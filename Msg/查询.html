@@ -1,0 +1,351 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>查询</title>
+<link rel="stylesheet" href="../css/reset_s.css">
+<link rel="stylesheet" href="../css/table.css" />
+<link rel="stylesheet" href="../css/news.css" />
+<link rel="stylesheet" href="../css/Msg/msg.css" />
+<link rel="stylesheet" href="../css/pagination.css" />
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+	  setDivMaxHeight();
+ });
+
+$(window).resize(function() {
+	setDivMaxHeight();
+});
+function setDivMaxHeight() {
+	var fg=$(window).height();
+	var h = parseInt(fg) - 240;
+	$("#m_con").css("height", h);
+	
+}
+$(function(){
+    $(".labelio").click(function(){
+        $(this).find(".Mdivbg").toggleClass("Mdivbg01");
+    });
+    $(".span_ms").click(function(){
+        $(this).siblings(".Mdivbg").toggleClass("Mdivbg01");
+    });
+});
+</script>
+</head>
+<body>
+<div class="m_top">
+	<div class="msg_top">
+        <a href="msg.html" class="msg_back">返回上一页</a>
+        <div class="msg_tit">再约客户</div>
+        <div class="msg_sx"><a href="#">查询</a><input type="text"><small>--</small><input type="text"></div>
+    </div>
+</div>
+<!--页面主内容 -->
+<div id="m_con" style="overflow:auto;">
+     <div class="m_table" style="width:2500px"> 
+        <table class="table  table-hover table-striped">
+            <thead class="tb_th_bga"><!-- 如果是在tab切换里面时候，th的class="tb_th_bgb";一般状态下用class="tb_th_bga"  -->
+                <tr>
+                    <td style="border:none"><a href="javascript:void(0)" class="tb_sup_btn" data-reveal-id="tb-box"></a></td><!--增加编辑按钮格式 -->
+
+                    <td>序号</td>
+                    <td>
+                        <div class="tb_sx"><!--一般排序格式 -->
+                            <div class="tb_sx_tit">客户编号</div>
+                            <ul class="tb_sx_show">
+                                <div class="tb_sx_arrow"></div>
+                                <div class="tb_sx_div">
+                                    <div class="tb_sx_px">
+                                        <li><a href="#" class="tb_sx_up">升序A-Z</a></li>
+                                        <li><a href="#" class="tb_sx_down">降序Z-A</a></li>
+                                        <li style="border:none;"></li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div> 
+                    </td>
+                    <td>客户姓名</td>
+                    <td>店面名称</td>
+                    <td>男士手机</td>
+                    <td>女士手机</td>
+                    <td>
+                        <div class="tb_sx"><!--销售类型排序筛选格式 -->
+                            <div class="tb_sx_tit">类型</div>
+                            <ul class="tb_sx_show">
+                                <div class="tb_sx_arrow"></div>
+                                <div class="tb_sx_div">
+                                    <div class="tb_sx_yx">
+                                        <li><a href="#">全部</a></li>
+                                        <li><a href="#">一销</a><label class="labelio cx_labelio"><span class="Mdivbg cx_Mdivbg"></span><input name="" type="checkbox" value=""><span class="span_ms">锁定</span></label></li>
+                                        <li><a href="#">二销</a><label class="labelio cx_labelio"><span class="Mdivbg cx_Mdivbg"></span><input name="" type="checkbox" value=""><span class="span_ms">锁定</span></label></li>
+                                        <li><a href="#">一销赠送</a><label class="labelio cx_labelio"><span class="Mdivbg cx_Mdivbg"></span><input name="" type="checkbox" value=""><span class="span_ms">锁定</span></label></li>
+                                        <li><a href="#">二销赠送</a><label class="labelio cx_labelio"><span class="Mdivbg cx_Mdivbg"></span><input name="" type="checkbox" value=""><span class="span_ms">锁定</span></label></li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div> 
+                    </td>
+                    <td>选片完成</td>
+                    <td>看版日期</td>
+                    <td>取件日期</td>
+                    <td>急件日期</td>
+                    <td>欠款</td>
+                    <td>消费</td>
+                    <td>取件点</td>
+                    <td>整件完成</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj" style="width:115px;"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td><label class="labelio cx_labelio tb_xh"><span class="Mdivbg cx_Mdivbg1"></span><input name="" type="checkbox" value=""><span class="span_ms">1</span></label>
+                    </td><!--序号check用这格式  -->
+                    <td>1882222242</td>
+                    <td><a href="#" class="m_tab_link">冯福生，李某某</a></td>
+                    <td>A00001 </td>
+                    <td>北京施华洛西单</td>
+                    <td>15101012233</td>
+                    <td>1</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td><div class="tb_qk">500</div></td><!--涉及到金额的，增<div class="tb_money> -->
+                    <td><div class="tb_money">1500</div></td>
+                    <td>自主上门</td>
+                    <td>是 </td>
+                </tr>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj" style="width:115px;"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td><label class="labelio cx_labelio tb_xh"><span class="Mdivbg cx_Mdivbg1"></span><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td>1882222242</td>
+                    <td><a href="#" class="m_tab_link">冯福生，李某某</a></td>
+                    <td>A00001 </td>
+                    <td>北京施华洛西单</td>
+                    <td>15101012233</td>
+                    <td>1</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td><div class="tb_qk">500</div></td><!--涉及到金额的，增<div class="tb_money> -->
+                    <td><div class="tb_money">1500</div></td>
+                    <td>自主上门</td>
+                    <td>是 </td>
+                </tr>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj" style="width:115px;"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td><label class="labelio cx_labelio tb_xh"><span class="Mdivbg cx_Mdivbg1"></span><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td>1882222242</td>
+                    <td><a href="#" class="m_tab_link">冯福生，李某某</a></td>
+                    <td>A00001 </td>
+                    <td>北京施华洛西单</td>
+                    <td>15101012233</td>
+                    <td>1</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td><div class="tb_qk">500</div></td><!--涉及到金额的，增<div class="tb_money> -->
+                    <td><div class="tb_money">1500</div></td>
+                    <td>自主上门</td>
+                    <td>是 </td>
+                </tr>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj" style="width:115px;"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td><label class="labelio cx_labelio tb_xh"><span class="Mdivbg cx_Mdivbg1"></span><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td>1882222242</td>
+                    <td><a href="#" class="m_tab_link">冯福生，李某某</a></td>
+                    <td>A00001 </td>
+                    <td>北京施华洛西单</td>
+                    <td>15101012233</td>
+                    <td>1</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td><div class="tb_qk">500</div></td><!--涉及到金额的，增<div class="tb_money> -->
+                    <td><div class="tb_money">1500</div></td>
+                    <td>自主上门</td>
+                    <td>是 </td>
+                </tr>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj" style="width:115px;"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td><label class="labelio cx_labelio tb_xh"><span class="Mdivbg cx_Mdivbg1"></span><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td>1882222242</td>
+                    <td><a href="#" class="m_tab_link">冯福生，李某某</a></td>
+                    <td>A00001 </td>
+                    <td>北京施华洛西单</td>
+                    <td>15101012233</td>
+                    <td>1</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td><div class="tb_qk">500</div></td><!--涉及到金额的，增<div class="tb_money> -->
+                    <td><div class="tb_money">1500</div></td>
+                    <td>自主上门</td>
+                    <td>是 </td>
+                </tr>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj" style="width:115px;"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td><label class="labelio cx_labelio tb_xh"><span class="Mdivbg cx_Mdivbg1"></span><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td>1882222242</td>
+                    <td><a href="#" class="m_tab_link">冯福生，李某某</a></td>
+                    <td>A00001 </td>
+                    <td>北京施华洛西单</td>
+                    <td>15101012233</td>
+                    <td>1</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td><div class="tb_qk">500</div></td><!--涉及到金额的，增<div class="tb_money> -->
+                    <td><div class="tb_money">1500</div></td>
+                    <td>自主上门</td>
+                    <td>是 </td>
+                </tr>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj" style="width:115px;"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td><label class="labelio cx_labelio tb_xh"><span class="Mdivbg cx_Mdivbg1"></span><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td>1882222242</td>
+                    <td><a href="#" class="m_tab_link">冯福生，李某某</a></td>
+                    <td>A00001 </td>
+                    <td>北京施华洛西单</td>
+                    <td>15101012233</td>
+                    <td>1</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td><div class="tb_qk">500</div></td><!--涉及到金额的，增<div class="tb_money> -->
+                    <td><div class="tb_money">1500</div></td>
+                    <td>自主上门</td>
+                    <td>是 </td>
+                </tr>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj" style="width:115px;"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td><label class="labelio cx_labelio tb_xh"><span class="Mdivbg cx_Mdivbg1"></span><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td>1882222242</td>
+                    <td><a href="#" class="m_tab_link">冯福生，李某某</a></td>
+                    <td>A00001 </td>
+                    <td>北京施华洛西单</td>
+                    <td>15101012233</td>
+                    <td>1</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td><div class="tb_qk">500</div></td><!--涉及到金额的，增<div class="tb_money> -->
+                    <td><div class="tb_money">1500</div></td>
+                    <td>自主上门</td>
+                    <td>是 </td>
+                </tr>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj" style="width:115px;"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td><label class="labelio cx_labelio tb_xh"><span class="Mdivbg cx_Mdivbg1"></span><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td>1882222242</td>
+                    <td><a href="#" class="m_tab_link">冯福生，李某某</a></td>
+                    <td>A00001 </td>
+                    <td>北京施华洛西单</td>
+                    <td>15101012233</td>
+                    <td>1</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td><div class="tb_qk">500</div></td><!--涉及到金额的，增<div class="tb_money> -->
+                    <td><div class="tb_money">1500</div></td>
+                    <td>自主上门</td>
+                    <td>是 </td>
+                </tr>
+            </tbody>
+        </table>
+    </div> 
+</div>    
+    <!--页面主内容-------------end -->
+
+<div class="tb_foot">
+    <div class="tb_bottom" style="border-top:1px solid #e9ecf3;"><!--公共底部功能（显示，按钮，分页） -->
+        <div class="tb_b_zs"><span>共<small>9</small>个客户</span></div>
+    </div> 
+    <div class="tb_bottom"><!--公共底部功能（显示，按钮，分页） -->
+        <div class="tb_pag">
+             <span class="tb_pag_xs"> 每页显示20条&nbsp;&nbsp;共<label>29</label>条 </span>
+             <div class="quotes" id="Pagination">
+                 <span class="prev">&nbsp;&nbsp;&nbsp;</span>
+                 <span class="current">5</span>
+                 <a href="#">1</a>
+                 <a href="#">2</a>
+                 <a href="#">3</a>
+                 <a href="#">4</a>
+                 <a href="#">6</a>
+                 <a href="#">7</a>
+                 <a href="#">8</a>
+                 <a href="#" class="next">&nbsp;&nbsp;&nbsp;</a>
+             </div>
+        </div>
+    </div>
+    <!--copyright -->
+    <div class="ft_tel">北京熊宝贝科技发展有限公司 技术支持：400-100-7592</div>
+</div>
+
+
+
+
+<script type="text/javascript">
+$(function(){
+	$(".tb_sx").mouseover(function(){
+		$(this).children('ul').show();
+		});
+	$(".tb_sx").mouseout(function(){
+		$(this).children('ul').hide();
+		});
+//		$(".tb_sx_px li a").click(function(){
+//			$(".tb_sx_px li a").removeClass('tb_sx_bg');
+//			$(this).addClass('tb_sx_bg');
+//			});          //筛选功能需要选中状态时候开启
+	$(".tb_bj_btn").mouseover(function(){
+		$(this).children('div').show();
+		});
+	$(".tb_bj_btn").mouseout(function(){
+		$(this).children('div').hide();
+		});
+	$(".tb_del").click(function(){
+		$(this).parentsUntil('table tbody').remove();
+		});
+	});
+</script>
+
+<!--table选中状态 -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('table tbody tr:odd').addClass('mtr_bg');
+	$(".table tbody tr").click(function(){
+		$('table tbody tr').removeClass('mtr_bg_act');
+		$('table tbody tr:odd').addClass('mtr_bg');
+		$(this).removeClass('mtr_bg');
+		$(this).addClass('mtr_bg_act');
+		});
+	});
+</script>
+</body>
+</html>

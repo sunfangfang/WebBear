@@ -1,0 +1,228 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我要发布</title>
+<link rel="stylesheet" href="../css/reset_s.css">
+<link rel="stylesheet" href="../css/table.css">
+<link rel="stylesheet" href="../css/news.css">
+<link rel="stylesheet" href="../css/box.css">
+<link rel="stylesheet" href="../css/OA/oa.css">
+<link href="SpryAssets/oaTab2.css" rel="stylesheet">
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../js/jquery.reveal.js"></script>
+<script type="text/javascript" src="SpryAssets/oaTab2.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+	  setDivMaxHeight();
+ });
+
+$(window).resize(function() {
+	setDivMaxHeight();
+});
+function setDivMaxHeight() {
+	var fg=$(window).height();
+	var h = parseInt(fg) - 10;
+	$("#m_con").css("height", h);
+	
+}
+$(function(){
+    $(".labelio").click(function(){
+        $(this).find(".Mdivbg").toggleClass("Mdivbg01");
+    });
+    $(".span_ms").click(function(){
+        $(this).siblings(".Mdivbg").toggleClass("Mdivbg01");
+    });
+});
+
+</script>
+</head>
+
+<body>
+<!--页面主内容 -->
+<div id="m_con" style="background-color:#fff; margin-top:0;">
+     <div class="msg_top">
+        <a href="#" class="msg_back">返回消息通知</a>
+        <div class="msg_tit">我要发消息</div>
+        <div class="msg_sx"><a href="#">发布</a><input type="text"><small>--</small><input type="text"></div>
+    </div>
+     <div class="oa_sc3">
+          <div class="oa_p1"><span>消息内容:</span><textarea name="" cols="" rows="" placeholder="请输入消息内容"></textarea></div>
+          <div class="oa_p1" style="margin:5px;"><!--<a href="#" ></a> --><small style="color:#999">（最多500字数）</small></div>
+          <div class="oa_p2">
+           	<div class="oa_p3">谁可以看:</div>
+            	<a href="#" class="oa_p4" data-reveal-id="oat_tj">
+                	<div class="oa_receive"><span>李某某某</span><small></small></div>
+                	<div class="oa_receive"><span>李某某</span><small></small></div>
+                	<div class="oa_receive"><span>李某某</span><small></small></div>
+                	<div class="oa_receive"><span>李某某某</span><small></small></div>
+                </a>
+                <script type="text/javascript">
+				$(function(){
+					$(".oa_receive small").click(function(){
+						$(this).parent().remove();
+						});
+					});
+				</script>
+          </div>
+          <div class="oa_p1" style="margin-top:10px;"><span>图片:</span><a href="#"><img src="../img/tt.jpg"></a><a href="#"></a></div>
+     </div>
+</div>
+<!--页面主内容-------------end -->	
+
+<!--选择消息对象弹窗 -->
+<div class="gbox" id="oat_tj">
+	<div class="gbox_top"><span>选择消息对象</span><a href="#" class="close-reveal-modal"></a></div>
+    <div class="oa_boxs"><a href="#"></a><input placeholder="搜索..." name="" type="text"></div>
+    <script type="text/javascript">
+    $(function(){
+        $(".oa_show_btn").click(function(){
+            $(this).parent().next('.oa_r_show').slideToggle(500);
+            });
+        });
+    </script>
+    <div id="TabbedPanels1" class="TabbedPanels">
+      <ul class="TabbedPanelsTabGroup">
+        <li class="TabbedPanelsTab" tabindex="0" style="margin-left:17px;">全部</li>
+        <li class="TabbedPanelsTab" tabindex="0">部门</li>
+      </ul>
+      <div class="TabbedPanelsContentGroup">
+        <div class="TabbedPanelsContent">
+            <div class="oa_check">
+                <label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg"></span><input name="" type="checkbox" value=""></label>
+                <div class="oa_show_btn"><img src="../img/OA/oa_check_bg.png"><span>人事部</span></div>
+            </div>
+            
+            <div class="oa_r_show">
+                <div class="oa_ren">
+                    <label>
+                        <div class="oa_r"><img src="../img/tt.jpg"></div>
+                        <div class="oa_r"><span>李某某</span><label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg1"></span><input name="" type="checkbox" value=""></label></div>
+                    </label>
+                </div>
+                <div class="oa_ren">
+                    <label>
+                        <div class="oa_r"><img src="../img/tt.jpg"></div>
+                        <div class="oa_r"><span>李某某</span><label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg1"></span><input name="" type="checkbox" value=""></label></div>
+                    </label>
+                </div>
+                <div class="oa_ren">
+                    <label>
+                        <div class="oa_r"><img src="../img/tt.jpg"></div>
+                        <div class="oa_r"><span>李某某</span><label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg1"></span><input name="" type="checkbox" value=""></label></div>
+                    </label>
+                </div>
+                <div class="oa_ren">
+                    <label>
+                        <div class="oa_r"><img src="../img/tt.jpg"></div>
+                        <div class="oa_r"><span>李某某</span><label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg1"></span><input name="" type="checkbox" value=""></label></div>
+                    </label>
+                </div>
+                <div class="oa_ren">
+                    <label>
+                        <div class="oa_r"><img src="../img/tt.jpg"></div>
+                        <div class="oa_r"><span>李某某</span><label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg1"></span><input name="" type="checkbox" value=""></label></div>
+                    </label>
+                </div>
+                <div class="oa_ren">
+                    <label>
+                        <div class="oa_r"><img src="../img/tt.jpg"></div>
+                        <div class="oa_r"><span>李某某</span><label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg1"></span><input name="" type="checkbox" value=""></label></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="TabbedPanelsContent">
+            <div class="oa_check">
+                <label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg"></span><input name="" type="checkbox" value=""></label>
+                <div class="oa_show_btn"><img src="../img/OA/oa_check_bg.png"><span>企划部</span></div>
+            </div>
+            <div class="oa_r_show">
+                <div class="oa_ren">
+                    <label>
+                        <div class="oa_r"><img src="../img/tt.jpg"></div>
+                        <div class="oa_r"><span>李某某</span><label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg1"></span><input name="" type="checkbox" value=""></label></div>
+                    </label>
+                </div>
+                <div class="oa_ren">
+                    <label>
+                        <div class="oa_r"><img src="../img/tt.jpg"></div>
+                        <div class="oa_r"><span>李某某</span><label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg1"></span><input name="" type="checkbox" value=""></label></div>
+                    </label>
+                </div>
+                <div class="oa_ren">
+                    <label>
+                        <div class="oa_r"><img src="../img/tt.jpg"></div>
+                        <div class="oa_r"><span>李某某</span><label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg1"></span><input name="" type="checkbox" value=""></label></div>
+                    </label>
+                </div>
+                <div class="oa_ren">
+                    <label>
+                        <div class="oa_r"><img src="../img/tt.jpg"></div>
+                        <div class="oa_r"><span>李某某</span><label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg1"></span><input name="" type="checkbox" value=""></label></div>
+                    </label>
+                </div>
+                <div class="oa_ren">
+                    <label>
+                        <div class="oa_r"><img src="../img/tt.jpg"></div>
+                        <div class="oa_r"><span>李某某</span><label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg1"></span><input name="" type="checkbox" value=""></label></div>
+                    </label>
+                </div>
+                <div class="oa_ren">
+                    <label>
+                        <div class="oa_r"><img src="../img/tt.jpg"></div>
+                        <div class="oa_r"><span>李某某</span><label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg1"></span><input name="" type="checkbox" value=""></label></div>
+                    </label>
+                </div>  
+            </div>
+            <div class="oa_check">
+                <label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg"></span><input name="" type="checkbox" value=""></label>
+                <div class="oa_show_btn"><img src="../img/OA/oa_check_bg.png"><span>工程部</span></div>
+            </div>
+            <div class="oa_r_show" style="display:none;">
+                <div class="oa_ren">
+                    <label>
+                        <div class="oa_r"><img src="../img/tt.jpg"></div>
+                        <div class="oa_r"><span>李某某</span><label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg1"></span><input name="" type="checkbox" value=""></label></div>
+                    </label>
+                </div>
+                <div class="oa_ren">
+                    <label>
+                        <div class="oa_r"><img src="../img/tt.jpg"></div>
+                        <div class="oa_r"><span>李某某</span><label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg1"></span><input name="" type="checkbox" value=""></label></div>
+                    </label>
+                </div>
+                <div class="oa_ren">
+                    <label>
+                        <div class="oa_r"><img src="../img/tt.jpg"></div>
+                        <div class="oa_r"><span>李某某</span><label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg1"></span><input name="" type="checkbox" value=""></label></div>
+                    </label>
+                </div>
+                <div class="oa_ren">
+                    <label>
+                        <div class="oa_r"><img src="../img/tt.jpg"></div>
+                        <div class="oa_r"><span>李某某</span><label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg1"></span><input name="" type="checkbox" value=""></label></div>
+                    </label>
+                </div>
+                <div class="oa_ren">
+                    <label>
+                        <div class="oa_r"><img src="../img/tt.jpg"></div>
+                        <div class="oa_r"><label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg1"></span><input name="" type="checkbox" value=""></label></div>
+                    </label>
+                </div>
+                <div class="oa_ren">
+                    <label>
+                        <div class="oa_r"><img src="../img/tt.jpg"></div>
+                        <div class="oa_r"><span>李某某</span><label class="labelio oa_labelio"><span class="Mdivbg oa_Mdivbg1"></span><input name="" type="checkbox" value=""></label></div>
+                    </label>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+</script>
+</body>
+</html>

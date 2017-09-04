@@ -1,0 +1,454 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>包套排行</title>
+<link rel="stylesheet" href="../css/reset_s.css">
+<link rel="stylesheet" href="../css/table.css" />
+<link rel="stylesheet" href="../css/news.css" />
+<link rel="stylesheet" href="../css/TongJi/tj3.css"/>
+<link rel="stylesheet" href="../css/TongJi/sheyingtongji2.css">
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+	setmcHeight();
+ });
+
+$(window).resize(function() {
+	setmcHeight();
+});
+function setmcHeight() {
+	var mcg=$(window).height();
+	var mch = parseInt(mcg) - 115;
+	$(".m_cz,.m_cy").css("height", mch);
+}
+</script>
+    <style>
+    @media(max-width:1024px){
+        body{min-width:827px;}
+    }
+</style>
+</head>
+<body>
+<div class="m_top">
+    <div class="m_name">销售产品统计-包套排行</div>
+	<div class="mt_btn"><a href="#">筛选</a></div>
+    <script type="text/javascript">
+        $(function(){
+            $(".mt_btn a").click(function () {
+                $(".crm_sx").slideToggle();
+                $(".mt_btn a").toggleClass("colo");
+            });
+
+        });
+    </script>
+
+    <!------------------筛选弹窗------------------>
+    <div class="crm_sx" style="width: 450px; height: 283px;">
+        <div class="crm_sx_arrow crm_sx_arrowfg">
+        </div>
+        <div class="crm_sx1" style="width: 430px; margin-left: 20px;">
+            <span>店面名称：</span>
+            <select name="ddl1" id="ddl1" style="width: 329px">
+                <option value="">全部</option>
+                <option value="XB0108">北京大兴旗舰店</option>
+                <option value="XBB5210">SH体验店</option>
+
+            </select>
+        </div>
+        <div class="crm_sx1" style="width: 430px; margin-left: 20px;">
+            <span>日期类型：</span>
+            <select id="ddl2">
+                <option value="预约日期">预约日期</option>
+                <option value="选片日期">选片日期</option>
+                <option value="取件日期">取件日期</option>
+            </select>
+            <input type="text" id="t1" style="margin-left: 10px;" onFocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,maxDate:'#F{$dp.$D(\'t2\')}'})"><small>--</small><input type="text" id="t2" onFocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,minDate:'#F{$dp.$D(\'t1\')}'})">
+        </div>
+        <div class="crm_sx1" style="width: 430px; margin-left: 20px;">
+                <span>
+                    <label>
+                        <input type="radio" name="r1" value="0" checked="checked">销售热度
+                    </label>
+                </span><span>销售排名</span>
+            <select id="ddl3" style="width: 60px">
+                <option value="before">前</option>
+                <option value="after">后</option>
+            </select>
+            <input type="text" id="t3" style="width: 40px; margin-left: 5px" value="10"><span style="font-size: 14px; margin-left: 10px; color: #333; width: auto;">名</span>
+        </div>
+        <div class="crm_sx1" style="width: 430px; margin-left: 20px;">
+                <span>
+                    <label>
+                        <input type="radio" name="r1" value="1">单一查询
+                    </label>
+                </span><span>包套名称</span>
+            <select name="ddl4" id="ddl4" style="width: 250px;">
+                <option value="">请选择</option>
+                <option value="婚博会套系二">婚博会套系二</option>
+                <option value="婚博会套系一">婚博会套系一</option>
+                <option value="团购套系一">团购套系一</option>
+                <option value="团购套系二">团购套系二</option>
+                <option value="儿童成长套系一">儿童成长套系一</option>
+                <option value="婚纱包套9999">婚纱包套9999</option>
+                <option value="写真一">写真一</option>
+                <option value="写真二">写真二</option>
+                <option value="海之恋">海之恋</option>
+
+            </select>
+        </div>
+        <div class="crm_sx1_btn" style="margin-top: 20px;">
+            <a href="javascript:;" onClick="Search()">查询</a>
+        </div>
+    </div>
+</div>
+<!--页面主内容 -->
+<div id="m_con">
+	<div class="m_cz">
+        <div class="tj_table" style="border-bottom:none;"> 
+            <table class="table  table-hover table-striped" style="min-width: 330px;">
+                <thead class="tb_th_bga">
+                    <tr>
+                        <td style="width:30px;">数量</td>
+                        <td>包套名称</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>9</td>
+                        <td>哥伦布成长皮箱</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>哥伦布成长皮箱</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>哥伦布成长皮箱</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>哥伦布成长皮箱</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>哥伦布成长皮箱</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>哥伦布成长皮箱</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>哥伦布成长皮箱</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>哥伦布成长皮箱</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>哥伦布成长皮箱</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>哥伦布成长皮箱</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>哥伦布成长皮箱</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>哥伦布成长皮箱</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>哥伦布成长皮箱</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>哥伦布成长皮箱</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>哥伦布成长皮箱</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> 
+    <div class="m_cy">
+         <div class="tj_table" style="border-bottom:none;"> 
+            <table class="table  table-hover table-striped" style="min-width:1200px;"><!--根据实际加值-->
+                <thead class="tb_th_bga">
+                    <tr>
+                        <td>服务店</td>
+                        <td>客户编号</td>
+                        <td>预约日期</td>
+                        <td>消费类型</td>
+                        <td>宝宝姓名</td>
+                        <td>父亲姓名</td>
+                        <td>母亲姓名</td>
+                        <td>父亲手机</td>
+                        <td>母亲手机</td>
+                        <td>门市接待</td>
+                        <td>预约金额</td>
+                        <td>总消费金额</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>爱你宝贝体育场店</td>
+                        <td>A000000</td>
+                        <td>20160808</td>
+                        <td>新生儿</td>
+                        <td>哈尼</td>
+                        <td>小刚</td>
+                        <td>小飞</td>
+                        <td>1888888888</td>
+                        <td>1888888888</td>
+                        <td>Admin</td>
+                        <td>3999</td>
+                        <td>29999</td>
+                    </tr>
+                    <tr>
+                        <td>爱你宝贝体育场店</td>
+                        <td>A000000</td>
+                        <td>20160808</td>
+                        <td>新生儿</td>
+                        <td>哈尼</td>
+                        <td>小刚</td>
+                        <td>小飞</td>
+                        <td>1888888888</td>
+                        <td>1888888888</td>
+                        <td>Admin</td>
+                        <td>3999</td>
+                        <td>29999</td>
+                    </tr>
+                    <tr>
+                        <td>爱你宝贝体育场店</td>
+                        <td>A000000</td>
+                        <td>20160808</td>
+                        <td>新生儿</td>
+                        <td>哈尼</td>
+                        <td>小刚</td>
+                        <td>小飞</td>
+                        <td>1888888888</td>
+                        <td>1888888888</td>
+                        <td>Admin</td>
+                        <td>3999</td>
+                        <td>29999</td>
+                    </tr>
+                    <tr>
+                        <td>爱你宝贝体育场店</td>
+                        <td>A000000</td>
+                        <td>20160808</td>
+                        <td>新生儿</td>
+                        <td>哈尼</td>
+                        <td>小刚</td>
+                        <td>小飞</td>
+                        <td>1888888888</td>
+                        <td>1888888888</td>
+                        <td>Admin</td>
+                        <td>3999</td>
+                        <td>29999</td>
+                    </tr>
+                    <tr>
+                        <td>爱你宝贝体育场店</td>
+                        <td>A000000</td>
+                        <td>20160808</td>
+                        <td>新生儿</td>
+                        <td>哈尼</td>
+                        <td>小刚</td>
+                        <td>小飞</td>
+                        <td>1888888888</td>
+                        <td>1888888888</td>
+                        <td>Admin</td>
+                        <td>3999</td>
+                        <td>29999</td>
+                    </tr>
+                    <tr>
+                        <td>爱你宝贝体育场店</td>
+                        <td>A000000</td>
+                        <td>20160808</td>
+                        <td>新生儿</td>
+                        <td>哈尼</td>
+                        <td>小刚</td>
+                        <td>小飞</td>
+                        <td>1888888888</td>
+                        <td>1888888888</td>
+                        <td>Admin</td>
+                        <td>3999</td>
+                        <td>29999</td>
+                    </tr>
+                    <tr>
+                        <td>爱你宝贝体育场店</td>
+                        <td>A000000</td>
+                        <td>20160808</td>
+                        <td>新生儿</td>
+                        <td>哈尼</td>
+                        <td>小刚</td>
+                        <td>小飞</td>
+                        <td>1888888888</td>
+                        <td>1888888888</td>
+                        <td>Admin</td>
+                        <td>3999</td>
+                        <td>29999</td>
+                    </tr>
+                    <tr>
+                        <td>爱你宝贝体育场店</td>
+                        <td>A000000</td>
+                        <td>20160808</td>
+                        <td>新生儿</td>
+                        <td>哈尼</td>
+                        <td>小刚</td>
+                        <td>小飞</td>
+                        <td>1888888888</td>
+                        <td>1888888888</td>
+                        <td>Admin</td>
+                        <td>3999</td>
+                        <td>29999</td>
+                    </tr>
+                    <tr>
+                        <td>爱你宝贝体育场店</td>
+                        <td>A000000</td>
+                        <td>20160808</td>
+                        <td>新生儿</td>
+                        <td>哈尼</td>
+                        <td>小刚</td>
+                        <td>小飞</td>
+                        <td>1888888888</td>
+                        <td>1888888888</td>
+                        <td>Admin</td>
+                        <td>3999</td>
+                        <td>29999</td>
+                    </tr>
+                    <tr>
+                        <td>爱你宝贝体育场店</td>
+                        <td>A000000</td>
+                        <td>20160808</td>
+                        <td>新生儿</td>
+                        <td>哈尼</td>
+                        <td>小刚</td>
+                        <td>小飞</td>
+                        <td>1888888888</td>
+                        <td>1888888888</td>
+                        <td>Admin</td>
+                        <td>3999</td>
+                        <td>29999</td>
+                    </tr>
+                    <tr>
+                        <td>爱你宝贝体育场店</td>
+                        <td>A000000</td>
+                        <td>20160808</td>
+                        <td>新生儿</td>
+                        <td>哈尼</td>
+                        <td>小刚</td>
+                        <td>小飞</td>
+                        <td>1888888888</td>
+                        <td>1888888888</td>
+                        <td>Admin</td>
+                        <td>3999</td>
+                        <td>29999</td>
+                    </tr>
+                    <tr>
+                        <td>爱你宝贝体育场店</td>
+                        <td>A000000</td>
+                        <td>20160808</td>
+                        <td>新生儿</td>
+                        <td>哈尼</td>
+                        <td>小刚</td>
+                        <td>小飞</td>
+                        <td>1888888888</td>
+                        <td>1888888888</td>
+                        <td>Admin</td>
+                        <td>3999</td>
+                        <td>29999</td>
+                    </tr>
+                    <tr>
+                        <td>爱你宝贝体育场店</td>
+                        <td>A000000</td>
+                        <td>20160808</td>
+                        <td>新生儿</td>
+                        <td>哈尼</td>
+                        <td>小刚</td>
+                        <td>小飞</td>
+                        <td>1888888888</td>
+                        <td>1888888888</td>
+                        <td>Admin</td>
+                        <td>3999</td>
+                        <td>29999</td>
+                    </tr>
+                    <tr>
+                        <td>爱你宝贝体育场店</td>
+                        <td>A000000</td>
+                        <td>20160808</td>
+                        <td>新生儿</td>
+                        <td>哈尼</td>
+                        <td>小刚</td>
+                        <td>小飞</td>
+                        <td>1888888888</td>
+                        <td>1888888888</td>
+                        <td>Admin</td>
+                        <td>3999</td>
+                        <td>29999</td>
+                    </tr>
+                    <tr>
+                        <td>爱你宝贝体育场店</td>
+                        <td>A000000</td>
+                        <td>20160808</td>
+                        <td>新生儿</td>
+                        <td>哈尼</td>
+                        <td>小刚</td>
+                        <td>小飞</td>
+                        <td>1888888888</td>
+                        <td>1888888888</td>
+                        <td>Admin</td>
+                        <td>3999</td>
+                        <td>29999</td>
+                    </tr>
+                </tbody>
+            </table>
+         </div>
+    </div>
+</div>    
+    <!--页面主内容-------------end -->
+
+<div class="tb_foot">
+    <div class="tb_bottom"><!--公共底部功能（显示，按钮，分页） -->
+        <a href="#" class="tb_btn tb_green">导出产品</a>
+        <a href="#" class="tb_btn tb_blue">导出客户</a>
+        <!--<div class="tb_pag">
+             <span class="tb_pag_xs"> 每页显示20条&nbsp;&nbsp;共<label>29</label>条 </span>
+             <div class="quotes" id="Pagination">
+                 <span class="prev">&nbsp;&nbsp;&nbsp;</span>
+                 <span class="current">5</span>
+                 <a href="#">1</a>
+                 <a href="#">2</a>
+                 <a href="#">3</a>
+                 <a href="#">4</a>
+                 <a href="#">6</a>
+                 <a href="#">7</a>
+                 <a href="#">8</a>
+                 <a href="#" class="next">&nbsp;&nbsp;&nbsp;</a>
+             </div>
+        </div>-->
+    </div>
+</div>
+
+
+
+<!--table选中状态 -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('table tbody tr:odd').addClass('mtr_bg');
+	$(".table tbody tr").click(function(){
+		$('table tbody tr').removeClass('mtr_bg_act');
+		$('table tbody tr:odd').addClass('mtr_bg');
+		$(this).removeClass('mtr_bg');
+		$(this).addClass('mtr_bg_act');
+		});
+	});
+</script>
+</body>
+</html>

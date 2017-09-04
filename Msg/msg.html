@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>消息提醒</title>
+<link rel="stylesheet" href="../css/reset_s.css">
+<link rel="stylesheet" href="../css/table.css" />
+<link rel="stylesheet" href="../css/news.css" />
+<link rel="stylesheet" href="../css/Msg/msg.css" />
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+	  setDivMaxHeight();
+ });
+
+$(window).resize(function() {
+	setDivMaxHeight();
+});
+function setDivMaxHeight() {
+	var fg=$(window).height();
+	var h = parseInt(fg) - 100;
+	$("#m_con").css("height", h);
+	
+}
+</script>
+
+</head>
+<body>
+<div class="m_top">
+    <div class="m_name">提示信息 </div>
+</div>
+<!--页面主内容 -->
+<div id="m_con">
+	<a href="查询.html" class="msg_my"><span>满月客户</span><strong>35</strong></a>
+	<a href="查询.html" class="msg_bt"><span>百天客户</span><strong>35</strong></a>
+	<a href="查询.html" class="msg_zso"><span>周岁客户</span><strong>35</strong></a>
+	<a href="查询.html" class="msg_sr"><span>生日客户</span><strong>35</strong></a>
+	<a href="查询.html" class="msg_zy"><span>再约客户</span><strong>35</strong></a>
+	<a href="查询.html" class="msg_pzo"><span>拍照客户</span><strong>35</strong></a>
+	<a href="查询.html" class="msg_xpo"><span>选片客户</span><strong>35</strong></a>
+	<a href="查询.html" class="msg_kb"><span>看版客户</span><strong>35</strong></a>
+	<a href="查询.html" class="msg_qjo"><span>取件客户</span><strong>35</strong></a>
+	<a href="查询.html" class="msg_wp"><span>未拍照客户</span><strong>35</strong></a>
+</div>    
+    <!--页面主内容-------------end -->
+
+<div class="tb_foot">
+    <!--copyright -->
+    <div class="ft_tel" style="background-color:#e4e6eb">北京熊宝贝科技发展有限公司 技术支持：400-100-7592</div>
+</div>
+
+</body>
+</html>

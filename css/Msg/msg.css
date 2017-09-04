@@ -1,0 +1,187 @@
+@charset "utf-8";
+/* CSS Document */
+/*#m_con a { 
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in; 
+}*/
+.msg_my,.msg_bt,.msg_zs,.msg_sr,.msg_zy,.msg_pz,.msg_xp,.msg_kb,.msg_qj,.msg_wp {
+	background-color: #FFF;
+	float: left;
+	height: 110px;
+	width: 172px;
+	margin-bottom: 10px;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #cbcbcc;
+	background-repeat: no-repeat;
+	background-position: 20px 19px;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding-left: 103px;
+}
+.msg_my span,.msg_bt span,.msg_zs span,.msg_sr span,.msg_zy span,.msg_pz span,.msg_xp span,.msg_kb span,.msg_qj span,.msg_wp span {
+	font-size: 14px;
+	line-height: 20px;
+	color: #33363f;
+	clear: both;
+	float: left;
+	height: 20px;
+	width: 150px;
+	margin-top: 22px;
+}
+.msg_my strong,.msg_bt strong,.msg_zs strong,.msg_sr strong,.msg_zy strong,.msg_pz strong,.msg_xp strong,.msg_kb strong,.msg_qj strong,.msg_wp strong {
+	font-size: 31px;
+	line-height: 35px;
+	color: #d5d4d4;
+	clear: both;
+	float: left;
+	height: 35px;
+	width: 150px;
+	margin-top: 12px;
+	font-weight:normal;
+}
+.msg_myo,.msg_bto,.msg_zso,.msg_sro,.msg_zyo,.msg_pzo,.msg_xpo,.msg_kbo,.msg_qjo,.msg_wpo {
+	background-color: #FFF;
+	float: left;
+	height: 110px;
+	width: 172px;
+	margin-bottom: 10px;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #cbcbcc;
+	background-repeat: no-repeat;
+	background-position: 20px 19px;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding-left: 103px;
+}
+.msg_myo span,.msg_bto span,.msg_zso span,.msg_sro span,.msg_zyo span,.msg_pzo span,.msg_xpo span,.msg_kbo span,.msg_qjo span,.msg_wpo span {
+	font-size: 14px;
+	line-height: 20px;
+	color: #33363f;
+	clear: both;
+	float: left;
+	height: 20px;
+	width: 150px;
+	margin-top: 22px;
+	margin-left:15px;
+}
+.msg_myo strong,.msg_bto strong,.msg_zso strong,.msg_sro strong,.msg_zyo strong,.msg_pzo strong,.msg_xpo strong,.msg_kbo strong,.msg_qjo strong,.msg_wpo strong {
+	font-size: 31px;
+	line-height: 35px;
+	color: #fb2222;
+	clear: both;
+	float: left;
+	height: 35px;
+	width: 150px;
+	margin-top: 12px;
+	font-weight:normal;
+	margin-left:15px;
+}
+/*.ms_btn:hover span {
+	color: #33363f;
+	margin-left:6px;
+}
+.ms_btn:hover strong {
+	color: #fb2222;
+	margin-left:6px;   
+}*/
+.msg_my {
+	background-image: url(../../img/Msg/msg_my1.png);
+}
+.msg_myo {
+	background-image: url(../../img/Msg/msg_my2.png);
+}
+.msg_bt {
+	background-image: url(../../img/Msg/msg_bt1.png);
+}
+.msg_bto {
+	background-image: url(../../img/Msg/msg_bt2.png);
+}
+.msg_zs {
+	background-image: url(../../img/Msg/msg_zs1.png);
+}
+.msg_zso {
+	background-image: url(../../img/Msg/msg_zs2.png);
+}
+.msg_sr {
+	background-image: url(../../img/Msg/msg_sr1.png);
+}
+.msg_sro {
+	background-image: url(../../img/Msg/msg_sr2.png);
+}
+.msg_zy {
+	background-image: url(../../img/Msg/msg_zy1.png);
+}
+.msg_zyo {
+	background-image: url(../../img/Msg/msg_zy2.png);
+}
+.msg_pz {
+	background-image: url(../../img/Msg/msg_pz1.png);
+}
+.msg_pzo {
+	background-image: url(../../img/Msg/msg_pz2.png);
+}
+.msg_xp {
+	background-image: url(../../img/Msg/msg_xp1.png);
+}
+.msg_xpo {
+	background-image: url(../../img/Msg/msg_xp2.png);
+}
+.msg_kb {
+	background-image: url(../../img/Msg/msg_kb1.png);
+}
+.msg_kbo {
+	background-image: url(../../img/Msg/msg_kb2.png);
+}
+.msg_qj {
+	background-image: url(../../img/Msg/msg_qj1.png);
+}
+.msg_qjo {
+	background-image: url(../../img/Msg/msg_qj2.png);
+}
+.msg_wp {
+	background-image: url(../../img/Msg/msg_wp1.png);
+}
+.msg_wpo {
+	background-image: url(../../img/Msg/msg_wp2.png);
+}
+
+
+/*----------------------------------------------*/
+.cx_labelio{
+	position: relative;
+}
+.cx_labelio input{
+	opacity: 0;
+}
+
+.tb_sx_yx li label .Mdivbg {
+	width: 16px;
+	height: 16px;
+	top: 5px;
+	left: -2px;
+	position: absolute;
+	background: url(../../img/check-bgb.png) no-repeat;
+	display: inline-block;
+}
+
+.tb_sx_yx li label .Mdivbg01{
+	background: url(../../img/check-bga.png) no-repeat;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+}
+.tb_sx_yx li label .cx_Mdivbg{
+	top:2px;
+}
+
+.tb_xh .cx_Mdivbg1{
+	top:1px;
+}
+@media(max-width:1024px){
+	.msg_my,.msg_bt,.msg_zs,.msg_sr,.msg_zy,.msg_pz,.msg_xp,.msg_kb,.msg_qj,.msg_wp,.msg_myo,.msg_bto,.msg_zso,.msg_sro,.msg_zyo,.msg_pzo,.msg_xpo,.msg_kbo,.msg_qjo,.msg_wpo {
+	padding-left: 210px;
+}
+	}

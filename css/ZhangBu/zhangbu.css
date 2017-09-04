@@ -1,0 +1,50 @@
+/* CSS Document */
+.table01{width:100%;height:56px;background:#d5d9e2;color:#161616;}
+ .table01 ::-webkit-scrollbar {
+    width: 5px;
+    height: 7px;
+ }
+
+ .table01::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #83a8c3;
+ }
+ .table01::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+
+ }
+/*滚动条样式*/
+ .table01::-webkit-scrollbar {
+   width:5px;
+   height:7px;
+}
+
+
+/* Track */
+ .table01::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+
+/* Handle */
+
+ .table01::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background: #83a8c3;
+}
+.divtableop{width:100%;overflow-x:auto;}
+.divFooterd{width:99.9%;background:#fff;height:57px;border:1px solid #e9ecf3;line-height:57px;clear:both;bottom:35px;right:22px; font-family: "微软雅黑","Microsoft Yahei", Verdana, Geneva, sans-serif;}
+.divFooterd input{border:none;}
+.forms01 input:nth-child(1){background:#4dcd70;color:#fff;width:80px;height:30px;margin-left:18px;font-family: "微软雅黑","Microsoft Yahei", Verdana, Geneva, sans-serif;cursor:pointer;}
+.forms01 input:nth-child(2){background:#0ab7e5;color:#fff;width:80px;height:30px;margin-left:10px;font-family: "微软雅黑","Microsoft Yahei", Verdana, Geneva, sans-serif;cursor:pointer;}
+.forms01 input:nth-child(3){background:#fd8b4a;color:#fff;width:80px;height:30px;margin-left:10px;font-family: "微软雅黑","Microsoft Yahei", Verdana, Geneva, sans-serif;cursor:pointer;}
+
+.forms01 input:nth-child(1):hover{background-color:#72dda9;}
+.forms01 input:nth-child(2):hover{background-color:#399df7;}
+.forms01 input:nth-child(3):hover{background-color:#ffc773;}

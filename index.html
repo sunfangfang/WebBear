@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>main</title>
+		<meta name="description" content="overview &amp; stats" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<!-- basic styles-->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/add.css" />
+        <link rel="stylesheet" href="css/Mskd.css"/>
+        <link rel="stylesheet" href="css/box.css"/>
+        <link rel="stylesheet" href="css/news.css"/>
+        <link rel="stylesheet" href="css/reset_s.css"/>
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+		<!-- page specific plugin styles -->
+		<!-- fonts -->
+		<!-- ace styles-->
+		<link rel="stylesheet" href="assets/css/ace.min.css"/>
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+		<link rel="stylesheet" href="css/content.css" />
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+		<!-- inline styles related to this page -->
+		<!-- ace settings handler -->
+		<script src="assets/js/ace-extra.min.js"></script>
+		<script src="js/jquery-1.7.2.js"></script>
+		<script src="js/jquery.reveal.js"></script>
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+        <script>
+		 function orient(){
+			if (window.orientation == 0 || window.orientation == 180) {
+				alert("请在横屏下浏览");
+			}
+		  }  
+		/* 在页面加载的时候调用 */
+		$(window).load(function(){
+			  orient();
+		});
+		/* 在用户变化屏幕显示方向的时候调用*/
+		$(function(){
+			$(window).on("orientationchange",function(){
+				orient();
+			});
+		});
+	</script>
+	</head>
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+			<div class="navbar-container" id="navbar-container">
+                <div class="navbar-header pull-left" id="top_logo">
+                    <a href="#" class="navbar-brand">
+                        北京华洛华洛华洛华
+                    </a>
+                </div>
+                <!-- /.navbar-header-->
+                <ul class="navbar-header pull-left top_nav">
+                    <li class="nav_act"><a href="#">任务</a><span class="cola">20</span></li>
+                    <li class="nav_a"><a href="#">消息</a><span class="colb">20</span></li>
+                    <li class="nav_a"><a href="#">报告</a><span class="colc">20</span></li>
+                    <li class="nav_a"><a href="#">申请</a><span class="cold">20</span></li>
+                    <li class="nav_a"><a href="#" data-reveal-id="box_kd_t">开单</a><span class="cole">20</span></li>
+                    <li class="nav_a"><a href="r_money.html" target="I2">收款</a></li>
+                    <li class="nav_a"><a href="#">首页</a></li>
+                    <li class="nav_a"><a href="javascript:void(0)" onclick="launchFullscreen(document.documentElement);">全屏</a></li>
+                </ul>
+                <!--快捷导航 -->
+                <script>
+				$(function(){
+					$("#msg_btn").click(function(){
+						$("#msg_show").hide();
+						});
+					});
+				</script> 
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+                        <li class="purple">
+                            <a href="Msg/msg.html" id="msg_btn" target="I2">
+                                <i class="icon-bell-alt icon-animated-bell"></i>
+                                <span class="badge badge-important" id="msg_show">218</span>
+                            </a>
+                        </li>
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle drop_hg">
+								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />
+                                <img src="img/s_lf.png" class="s_lfg" alt="Jason's Photo"/>
+								<span class="user-info">
+									用户名
+								</span>
+								<i class="icon caret-down"></i>
+							</a>
+                            <script>
+                                $(function(){
+								  $(".li_kh").click(function(){
+								     $(this).css({"background":"#c0cdd6"}).siblings().css({"background":"none"});
+								  });
+								});
+                            </script>
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li class="li_kh">
+									<a href="#">
+										<div class="icon-coga"></div>
+										<span class="font_04">在线</span>
+									</a>
+								</li>
+								<li class="li_kh">
+									<a href="#">
+										<i class="icon-usera"></i>
+										<span class="font_04">离开</span>
+									</a>
+								</li>
+                                <li class="li_kh">
+									<a href="#">
+										<i class="icon-offa"></i>
+										<span class="font_04">离线</span>
+									</a>
+								</li>
+								<li class="divider"></li>
+								<li class="li_kh">
+									<a href="#">
+										<i class="icon-sc"></i>
+										<span class="font_04">实收业绩</span>
+									</a>
+								</li>
+								<li class="li_kh">
+									<a href="#">
+										<i class="icon-sca"></i>
+										<span class="font_04">摄影业绩</span>
+									</a>
+								</li>
+								<li class="divider"></li>
+                                <li class="li_kh">
+									<a href="#">
+										<i class="icon-offb"></i>
+									     <span class="font_05">修改密码</span>
+									</a>
+								</li>
+								<li class="divider"></li>
+								<li class="li_kh">
+									<a href="#">
+										<i class="icon-ic"></i>
+									     <span class="font_05">升级记录</span>
+									</a>
+								</li>
+								<li class="divider"></li>
+								<li class="li_kh">
+									<a href="#">
+										<i class="icon-offc"></i>
+										 <span class="font_04">退出</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+                    <!--/.ace-nav-->
+				</div>
+				<div class="navbar-header pull-right" style="padding:9px 0">                	
+						<div class="nav-search" id="nav-search">
+                            <form class="form-search">
+                                <span class="input-icon">
+                                    <input type="text" placeholder="输入订单编号..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                                    <i class="icon-search nav-search-icon"></i>
+                                </span>
+                                <a href="#" class="sear_btn" id="s_search">搜索</a>
+                            </form>
+						</div><!-- #nav-search -->
+                        <script type="text/javascript"><!--搜索按钮颜色 -->
+							$(function(){
+								$("#nav-search-input").focus(function(){
+									$("#s_search").addClass('sear_act');
+								});
+								$("#nav-search-input").blur(function(){
+									$("#s_search").removeClass('sear_act');
+								});
+							});
+						</script>
+                </div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+		<div class="main-container" id="main-container">
+			<div class="main-container-inner">
+            	<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+				<div class="sidebar" id="sidebar">
+					<!--左侧主导航 -->
+					<ul class="nav nav-list" id="n-list" style="overflow-y:auto">
+                    	<li id="top_logo2">
+							<div class="wb-logo">北京华洛华洛华洛华洛</div>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-group"></i>
+								<span class="menu-text">客户资源系统</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="crm/index.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										客户资料管理
+									</a>
+								</li>
+								<li>
+									<a href="crm/派活人.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										话务统计分析
+									</a>
+								</li>
+								<li>
+									<a href="MessageSet/即时短信发送.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										即时短信发送
+									</a>
+								</li>
+								<li>
+									<a href="MessageSet/规则短信发送.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										规则短信发送
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-cloud-download"></i>
+								<span class="menu-text">门市销售系统</span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="MenShi/Dingd.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										订单查询
+									</a>
+								</li>
+								<li>
+									<a href="MenShi/gzpc.html"target="I2">
+										<i class="icon-double-angle-right"></i>
+										工作排程
+									</a>
+								</li>
+								<!--<li>-->
+									<!--<a href="#">-->
+										<!--<i class="icon-double-angle-right"></i>-->
+										<!--前台收款-->
+									<!--</a>-->
+								<!--</li>-->
+								<!--<li>-->
+									<!--<a href="#">-->
+										<!--<i class="icon-double-angle-right"></i>-->
+										<!--押金管理-->
+									<!--</a>-->
+								<!--</li>-->
+                                 <li>
+									<a href="JieShow/介绍人维护.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										介绍人维护
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-leaf"></i>
+								<span class="menu-text">礼服管理系统</span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="MenShi/Dingd.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										礼服客户查询
+									</a>
+								</li>
+								<li>
+									<a href="MenShi/gzpc.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										挑选礼服客户排程
+									</a>
+								</li>
+								<li>
+									<a href="FuShi/SelectDress.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										单一礼服查询
+									</a>
+								</li>
+								<li>
+									<a href="FuShi/lfcj.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										礼服出件单
+									</a>
+								</li>
+                                <li>
+                                    <a href="FuShi/lfdz.html" target="I2">
+                                        <i class="icon-double-angle-right"></i>
+                                        男士礼服定制
+                                    </a>
+                                </li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-eye-open"></i>
+								<span class="menu-text">化妆管理系统</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+                                <li>
+                                    <a href="MenShi/Dingd.html" target="I2">
+                                        <i class="icon-double-angle-right"></i>
+                                        化妆客户查询
+                                    </a>
+                                </li>
+								<li>
+									<a href="MenShi/gzpc.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										化妆排程
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-camera"></i>
+								<span class="menu-text">摄影管理系统</span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="MenShi/Dingd.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										摄影客户查询
+									</a>
+								</li>
+								<li>
+									<a href="MenShi/gzpc.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										摄影客户排程
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-inbox"></i>
+								<span class="menu-text">取件管理系统</span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="MenShi/Dingd.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										取件订单查询
+									</a>
+								</li>
+								<li>
+									<a href="MenShi/gzpc.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										取件客户排程
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-folder-open-alt"></i>
+								<span class="menu-text">电子工作簿</span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="ZhangBu/电子工作簿.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										摄影工作簿
+									</a>
+								</li>
+								<li>
+									<a href="ZhangBu/电子工作簿设定.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										礼服工作簿
+									</a>
+								</li>
+								<li>
+									<a href="LSan/LS_list.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										化妆工作簿
+									</a>
+								</li>
+								<li>
+									<a href="LSan/LS_de.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										儿童工作簿
+									</a>
+								</li>
+								<li>
+									<a href="MenShi/TimeSet.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										显示设定
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-desktop"></i>
+								<span class="menu-text">易用办公系统</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="OA/WorkReport.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										工作汇报
+									</a>
+								</li>
+                                <li>
+                                    <a href="OA/Work.html" target="I2">
+                                        <i class="icon-double-angle-right"></i>
+                                        工作任务
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="OA/WorkSQ.html" target="I2">
+                                        <i class="icon-double-angle-right"></i>
+                                        申请流程
+                                    </a>
+                                </li>
+								<li>
+									<a href="OA/WorkSP.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										审批设定
+									</a>
+								</li>
+								<li>
+									<a href="OA/oaMesg.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										收到消息
+									</a>
+								</li>
+								<li>
+									<a href="OA/YGrec.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										个人考勤
+									</a>
+								</li>
+								<li>
+									<a href="OA/KQTJ.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										考勤统计
+									</a>
+								</li>
+								<li>
+									<a href="OA/YGid.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										通讯录
+									</a>
+								</li>
+								<li>
+									<a href="OA/JRinf.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										今日通知
+									</a>
+								</li>
+								<li>
+									<a href="OA/YGPB.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										员工排班
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-credit-card"></i>
+								<span class="menu-text"> 会员管理系统 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="VIP/vip.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										会员中心
+									</a>
+								</li>
+								<li>
+									<a href="VIP/vip2.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										会员统计
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-comment"></i>
+								<span class="menu-text"> 客服短信系统 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="MessageSet/即时短信发送.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										即时短信发送
+									</a>
+								</li>
+								<li>
+									<a href="MessageSet/规则短信发送.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										规则短信发送
+									</a>
+								</li>
+								<li>
+									<a href="MessageSet/特定短信发送.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										特定短信发送
+									</a>
+								</li>
+								<li>
+									<a href="PingJ/PingJ.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										客户评价
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-exchange"></i>
+								<span class="menu-text"> 后期管理系统 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="LiuCheng/送件流程.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										送件回件作业
+									</a>
+								</li>
+								<li>
+									<a href="LiuCheng/回件流程.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										厂商回件查询
+									</a>
+								</li>
+                                <li>
+									<a href="ZZLC/zzlc.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										制作流程管理
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-book"></i>
+								<span class="menu-text">零散件客户</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="LSan/LS_list.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										订单列表
+									</a>
+								</li>
+							</ul>
+						</li>
+						<!--<li>-->
+							<!--<a href="#">-->
+								<!--<i class="icon-film"></i>-->
+								<!--<span class="menu-text">选片系统</span>-->
+							<!--</a>-->
+						<!--</li>-->
+						<!--<li>-->
+							<!--<a href="#">-->
+								<!--<i class="icon-hdd"></i>-->
+								<!--<span class="menu-text">数码管控系统</span>-->
+							<!--</a>-->
+						<!--</li>-->
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-desktop"></i>
+								<span class="menu-text"> 核账管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="CaiW/财务.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										财务合账
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bar-chart"></i>
+								<span class="menu-text"> 统计分析系统 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="TongJi/实收统计.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										实收统计
+									</a>
+								</li>
+								<li>
+									<a href="TongJi/实收明细.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										实收明细
+									</a>
+								</li>
+								<li>
+									<a href="TongJi/服务进度.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										服务进度
+									</a>
+								</li>
+								<li>
+									<a href="TongJi/产品排行.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										产品排行
+									</a>
+								</li>
+								<li>
+									<a href="TongJi/包套.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										包套排行
+									</a>
+								</li>
+								<li>
+									<a href="TongJi/成本统计.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										成本统计
+									</a>
+								</li>
+								<li>
+									<a href="TongJi/客户统计.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										客户统计
+									</a>
+								</li>
+								<li>
+									<a href="TongJi/门市工作统计.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										门市工作统计
+									</a>
+								</li>
+								<li>
+									<a href="TongJi/成本统计.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										礼服工作统计
+									</a>
+								</li>
+								<li>
+									<a href="TongJi/摄影工作统计.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										摄影工作统计
+									</a>
+								</li>
+								<li>
+									<a href="TongJi/成本统计.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										化妆工作统计
+									</a>
+								</li>
+								<li>
+									<a href="TongJi/统计.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										工作统计
+									</a>
+								</li>
+								<li>
+									<a href="TongJi/成本统计.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										操作记录查询
+									</a>
+								</li>
+								<li>
+									<a href="TongJi/成本统计.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										摄影取件表
+									</a>
+								</li>
+								<li>
+									<a href="TongJi/成本统计.html" target="I2">
+										<i class="icon-double-angle-right"></i>
+										消费项目统计
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-cog"></i>
+								<span class="menu-text">系统设定</span>
+							</a>
+						</li> 
+					</ul>
+                    <!-- /.nav-list -->
+					<!--<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+					</div> -->
+				</div>
+				<!-- /.main-content -->
+                <div class="main-content" id="aaa">
+        			<iframe name="I2" border="0" frameborder="0" src="home.html" class="s_iframe"></iframe>   
+                </div> 
+				<!-- /#ace-settings-container -->
+			</div><!-- /.main-container-inner -->
+			<!--<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a> -->
+		</div><!-- /.main-container -->
+<div class="box" id="box_kd_t">
+  	<div class="box_tit">
+    	<div class="box_t_name">门市开单</div><a href="#" class="box_close close-reveal-modal"></a></div>
+  		<div id="TabbedPanels4" class="TabbedPanels">
+          <ul class="TabbedPanelsTabGroup">
+            <li class="TabbedPanelsTab" tabindex="0" style="margin-left:10px;">婚纱订单</li>
+            <li class="TabbedPanelsTab" tabindex="0">儿童订单</li>
+          </ul>
+    	<div class="TabbedPanelsContentGroup">
+            <div class="TabbedPanelsContent">
+            	<!--婚纱订单 -->
+                <div class="box_kd_con">
+                    <div class="box_kd_tz">
+                        <div class="box_in5" style="margin-right:10px;"><span>会员卡号</span><input name="" type="text" /></div>
+                        <div class="box_in4"><label class="labelio mian_labelio crm_labelio"><input name="" type="checkbox" value=""><span>不接受短信通知</span></label></div>
+                    </div>
+                    <div class="box_line"></div>
+                    <div class="box_in2">
+                        <span>客户编号</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                      </select>
+                    </div>
+                    <div class="box_in2">
+                        <span>预约日期</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                  </div>
+                     <div class="box_in2">
+                        <span>消费类型</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                     </div>
+                     <div class="box_in2">
+                        <span>门市接待</span>
+                        <select name="select"  class="box_in2_sel" >
+                          <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                     </div>
+                  <div class="box_line"></div>
+                     <div class="box_in2">
+                        <span>接&nbsp;&nbsp;单&nbsp;&nbsp;点</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                       </select>
+                  </div>
+                      <div class="box_in2">
+                        <span>客户来源</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                      <div class="box_in2">
+                        <span>男士姓名</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                      <div class="box_in2">
+                        <span>男士手机</span>
+                        <select name="select"  class="box_in2_sel" >
+                           <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                      <div class="box_in2">
+                        <span>女士姓名</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                      <div class="box_in2">
+                        <span>男士手机</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                      <div class="box_in2">
+                            <span>会员卡号</span>
+                            <input name="" type="text" />
+                      </div>
+                      <button class="box_cx_btn" value="查询">查询</button>
+                      <div class="box_line"></div>
+                      <div class="box_kd_tit"><span>其他客户资料</span></div>
+                      <div class="box_in2">
+                        <span>微信账号</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                      <div class="box_in2">
+                        <span>微博账号</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                      <div class="box_in2">
+                        <span>男士QQ</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                  </div>
+                      <div class="box_in2">
+                        <span>男士生日</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                      <div class="box_in2">
+                        <span>女士QQ</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                      <div class="box_in2">
+                        <span>女士生日</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                      <div class="box_in1"><span>居住地址</span><textarea name="" cols="" rows=""></textarea></div>
+                </div>
+                <!--婚纱订单-----------------end -->
+                <div class="gbox_btm"><a href="#" class="gbox_btn_clear close-reveal-modal">取消</a><button class="gbox_btn_save close-reveal-modal">保存</button></div>
+            </div>
+            <div class="TabbedPanelsContent">
+            	<div class="box_kd_line"></div>
+            	<!--儿童订单 -->
+                <div class="box_kd_con">
+                    <div class="box_kd_tz">
+                        <div class="box_in5" style="margin-right:10px;"><span>会员卡号</span><input name="" type="text" /></div>
+                        <div class="box_in4"><label class="labelio mian_labelio"><input name="" type="checkbox" value=""><span class="span_ms">不接受短信通知</span></label></div>
+                    </div>
+                    <div class="box_line"></div>
+                    <div class="box_in2">
+                        <span>客户编号</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                      </select>
+                    </div>
+                    <div class="box_in2">
+                        <span>预约日期</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                     </div>
+                     <div class="box_in2">
+                        <span>消费类型</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                     </div>
+                     <div class="box_in2">
+                        <span>门市接待</span>
+                        <select name="select"  class="box_in2_sel" >
+                          <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                     </div>
+                  <div class="box_line"></div>
+                     <div class="box_in2">
+                     	<!--<div class="ts">*</div>-->
+                        <span><small>*</small>接&nbsp;&nbsp;单&nbsp;&nbsp;点</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                       </select>
+                  </div>
+                      <div class="box_in2">
+                        <span>客户来源</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                      <div class="box_in2">
+                        <span>父亲姓名</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                      <div class="box_in2">
+                        <span>父亲手机</span>
+                        <select name="select"  class="box_in2_sel" >
+                           <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                      <div class="box_in2">
+                        <span>母亲姓名</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                      <div class="box_in2">
+                        <span>母亲手机</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                      <div class="box_in2">
+                        <span>宝宝姓名</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                      <div class="box_in2">
+                        <span>宝宝生日</span>
+                         <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                         </select>
+                      </div>
+                      <div class="box_show_data">阴历：二月初二&nbsp;&nbsp;&nbsp;生肖：马&nbsp;&nbsp;&nbsp;星座：双鱼座</div>
+                  		<div class="box_in2">
+                        <span>会员卡号</span>
+                        <input name="" type="text" />
+                	  </div>
+                      <button class="box_cx_btn" value="查询">查询</button>
+                      <div class="box_line"></div>
+                      <div class="box_kd_tit"><span>其他客户资料</span></div>
+                      <div class="box_in2">
+                        <span>微信账号</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                      <div class="box_in2">
+                        <span>微博账号</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                      <div class="box_in2">
+                        <span>爸爸QQ</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                      </div>
+                    <div class="box_in2">
+                        <span>妈妈生日</span>
+                        <select name="select"  class="box_in2_sel" >
+                            <option class="show_in_op">项目1</option>
+                            <option class="show_in_op">项目2</option>
+                            <option class="show_in_op">项目3</option>
+                            <option class="show_in_op">项目4</option>
+                            <option class="show_in_op">项目5</option>
+                        </select>
+                    </div>
+                    <div class="box_in1"><span>居住地址</span><textarea name="" cols="" rows=""></textarea></div>
+                </div>
+                <div class="gbox_btm"><a href="#" class="gbox_btn_clear close-reveal-modal">取消</a><button class="gbox_btn_save close-reveal-modal">保存</button></div>
+                <!--儿童订单------------end-->
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+</script>
+<script type="text/javascript">
+	if("ontouchend" in document)
+	  document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+</script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/typeahead-bs2.min.js"></script>
+<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+<script src="assets/js/jquery.slimscroll.min.js"></script>
+<script src="assets/js/jquery.easy-pie-chart.min.js"></script>
+<script src="assets/js/jquery.sparkline.min.js"></script>
+<script src="assets/js/flot/jquery.flot.min.js"></script>
+<script src="assets/js/flot/jquery.flot.pie.min.js"></script>
+<script src="assets/js/flot/jquery.flot.resize.min.js"></script>
+<!-- ace scripts -->
+<script src="assets/js/ace-elements.min.js"></script>
+<script src="assets/js/ace.min.js"></script>
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+	<!--iframe 高度 -->
+	$(window).load(function(){
+	 IfH();
+	});
+	$(window).resize(function() {
+	 IfH();
+	});
+	function IfH() {
+		var FH=$(window).height();
+		var H = parseInt(FH) - 50;
+		$(".s_iframe").css("height", H);	
+	}
+<!--左边导航高度 -->
+$(window).load(function(){
+	NavHeight();
+ });
+$(window).resize(function() {
+	NavHeight();
+});
+function NavHeight() {
+	var NavH=$(window).height();
+	var NH = parseInt(NavH) - 75;
+	$("#n-list").css("height",NH);
+}
+</script>
+<!--首页开单弹窗-->
+<script type="text/javascript" src="js/Mskd.js"></script>
+<script type="text/javascript">
+var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels4");
+</script> 
+<script>
+function launchFullscreen(element){
+  if(element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if(element.mozRequestFullScreen){
+    element.mozRequestFullScreen();
+  } else if(element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen();
+  } else if(element.msRequestFullscreen){
+    element.msRequestFullscreen();
+  }
+}
+</script>
+</body>
+</html>

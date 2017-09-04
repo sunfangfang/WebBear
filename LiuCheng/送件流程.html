@@ -1,0 +1,1023 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>送件流程</title>
+<link rel="stylesheet" href="../css/reset_s.css">
+<link rel="stylesheet" href="../css/table.css" />
+<link rel="stylesheet" href="../css/news.css" />
+<link rel="stylesheet" href="../css/pagination.css" />
+<link rel="stylesheet" href="../css/LiuCheng/liucheng.css">
+<link rel="stylesheet" href="../css/right.css"/>
+<link rel="stylesheet" href="../css/content.css"/>
+<link rel="stylesheet" href="../css/box.css"/>
+<link rel="stylesheet" type="text/css" href="../css/yt.css"/>
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../js/jquery.reveal.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/yt.js"></script>
+<script type="text/javascript">
+	$(window).load(function(){
+		  setDivMaxHeight();
+	 });
+	$(window).resize(function(){
+		setDivMaxHeight();
+	});
+	function setDivMaxHeight(){
+		var fg=$(window).height();
+		var h = parseInt(fg) -163;
+		$("#m_con").css("height", h);
+	}
+	function setDivMaxHeight(){
+		var ytfg=$(window).height();
+		var yth = parseInt(ytfg) -169;
+		$(".m_table").css("height", yth);
+	}
+	$(function(){
+		$(".labelio").click(function(){
+			$(this).find(".Mdivbg").toggleClass("Mdivbg01");
+		});
+		$(".span_ms").click(function(){
+			$(this).siblings(".Mdivbg").toggleClass("Mdivbg01");
+		});
+	});
+</script>
+<style>
+    .tb_bj{width:104px;}
+    #right_go{width:900px;}
+	@media(max-width:1024px){	
+		#m_con{
+			clear: both;
+			float: left;
+			height:auto;
+			width: 825px;
+			margin-left: 5px;
+			overflow: auto;
+			margin-top:10px;
+		}
+	   #right_go{width:566px;}
+	   #right_go table{width:1024px;}
+	   .box_con{min-height:372px;}
+	   /*.mt_s2 label span {
+		  margin-top: 3px;
+		}*/
+	}
+</style>
+</head>
+<body>
+<div class="m_top">
+    <div class="m_name">送件</div>
+    <div class="mt_btn"><a href="#">全未送</a><a href="#">未全送</a><a href="#">全送</a><a href="#" id="mt_sx_show">筛选</a></div>
+    <script type="text/javascript">
+	$(function(){
+		$("#mt_sx_show,.mt_search").click(function(){
+			$(".mt_sx").slideToggle();
+			});
+		});
+	</script>
+    <div class="mt_sx" style="top:43px;">
+    	<div class="mt_sx_arrow" style="margin-left:260px;"></div>
+        <div class="mt_sx_con">
+        	<div class="mt_s1">
+            	<span>取件地点：</span>
+        	    <select name="select">
+        	      <option>请选择取件地点</option>
+        	      <option>项目2</option>
+        	      <option>请选择日期类型</option>
+      	        </select>
+        	</div>
+        	<div class="mt_s1">
+            	<span>取件地点:</span>
+        	    <input type="text" placeholder="请输入客户编号/客户姓名/电话">
+        	</div>
+            <div class="mt_s1">
+                <span>日期类型：</span>
+                <select name="select">
+                  <option>项目1</option>
+                  <option>项目2</option>
+                  <option>项目3</option>
+                </select>
+            </div>
+           <div class="mt_s2">
+                <label class="labelio hj_labelio"><input name="" type="checkbox"  value=""><span class="span_ms">当次</span></label>
+                <label class="labelio hj_labelio"><input name="" type="checkbox" value="" ><span class="span_ms">完成</span></label>
+                <label class="labelio hj_labelio"><input name="" type="checkbox" value="" ><span class="span_ms">未完成</span></label>
+            </div>
+            <div class="mt_btm"><a href="#" class="mt_search tb_orange">查询</a></div>
+      	</div>
+    </div>
+</div>
+<!--页面主内容 -->
+<div id="m_con">
+    <div class="m_table">
+        <table class="table  table-hover  table-striped" style="width:1977px;">
+            <thead class="tb_th_bga">
+                <tr>
+                    <td>序号</td>
+                    <td>会员卡号</td>
+                    <td>会员类型</td>
+                    <td>会员姓名</td>
+                    <td>客户编号</td>
+                    <td>消费类型</td>
+                    <td>会员余额</td>
+                    <td>会员积分</td>
+                    <td>会员折扣</td>
+                    <td>游泳次数</td>
+                    <td>男士号码</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A1111</td>
+                    <td>55555555555</td>
+                    <td>会员类型</td>
+                    <td><a href="#" class="m_tab_link right_btn">张ab</a></td>
+                    <td>655126352132</td>
+                    <td>消费类型</td>
+                    <td><div class="tb_money">1000</div></td>
+                    <td>100</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>16786456345</td>
+                </tr>
+                <tr>
+                    <td>A1111</td>
+                    <td>55555555555</td>
+                    <td>会员类型</td>
+                    <td><a href="#" class="m_tab_link right_btn">张ab</a></td>
+                    <td>655126352132</td>
+                    <td>消费类型</td>
+                    <td><div class="tb_money">1000</div></td>
+                    <td>100</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>16786456345</td>
+                </tr>
+                <tr>
+                    <td>A1111</td>
+                    <td>55555555555</td>
+                    <td>会员类型</td>
+                    <td><a href="#" class="m_tab_link right_btn">张ab</a></td>
+                    <td>655126352132</td>
+                    <td>消费类型</td>
+                    <td><div class="tb_money">1000</div></td>
+                    <td>100</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>16786456345</td>
+                </tr>
+                <tr>
+                    <td>A1111</td>
+                    <td>55555555555</td>
+                    <td>会员类型</td>
+                    <td><a href="#" class="m_tab_link right_btn">张ab</a></td>
+                    <td>655126352132</td>
+                    <td>消费类型</td>
+                    <td><div class="tb_money">1000</div></td>
+                    <td>100</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>16786456345</td>
+                </tr>
+                <tr>
+                    <td>A1111</td>
+                    <td>55555555555</td>
+                    <td>会员类型</td>
+                    <td><a href="#" class="m_tab_link right_btn">张ab</a></td>
+                    <td>655126352132</td>
+                    <td>消费类型</td>
+                    <td><div class="tb_money">1000</div></td>
+                    <td>100</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>16786456345</td>
+                </tr>
+                <tr>
+                    <td>A1111</td>
+                    <td>55555555555</td>
+                    <td>会员类型</td>
+                    <td><a href="#" class="m_tab_link right_btn">张ab</a></td>
+                    <td>655126352132</td>
+                    <td>消费类型</td>
+                    <td><div class="tb_money">1000</div></td>
+                    <td>100</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>16786456345</td>
+                </tr>
+                <tr>
+                    <td>A1111</td>
+                    <td>55555555555</td>
+                    <td>会员类型</td>
+                    <td><a href="#" class="m_tab_link right_btn">张ab</a></td>
+                    <td>655126352132</td>
+                    <td>消费类型</td>
+                    <td><div class="tb_money">1000</div></td>
+                    <td>100</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>16786456345</td>
+                </tr>
+                <tr>
+                    <td>A1111</td>
+                    <td>55555555555</td>
+                    <td>会员类型</td>
+                    <td><a href="#" class="m_tab_link right_btn">张ab</a></td>
+                    <td>655126352132</td>
+                    <td>消费类型</td>
+                    <td><div class="tb_money">1000</div></td>
+                    <td>100</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>16786456345</td>
+                </tr>
+                <tr>
+                    <td>A1111</td>
+                    <td>55555555555</td>
+                    <td>会员类型</td>
+                    <td><a href="#" class="m_tab_link right_btn">张ab</a></td>
+                    <td>655126352132</td>
+                    <td>消费类型</td>
+                    <td><div class="tb_money">1000</div></td>
+                    <td>100</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>16786456345</td>
+                </tr>
+                <tr>
+                    <td>A1111</td>
+                    <td>55555555555</td>
+                    <td>会员类型</td>
+                    <td><a href="#" class="m_tab_link right_btn">张ab</a></td>
+                    <td>655126352132</td>
+                    <td>消费类型</td>
+                    <td><div class="tb_money">1000</div></td>
+                    <td>100</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>16786456345</td>
+                </tr>
+                <tr>
+                    <td>A1111</td>
+                    <td>55555555555</td>
+                    <td>会员类型</td>
+                    <td><a href="#" class="m_tab_link right_btn">张ab</a></td>
+                    <td>655126352132</td>
+                    <td>消费类型</td>
+                    <td><div class="tb_money">1000</div></td>
+                    <td>100</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>16786456345</td>
+                </tr>
+                <tr>
+                    <td>A1111</td>
+                    <td>55555555555</td>
+                    <td>会员类型</td>
+                    <td><a href="#" class="m_tab_link right_btn">张ab</a></td>
+                    <td>655126352132</td>
+                    <td>消费类型</td>
+                    <td><div class="tb_money">1000</div></td>
+                    <td>100</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>16786456345</td>
+                </tr>
+                <tr>
+                    <td>A1111</td>
+                    <td>55555555555</td>
+                    <td>会员类型</td>
+                    <td><a href="#" class="m_tab_link right_btn">张ab</a></td>
+                    <td>655126352132</td>
+                    <td>消费类型</td>
+                    <td><div class="tb_money">1000</div></td>
+                    <td>100</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>16786456345</td>
+                </tr>
+                <tr>
+                    <td>A1111</td>
+                    <td>55555555555</td>
+                    <td>会员类型</td>
+                    <td><a href="#" class="m_tab_link right_btn">张ab</a></td>
+                    <td>655126352132</td>
+                    <td>消费类型</td>
+                    <td><div class="tb_money">1000</div></td>
+                    <td>100</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>16786456345</td>
+                </tr>
+                <tr>
+                    <td>A1111</td>
+                    <td>55555555555</td>
+                    <td>会员类型</td>
+                    <td><a href="#" class="m_tab_link right_btn">张ab</a></td>
+                    <td>655126352132</td>
+                    <td>消费类型</td>
+                    <td><div class="tb_money">1000</div></td>
+                    <td>100</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>16786456345</td>
+                </tr>
+                <tr>
+                    <td>A1111</td>
+                    <td>55555555555</td>
+                    <td>会员类型</td>
+                    <td><a href="#" class="m_tab_link right_btn">张ab</a></td>
+                    <td>655126352132</td>
+                    <td>消费类型</td>
+                    <td><div class="tb_money">1000</div></td>
+                    <td>100</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>16786456345</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>   
+</div>    
+    <!--页面主内容-------------end -->
+<div class="tb_foot">
+    <div class="tb_bottom"><!--公共底部功能（显示，按钮，分页） -->
+        <div class="lc_bq"><div class="m_mark"><span class="blue"></span></div>流程中间：6</div>
+        <div class="lc_bq"><div class="m_mark"><span class="green"></span></div>逾期件：4</div>
+        <div class="lc_bq"><div class="m_mark"><span class="red"></span></div>准时回件：6</div>
+        <div class="lc_bq"><div class="m_mark"><span class="purple"></span></div>准时回件：6</div>
+        <div class="lc_bq"><div class="m_mark"><span class="gray"></span></div>退件：6</div>
+    </div> 
+    <div class="tb_bottom"><!--公共底部功能（显示，按钮，分页） -->
+        <div class="tb_pag">
+             <span class="tb_pag_xs"> 每页显示20条&nbsp;&nbsp;共<label id="lblTotalCount">29</label>条 </span>
+             <div class="quotes" id="Pagination">
+                 <span class="prev">&nbsp;&nbsp;&nbsp;</span>
+                 <span class="current">5</span>
+                 <a href="#">1</a>
+                 <a href="#">2</a>
+                 <a href="#">3</a>
+                 <a href="#">4</a>
+                 <a href="#">6</a>
+                 <a href="#">7</a>
+                 <a href="#">8</a>
+                 <a href="#" class="next">&nbsp;&nbsp;&nbsp;</a>
+             </div>
+        </div>
+    </div>
+    <!--copyright -->
+   <!-- <div class="ft_tel">北京熊宝贝科技发展有限公司 技术支持：400-100-7592</div>-->
+</div>
+<!--右推效果内容 -->
+<div id="right_go" class="sidr-right"><!--宽度根据页面需要自定义，不能写百分比 -->
+    <a href="#" class="myt_close clo_yt"></a>
+    <!--内容区域 -->
+    <div class="myt_con">
+        <div id="TabbedPanels1" class="TabbedPanels">
+            <ul class="TabbedPanelsTabGroup">
+                <li class="TabbedPanelsTab" tabindex="0" style="margin-left:10px;">送件控制区</li>
+                <li class="TabbedPanelsTab" tabindex="0">回件控制区</li>
+            </ul>
+            <div class="TabbedPanelsContentGroup">
+                <div class="TabbedPanelsContent">
+                    <div class="m_table m_tablep" style="overflow:auto;">
+                        <table class="table  table-hover  table-striped tablewid">
+                            <thead>
+                                <tr>
+                                    <td class="tb_bor_right">编号</td>
+                                    <td>状态</td>
+                                    <td>店铺名称</td>
+                                    <td>序</td>
+                                    <td>消费项目</td>
+                                    <td>服次</td>
+                                    <td>数量</td>
+                                    <td>次数</td>
+                                    <td>整件完成</td>
+                                    <td>取件时间</td>
+                                    <td>到店</td>
+                                    <td>备注</td>
+                                    <td>选片备注</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td>北京施华洛婚纱摄影</td>
+                                    <td>1</td>
+                                    <td><a href="#" class="m_tab_link" data-reveal-id="hj_t">淡雅百合奢华纹理套册</a></td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>完成</td>
+                                    <td>2015-12-25</td>
+                                    <td>是</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="gray"></span></div></td>
+                                    <td>北京施华洛婚纱摄影</td>
+                                    <td>1</td>
+                                    <td><a href="#" class="m_tab_link" data-reveal-id="hj_t">淡雅百合奢华纹理套册</a></td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>完成</td>
+                                    <td>2015-12-25</td>
+                                    <td>是</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="red"></span></div></td>
+                                    <td>北京施华洛婚纱摄影</td>
+                                    <td>1</td>
+                                    <td><a href="#" class="m_tab_link" data-reveal-id="hj_t">淡雅百合奢华纹理套册</a></td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>完成</td>
+                                    <td>2015-12-25</td>
+                                    <td>是</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="blue"></span></div></td>
+                                    <td>北京施华洛婚纱摄影</td>
+                                    <td>1</td>
+                                    <td><a href="#" class="m_tab_link" data-reveal-id="hj_t">淡雅百合奢华纹理套册</a></td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>完成</td>
+                                    <td>2015-12-25</td>
+                                    <td>是</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="blue"></span></div></td>
+                                    <td>北京施华洛婚纱摄影</td>
+                                    <td>1</td>
+                                    <td><a href="#" class="m_tab_link" data-reveal-id="hj_t">淡雅百合奢华纹理套册</a></td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>完成</td>
+                                    <td>2015-12-25</td>
+                                    <td>是</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td>北京施华洛婚纱摄影</td>
+                                    <td>1</td>
+                                    <td><a href="#" class="m_tab_link" data-reveal-id="hj_t">淡雅百合奢华纹理套册</a></td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>完成</td>
+                                    <td>2015-12-25</td>
+                                    <td>是</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td>北京施华洛婚纱摄影</td>
+                                    <td>1</td>
+                                    <td><a href="#" class="m_tab_link" data-reveal-id="hj_t">淡雅百合奢华纹理套册</a></td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>完成</td>
+                                    <td>2015-12-25</td>
+                                    <td>是</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td>北京施华洛婚纱摄影</td>
+                                    <td>1</td>
+                                    <td><a href="#" class="m_tab_link" data-reveal-id="hj_t">淡雅百合奢华纹理套册</a></td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>完成</td>
+                                    <td>2015-12-25</td>
+                                    <td>是</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td>北京施华洛婚纱摄影</td>
+                                    <td>1</td>
+                                    <td><a href="#" class="m_tab_link" data-reveal-id="hj_t">淡雅百合奢华纹理套册</a></td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>完成</td>
+                                    <td>2015-12-25</td>
+                                    <td>是</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td>北京施华洛婚纱摄影</td>
+                                    <td>1</td>
+                                    <td><a href="#" class="m_tab_link" data-reveal-id="hj_t">淡雅百合奢华纹理套册</a></td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>完成</td>
+                                    <td>2015-12-25</td>
+                                    <td>是</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td>北京施华洛婚纱摄影</td>
+                                    <td>1</td>
+                                    <td><a href="#" class="m_tab_link" data-reveal-id="hj_t">淡雅百合奢华纹理套册</a></td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>完成</td>
+                                    <td>2015-12-25</td>
+                                    <td>是</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td>北京施华洛婚纱摄影</td>
+                                    <td>1</td>
+                                    <td><a href="#" class="m_tab_link" data-reveal-id="hj_t">淡雅百合奢华纹理套册</a></td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>完成</td>
+                                    <td>2015-12-25</td>
+                                    <td>是</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td>北京施华洛婚纱摄影</td>
+                                    <td>1</td>
+                                    <td><a href="#" class="m_tab_link" data-reveal-id="hj_t">淡雅百合奢华纹理套册</a></td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>完成</td>
+                                    <td>2015-12-25</td>
+                                    <td>是</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td>北京施华洛婚纱摄影</td>
+                                    <td>1</td>
+                                    <td><a href="#" class="m_tab_link" data-reveal-id="hj_t">淡雅百合奢华纹理套册</a></td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>完成</td>
+                                    <td>2015-12-25</td>
+                                    <td>是</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td>北京施华洛婚纱摄影</td>
+                                    <td>1</td>
+                                    <td><a href="#" class="m_tab_link" data-reveal-id="hj_t">淡雅百合奢华纹理套册</a></td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>完成</td>
+                                    <td>2015-12-25</td>
+                                    <td>是</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tb_bottom">
+                        <div class="bottom_xx"><div class="m_mark"><span class="blue"></span></div>流程中间：7</div>
+                        <div class="bottom_xx"><div class="m_mark"><span class="green"></span></div>逾期件：4</div>
+                        <div class="bottom_xx"><div class="m_mark"><span class="red"></span></div>准时回件：6</div>
+                        <div class="bottom_xx"><div class="m_mark"><span class="gray"></span></div>退件：6</div>
+                    </div>
+                    <div class="tb_bottom">
+                        <a href="#" class="tb_btn tb_green" data-reveal-id="hj_t">快速完成</a>
+                        <a href="#" class="tb_btn tb_blue" data-reveal-id="hj_t">无项目送件</a>
+                        <a href="#" class="tb_btn tb_orange" data-reveal-id="hj_t">批量送件</a>
+                        <div class="tb_pag">
+                             <span class="tb_pag_xs"> 每页显示20条&nbsp;&nbsp;共<label id="lblTotalCount">29</label>条 </span>
+                             <div class="quotes" id="Pagination">
+                                 <span class="prev">&nbsp;&nbsp;&nbsp;</span>
+                                 <span class="current">5</span>
+                                 <a href="#">1</a>
+                                 <a href="#">2</a>
+                                 <a href="#">3</a>
+                                 <a href="#">4</a>
+                                 <a href="#">6</a>
+                                 <a href="#">7</a>
+                                 <a href="#">8</a>
+                                 <a href="#" class="next">&nbsp;&nbsp;&nbsp;</a>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="TabbedPanelsContent">
+                	<div class="m_table" style="overflow:auto;">
+                        <table class="table table-hover table-striped tablewid">
+                            <thead>
+                                <tr>
+                                    <td class="tb_bor_right">编号</td>
+                                    <td>状态</td>
+                                    <td>操作</td>
+                                    <td>消费项目</td>
+                                    <td>厂商名称</td>
+                                    <td>代工项目</td>
+                                    <td>规格</td>
+                                    <td>服次</td>
+                                    <td>数量</td>
+                                    <td>P数</td>
+                                    <td>单价</td>
+                                    <td>小计</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td class="tb_bj_btn">
+                                        <div class="tb_bj"><a href="#" data-reveal-id="hj_t">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                    </td>
+                                    <td>480张底片全部进行修改</td>
+                                    <td>八月照相馆（库房提供）</td>
+                                    <td>原片刻盘</td>
+                                    <td>008-原片刻盘</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td class="tb_bj_btn">
+                                        <div class="tb_bj"><a href="#" data-reveal-id="hj_t">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                    </td>
+                                    <td>480张底片全部进行修改</td>
+                                    <td>八月照相馆（库房提供）</td>
+                                    <td>原片刻盘</td>
+                                    <td>008-原片刻盘</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td class="tb_bj_btn">
+                                        <div class="tb_bj"><a href="#" data-reveal-id="hj_t">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                    </td>
+                                    <td>480张底片全部进行修改</td>
+                                    <td>八月照相馆（库房提供）</td>
+                                    <td>原片刻盘</td>
+                                    <td>008-原片刻盘</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td class="tb_bj_btn">
+                                        <div class="tb_bj"><a href="#" data-reveal-id="hj_t">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                    </td>
+                                    <td>480张底片全部进行修改</td>
+                                    <td>八月照相馆（库房提供）</td>
+                                    <td>原片刻盘</td>
+                                    <td>008-原片刻盘</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td class="tb_bj_btn">
+                                        <div class="tb_bj"><a href="#" data-reveal-id="hj_t">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                    </td>
+                                    <td>480张底片全部进行修改</td>
+                                    <td>八月照相馆（库房提供）</td>
+                                    <td>原片刻盘</td>
+                                    <td>008-原片刻盘</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td class="tb_bj_btn">
+                                        <div class="tb_bj"><a href="#" data-reveal-id="hj_t">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                    </td>
+                                    <td>480张底片全部进行修改</td>
+                                    <td>八月照相馆（库房提供）</td>
+                                    <td>原片刻盘</td>
+                                    <td>008-原片刻盘</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td class="tb_bj_btn">
+                                        <div class="tb_bj"><a href="#" data-reveal-id="hj_t">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                    </td>
+                                    <td>480张底片全部进行修改</td>
+                                    <td>八月照相馆（库房提供）</td>
+                                    <td>原片刻盘</td>
+                                    <td>008-原片刻盘</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td class="tb_bj_btn">
+                                        <div class="tb_bj"><a href="#" data-reveal-id="hj_t">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                    </td>
+                                    <td>480张底片全部进行修改</td>
+                                    <td>八月照相馆（库房提供）</td>
+                                    <td>原片刻盘</td>
+                                    <td>008-原片刻盘</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td class="tb_bj_btn">
+                                        <div class="tb_bj"><a href="#" data-reveal-id="hj_t">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                    </td>
+                                    <td>480张底片全部进行修改</td>
+                                    <td>八月照相馆（库房提供）</td>
+                                    <td>原片刻盘</td>
+                                    <td>008-原片刻盘</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bor_right"><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                                    <td><div class="m_mark"><span class="green"></span></div></td>
+                                    <td class="tb_bj_btn">
+                                        <div class="tb_bj"><a href="#" data-reveal-id="hj_t">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                    </td>
+                                    <td>480张底片全部进行修改</td>
+                                    <td>八月照相馆（库房提供）</td>
+                                    <td>原片刻盘</td>
+                                    <td>008-原片刻盘</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tb_bottom">
+                        <div class="bottom_xx"><div class="m_mark"><span class="blue"></span></div>流程中间：6</div>
+                        <div class="bottom_xx"><div class="m_mark"><span class="green"></span></div>逾期件：4</div>
+                        <div class="bottom_xx"><div class="m_mark"><span class="red"></span></div>准时回件：6</div>
+                        <div class="bottom_xx"><div class="m_mark"><span class="gray"></span></div>退件：6</div>
+                    </div>
+                    <div class="tb_bottom">
+                        <a href="#" class="tb_btn tb_green" data-reveal-id="hj_t">打印</a>
+                        <a href="#" class="tb_btn tb_blue" data-reveal-id="hj_t">打印条码</a>
+                        <a href="#" class="tb_btn tb_orange" data-reveal-id="hj_t">批量送件</a>
+                        <div class="tb_pag">
+                             <span class="tb_pag_xs"> 每页显示20条&nbsp;&nbsp;共<label id="lblTotalCount">29</label>条 </span>
+                             <div class="quotes" id="Pagination">
+                                 <span class="prev">&nbsp;&nbsp;&nbsp;</span>
+                                 <span class="current">5</span>
+                                 <a href="#">1</a>
+                                 <a href="#">2</a>
+                                 <a href="#">3</a>
+                                 <a href="#">4</a>
+                                 <a href="#">6</a>
+                                 <a href="#">7</a>
+                                 <a href="#">8</a>
+                                 <a href="#" class="next">&nbsp;&nbsp;&nbsp;</a>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--回件作业弹窗 -->
+<div class="box" id="hj_t">
+	<div class="box_tit">
+    	<div class="box_t_name">回件作业</div> 
+        <a href="#" class="box_close close-reveal-modal"></a>
+    </div>
+    <div class="box_con">
+        <div class="box_in2">
+            <span>厂商名称</span>
+            <select name="select" class="box_in2_sel" >
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+        <div class="box_in2">
+            <span>代工产品</span>
+            <input name="" type="text" />
+        </div>
+        <div class="box_in2">
+            <span>消费项目</span>
+            <select name="select"  class="box_in2_sel" >
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+        <div class="box_in2">
+            <span>项目数量</span>
+            <input name="" type="text" />
+        </div>
+        <div class="box_in2">
+            <span>项目P数</span>
+            <select name="select"  class="box_in2_sel" >
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+        <div class="box_in2">
+            <span>赠送数量</span>
+            <input name="" type="text" />
+        </div>
+        <div class="box_in2">
+            <span>输出面积</span>
+            <input name="" type="text" />
+        </div>
+        <div class="box_in2">
+            <span>输出单价</span>
+            <input name="" type="text" />
+        </div>
+        <div class="box_in8">
+            <span>规&nbsp;&nbsp;&nbsp;&nbsp;格</span>
+            <input name="" type="text" />
+        </div>
+        <div class="box_in1">
+            <span>备&nbsp;&nbsp;&nbsp;&nbsp;注</span>
+            <textarea name="" cols="" rows=""></textarea>
+        </div>
+        <div class="box_line"></div>
+        <div class="box_in2">
+            <span>送件日期</span>
+            <select name="select"  class="box_in2_sel" >
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+        <div class="box_in7">
+        	<label style="margin-left:10px;">
+        	<input name="" type="checkbox" value="" />
+            <span>退&nbsp;&nbsp;&nbsp;&nbsp;件</span>
+            </label>
+            <select name="select"  class="box_in2_sel" >
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+    </div>
+  <div class="gbox_btm"><a href="#" class="gbox_btn_clear close-reveal-modal">取消</a><button class="gbox_btn_save close-reveal-modal">保存</button></div>
+</div>  
+<!--回件作业弹窗-------------end -->
+<script type="text/javascript"><!--右推tab切换 -->
+	$('#myTab a').click(function(e){
+		e.preventDefault();
+		$(this).tab('show');
+	});
+</script>
+<!--右推脚本 -->
+<script type="text/javascript">
+	$(function(){
+	  $(".sidr-right").css({"right":-900});
+	  $(".m_tab_link").click(function(){
+		  $(".sidr-right").animate({
+				right: '0'
+		  });
+	   });
+	  $(".myt_close").click(function(){
+		  $(".sidr-right").animate({
+				right: '-900px'
+			});
+		  });
+	 });
+</script>
+<script type="text/javascript">
+$(function(){
+	$(".tb_sx").mouseover(function(){
+		$(this).children('ul').show();
+		});
+	$(".tb_sx").mouseout(function(){
+		$(this).children('ul').hide();
+		});
+//		$(".tb_sx_px li a").click(function(){
+//			$(".tb_sx_px li a").removeClass('tb_sx_bg');
+//			$(this).addClass('tb_sx_bg');
+//			});          //筛选功能需要选中状态时候开启
+	$(".tb_bj_btn").mouseover(function(){
+		$(this).children('div').show();
+    });
+	$(".tb_bj_btn").mouseout(function(){
+		$(this).children('div').hide();
+	 });
+	$(".tb_del").click(function(){
+		$(this).parentsUntil('table tbody').remove();
+		});
+	});
+</script>
+<!--table选中状态 -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('table tbody tr:odd').addClass('mtr_bg');
+	$(".table tbody tr").click(function(){
+		$('table tbody tr').removeClass('mtr_bg_act');
+		$('table tbody tr:odd').addClass('mtr_bg');
+		$(this).removeClass('mtr_bg');
+		$(this).addClass('mtr_bg_act');
+		});
+});
+var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+</script>
+</body>
+</html>

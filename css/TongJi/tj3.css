@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document 20160331 by houhaixiaofeixia */
+
+.m_cz {
+	float: left;
+	height: auto;
+	width: 19.7%;
+	overflow: auto;
+}
+.m_cy {
+	float: right;
+	width: 79.7%;
+	overflow: auto;
+}
+.m_cz2 {
+	float: left;
+	height: auto;
+	width: 34.7%;
+	overflow: auto;
+}
+.m_cy2 {
+	float: right;
+	width: 64.7%;
+	overflow: auto;
+}
+.m_cz,.m_cy,.m_cz2,.m_cy2,.m_cz3,.m_cy3{ background-color:#fff;}
+
+.tj_table {
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.m_cz3 {
+	float: left;
+	width: 100%;
+	overflow: auto;
+	clear: both;
+	height: 56.7%;
+}
+.m_cy3 {
+	margin-top: 0.5%;
+	float: left;
+	height: 29%;
+	width: 100%;
+	overflow: auto;
+	clear: both;
+}
+.mcz3_bot {
+	clear: both;
+	float: left;
+	height: 6%;
+	width: 100%;
+	background-color:#FFF;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #e1e1e1;
+	min-height:35px;
+}
+

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页</title>
+<link rel="stylesheet" type="text/css" href="css/reset_s.css">
+<link rel="stylesheet" type="text/css" href="css/index/myrl.css">
+<link rel="stylesheet" type="text/css" href="css/index/index.css">
+<script src="js/index/jquery-2.1.3.min.js"></script>
+<script src="js/index/calendar.js"></script>
+<script>
+    $(function(){
+		$(".divtopleft").find("li").mouseover(function(){
+			$(this).find(".div01").addClass("hover1");
+		}).mouseout(function(){
+			$(this).find(".div01").removeClass("hover1");
+		});
+		var b=$(".divson1").attr("src");
+		$(".divson1").click(function(){
+			location.href=b;
+		});
+		$(".divson2").click(function(){
+			location.href=$(".divson2").attr("src");
+		});
+		$(".divson3").click(function(){
+			location.href=$(".divson3").attr("src");
+		});
+		$(".divson4").click(function(){
+			location.href=$(".divson4").attr("src");
+		});
+		$(".divson5").click(function(){
+			location.href=$(this).attr("src");
+		});
+		var n=$(".divson6").attr("src");
+		$(".divson6").click(function(){
+			location.href=n;
+		});
+		$(".divson7").click(function(){            
+			location.href=$(this).attr("src");
+		});
+       $(".divson8").click(function(){
+			location.href=$(this).attr("src");
+		});
+		var c=$(".li1").attr("src");
+		$(".li1").click(function(){
+			location.href=c;
+	    });                                                        
+	});
+</script>
+</head>
+<body>
+<div id="index_con">
+        <div class="divtop">
+             <div class="divtopleft clearfix">
+                  <ul class="ulcontentleft">
+                    <li class="li1" src="MenShi/Dingdzheng.html">
+                        <a href="#2" class="ali"><img src="img/index/01_03.png"/></a>
+                        <div class="div01">
+                            <p>今日预约客户</p>
+                            <p style="margin-top:5px;">26</p>
+                        </div>
+                     </li>
+                     <li class="libottom li1" src="MenShi/Dingdzheng.html">
+                        <a href="#2" class="ali"><img src="img/index/01_09.png"/></a>
+                        <div class="div01">
+                            <p>今日预约客户</p>
+                            <p style="margin-top:5px;">26</p>
+                        </div>
+                    </li>
+                 </ul>
+                  <ul class="ulcontentright" src="MenShi/Dingdzheng.html">
+                    <li class="li1">
+                        <a href="#2" class="ali"><img src="img/index/01_05.png"/></a>
+                        <div class="div01">
+                            <p>今日预约客户</p>
+                            <p style="margin-top:5px;">26</p>
+                        </div>
+                    </li>
+                     <li class="libottom li1" src="MenShi/Dingdzheng.html">
+                        <a href="#2" class="ali"><img src="img/index/01_11.png"/></a>
+                        <div class="div01">
+                            <p>今日预约客户</p>
+                            <p style="margin-top:5px;">26</p>
+                        </div>
+                    </li>
+                 </ul>
+             </div>
+             <div class="divtopright"> 
+                <div id="myrl">
+                    <form name=CLD>
+                      <TABLE class="biao" width="100%" id="sucaijiayuan">
+                        <TBODY>
+        
+                            <div class="calTit">
+                            	<a href="#" title="上一月" id="yuejian" class="ymNaviBtn lArrow"></a>
+                              <div class="mouse"> <span id="dateSelectionRili" class="dateSelectionRili" style="cursor:hand;color: white;" onclick="dateSelection.show()"> <span id="nian" class="topDateFont"></span><span class="topDateFont">年</span><span id="yue" class="topDateFont"></span><span class="topDateFont">月</span> </span> &nbsp;&nbsp;<font id=GZ class="topDateFont" style="display:none"></font></div>              
+                                          
+                              <div style=" display: none;" id="dateSelectionDiv">
+                                <div id="dateSelectionHeader"></div>
+                                <div id="dateSelectionBody">
+                                  <div id="yearList">
+                                    <div id="yearListPrev" onclick="dateSelection.prevYearPage()">&lt;</div>
+                                    <div id="yearListContent"></div>
+                                    <div id="yearListNext" onclick="dateSelection.nextYearPage()">&gt;</div>
+                                  </div>
+                                  <div id="dateSeparator"></div>
+                                  <div id="monthList">
+                                    <div id="monthListContent">
+                                        <span id="SM0" class="month" onclick="dateSelection.setMonth(0)">1</span>
+                                        <span id="SM1" class="month" onclick="dateSelection.setMonth(1)">2</span>
+                                        <span id="SM2" class="month" onclick="dateSelection.setMonth(2)">3</span>
+                                        <span id="SM3" class="month" onclick="dateSelection.setMonth(3)">4</span>
+                                        <span id="SM4" class="month" onclick="dateSelection.setMonth(4)">5</span>
+                                        <span id="SM5" class="month" onclick="dateSelection.setMonth(5)">6</span
+                                        ><span id="SM6" class="month" onclick="dateSelection.setMonth(6)">7</span>
+                                        <span id="SM7" class="month" onclick="dateSelection.setMonth(7)">8</span>
+                                        <span id="SM8" class="month" onclick="dateSelection.setMonth(8)">9</span>
+                                        <span id="SM9" class="month" onclick="dateSelection.setMonth(9)">10</span>
+                                        <span id="SM10" class="month" onclick="dateSelection.setMonth(10)">11</span>
+                                        <span id="SM11" class="month curr" onclick="dateSelection.setMonth(11)">12</span>
+                                    </div>
+                                    <div style="clear:both;"></div>
+                                  </div>
+                                  <div id="dateSelectionBtn">
+                                    <div id="dateSelectionTodayBtn" onclick="dateSelection.goToday()">今天</div>
+                                    <div id="dateSelectionOkBtn" onclick="dateSelection.go()">确定</div>
+                                    <div id="dateSelectionCancelBtn" onclick="dateSelection.hide()">取消</div>
+                                  </div>
+                                </div>
+                                <div id="dateSelectionFooter"></div>
+                              </div>
+                              <a href="#" id="yuejia" title="下一月" class="ymNaviBtn rArrow"></a> 
+                            </div>
+                            <TR class="calWeekTit">
+                              <TD class="red">SUN日</TD>
+                              <TD >MON一</TD>
+                              <TD >TUES二</TD>
+                              <TD >WED三</TD>
+                              <TD >THUR四</TD>
+                              <TD >FRI五</TD>
+                              <TD class="red">SAT六</TD>
+                            </TR>
+                        </tbody>
+							<script type="text/javascript">
+                              var gNum;
+                              for (var i = 0; i < 6; i++) {
+                                  document.write('<tr align=left height="25" id="tt">');
+                              for (var j = 0; j < 7; j++) {
+                              gNum = i * 7 + j ;
+                                  document.write('<td  id="GD' + gNum + '" on="0" ><font  id="SD' + gNum + '" style="font-size:16px;" ');
+                              if (j == 0)  document.write('color=red');
+                              if (j == 6)
+                              if (i % 2 == 1)  document.write('color=red');
+                              else  document.write('color=red');
+                                  document.write('  TITLE="">  </font><font  id="LD' + gNum + '"  size=2  style="white-space:nowrap;overflow:hidden;cursor:default;">  </font></td>');
+                              }
+                                  document.write('</tr>');
+                              }
+                            </script>
+                      </TABLE>
+                    
+                    </form>
+                 </div> 
+            </div>
+        </div>
+        <div class="divbottom">
+            <div class="divimg01" >今日客户信息</div>
+            <div class="div_con">
+                <div class="divbottomson">
+                     <div class="divson1" src="MenShi/Dingdzheng.html">
+                        <p class="lip">订单客户</p>
+                        <p class="lip1">36</p>
+                     </div>
+                      <div class="divson2" src="MenShi/Dingdzheng.html">
+                        <p class="lip">礼服挑选客户</p>
+                        <p class="lip1">36</p>
+                     </div>
+                      <div class="divson3" src="MenShi/Dingdzheng.html">
+                        <p class="lip">拍照客户</p>
+                        <p class="lip1">36</p>
+                     </div>
+                      <div class="divson4 " src="MenShi/Dingdzheng.html">
+                        <p class="lip">选片客户</p>
+                        <p class="lip1">36</p>
+                     </div>
+                      <div class="divson5" src="MenShi/Dingdzheng.html">
+                        <p class="lip">看板客户</p>
+                        <p class="lip1">36</p>
+                     </div>
+                      <div class="divson6" src="MenShi/Dingdzheng.html">
+                        <p class="lip">送件客户</p>
+                        <p class="lip1">36</p>
+                     </div>
+                      <div class="divson7" src="MenShi/Dingdzheng.html">
+                        <p class="lip">整件客户</p>
+                        <p class="lip1">36</p>
+                     </div>
+                      <div class="divson8" src="MenShi/Dingdzheng.html">
+                        <p class="lip">取件客户</p>
+                        <p class="lip1">36</p>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="stb_foot">
+            <!--<div class="sft_tel">北京熊宝贝科技发展有限公司 技术支持：400-100-7592</div>-->
+            <div class="divms"> <img src="img/index/font.png" alt="每一天都要认真对待"/></div>
+        </div>
+</div>    
+    <!--页面主内容-------------end -->
+</body>
+</html>

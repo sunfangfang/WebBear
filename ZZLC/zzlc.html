@@ -1,0 +1,613 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>制作流程管理</title>
+<link rel="stylesheet" type="text/css" href="../css/reset_s.css"/>
+<link rel="stylesheet" type="text/css" href="css/zzlc.css"/>
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script>
+  <!-- 页面滚动条-->
+	$(window).load(function(){
+		setDivMaxHeight();
+	});
+	$(window).resize(function(){
+		setDivMaxHeight();
+	});
+	function setDivMaxHeight() {
+		var fg=$(window).height();
+		var h = parseInt(fg) -60;
+		$(".p_main").css("height", h);
+	}
+  $(function(){
+	   $(".s_span").mouseover(function(){
+		  $(".s_spanf").css({"display":"block"});
+	   }).mouseout(function(){
+	      $(".s_spanf").css({"display":"none"});
+	   });
+	   $(".a_float").click(function(){
+		  $(".div_k").toggle();
+	   });
+	   $(".b_bots1").click(function(){
+		 $(this).next().toggle();
+	   });
+	   $(".div_ha1 div").mouseover(function(){
+		  $(this).css({"cursor":"pointer"});
+	      $(this).find(".span_fei").css({"color":"#f78e57","cursor":"pointer"});
+	   }).mouseout(function(){
+	      $(this).find(".span_fei").css({"color":"rgb(51,51,51)"});
+	   });
+	   $(".ulo li").click(function(){
+	      $(this).addClass("ulio").siblings().removeClass("ulio");
+	   });
+	   $(".ul-c li").click(function(){
+	       $(this).addClass("limh").siblings().removeClass("limh");
+		   $(this).parent().siblings().find("li").removeClass("limh");
+	   });
+	   $(".ul-d li").click(function(){
+	       $(this).addClass("limh").siblings().removeClass("limh");
+		   $(this).parent().siblings().find("li").removeClass("limh");
+	   });
+	   $(".li_ulf").click(function(){
+		   var licol=$(this).find(".span_d");
+	       licol.addClass("bgcol").parent().siblings().find(".span_d").removeClass("bgcol");
+		   $(".li_ulf>.span_jh").removeClass("bg_con1 bg bg_con bg_cor");
+		   $(this).find(".spo_f").addClass("bg_con1");
+		   $(this).find(".spo_f1").addClass("bg");
+		   $(this).find(".spo_f2").addClass("bg_con");
+		   $(this).find(".spo_f3").addClass("bg_cor");
+		  $(".div_botm").eq($(this).index()).show().siblings().hide();
+	   });
+	   $(".li_ulf span:first").addClass("bgcol");
+	   $(".spo_f").addClass("bg_con1");
+  });
+  window.onload = function(){
+		function timer(id,start,end,interval){
+			window.setTimeout(function(){
+				circle(id,start/100);
+				start++;
+				if(start<end+1){
+					timer(id,start,end,interval);
+				}
+			},interval);
+		}
+		function circle(id,percent){
+			var p=(percent*100).toFixed(0);
+			var c=document.getElementById('step1Canvas');
+			var cxt=c.getContext("2d");
+			//生成圆形（底圆）
+			cxt.fillStyle="#f1f1f1";
+			cxt.beginPath();
+			cxt.moveTo(75, 75); 
+			cxt.arc(75,75,70,0,Math.PI*2,false);
+			cxt.closePath();
+			cxt.fill();
+			//生成扇形
+			cxt.fillStyle="#77aeff";
+			cxt.beginPath();
+			cxt.moveTo(75, 75);
+			if(percent==1){
+				cxt.arc(75,75,70,0,Math.PI*2,false);
+			}else if(percent==0){
+				cxt.arc(75,75,70,0,0,true);
+			}else{
+				cxt.arc(75,75,70,Math.PI,Math.PI+Math.PI*2*percent,false);
+			}
+			cxt.closePath();
+			cxt.fill();
+			//生成圆形（上层园）
+			cxt.fillStyle="#FFFFFF";
+			cxt.beginPath();
+			cxt.moveTo(75, 75); 
+			cxt.arc(75,75,50,0,Math.PI*2,false);
+			cxt.closePath();
+			cxt.fill();
+			//生成中间百分比文字
+			cxt.font="12px arial";
+			cxt.fillStyle="#6b6b6b";
+			cxt.fillText(p+"%",55,75);
+		}
+		timer('step1Canvas',1,100,30);
+		circle();
+	}
+</script>
+</head>
+<body>
+   <div class="p_main clearfix">
+      <div class="p_top clearfix">
+         <div class="ps_top clearfix">
+            <div class="left_img">
+              <img src="img/people_01.jpg" alt="流程管理"/>
+            </div>
+            <div class="right_font">
+               <span class="span_f1">小小</span>
+               <div class="div_hg">
+                   <span class="s_span"></span>
+                   <span class="s_spana"></span><!--离线-->
+                   <span class="s_spana1"></span><!--离开-->
+                   <span class="s_spanf">在线</span>
+               </div>
+               <span class="span_f2">销售总监</span>
+            </div>
+            <a href="#2" class="a_float">查看小伙伴<span class="cursor"></span></a>
+            <div class="div_k clearfix">
+               <div class="div_p"><span class="span_pj"></span><span class="span_hn">我的小伙伴</span></div>
+               <div class="div_pd">
+                  <div class="div_ha1 clearfix">
+                      <div class="div_ha1s clearfix">
+                       <div class="div_img">
+                          <img src="img/people_01.jpg"/>
+                          <div class="div_mg">
+                            <img src="img/s_lf.png" class="img_my"/>
+                          </div>
+                       </div>
+                       <span class="span_fei">菲菲</span>
+                     </div>
+                     <div class="div_ha1s clearfix div_ha1sd">
+                       <div class="div_img">
+                          <img src="img/people_01.jpg" />
+                          <div class="div_mg">
+                            <img src="img/s_lf.png" class="img_my"/>
+                          </div>
+                       </div>
+                       <span class="span_fei">菲菲</span>
+                     </div>
+                     <div class="div_ha1s clearfix div_ha1sd">
+                       <div class="div_img">
+                          <img src="img/people_01.jpg" />
+                          <div class="div_mg">
+                            <img src="img/s_lf.png" class="img_my"/>
+                          </div>
+                       </div>
+                       <span class="span_fei">菲菲</span>
+                     </div>
+                  </div>
+                  <div class="div_ha1 clearfix div_hag">
+                      <div class="div_ha1s clearfix">
+                       <div class="div_img">
+                          <img src="img/people_01.jpg" />
+                           <div class="div_mgs">
+                            <img src="img/s_green.png" class="img_my gray"/>
+                           </div>
+                       </div>
+                       <span class="span_fei">菲菲</span>
+                     </div>
+                     <div class="div_ha1s clearfix div_ha1sd">
+                       <div class="div_img">
+                           <img src="img/people_01.jpg"/>
+                           <div class="div_mgs">
+                             <img src="img/s_green.png" class="img_my"/>
+                           </div>
+                       </div>
+                       <span class="span_fei">菲菲</span>
+                     </div>
+                     <div class="div_ha1s clearfix div_ha1sd">
+                       <div class="div_img">
+                          <img src="img/people_01.jpg" class="gray"/>
+                           <div class="div_mgs1">
+                             <img src="img/s_levef.png" class="img_my"/>
+                           </div>
+                       </div>
+                       <span class="span_fei">菲菲</span>
+                     </div>
+                  </div>
+                  <div class="div_ha1 clearfix div_hag">
+                      <div class="div_ha1s clearfix">
+                       <div class="div_img">
+                          <img src="img/people_01.jpg" class="gray"/>
+                          <div class="div_mgs1">
+                             <img src="img/s_levef.png" class="img_my"/>
+                           </div>
+                       </div>
+                       <span class="span_fei">菲菲</span>
+                     </div>
+                     <div class="div_ha1s clearfix div_ha1sd">
+                       <div class="div_img">
+                          <img src="img/people_01.jpg" class="gray"/>
+                          <div class="div_mgs1">
+                             <img src="img/s_levef.png" class="img_my"/>
+                          </div>
+                       </div>
+                       <span class="span_fei">菲菲</span>
+                     </div>
+                     <div class="div_ha1s clearfix div_ha1sd">
+                       <div class="div_img">
+                          <img src="img/people_01.jpg" class="gray"/>
+                           <div class="div_mgs1">
+                             <img src="img/s_levef.png" class="img_my"/>
+                           </div>
+                       </div>
+                       <span class="span_fei">菲菲</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="ps_bottom clearfix">
+             <div class="ps_bot"></div><!--/*背景*/-->
+             <div class="b_bot clearfix">
+               <span class="b_bots">当月数据</span>
+               <span class="b_bots1">月份切换</span>
+               <div class="dates">
+                  <div class="div_line">
+                     <span class="span_nim">年</span>
+                     <span class="span_mjs">月</span>
+                  </div>
+                  <div class="div_liner clearfix">
+                     <div class="div_linefl">
+                        <ul class="ulo">
+                          <li>2015</li>
+                          <li>2016</li>
+                          <li>2017</li>
+                          <li>2018</li>
+                          <li>2019</li>
+                          <li>2020</li>
+                          <li>2020</li>
+                          <li>2020</li>
+                          <li>2020</li>
+                        </ul>
+                     </div>
+                     <div class="div_linefr"> 
+                         <ul class="ul_left ul-c">
+                           <li>1</li>
+                           <li>2</li>
+                           <li>3</li>
+                           <li>4</li>
+                           <li>5</li>
+                           <li>6</li>
+                         </ul>
+                         <ul class="ul_left ul-d">
+                           <li>7</li>
+                           <li>8</li>
+                           <li>9</li>
+                           <li>10</li>
+                           <li>11</li>
+                           <li>12</li>
+                         </ul>
+                     </div>
+                  </div>
+               </div>
+             </div>
+             <div class="b_botm">
+                <ul class="ulfont_li clearfix">
+                  <li class="li_line">客资简介</li>
+                  <li class="li_linea">
+                    <span>新增客资</span>
+                    <span class="span_col0"><strong>10</strong>个</span>
+                  </li>
+                   <li class="li_linea">
+                    <span>总客资量</span>
+                    <span class="span_col0"><strong>10</strong>个</span>
+                  </li>
+                  <li class="li_linea">
+                    <span>已成交量</span>
+                    <span class="span_col0"><strong>10</strong>个</span>
+                  </li>
+                  <li class="li_linea">
+                    <span>已电访量</span>
+                    <span class="span_col0"><strong>10</strong>个</span>
+                  </li>
+                   <li class="li_linea">
+                    <span>未电访量</span>
+                    <span class="span_col"><strong>10</strong>个</span>
+                  </li>
+                  <li class="li_linea">
+                     <span>订单消费总额</span>
+                     <span class="span_col"><strong>10</strong>个</span>
+                  </li>
+                  <li class="li_linea">
+                     <span>未审核数</span>
+                     <span class="span_col"><strong>10</strong>个</span>
+                  </li>
+                </ul>
+             </div>
+             <div class="div_btop">
+                 <div class="div_fonr">
+                   <span class="div_fonr1">指标</span>
+                   <span class="div_fonr2">目标设置</span>
+                 </div>
+                  <div class="d_bom clearfix">
+                    <ul class="ul_pk">
+                       <li class="li_top">
+                        <span>目标</span>
+                        <span class="span_st"><strong>8</strong>万元</span>
+                       </li>
+                       <li class="li_top"> 
+                        <span>成交</span>
+                        <span class="span_stg"><strong>10.5</strong>万元</span>
+                       </li>
+                       <li class="li_top">
+                        <span>实际收款</span>
+                        <span class="span_stg"><strong>8</strong>万元</span>
+                       </li>
+                    </ul>
+                    <div class="d_fl">
+                       <div class="d_boms">
+                              <canvas id="step1Canvas" width='150' height='150' class="cansv" style="float:left;position:relative;top:-48px;"></canvas>
+                              <span style="font-size:12px;color:#6b6b6b;position: absolute;top:38px;width: 100%;left: 49px;display:block;" class="span_op">业绩完成</span>
+                           </div>
+                       <div class="div_gh clearfix">
+                             <span class="span_hi">目标</span>
+                             <div class="div_sp">
+                                <span class="span_bgh"></span>
+                             </div>
+                             <span class="span_numa">50%</span>
+                        </div>
+                        <div class="div_gh clearfix div_hg1">
+                             <span class="span_hi">成交</span>
+                             <div class="div_sp">
+                                <span class="span_bgha"></span>
+                             </div>
+                             <span class="span_numa">75%</span>
+                        </div>
+                        <div class="div_gh clearfix div_hg1">
+                             <span class="span_hi">实收</span>
+                             <div class="div_sp">
+                                <span class="span_bghb"></span>
+                             </div>
+                             <span class="span_numa">60%</span>
+                        </div>
+                      </div>
+                    </div>                   
+                 </div>
+             </div>
+         </div>
+      <div class="p_bottom clearfix">
+          <div class="ps_bot ps_yi"></div><!--/*背景*/-->
+          <div class="div_spd">
+            <span class="sp_font">跟进中客户</span>
+            <span class="sp_font1">客资标记</span>
+          </div> 
+          <div class="div_ul">
+             <div class="div_hui"></div>
+             <ul class="div_ful">
+                <li class="li_ulf">
+                   <span class="span_d">意向沟通(142个)</span>
+                   <span class="spo_f span_jh"></span>
+                </li>
+                <li class="li_ulf">
+                   <span class="span_d">再约客户(142个)</span>
+                   <span class="spo_f1 span_jh"></span>
+                </li>
+                <li class="li_ulf">
+                   <span class="span_d">上门洽谈(142个)</span>
+                   <span class="spo_f2 span_jh"></span>
+                </li>
+                <li class="li_ulf">
+                   <span class="span_d">成交(142个)</span>
+                   <span class="spo_f3 span_jh"></span>
+                </li>
+             </ul>
+          </div>
+          <div class="div_tab clearfix">
+              <div class="div_botm clearfix">
+                  <ul class="div_botmul clearfix">
+                     <li class="botmul_li">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                  </ul>
+                 <ul class="div_botmul clearfix">
+                     <li class="botmul_li">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                  </ul>
+              </div>
+              <div class="div_botm clearfix div_b">
+                  <ul class="div_botmul clearfix">
+                     <li class="botmul_li">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                  </ul>
+                  <ul class="div_botmul clearfix">
+                     <li class="botmul_li">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                  </ul>
+              </div>
+              <div class="div_botm clearfix div_b">
+                   <ul class="div_botmul clearfix">
+                     <li class="botmul_li">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                  </ul>
+                  <ul class="div_botmul clearfix">
+                     <li class="botmul_li">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                  </ul>
+              </div>
+              <div class="div_botm clearfix div_b">
+                  <ul class="div_botmul clearfix">
+                     <li class="botmul_li">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                  </ul>
+                  <ul class="div_botmul clearfix">
+                     <li class="botmul_li">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                     <li class="botmul_li botmul_left">
+                       <div class="df_li"><span>客户姓名:</span><span>韦小宝</span></div>
+                       <div class="df_lis"><span>品牌:</span><span>芳妮豆丁</span></div>
+                       <div class="df_lif">该阶段已经停留了8天</div>
+                       <div class="df_lifd"><span>最后跟进事件:</span><span>2016-08-21 10:22</span></div>
+                     </li>
+                  </ul>
+              </div>
+          </div>
+     </div>
+    </div>
+    </div>
+   <div class="div_bottom">北京熊宝贝科技发展有限公司 技术支持：400-100-7592</div>
+  <!-- <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script type="text/javascript" src="js/jquery.nicescroll.js"></script>-->
+   <script>
+  /* $(document).ready(function(){
+//    $("html").niceScroll();  // The document page (html)
+		$(".div_linefl").niceScroll({touchbehavior:false,cursorcolor:"#00F",cursoropacitymax:0.7,cursorwidth:11,cursorborder:"1px solid #2848BE",cursorborderradius:"8px",background:"#ccc",autohidemode:"scroll"}).cursor.css({"background-image":"url(img/mac6scroll.png)"}); // MAC like scrollbar		$("#boxscroll2").niceScroll({touchbehavior:false,cursorcolor:"#00F",cursoropacitymax:0.7,cursorwidth:6,background:"#ccc",autohidemode:false});
+	  })*/
+	</script>
+</body>
+</html>

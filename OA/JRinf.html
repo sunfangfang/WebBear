@@ -1,0 +1,370 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>今日通知</title>
+<link rel="stylesheet" href="../css/reset_s.css">
+<link rel="stylesheet" href="../css/OA/oa.css">
+<link rel="stylesheet" href="../css/table.css">
+<link rel="stylesheet" href="../css/news.css">
+<link rel="stylesheet" href="SpryAssets/oaTab1.css">
+<script type="text/javascript" src="SpryAssets/oaTab1.js" ></script>
+<script type="text/javascript" src="../js/jquery-1.7.2.js" ></script>
+<script type="text/javascript">
+$(window).load(function(){
+	  setDivMaxHeight();
+ });
+
+$(window).resize(function() {
+	setDivMaxHeight();
+});
+function setDivMaxHeight() {
+	var fg=$(window).height();
+	var h = parseInt(fg);
+	$("#m_con").css("height", h);
+	
+}
+</script>
+    <style>
+        .m_table{
+            overflow: auto;
+        }
+        @media(max-width:850px){
+            body{min-width:827px;}
+        }
+    </style>
+</head>
+
+<body>
+<div id="m_con" style="background-color:#fff; margin-top:0;">
+    <!--左边内容 -->
+    <div class="oa_s">
+    	<div class="oa_sa">
+            <div class="oa_s_tit"><span>今日审批</span></div>
+            <div id="TabbedPanels1" class="TabbedPanels">
+                <ul class="TabbedPanelsTabGroup">
+                    <li class="TabbedPanelsTab" tabindex="0" style="margin-left:10px;">待办（4）</li>
+                    <li class="TabbedPanelsTab" tabindex="0">已办</li>
+                    <li class="TabbedPanelsTab" tabindex="0">督办</li>
+                    <li class="TabbedPanelsTab" tabindex="0">超时</li>
+                </ul>
+                <div class="TabbedPanelsContentGroup">
+                    <div class="TabbedPanelsContent">
+                        <div class="m_table" style="overflow: auto">
+                            <table class="table  table-hover  table-striped" style="min-width: 500px;">
+                                <thead class="tb_th_bga">
+                                    <tr style="text-align:right;">
+                                        <td>状态</td>
+                                        <td>名称</td>
+                                        <td>发起人</td>
+                                        <td style="border:none;">发起时间</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><div class="oblue">待办</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td>李某某	</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">待办</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td>李某某	</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">待办</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td>李某某	</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">待办</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td>李某某	</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="TabbedPanelsContent">内容 2</div>
+                    <div class="TabbedPanelsContent">3</div>
+                    <div class="TabbedPanelsContent">4</div>
+                </div>
+            </div>
+        </div>
+    	<div class="oa_sa">
+            <div class="oa_s_tit"><span>今日审批</span></div>
+            <div id="TabbedPanels2" class="TabbedPanels">
+                <ul class="TabbedPanelsTabGroup">
+                    <li class="TabbedPanelsTab" tabindex="0" style="width:85px; margin-left:10px;">审批/申请(5)</li>
+                </ul>
+                <div class="TabbedPanelsContentGroup">
+                    <div class="TabbedPanelsContent">
+                        <div class="m_table">
+                            <table class="table  table-hover  table-striped" style="min-width: 600px">
+                                <thead class="tb_th_bga">
+                                    <tr class="crm_tit_tr" style="text-align:right">
+                                        <td>状态</td>
+                                        <td>名称</td>
+                                        <td>发起人</td>
+                                        <td style="border:none">发起时间</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><div class="oblue">已通过 </div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td>李某某	</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="ogray">待审批</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td>李某某	</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oorange">已驳回</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td>李某某	</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="ored">已驳回</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td>李某某	</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--左边内容--------------end -->
+    <!--右边内容 -->
+    <div class="oa_s" style="margin-left:0.5%">
+    	<div class="oa_sa">
+            <div class="oa_s_tit"><span>工作报告</span></div>
+            <div id="TabbedPanels3" class="TabbedPanels">
+                <ul class="TabbedPanelsTabGroup">
+                    <li class="TabbedPanelsTab" tabindex="0" style="margin-left:10px;">消息(6)</li>
+                    <li class="TabbedPanelsTab" tabindex="0">日报</li>
+                    <li class="TabbedPanelsTab" tabindex="0">周报</li>
+                    <li class="TabbedPanelsTab" tabindex="0">月报</li>
+                </ul>
+                <div class="TabbedPanelsContentGroup">
+                    <div class="TabbedPanelsContent">
+                        <div class="m_table">
+                            <table class="table  table-hover  table-striped" style="min-width: 500px">
+                                <thead class="tb_th_bga">
+                                    <tr>
+                                        <td>姓名</td>
+                                        <td>内容</td>
+                                        <td style="border:none;">发起时间</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="TabbedPanelsContent">
+                    	<div class="m_table">
+                            <table class="table  table-hover  table-striped" style="min-width: 500px">
+                                <thead class="tb_th_bga">
+                                    <tr>
+                                        <td>姓名</td>
+                                        <td>内容</td>
+                                        <td style="border:none;">发起时间</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="TabbedPanelsContent">
+                    	<div class="m_table">
+                            <table class="table  table-hover  table-striped" style="min-width: 500px">
+                                <thead class="tb_th_bga">
+                                    <tr>
+                                        <td>姓名</td>
+                                        <td>内容</td>
+                                        <td style="border:none;">发起时间</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                     </div>
+                    <div class="TabbedPanelsContent">
+                    	<div class="m_table">
+                            <table class="table  table-hover  table-striped" style="min-width: 500px">
+                                <thead class="tb_th_bga">
+                                    <tr>
+                                        <td>姓名</td>
+                                        <td>内容</td>
+                                        <td style="border:none;">发起时间</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="oblue">李某某</div></td>
+                                        <td style="text-align:center">针对6+1儿童车会部署草案</td>
+                                        <td style="text-align:center">2015-11-05  10：45-18:00 </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--右边内容--------------end -->
+</div>
+
+
+<script type="text/javascript">
+var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels2");
+var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels3");
+</script>
+</body>
+</html>

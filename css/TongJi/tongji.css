@@ -1,0 +1,50 @@
+/* CSS Document */
+.mt_sx1{right:10px;z-index:999;height:480px;margin-top:0px;}
+.mt_sx_arrow1{margin-left:303px;}
+.mt_s1 .spanright{width:60px;text-align:right;}
+.mt_s1 select{margin-left:20px;color:#525660;}
+.mt_s1 .selectwidth{width:86px;}
+.spand{width:50px;display:inline-block;}
+.divheader{
+	width:100%;
+	height:58px;
+	line-height:58px;
+	clear:both;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.divheaderul{background:#fff;margin-top:10px;float:left;width:100%;}
+.lileftyt{margin-left:10px;}
+.divheaderul li{float:left;width:106px;text-align:center;margin-top:12px;height:50px;line-height:50px; position:relative; top:1px;}
+.divheaderul li a{color:#6b6b6b;font-size:16px;}
+.divparents{width:99%;background:#f9f9f9;clear:both;border:1px solid #c5c8cf;margin:0 8px;height:100%;float:left;}
+.divson{
+	width:100%;
+	clear: both;
+	float: left;
+	height: auto;
+}
+.tyline{border:1px solid #c9cdd7;}
+.fontcol{color:#161616;}
+.tyline{width:99%;}
+.lineborders{background:#f9f9f9;border-top:1px solid #c5c8cf;border-bottom:1px solid #f9f9f9;border-right:1px solid #c5c8cf;border-left:1px solid #c5c8cf;}
+.mainzhu{background:#f9f9f9;clear:both;width:100%;}
+.mt_s1{float:left;}
+
+.tj_foot {
+	height: auto;
+	width: 99.5%;
+	position: fixed;
+	bottom: 0px;
+	float: left;
+	z-index: 900;
+	left: 0.5%;
+}
+/*---------------------------------------------------*/
+.tjilab{
+	position: relative;
+}
+.tjilab .tjispan{
+	top:2px;left:-1px;
+}
+.tjilab input{opacity: 1;}

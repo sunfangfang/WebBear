@@ -1,0 +1,542 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>门市收款</title>
+<link rel="stylesheet" href="css/reset_s.css">
+<link rel="stylesheet" href="css/table.css" />
+<link rel="stylesheet" href="css/news.css" />
+<link rel="stylesheet" href="css/box.css" />
+<link rel="stylesheet" href="css/content.css" />
+<link rel="stylesheet" href="css/crm/crm_tab.css" />
+<script type="text/javascript" src="js/crm/crm_tab.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="js/jquery.reveal.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+	  setDivMaxHeight();
+ });
+
+$(window).resize(function() {
+	setDivMaxHeight();
+});
+function setDivMaxHeight() {
+	var fg=$(window).height();
+	var h = parseInt(fg) - 243;
+	$("#m_con").css("height", h);
+	
+}
+</script>
+<script type="text/javascript">
+$(function(){$("table tbody tr td").css("padding-left","0");});//表格tbody第一个td的padding-left值未0
+</script>
+</head>
+<body>
+<div class="m_top">
+    <div class="m_name">门市收款 </div>
+    <div class="mt_btn"><a href="#">订单查询</a><a href="#">客户资料</a></div>
+</div>
+<!--页面主内容 -->
+<div id="m_con" style="overflow-y:auto">
+	<div class="ms_sk_s">
+        <div class="ms_sk_sd"><input type="text" placeholder="请输入订单编号/客户姓名/手机号"><a href="#">查询</a></div>
+    </div>
+    <div class="ms_sk" style="overflow-x:auto">
+        <div class="m_table" style="border:none;"> 
+            <table class="table  table-hover table-striped" style="width:2500px">
+                <thead class="tb_th_bga">
+                    <tr>
+                        <td>序号</td>
+                        <td>客户编号</td>
+                        <td>客户姓名</td>
+                        <td>标题</td>
+                        <td>标题</td>
+                        <td>标题</td>
+                        <td>标题</td>
+                        <td>标题</td>
+                        <td>欠款</td>
+                        <td>金额</td>
+                        <td>标题</td>
+                        <td style="border:none;">标题</td><!--最后一个td//border:none-->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>A00001 </td>
+                        <td><a href="#" class="m_tab_link">李某某</a></td>
+                        <td>内容</td>
+                        <td>内容</td>
+                        <td>内容</td>
+                        <td>内容</td>
+                        <td>内容</td>
+                        <td><div class="tb_qk">500</div></td><!--涉及到金额的，增<div class="tb_money> -->
+                        <td><div class="tb_money">1500</div></td>
+                        <td>内容</td>
+                        <td>内容</td><!--最后一个td//border:none-->
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>A00001 </td>
+                        <td><a href="#" class="m_tab_link">李某某</a></td>
+                        <td>内容</td>
+                        <td>内容</td>
+                        <td>内容</td>
+                        <td>内容</td>
+                        <td>内容</td>
+                        <td><div class="tb_qk">500</div></td><!--涉及到金额的，增<div class="tb_money> -->
+                        <td><div class="tb_money">1500</div></td>
+                        <td>内容</td>
+                        <td>内容</td><!--最后一个td//border:none-->
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>A00001 </td>
+                        <td><a href="#" class="m_tab_link">李某某</a></td>
+                        <td>内容</td>
+                        <td>内容</td>
+                        <td>内容</td>
+                        <td>内容</td>
+                        <td>内容</td>
+                        <td><div class="tb_qk">500</div></td><!--涉及到金额的，增<div class="tb_money> -->
+                        <td><div class="tb_money">1500</div></td>
+                        <td>内容</td>
+                        <td>内容</td><!--最后一个td//border:none-->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="ms_sk" style="margin-top:10px;">
+        <div id="TabbedPanels1" class="TabbedPanels">
+            <ul class="TabbedPanelsTabGroup">
+                <li class="TabbedPanelsTab" tabindex="0" style="margin-left:10px;">门市收款</li>
+                <li class="TabbedPanelsTab" tabindex="0">礼服收款</li>
+                <li class="TabbedPanelsTab" tabindex="0">化妆收款</li>
+                <li class="TabbedPanelsTab" tabindex="0">商品收款</li>
+                <li class="TabbedPanelsTab" tabindex="0">VIP充值</li>
+                <li class="TabbedPanelsTab" tabindex="0">零散件收款</li>
+            </ul>
+            <div class="TabbedPanelsContentGroup">
+                <div class="TabbedPanelsContent">
+                    <div class="m_table" style="border-bottom:none;"> 
+                        <table class="table  table-hover table-striped">
+                            <thead class="tb_th_bga">
+                                <tr>
+                                    <td>序号</td>
+                                    <td>客户编号</td>
+                                    <td>客户姓名</td>
+                                    <td>标题</td>
+                                    <td>标题</td>
+                                    <td>标题</td>
+                                    <td>标题</td>
+                                    <td>标题</td>
+                                    <td>欠款</td>
+                                    <td>金额</td>
+                                    <td>标题</td>
+                                    <td style="border:none;">标题</td><!--最后一个td//border:none-->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="tb_bj_btn tb_bor_right">
+                                        <div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                    </td>
+                                    <td>A00001 </td>
+                                    <td><a href="#" class="m_tab_link">李某某</a></td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td><div class="tb_qk">500</div></td><!--涉及到金额的，增<div class="tb_money> -->
+                                    <td><div class="tb_money">1500</div></td>
+                                    <td>内容</td>
+                                    <td>内容</td><!--最后一个td//border:none-->
+                                </tr>
+                                <tr>
+                                    <td class="tb_bj_btn tb_bor_right">
+                                        <div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                    </td>
+                                    <td>A00001 </td>
+                                    <td><a href="#" class="m_tab_link">李某某</a></td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td><div class="tb_qk">500</div></td><!--涉及到金额的，增<div class="tb_money> -->
+                                    <td><div class="tb_money">1500</div></td>
+                                    <td>内容</td>
+                                    <td>内容</td><!--最后一个td//border:none-->
+                                </tr>
+                                <tr>
+                                    <td class="tb_bj_btn tb_bor_right">
+                                        <div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                    </td>
+                                    <td>A00001 </td>
+                                    <td><a href="#" class="m_tab_link">李某某</a></td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td><div class="tb_qk">500</div></td><!--涉及到金额的，增<div class="tb_money> -->
+                                    <td><div class="tb_money">1500</div></td>
+                                    <td>内容</td>
+                                    <td>内容</td><!--最后一个td//border:none-->
+                                </tr>
+                                <tr>
+                                    <td class="tb_bj_btn tb_bor_right">
+                                        <div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                    </td>
+                                    <td>A00001 </td>
+                                    <td><a href="#" class="m_tab_link">李某某</a></td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td><div class="tb_qk">500</div></td><!--涉及到金额的，增<div class="tb_money> -->
+                                    <td><div class="tb_money">1500</div></td>
+                                    <td>内容</td>
+                                    <td>内容</td><!--最后一个td//border:none-->
+                                </tr>
+                                <tr>
+                                    <td class="tb_bj_btn tb_bor_right">
+                                        <div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                    </td>
+                                    <td>A00001 </td>
+                                    <td><a href="#" class="m_tab_link">李某某</a></td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td>内容</td>
+                                    <td><div class="tb_qk">500</div></td><!--涉及到金额的，增<div class="tb_money> -->
+                                    <td><div class="tb_money">1500</div></td>
+                                    <td>内容</td>
+                                    <td>内容</td><!--最后一个td//border:none-->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="TabbedPanelsContent">
+                    2
+                </div>
+                <div class="TabbedPanelsContent">
+                    3
+                </div>
+                <div class="TabbedPanelsContent">
+                    4
+                </div>
+                <div class="TabbedPanelsContent">
+                    5
+                </div>
+                <div class="TabbedPanelsContent">
+                    5
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+    <!--页面主内容-------------end -->
+
+<div class="tb_foot">
+    <div class="tb_bottom"><!--公共底部功能（显示，按钮，分页） -->
+        <div class="tb_b_zs"><span>合计：18,800.00</span><span>欠款：<small>800.00</small></span></div>
+    </div>
+    <div class="tb_bottom"><!--公共底部功能（显示，按钮，分页） -->
+        <a href="#" class="tb_btn tb_blue">收款</a>
+        <a href="#" class="tb_btn tb_green" data-reveal-id="divPrint">打印</a>
+    </div>
+    <!--copyright -->
+    <!--<div class="ft_tel">北京熊宝贝科技发展有限公司 技术支持：400-100-7592</div>-->
+</div>
+<div class="box" id="divPrint" style="width:680px;top:20px; opacity: 0; visibility: visible;">
+    <div class="box_tit">
+        <div class="box_t_name">打印选择</div>
+        <a href="javascript:;" class="box_close close-reveal-modal" onClick="PrintCancel()"></a>
+    </div>
+    <div class="box_con" style="height:400px;width:680px;overflow-y:auto;overflow-x:hidden;">
+    	<!--<div class="m_table" style="border-bottom:none;"> 
+            <table class="table  table-hover table-striped">
+                <thead class="tb_th_bgb">
+                    <tr>
+                        <td colspan="3"><label class="rs_c2"><input type="checkbox"><span>第1次服务</span></label></td>
+                    </tr>
+                    <tr>
+                        <td class="tb_bor_right"><label class="rs_c2"><input type="checkbox"><span>一销</span></label></td>
+                        <td class="tb_bor_right">&nbsp;</td>
+                        <td>收款</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="rs_c">
+                            	<label><input type="checkbox"><span>蓬壁生辉</span></label>
+                            	<label><input type="checkbox"><span>J金宝贝台历拍摄券（598元）</span></label>
+                            	<label><input type="checkbox"><span>升级前 8*8寸德国亚克力相册</span></label>
+                            	<label><input type="checkbox"><span>升级前 资深造型师采用专业化妆品全程一对一贴心跟资深造型师采用专业化妆品全程一对一贴心跟资深造型师采用专业化妆品全程一对一贴心跟</span></label>
+                            	<label><input type="checkbox"><span>Z掌中宝迷你相册</span></label>
+                            	<label><input type="checkbox"><span>资深摄影师团队跟拍</span></label>
+                            </div>
+                        </td>
+                    </tr>
+                <tbody>
+            </tbody>
+            </table>
+        </div>-->
+        
+        <div id="divCC">
+            <table cellpadding="0" cellspacing="0">
+                  <tbody>
+                        <tr style="border-bottom:1px dotted #CCC;"><th colspan="3"><label class="rs_c" onClick="checkAll(this,1)"><input type="checkbox" name="ckbFC" value="1"><span>第1次服务</span></label></th></tr>
+                        <tr>
+                        	<td valign="top">
+                                <table cellpadding="0" cellspacing="0" border="1">
+                                    <tbody>
+                                        <tr style="border-bottom:1px dotted #CCC;">
+                                        	<th><label class="rs_c" onClick="checkAll(this,1)"><input type="checkbox"><span>一销</span></label></th>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="982"><span>J金宝贝台历拍摄券（598元）</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="983"><span>蓬壁生辉</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="984"><span>升级前 8*8寸德国亚克力相册</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="985"><span>升级前 T天才宝贝台历券</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="986"><span>升级前 资深造型师采用专业化妆品全程一对一贴心跟</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="987"><span>资深摄影师团队跟拍</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="988"><span>Z掌中宝迷你相册</span></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td><!--
+                        	<td valign="top">
+                                <table cellpadding="0" cellspacing="0" border="1">
+                                    <tbody>
+                                        <tr>
+                                        	<th><label class="rs_c" onclick="checkAll(this,1)"><input type="checkbox"><span>二销</span></label></th>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="982"><span>J金宝贝台历拍摄券（598元）</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="983"><span>蓬壁生辉</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="984"><span>升级前 8*8寸德国亚克力相册</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="985"><span>升级前 T天才宝贝台历券</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="986"><span>升级前 资深造型师采用专业化妆品全程一对一贴心跟</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="987"><span>资深摄影师团队跟拍</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="988"><span>Z掌中宝迷你相册</span></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        	<td valign="top">
+                                <table cellpadding="0" cellspacing="0" border="1">
+                                    <tbody>
+                                        <tr>
+                                        	<th><label class="rs_c" onclick="checkAll(this,1)"><input type="checkbox"><span>收款</span></label></th>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="982"><span>J金宝贝台历拍摄券（598元）</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="983"><span>蓬壁生辉</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="984"><span>升级前 8*8寸德国亚克力相册</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="985"><span>升级前 T天才宝贝台历券</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="986"><span>升级前 资深造型师采用专业化妆品全程一对一贴心跟</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="987"><span>资深摄影师团队跟拍</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="988"><span>Z掌中宝迷你相册</span></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>-->
+                        </tr>
+                   </tbody>
+             </table>
+         </div>
+         <div id="divCC">
+            <table cellpadding="0" cellspacing="0" border="1">
+                  <tbody>
+                        <tr style="border-bottom:1px dotted #CCC;"><th colspan="3"><label class="rs_c" onClick="checkAll(this,1)"><input type="checkbox" name="ckbFC" value="1"><span>第2次服务</span></label></th></tr>
+                        <tr>
+                        	<td valign="top">
+                                <table cellpadding="0" cellspacing="0" border="1">
+                                    <tbody>
+                                        <tr>
+                                        	<th><label class="rs_c" onClick="checkAll(this,1)"><input type="checkbox"><span>一销</span></label></th>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="982"><span>J金宝贝台历拍摄券（598元）</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="983"><span>蓬壁生辉</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="984"><span>升级前 8*8寸德国亚克力相册</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="985"><span>升级前 T天才宝贝台历券</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="986"><span>升级前 资深造型师采用专业化妆品全程一对一贴心跟</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="987"><span>资深摄影师团队跟拍</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="988"><span>Z掌中宝迷你相册</span></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        	<td valign="top">
+                                <table cellpadding="0" cellspacing="0" border="1">
+                                    <tbody>
+                                        <tr>
+                                        	<th><label class="rs_c" onClick="checkAll(this,1)"><input type="checkbox"><span>二销</span></label></th>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="982"><span>J金宝贝台历拍摄券（598元）</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="983"><span>蓬壁生辉</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="984"><span>升级前 8*8寸德国亚克力相册</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="985"><span>升级前 T天才宝贝台历券</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="986"><span>升级前 资深造型师采用专业化妆品全程一对一贴心跟</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="987"><span>资深摄影师团队跟拍</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="988"><span>Z掌中宝迷你相册</span></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        	<td valign="top">
+                                <table cellpadding="0" cellspacing="0" border="1">
+                                    <tbody>
+                                        <tr>
+                                        	<th><label class="rs_c" onClick="checkAll(this,1)"><input type="checkbox"><span>收款</span></label></th>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="982"><span>J金宝贝台历拍摄券（598元）</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="983"><span>蓬壁生辉</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="984"><span>升级前 8*8寸德国亚克力相册</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="985"><span>升级前 T天才宝贝台历券</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="986"><span>升级前 资深造型师采用专业化妆品全程一对一贴心跟</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="987"><span>资深摄影师团队跟拍</span></label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label class="rs_c2"><input type="checkbox" name="ckbA1" value="988"><span>Z掌中宝迷你相册</span></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                   </tbody>
+             </table>
+         </div>
+         
+    </div>
+    
+    
+    <div class="gbox_btm">
+        <a href="javascript:;" class="gbox_btn_clear" onClick="PrintCancel()">取消</a> <a href="javascript:;" class="gbox_btn_save" onClick="PrintOK()">确定</a>
+    </div>
+</div>
+
+
+<script type="text/javascript"><!--tab切换 -->
+var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+</script>
+<script type="text/javascript">
+$(function(){
+	$(".tb_sx").mouseover(function(){
+		$(this).children('ul').show();
+		});
+	$(".tb_sx").mouseout(function(){
+		$(this).children('ul').hide();
+		});
+//		$(".tb_sx_px li a").click(function(){
+//			$(".tb_sx_px li a").removeClass('tb_sx_bg');
+//			$(this).addClass('tb_sx_bg');
+//			});          //筛选功能需要选中状态时候开启
+	$(".tb_bj_btn").mouseover(function(){
+		$(this).children('div').show();
+		});
+	$(".tb_bj_btn").mouseout(function(){
+		$(this).children('div').hide();
+		});
+	$(".tb_del").click(function(){
+		$(this).parentsUntil('table tbody').remove();
+		});
+	});
+</script>
+
+<!--table选中状态 -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('table tbody tr:odd').addClass('mtr_bg');
+	$(".table tbody tr").click(function(){
+		$('table tbody tr').removeClass('mtr_bg_act');
+		$('table tbody tr:odd').addClass('mtr_bg');
+		$(this).removeClass('mtr_bg');
+		$(this).addClass('mtr_bg_act');
+		});
+	});
+</script>
+</body>
+</html>

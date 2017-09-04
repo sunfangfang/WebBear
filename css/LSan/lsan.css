@@ -1,0 +1,402 @@
+@charset "utf-8";
+/* CSS Document */
+.lc_bq {
+	font-size: 14px;
+	line-height: 20px;
+	color: #161616;
+	float: left;
+	height: 20px;
+	width: auto;
+	margin-top: 10px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	margin-left: 10px;
+}
+.ls_top {
+	background-color: #FFF;
+	clear: both;
+	float: left;
+	height: 50px;
+	width: 100%;
+	padding-right: 1%;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #c5c8cf;
+	box-sizing: border-box;
+	padding-left:8px;
+}
+
+.ls_sx {
+	float: left;
+	height: 30px;
+	width: auto;
+	margin-top:15px;
+}
+.ls_top_btn {
+	font-size: 12px;
+	line-height: 26px;
+	color: #FFF;
+	text-align: center;
+	float: left;
+	height: 26px;
+	width: 50px;
+	background-color: #4dcd70;
+	margin-top: 14px;
+	margin-left: 10px;
+}
+.ls_sx input {
+	float: left;
+	height: 26px;
+	width: 100px;
+	padding-right: 10px;
+	padding-left: 10px;
+	font-size: 12px;
+	line-height: 25px;
+	color: #3f4450;
+	border: 1px solid #ced4e0;
+}
+.ls_sx small {
+	font-size: 12px;
+	line-height: 25px;
+	color: #3f4450;
+	text-align: center;
+	height: 25px;
+	width: 20px;
+	float: left;
+}
+.ls_sx select {
+	float: left;
+	height: 26px;
+	width: auto;
+	border: 1px solid #ced4e0;
+	margin-right: 10px;
+	margin-left:5px;
+	font-size: 12px;
+	line-height: 26px;
+	color: #333;
+	min-width:100px;
+}
+.ls_sx span {
+	font-size: 13px;
+	line-height: 26px;
+	color: #3f4450;
+	float: left;
+	height: 26px;
+	width: auto;
+}
+.ls_con {
+	clear: both;
+	float: left;
+	height: auto;
+	width: 560px;
+	background-color: #f7f7f7;
+	padding-top: 15px;
+	min-height:380px;
+	padding-bottom: 15px;
+}
+
+.ls {
+	float: left;
+	height: auto;
+	width: auto;
+	margin-top: 16px;
+	padding-left: 30px;
+}
+.ls span {
+	font-size: 14px;
+	line-height: 24px;
+	color: #666;
+	text-align: center;
+	float: left;
+	height: 24px;
+	width: 60px;
+}
+.ls input {
+	font-size: 13px;
+	line-height: 28px;
+	color: #333;
+	float: left;
+	height: 28px;
+	width: 163px;
+	padding-right: 4px;
+	padding-left: 4px;
+	border: 1px solid #999;
+	margin-left: 8px;
+}
+.ls_sel {
+	font-size: 13px;
+	color: #333;
+	float: left;
+	height: auto;
+	width: 163px;
+	border:1px solid #999;
+	line-height: 22px;
+	padding-top: 4px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	margin-left: 8px;
+}
+.ls textarea {
+	font-size: 13px;
+	line-height: 28px;
+	color: #333;
+	float: left;
+	height: 80px;
+	width: 423px;
+	padding-right: 4px;
+	padding-left: 4px;
+	border: 1px solid #999;
+	margin-left: 8px;
+	overflow-y:auto;
+}
+.lc_sx {
+	clear: both;
+	float: left;
+	height: auto;
+	width: 99%;
+	background-color: #FFF;
+	border: 1px solid #d1d4db;
+	margin-top: 10px;
+	margin-left: 0.5%;
+	min-height:135px;
+	min-width:1000px;
+}
+.lc_s1 {
+	clear: both;
+	float: left;
+	height: auto;
+	width: 100%;
+	margin-top: 5px;
+}
+.lc_in_m {
+	float: left;
+	height: auto;
+	width: 230px;
+	margin-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.lc_in_m span {
+	font-size: 12px;
+	line-height: 27px;
+	color: #666;
+	text-align: right;
+	float: left;
+	height: 27px;
+	width: 65px;
+}
+.lc_in_m input {
+	font-size: 13px;
+	color: #3f4450;
+	float: left;
+	height: auto;
+	width: 150px;
+	border:1px none #999;
+	background-color: #FFF;
+	padding: 4px;
+	margin-top: 1px;
+}
+
+.lc_in_sel_m {
+	font-size: 13px;
+	color: #3f4450;
+	float: left;
+	height: auto;
+	width: 150px;
+	border:1px none #999;
+	padding-top: 4px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	background-color: #FFF;
+}
+.lc_in_sel {
+	font-size: 12px;
+	color: #333;
+	float: left;
+	height: auto;
+	width: 110px;
+	border:1px solid #999;
+	padding:2px 4px;
+}
+.lc_in {
+	float: left;
+	height: 22px;
+	width: 190px;
+	margin-top:11px;
+	padding-right: 40px;
+}
+.lc_in span {
+	font-size: 12px;
+	line-height: 22px;
+	color: #666;
+	text-align: right;
+	float: left;
+	height: 22px;
+	width: 65px;
+}
+.lc_in input {
+	float: left;
+	height: 21px;
+	border: 1px solid #999;
+	font-size: 12px;
+	line-height: 21px;
+	color: #333;
+	width: 110px;
+	padding:0 4px;
+}
+.ls_t2 {
+	clear: both;
+	float: left;
+	height: auto;
+	width: 100%;
+	margin-top: 15px;
+}
+.ls_t2 span {
+	font-size: 13px;
+	line-height: 20px;
+	color: #ff452d;
+	float: left;
+	height: 20px;
+	width: auto;
+	margin-right: 30px;
+	margin-left: 10px;
+}
+.ls_foot {
+	height: auto;
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.ls_r2 {
+	float: right;
+	height: 20px;
+	width: auto;
+	margin-right: 50px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #f63545;
+	margin-top: 18px;
+}
+#ls_show1 {
+	left: 547px;
+	top: 128px;
+}
+#ls_show2 {
+	left: 782px;
+	top: 128px;
+}
+.ls_show {
+	float: left;
+	height: auto;
+	width: auto;
+	position: absolute;
+	left: 782px;
+	top: 128px;
+	border:1px solid #999;
+	display:none;
+}
+.ls_show li {
+	font-size: 13px;
+	color: #999;
+	float: left;
+	height: auto;
+	width: 140px;
+	background-color: #f9f9f9;
+	padding: 4px;
+	clear: both;
+}
+.ls_show li:hover {
+	color: #333;
+	background-color: #fff;
+}
+.ls_show li:last-child{border:none;}.ls_che {
+	float: left;
+	height: 30px;
+	width: 200px;
+	margin-top:18px;
+}
+.ls_che input {
+	float: left;
+	margin-top: 7px;
+	margin-left: 30px;
+}
+.ls_che span {
+	font-size: 14px;
+	line-height: 24px;
+	color: #666;
+	float: left;
+	height: 24px;
+	width: 60px;
+}
+.lc_in_m:hover {
+	background-color: #f3f3f3;
+}
+@media(max-width:1024px){
+.lc_in_m {
+	float: left;
+	height: auto;
+	width: 200px;
+	margin-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.lc_in_m span {
+	font-size: 12px;
+	line-height: 27px;
+	color: #666;
+	text-align: right;
+	float: left;
+	height: 27px;
+	width: 65px;
+}
+.lc_in_m input {
+	font-size: 13px;
+	color: #3f4450;
+	float: left;
+	height: auto;
+	width: 130px;
+	border:1px none #999;
+	background-color: #FFF;
+	padding: 4px;
+	margin-top: 1px;
+}
+.lc_in_sel_m {
+	font-size: 13px;
+	color: #3f4450;
+	float: left;
+	height: auto;
+	width: 130px;
+	border:1px none #999;
+	padding-top: 4px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	background-color: #FFF;
+}
+	}
+@media(max-width:1024px){
+.lc_sx {
+	clear: both;
+	float: left;
+	height: auto;
+	width: 530px;
+	background-color: #FFF;
+	border: 1px solid #d1d4db;
+	margin-top: 10px;
+	margin-left: 0.5%;
+	min-height:135px;
+	min-width:830px;
+}
+.ls_con {
+	clear: both;
+	float: left;
+	height: auto;
+	width: 560px;
+	background-color: #f7f7f7;
+	padding-top: 15px;
+	min-height:300px;
+	padding-bottom: 15px;
+}
+	}

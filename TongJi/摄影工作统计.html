@@ -1,0 +1,629 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>摄影工作统计</title>
+<link rel="stylesheet" href="../css/reset_s.css">
+<link rel="stylesheet" href="../css/table.css" />
+<link rel="stylesheet" href="../css/news.css" />
+<link rel="stylesheet" href="../css/pagination.css" />
+<link rel="stylesheet" href="../css/TongJi/sheyingtongji002.css">
+<link rel="stylesheet" type="text/css" href="../css/TongJi/sheyingtongji2.css">
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../js/jquery.reveal.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+	  setDivMaxHeight();
+ });
+$(window).resize(function() {
+	setDivMaxHeight();
+});
+function setDivMaxHeight() {
+	var fg=$(window).height();
+    var aa=$(window).width();
+    var bb;
+    if(aa<1020){
+        bb=262;
+    }else{
+        bb=223;
+    }
+	var h = parseInt(fg) - bb;
+	$(".m_table").css("height", h);
+}
+$(function(){
+    $(".labelio").click(function(){
+        $(this).find(".Mdivbg").toggleClass("Mdivbg01");
+    });
+    $(".span_ms").click(function(){
+        $(this).siblings(".Mdivbg").toggleClass("Mdivbg01");
+    });
+});
+</script>
+<style>
+    /*.tb_bottom{*/
+        /*width: 80px;*/
+    /*}*/
+    @media(max-width:850px){
+        body{min-width:827px;}
+        /*.tb_bottom{*/
+            /*width: 120px;*/
+        /*}*/
+	  .crm_sx_arrow.crm_sx_arrows{right:25px;}
+    }
+</style>
+</head>
+<body>
+<div class="m_top">
+    <div class="m_name">摄影工作统计 </div>
+     <div class="mt_btn"><a href="#" id="mt_sx_show" class="select01">筛选</a></div>
+    <script type="text/javascript">
+		$(function(){
+			$("#mt_sx_show,.mt_search").click(function(){
+				$(".crm_sx").slideToggle();
+				$(".mt_btn a").toggleClass("colo");
+			});
+		});
+	</script>
+    <div class="crm_sx" style="width: 450px; height: 412px;">
+        <div class="crm_sx_arrow crm_sx_arrows">
+        </div>
+        <div class="crm_sx1" style="width: 430px; margin-left: 20px;">
+            <span>店面名称：</span>
+            <select name="ddl1" id="ddl1" style="width: 329px">
+                <option value="">全部</option>
+                <option value="XB0108">北京大兴旗舰店</option>
+                <option value="XBB5210">SH体验店</option>
+
+            </select>
+        </div>
+        <div class="crm_sx1" style="width: 430px; margin-left: 20px;">
+            <span>日期类型：</span>
+            <select id="ddl6">
+                <option value="预约日期">预约日期</option>
+                <option value="沟通日期">沟通日期</option>
+                <option value="拍照日期">拍照日期</option>
+                <option value="选片日期">选片日期</option>
+                <option value="看版日期">看版日期</option>
+                <option value="取件日期">取件日期</option>
+                <option value="急件日期">急件日期</option>
+                <option value="出件日期">出件日期</option>
+                <option value="付款完成日">付款完成日</option>
+                <option value="服次完成日">服次完成日</option>
+            </select>
+            <input type="text" id="t1" style="margin-left: 10px" onFocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,maxDate:'#F{$dp.$D(\'t2\')}'})"><small>--</small><input type="text" id="t2" onFocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,minDate:'#F{$dp.$D(\'t1\')}'})">
+        </div>
+        <div class="crm_sx1" style="width: 230px; margin-left: 20px;">
+            <span>部门：</span>
+            <select name="ddl2" id="ddl2">
+                <option value="">全部</option>
+                <option value="门市">门市</option>
+                <option value="选样部">选样部</option>
+                <option value="摄影部">摄影部</option>
+                <option value="化妆部">化妆部</option>
+                <option value="客服">客服</option>
+                <option value="数码">数码</option>
+                <option value="人事管理">人事管理</option>
+                <option value="网络">网络</option>
+                <option value="财务">财务</option>
+                <option value="取件">取件</option>
+                <option value="行政">行政</option>
+                <option value="总经办">总经办</option>
+                <option value="礼服部">礼服部</option>
+                <option value="后期">后期</option>
+                <option value="导师部">导师部</option>
+
+            </select>
+        </div>
+        <div class="crm_sx1" style="width: 200px;">
+            <span>职务：</span>
+            <select id="ddl3">
+                <option value="门市接待">门市接待</option>
+                <option value="接单人员">接单人员</option>
+                <option value="沟通人员">沟通人员</option>
+                <option value="摄影师">摄影师</option>
+                <option value="摄影助理">摄影助理</option>
+                <option value="初修人员">初修人员</option>
+                <option value="精修人员">精修人员</option>
+                <option value="设计人员">设计人员</option>
+                <option value="美编人员">美编人员</option>
+                <option value="调色人员">调色人员</option>
+                <option value="选片人员">选片人员</option>
+                <option value="看版人员">看版人员</option>
+                <option value="急件取件">急件取件</option>
+                <option value="导师">导师</option>
+                <option value="导师二">导师二</option>
+                <option value="灯光师">灯光师</option>
+                <option value="灯光助理">灯光助理</option>
+                <option value="造型师">造型师</option>
+                <option value="造型助理">造型助理</option>
+            </select>
+        </div>
+        <div class="crm_sx1" style="width: 230px; margin-left: 20px;">
+            <span>人员：</span>
+            <select name="ddl4" id="ddl4">
+                <option value="">全部</option>
+                <option value="小小">小小</option>
+                <option value="amy">amy</option>
+                <option value="天翼">天翼</option>
+                <option value="静静">静静</option>
+                <option value="Michael">Michael</option>
+                <option value="姗姗">姗姗</option>
+                <option value="阳阳">阳阳</option>
+                <option value="小娟">小娟</option>
+                <option value="小彤">小彤</option>
+                <option value="小俊">小俊</option>
+                <option value="小鹏">小鹏</option>
+                <option value="董事长">董事长</option>
+                <option value="秘书">秘书</option>
+                <option value="微微">微微</option>
+                <option value="苗苗">苗苗</option>
+                <option value="Gerry">Gerry</option>
+                <option value="Tang">Tang</option>
+                <option value="小王">小王</option>
+                <option value="7号">7号</option>
+                <option value="瑶瑶">瑶瑶</option>
+                <option value="尼古拉斯">尼古拉斯</option>
+                <option value="小张">小张</option>
+                <option value="00">00</option>
+                <option value="Dean">Dean</option>
+                <option value="小帅帅">小帅帅</option>
+                <option value="大大">大大</option>
+
+            </select>
+        </div>
+        <div class="crm_sx1" style="width: 200px;">
+            <span>消费类型：</span>
+            <select name="ddl5" id="ddl5">
+                <option value="">全部</option>
+                <option value="1">婚纱照</option>
+                <option value="2">全家福</option>
+                <option value="3">写真照</option>
+                <option value="4">出生照</option>
+                <option value="5">满月照</option>
+                <option value="6">百天照</option>
+                <option value="7">周岁照</option>
+                <option value="8">亲子照</option>
+                <option value="9">孕妇照</option>
+                <option value="消费">婚纱照1</option>
+
+            </select>
+        </div>
+        <div class="crm_sx1" style="width: 230px; margin-left: 20px;">
+            <span>客户来源：</span>
+            <select name="ddl7" id="ddl7">
+                <option value="">全部</option>
+                <option value="自然进店">自然进店</option>
+                <option value="大众点评网">大众点评网</option>
+                <option value="天猫">天猫</option>
+                <option value="展会">展会</option>
+                <option value="报纸杂志">报纸杂志</option>
+
+            </select>
+        </div>
+        <div class="crm_sx1" style="width: 200px;">
+            <span>拍照类型：</span>
+            <select name="ddl8" id="ddl8">
+                <option value="">全部</option>
+                <option value="1">拍照</option>
+                <option value="2">补拍</option>
+                <option value="3">加拍</option>
+                <option value="4">重拍</option>
+                <option value="5">赠拍</option>
+
+            </select>
+        </div>
+        <div class="crm_sx1" style="width: 225px; margin-left: 20px;">
+            <span>状态：</span>
+            <select id="ddl9">
+                <option value="">全部</option>
+                <option value="未拍完">未拍完</option>
+                <option value="已拍完">已拍完</option>
+                <option value="全未拍">全未拍</option>
+            </select>
+        </div>
+        <div class="crm_sx1" style="width: 200px;">
+                <span style="width: 85px">
+                    <label>
+                        <input type="checkbox" id="t3">拍摄景点：</label></span>
+            <select name="ddl10" id="ddl10">
+                <option value="">全部</option>
+                <option value="北海公园">北海公园</option>
+                <option value="圆明园">圆明园</option>
+                <option value="故宫">故宫</option>
+                <option value="长城">长城</option>
+                <option value="后海">后海</option>
+                <option value="天安门">天安门</option>
+
+            </select>
+        </div>
+        <div class="crm_sx1" style="width: 230px; margin-left: 20px;">
+            <span style="width: 160px">当前摄影景点使用数量：</span>
+            <label id="Label17">
+            </label>
+        </div>
+        <div class="crm_sx1_btn" style="margin-top: 20px;">
+            <a href="javascript:;" onClick="Search()">查询</a>
+        </div>
+    </div>
+</div>
+    <!--页面主内容 -->
+<div id="m_con">
+     <div class="m_table" style="overflow: auto;">
+        <table class="table  table-hover table-striped" style="width: 2000px;">
+            <thead class="tb_th_bga"><!-- 如果是在tab切换里面时候，th的class="tb_th_bgb";一般状态下用class="tb_th_bga"  -->
+                <tr>
+                    <td>序号</td>
+                    <td>服务店面</td>
+                    <td>服次</td>
+                    <td>日期</td>
+                    <td>客户编号</td>
+                    <td>宝宝姓名</td>
+                    <td>父亲电话</td>
+                    <td>母亲电话</td>
+                    <td>预约金额</td>
+                    <td>平均预约</td>
+                    <td>二销金额</td>
+                    <td>商品金额</td>
+                    <td>商品已付</td>
+                    <td>商品</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label class="labelio sytjlab tb_xh"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label class="labelio sytjlab tb_xh"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label class="labelio sytjlab tb_xh"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label class="labelio sytjlab tb_xh"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+               <tr>
+                   <td><label class="labelio sytjlab tb_xh"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+               <tr>
+                   <td><label class="labelio sytjlab tb_xh"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+               <tr>
+                   <td><label class="labelio sytjlab tb_xh"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label class="labelio sytjlab tb_xh"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label class="labelio sytjlab tb_xh"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+              <tr>
+                  <td><label class="labelio sytjlab tb_xh"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+              <tr>
+                  <td><label class="labelio sytjlab tb_xh"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+               <tr>
+                   <td><label class="labelio sytjlab tb_xh"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+              <tr>
+                    <td><label class="labelio sytjlab tb_xh"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label class="labelio sytjlab tb_xh"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label class="labelio sytjlab tb_xh"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label class="labelio sytjlab tb_xh"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label class="labelio sytjlab tb_xh"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label class="labelio sytjlab tb_xh"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div> 
+</div>    
+    <!--页面主内容-------------end -->
+
+<div class="tb_foot" style="width:99.4%;">
+    <div class="tb_bottom hrighti" style="width:99.4%;"><!--公共底部功能（显示，按钮，分页） -->
+        <div class="tb_b_zs heightp">
+           <div class="divfontm1 clearfix"><span>客户数量：8,800.00</span><span>总预约组：8,800.00</span><span>总加挑数：8,800.00</span><span>总赠组数：8,800.00</span><span>总拍摄组：8,800.00</span><span>设计P图：8,800.00</span><span>微信数：8,800.00</span></div>
+           <div class="divfontm2 clearfix">
+              <span>客户数量：8,800.00</span><span>总预约组：8,800.00</span><span>总加挑数：8,800.00</span><span>总赠组数：8,800.00</span><span>总拍摄组：8,800.00</span><span>设计P 图：8,800.00</span><span>平均预约总金额：<label class="inum">8,800.00</label></span>
+           </div>
+    </div> 
+
+    <div class="tb_bottom heightio" style="border-top:1px solid #c9cdd6;"><!--公共底部功能（显示，按钮，分页） -->
+        <a href="#" class="tb_btn tb_green">导出Excel</a>
+    </div>
+
+</div>
+<script type="text/javascript">
+$(function(){
+	$(".tb_sx").mouseover(function(){
+		$(this).children('ul').show();
+		});
+	$(".tb_sx").mouseout(function(){
+		$(this).children('ul').hide();
+		});
+	$(".tb_bj_btn").mouseover(function(){
+		$(this).children('div').show();
+		});
+	$(".tb_bj_btn").mouseout(function(){
+		$(this).children('div').hide();
+		});
+	$(".tb_del").click(function(){
+		$(this).parentsUntil('table tbody').remove();
+		});
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('table tbody tr:odd').addClass('mtr_bg');
+	$(".table tbody tr").click(function(){
+		$('table tbody tr').removeClass('mtr_bg_act');
+		$('table tbody tr:odd').addClass('mtr_bg');
+		$(this).removeClass('mtr_bg');
+		$(this).addClass('mtr_bg_act');
+		});
+	});
+</script>
+</body>
+</html>

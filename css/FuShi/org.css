@@ -1,0 +1,60 @@
+/*本实例 css*/
+
+.dressF {
+	width: 660px;
+	overflow:hidden;
+	float: left;
+	height: auto;
+}
+.qirepic {
+	width:500px;
+	height: auto;
+	color:#FFFFFF;
+	float: left;
+	margin-top: 9px;
+}
+.qirepic ul li img {
+	width: 500px;
+	height: 640px;
+}
+.qirepic ul li a.qirepic-silder-img {
+	display: block;
+	width: 500px;
+	float: left;
+	height: 640px;
+}
+.qirepic-silder-intro { height: 310px; width: 530px; float: left; padding-left: 15px; }
+
+.qirepic-silder-title { line-height: 30px; padding: 10px 0 14px 0; }
+.qirepic-silder-title h2 a { color: #FFFFFF; font-size: 26px; font-weight: normal; font-family:"Microsoft Yahei" }
+.qirepic-silder-title h2 a:hover { text-decoration:underline; }
+.qirepic-silder-title span { color: #FF6600; font-size: 14px; }
+
+.qirepic-silder-info li,.qirepic-silder-desc { font-size: 14px; color: #999999; }
+.qirepic-silder-info li { width: 250px; height: 25px;  overflow:hidden; float: left; }
+.qirepic-silder-info li span,.qirepic-silder-desc span { color: #CCCCCC; }
+.qirepic-silder-info li.long { width: 500px; margin-bottom: 5px; }
+.qirepic-silder-desc { display:block; height: 96px; line-height:24px; padding-bottom: 10px; overflow: hidden; }
+ 
+.qirepic-silder-play { display: block; width: 136px; height: 29px; background:url(../images/silder-play.png) no-repeat; text-indent:-9999px;}
+.qirepic-silder-play:hover { background-position: 0 -30px; }
+
+/*图片导航*/
+.dressF-num {
+	width: 150px;
+	height: auto;
+	float: left;
+	overflow:hidden;
+	margin-top: 7px;
+	margin-left: 5px;
+}
+.dressF-num ul {
+	width: 150px;
+}
+.dressF-num li { float: left; margin: 0 5px 5px 0px; clear:both; }
+.dressF-num li a { display:block; border: 3px #ddd solid; padding: 1px; }
+.dressF-num li img {
+	width: 135px;
+	height: 150px;
+}
+.dressF-num li.on a { border: 3px #F78E57 solid; } /*当前项*/

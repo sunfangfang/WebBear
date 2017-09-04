@@ -1,0 +1,717 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>礼服挑选</title>
+<link rel="stylesheet" href="../css/reset_s.css">
+<link rel="stylesheet" href="../css/FuShi/table.css" />
+<link rel="stylesheet" href="../css/FuShi/news.css" />
+<link rel="stylesheet" href="../css/FuShi/pagination.css" />
+<link rel="stylesheet" href="../css/content.css" />
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../js/FuShi/main.js"></script>
+<script type="text/javascript" src="../js/jquery.reveal.js"></script>
+<link rel="stylesheet" href="../css/FuShi/org.css">
+<link rel="stylesheet" href="../css/FuShi/dress.css" />
+<!--<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>-->
+<script type="text/javascript" src="../js/FuShi/SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+	  setDivMaxHeight();
+ });
+$(window).resize(function() {
+	setDivMaxHeight();
+});
+function setDivMaxHeight() {
+	var fg=$(window).height();
+	var h = parseInt(fg) -82;
+	$("#m_con").css("height", h);
+}
+$(document).ready(function() {
+    $("#lftx_sx_btn1,.lftx_sx_btn2 a").click(function() {
+        $(".lftx_sx").slideToggle();
+    });
+});
+$(function(){
+    $(".labelio").click(function(){
+        $(this).find(".Mdivbg").toggleClass("Mdivbg01");
+    });
+    $(".span_ms").click(function(){
+        $(this).siblings(".Mdivbg").toggleClass("Mdivbg01");
+    });
+    $(".mt_btn a").click(function(){
+        $(".mt_btn a").removeClass("colo");
+        $(this).addClass("colo");
+    })
+});
+</script>
+</head>
+<body>
+<div class="m_top">
+    <div class="m_name">礼服挑选 </div>
+    <div class="txtSearch" style="float: left; margin-left: 20px;">
+        <input type="text" id="txtDressID" placeholder="请输入礼服编号">
+        <a href="javascript:;" id="DCA4">查询</a>
+    </div>
+    <div class="mt_btn">
+        <a href="javascript:;" id="lftx_sx_btn1">礼服筛选</a><a href="javascript:;" id="DCA1">显示试穿</a><a href="javascript:;" id="DCA3" class="colo">显示可用</a><a href="javascript:;" id="DCA2">显示所有</a><a href="javascript:;" id="btnBack">返回上一页</a>
+    </div>
+    <!--筛选隐藏内容 -->
+    <div class="lftx_sx">
+        <div class="fs_sx_arrow"></div>
+        <div class="lfs_con">
+            <div class="lfs">
+                <div class="lfs_tit ls_left">筛选：</div>
+                <div class="lf_con lf_con1" id="lfsx_mark">
+                    <div class="lfs_btn"><span>白色</span><a href="#"></a></div>
+                    <div class="lfs_btn"><span>新娘妆</span><a href="#"></a></div>
+                    <div class="lfs_btn"><span>蕾丝连衣裙</span><a href="#"></a></div>
+                    <div class="lfs_btn"><span>白色</span><a href="#"></a></div>
+                    <div class="lfs_btn"><span>新娘妆</span><a href="#"></a></div>
+                    <div class="lfs_btn"><span>蕾丝连衣裙</span><a href="#"></a></div>
+                    <div class="lfs_btn"><span>白色</span><a href="#"></a></div>
+                    <div class="lfs_btn"><span>新娘妆</span><a href="#"></a></div>
+                    <div class="lfs_btn"><span>蕾丝连衣裙</span><a href="#"></a></div>
+                    <div class="lfs_btn"><span>白色</span><a href="#"></a></div>
+                    <div class="lfs_btn"><span>新娘妆</span><a href="#"></a></div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $(".lfs_btn a").click(function(){
+                        $(this).parent().remove();
+                    });
+                });
+            </script>
+            <div class="lftx_line lf_line"></div>
+            <div class="ls_scroll">
+                <div class="lfs lf">
+                    <div class="lfs_tit">种类：</div>
+                    <div class="lf_con">
+                        <a href="#" class="lfs_tx_btn">晚礼服</a>
+                        <a href="#" class="lfs_tx_btn">白纱</a>
+                        <a href="#" class="lfs_tx_btn">订婚装</a>
+                        <a href="#" class="lfs_tx_btn">新娘装 </a>
+                        <a href="#" class="lfs_tx_btn">伴娘装</a>
+                        <a href="#" class="lfs_tx_btn">晚礼服</a>
+                        <a href="#" class="lfs_tx_btn">白纱</a>
+                        <a href="#" class="lfs_tx_btn">订婚装</a>
+                        <a href="#" class="lfs_tx_btn">新娘装 </a>
+                        <a href="#" class="lfs_tx_btn">伴娘装</a>
+                        <a href="#" class="lfs_tx_btn">晚礼服</a>
+                        <a href="#" class="lfs_tx_btn">白纱</a>
+                        <a href="#" class="lfs_tx_btn">订婚装</a>
+                        <a href="#" class="lfs_tx_btn">新娘装 </a>
+                        <a href="#" class="lfs_tx_btn">伴娘装</a>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        $(".lfs_tx_btn").click(function(){
+                            $("#lfsx_mark").append('<div class="lfs_btn"><span>晚礼服</span><a href="#"></a></div>');
+                            $(".lfs_btn a").click(function(){
+                                $(this).parent().remove();
+                            });
+                        });
+                    });
+                </script>
+                <div class="lfs lf">
+                    <div class="lfs_tit">颜色：</div>
+                    <div class="lf_con">
+                        <a href="#" class="lfs_tx_btn">白色</a>
+                        <a href="#" class="lfs_tx_btn">红色</a>
+                        <a href="#" class="lfs_tx_btn">粉色</a>
+                        <a href="#" class="lfs_tx_btn">紫色 </a>
+                        <a href="#" class="lfs_tx_btn">米黄色</a>
+                        <a href="#" class="lfs_tx_btn">白色</a>
+                        <a href="#" class="lfs_tx_btn">红色</a>
+                        <a href="#" class="lfs_tx_btn">粉色</a>
+                        <a href="#" class="lfs_tx_btn">紫色 </a>
+                        <a href="#" class="lfs_tx_btn">米黄色</a>
+                        <a href="#" class="lfs_tx_btn">白色</a>
+                        <a href="#" class="lfs_tx_btn">红色</a>
+                        <a href="#" class="lfs_tx_btn">粉色</a>
+                        <a href="#" class="lfs_tx_btn">紫色 </a>
+                        <a href="#" class="lfs_tx_btn">米黄色</a>
+                    </div>
+                </div>
+                <div class="lfs lf">
+                    <div class="lfs_tit">样式：</div>
+                    <div class="lf_con">
+                        <a href="#" class="lfs_tx_btn">雪纺百褶裙</a>
+                        <a href="#" class="lfs_tx_btn">蕾丝连衣裙</a>
+                        <a href="#" class="lfs_tx_btn">A字裙</a>
+                        <a href="#" class="lfs_tx_btn">高腰裙 </a>
+                        <a href="#" class="lfs_tx_btn">雪纺百褶裙</a>
+                        <a href="#" class="lfs_tx_btn">蕾丝连衣裙</a>
+                        <a href="#" class="lfs_tx_btn">A字裙</a>
+                        <a href="#" class="lfs_tx_btn">高腰裙 </a>
+                        <a href="#" class="lfs_tx_btn">雪纺百褶裙</a>
+                        <a href="#" class="lfs_tx_btn">蕾丝连衣裙</a>
+                        <a href="#" class="lfs_tx_btn">A字裙</a>
+                        <a href="#" class="lfs_tx_btn">高腰裙 </a>
+                        <a href="#" class="lfs_tx_btn">雪纺百褶裙</a>
+                        <a href="#" class="lfs_tx_btn">蕾丝连衣裙</a>
+                        <a href="#" class="lfs_tx_btn">A字裙</a>
+                        <a href="#" class="lfs_tx_btn">高腰裙 </a>
+                    </div>
+                </div>
+                <div class="lfs lf">
+                    <div class="lfs_tit">裙长：</div>
+                    <div class="lf_con">
+                        <a href="#" class="lfs_tx_btn">长裙</a>
+                        <a href="#" class="lfs_tx_btn">七分裙</a>
+                        <a href="#" class="lfs_tx_btn">五分裙</a>
+                        <a href="#" class="lfs_tx_btn">拖地 </a>
+                        <a href="#" class="lfs_tx_btn">长裙</a>
+                        <a href="#" class="lfs_tx_btn">七分裙</a>
+                        <a href="#" class="lfs_tx_btn">五分裙</a>
+                        <a href="#" class="lfs_tx_btn">拖地 </a>
+                        <a href="#" class="lfs_tx_btn">长裙</a>
+                        <a href="#" class="lfs_tx_btn">七分裙</a>
+                        <a href="#" class="lfs_tx_btn">五分裙</a>
+                        <a href="#" class="lfs_tx_btn">拖地 </a>
+                        <a href="#" class="lfs_tx_btn">长裙</a>
+                        <a href="#" class="lfs_tx_btn">七分裙</a>
+                        <a href="#" class="lfs_tx_btn">五分裙</a>
+                        <a href="#" class="lfs_tx_btn">拖地 </a>
+                    </div>
+                </div>
+                <div class="lfs lf">
+                    <div class="lfs_tit">风格：</div>
+                    <div class="lf_con">
+                        <a href="#" class="lfs_tx_btn">公主</a>
+                        <a href="#" class="lfs_tx_btn">优雅</a>
+                        <a href="#" class="lfs_tx_btn">可爱</a>
+                        <a href="#" class="lfs_tx_btn">新娘装 </a>
+                        <a href="#" class="lfs_tx_btn">伴娘装</a>
+                        <a href="#" class="lfs_tx_btn">公主</a>
+                        <a href="#" class="lfs_tx_btn">优雅</a>
+                        <a href="#" class="lfs_tx_btn">可爱</a>
+                        <a href="#" class="lfs_tx_btn">新娘装 </a>
+                        <a href="#" class="lfs_tx_btn">伴娘装</a>
+                        <a href="#" class="lfs_tx_btn">公主</a>
+                        <a href="#" class="lfs_tx_btn">优雅</a>
+                        <a href="#" class="lfs_tx_btn">可爱</a>
+                        <a href="#" class="lfs_tx_btn">新娘装 </a>
+                        <a href="#" class="lfs_tx_btn">伴娘装</a>
+                        <a href="#" class="lfs_tx_btn">公主</a>
+                        <a href="#" class="lfs_tx_btn">优雅</a>
+                        <a href="#" class="lfs_tx_btn">可爱</a>
+                        <a href="#" class="lfs_tx_btn">新娘装 </a>
+                        <a href="#" class="lfs_tx_btn">伴娘装</a>
+                    </div>
+                </div>
+                <div class="lfs lf">
+                    <div class="lfs_tit">柜位：</div>
+                </div>
+                <div class="lfs lf">
+                    <div class="lfs_tit">其让：</div>
+                </div>
+                <div class="lftx_line"></div>
+                <div class="lfs_date"><span>预计使用时间:</span><input type="text" id="start"><small>--</small><input type="text" id="end"></div>
+            </div>
+            <div class="lftx_sx_btn2"><a href="#" class="zz_s_btn lf_btn tb_orange">筛选</a></div>
+        </div>
+    </div>
+    <!--筛选隐藏内容------------------end -->
+</div>
+<!--页面主内容 -->
+<div id="m_con">
+    <div class="dresslist">
+        <div class="dressSel lf_dress">
+            <!--<div class="dressSelinfo">
+                <div class="sel">筛选 ：</div>
+                <div class="sel_name">白色<a class="a_close" data-dismiss="alert" href="#">&times;</a></div>
+                <div class="sel_name">白色<a class="a_close" data-dismiss="alert" href="#">&times;</a></div>
+                <div class="sel_name">白色<a class="a_close" data-dismiss="alert" href="#">&times;</a></div>
+            </div>  -->
+            <div class="lfs">
+                <div class="lfs_tit">筛选：</div>
+                <div class="lf_con2">
+                    <div class="lfs_btn lf_hsbtn"><span>白色</span><a href="#"></a></div>
+                    <div class="lfs_btn lf_hsbtn"><span>新娘妆</span><a href="#"></a></div>
+                    <div class="lfs_btn lf_hsbtn"><span>蕾丝连衣裙</span><a href="#"></a></div>
+
+                </div>
+            </div>
+        </div>
+        <ul class="dress_ul">
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/1.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001F
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/2.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW-20151201-000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/3.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/4.jpg" /> </a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/5.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/6.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/7.jpg" /> </a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/8.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/9.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/10.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/11.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/1.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/1.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/1.jpg" /> </a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/1.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/1.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/1.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/1.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/1.jpg" /> </a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/1.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/1.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/1.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/1.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/1.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/1.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/1.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+            <li class="dress_li">
+                <div class="dressimg">
+                    <a href="#0" class="cd-popup-trigger"><img src="../img/Fushi/1.jpg" /></a>
+                </div>
+                <div class="dressname">
+                    FEW000001
+                </div>
+                <div class="dresstry">
+                    <label class="labelio div_shichuan"><input name="" type="checkbox" value=""><span class="span_ms div_shiwenzi">试穿</span></label>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+    <!--页面主内容-------------end -->
+
+
+
+
+<!--
+ 	作者：小黑
+ 	时间：2015-12-25
+ 	描述：弹出礼服层
+ -->
+<div class="cd-popup" role="alert">
+    <div class="cd-popup-container">
+
+        <div class="dressInfo">
+            <div class="dressInfo_title">
+                <div class="drename">A0000001</div>
+                <a href="#">
+                    <div class="drecloss cd-popup-close img-replace">
+                        ×
+                    </div>
+                </a>
+            </div>
+            <!--<div class="container">
+              <div id="ipresenter">
+                <div id="aaa" class="step" data-x="0" data-y="0" data-thumbnail="../img/Fushi/1.jpg"><a href="../img/Fushi/1.jpg"class="boxer" rel="gallery"> <img src="../img/Fushi/1.jpg"/></a></div>
+                <div id="bbb" class="step" data-x="700" data-y="0" data-scale="1" data-thumbnail="../img/Fushi/2.jpg"><a href="../img/Fushi/2.jpg" class="boxer" rel="gallery">  <img src="../img/Fushi/2.jpg" /></a></div>
+                <div id="ccc" class="step" data-x="1400" data-y="0" data-scale="1" data-thumbnail="../img/Fushi/3.jpg"><a href="../img/Fushi/3.jpg" class="boxer" rel="gallery">  <img src="../img/Fushi/3.jpg" /></a></div>
+                <div id="ddd" class="step" data-x="2100" data-y="0" data-scale="1" data-thumbnail="../img/Fushi/4.jpg"><a href="../img/Fushi/4.jpg" class="boxer" rel="gallery">  <img src="../img/Fushi/4.jpg"/></a></div>
+                <div id="eee" class="step" data-x="2800" data-y="0" data-scale="1" data-thumbnail="../img/Fushi/5.jpg"><a href="../img/Fushi/5.jpg" class="boxer" rel="gallery">  <img src="../img/Fushi/5.jpg"/></a></div>
+              </div>
+            </div> -->
+            <div class="dressF">
+                <div class="dressF-num">
+                    <ul>
+                        <li><a href="#"><img src="../img/Fushi/1.jpg" /></a></li>
+                        <li><a href="#"><img src="../img/Fushi/2.jpg" /></a></li>
+                        <li><a href="#"><img src="../img/Fushi/3.jpg" /></a></li>
+                        <li><a href="#"><img src="../img/Fushi/4.jpg" /></a></li>
+                    </ul>
+                </div>
+                <div class="qirepic">
+                    <ul class="info">
+                        <li><div class="qirepic-silder-panel"><a class="qirepic-silder-img" href="#"><img src="../img/Fushi/1.jpg" /></a></div></li>
+                        <li><div class="qirepic-silder-panel"><a class="qirepic-silder-img" href="#"><img src="../img/Fushi/2.jpg" /></a></div></li>
+                        <li><div class="qirepic-silder-panel"><a class="qirepic-silder-img" href="#"><img src="../img/Fushi/3.jpg" /></a></div></li>
+                        <li><div class="qirepic-silder-panel"><a class="qirepic-silder-img" href="#"><img src="../img/Fushi/4.jpg" /></a></div></li>
+                    </ul>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(".dressF").slide({ titCell:".dressF-num ul li" , mainCell:".qirepic ul.info" , effect:"fold", autoPlay:true , delayTime:300 });
+            </script>
+
+            <div class="dressInfo_right">
+                <div class="dress_01">结婚礼服</div>
+                <div class="dress_01">
+                    <input class="dresstxt" type="text" />
+                    <input class="dressbtn tb_orange" type="button" value="查询" />
+                </div>
+                <div class="dressCustomer">
+                    <div class="dressCustomer_01">
+                        <div class="drecustomspan">客户编号：</div>
+                        <div class="drecustomspanname"><input type="text"></div>
+                    </div>
+                    <div class="dressCustomer_01">
+                        <div class="drecustomspan">客户姓名：</div>
+                        <div class="drecustomspanname"><input type="text"></div>
+                    </div>
+                    <div class="dressCustomer_01">
+                        <div class="drecustomspan">借出时间：</div>
+                        <div class="drecustomspanname drecustomspanname1">
+                            <select class="fs_input1">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                            <input class="fs_input2" type="text"/>
+                        </div>
+                    </div>
+                    <div class="dressCustomer_01">
+                        <div class="drecustomspan">归还时间：</div>
+                        <div class="drecustomspanname drecustomspanname1">
+                            <select class="fs_input1">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                            <input class="fs_input2" type="text"/>
+                        </div>
+                    </div>
+                    <div class="dressCustomer_01">
+                        <div class="drecustomspan">加挑金额：</div>
+                        <div class="drecustomspanname">
+                            <input class="dretxt02" type="text" />
+                        </div>
+                    </div>
+                    <div class="dressCustomer_01">
+                        <div class="drecustomspan">礼服备注：</div>
+                        <textarea rows="8" id="beizhu"></textarea>
+                    </div>
+                </div>
+                <div class="dressbtnme">
+                    <a href="#" class="btn_dengji tb_orange">确认礼服登记</a>
+                </div>
+            </div>
+        </div>
+
+        <!-------------------------------------------------------------------------------->
+
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    //日期范围限制
+//    var start = {
+//        elem: '#start',
+//        format: 'YYYY-MM-DD',
+//        min: laydate.now(), //设定最小日期为当前日期
+//        max: '2099-06-16', //最大日期
+//        istime: true,
+//        istoday: false,
+//        choose: function(datas){
+//            end.min = datas; //开始日选好后，重置结束日的最小日期
+//            end.start = datas; //将结束日的初始值设定为开始日
+//        }
+//    };
+
+//    var end = {
+//        elem: '#end',
+//        format: 'YYYY-MM-DD',
+//        min: laydate.now(),
+//        max: '2099-06-16',
+//        istime: true,
+//        istoday: false,
+//        choose: function(datas){
+//            start.max = datas; //结束日选好后，充值开始日的最大日期
+//        }
+//    };
+//    laydate(start);
+//    laydate(end);
+
+    //自定义日期格式
+//    laydate({
+//        elem: '#test1',
+//        format: 'YYYY年MM月DD日',
+//        festival: true, //显示节日
+//        choose: function(datas){ //选择日期完毕的回调
+//            alert('得到：'+datas);
+//        }
+//    });
+
+    //日期范围限定在昨天到明天
+//    laydate({
+//        elem: '#hello3',
+//        min: laydate.now(-1), //-1代表昨天，-2代表前天，以此类推
+//        max: laydate.now(+1) //+1代表明天，+2代表后天，以此类推
+//    });
+</script>
+
+<!--弹窗内弹出大图效果 -->
+<!--<script src="../js/jquery.fs.boxer.js"></script>
+<script>
+$(function(){
+	$('.boxer').boxer({
+		labels: {
+			close: "关闭",
+			count: "/",
+			next: "下一个",
+			previous: "上一个"
+		}
+	});
+});
+</script> -->
+
+
+</body>
+</html>

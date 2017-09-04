@@ -1,0 +1,328 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>员工通讯录</title>
+<link rel="stylesheet" href="../css/reset_s.css">
+<link rel="stylesheet" href="../css/OA/oa.css">
+<link rel="stylesheet" href="../css/table.css"/>
+<link rel="stylesheet" href="../css/content.css">
+<link rel="stylesheet" href="../css/TongJi/sheyingtongji2.css" />
+<link rel="stylesheet" href="../css/box.css">
+<link rel="stylesheet" href="../css/news.css">
+<link rel="stylesheet" href="../css/pagination.css">
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+	  setDivMaxHeight();
+ });
+$(window).resize(function() {
+	setDivMaxHeight();
+});
+function setDivMaxHeight() {
+	var fg=$(window).height();
+	var h = parseInt(fg) -115;
+	$(".m_table").css("height", h);
+	
+}
+$(function(){
+    $(".labelio").click(function(){
+        $(this).find(".Mdivbg").toggleClass("Mdivbg01");
+    });
+    $(".span_ms").click(function(){
+        $(this).siblings(".Mdivbg").toggleClass("Mdivbg01");
+    });
+});
+</script>
+    <script type="text/javascript">
+        $(function () {
+            //筛选
+           /* $(".crm_sx1_btn a").click(function () {
+                $(".crm_sx").slideToggle();
+                $(".mt_btn a").toggleClass("colo");
+            });*/
+            $(".mt_btn a").click(function () {
+                $(".crm_sx").slideToggle();
+                $(this).toggleClass("colo");
+            });
+        });
+    </script>
+    <style>
+        @media(max-width:850px){
+            body{min-width:827px;}
+        }
+    </style>
+</head>
+
+<body>
+<!--标题-->
+<div class="m_top">
+    <div class="m_name">员工通讯录 </div>
+    <div class="mt_btn">
+        <a href="javascript:;">筛选</a></div>
+    <div class="crm_sx" style="width: 340px; height: 280px;">
+        <div class="crm_sx_arrow crmn">
+        </div>
+        <div class="crm_sx1" style="width: 300px; margin-left: 20px;">
+            <span>所属店面：</span>
+            <select name="s1" id="s1" style="width: 220px">
+                <option value="">全部</option>
+                <option value="望京路金夫人A01">望京路金夫人A01</option>
+            </select>
+        </div>
+        <div class="crm_sx1" style="width: 300px; margin-left: 20px;">
+            <span>昵称：</span>
+            <input type="text" id="s2" style="width: 220px">
+        </div>
+        <div class="crm_sx1" style="width: 300px; margin-left: 20px;">
+            <span>入职日期：</span>
+            <input type="text"><small>--</small><input type="text"></div>
+        <div class="crm_sx1" style="width: 300px; margin-left: 20px;">
+            <span>离职日期：</span>
+            <input type="text"><small>--</small><input type="text"></div>
+        <div class="crm_sx1_btn" style="margin-top: 20px;">
+            <a href="javascript:;">查询</a> <a href="javascript:;">重置</a>
+        </div>
+    </div>
+</div>
+
+<div id="m_con">
+    <div class="m_table" style="border-bottom:none;overflow: auto">
+        <table class="table  table-hover  table-striped" style="width: 2000px">
+            <thead class="tb_th_bga">
+                <tr>
+                    <td>序</td>
+                    <td>编号</td>
+                    <td>昵称</td>
+                    <td>真实名字</td>
+                    <td>所属店面</td>
+                    <td>部门</td>
+                    <td>支撑</td>
+                    <td>手机</td>
+                    <td>地址</td>
+                    <td>生日</td>
+                    <td>性别</td>
+                    <td>到职日期</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label class="labelio m_t_check ygcheck"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                    <td>A001</td>
+                    <td>咔咔咔</td>
+                    <td>李某</td>
+                    <td>Bearbaby店</td>
+                    <td>部门</td>
+                    <td>经理</td>
+                    <td>18511811818</td>
+                    <td>北京市大兴区aaa街12号</td>
+                    <td>19991225</td>
+                    <td>男</td>
+                    <td>20091225</td>
+                </tr>
+                <tr>
+                    <td><label class="labelio m_t_check ygcheck"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                    <td>A001</td>
+                    <td>咔咔咔</td>
+                    <td>李某</td>
+                    <td>Bearbaby店</td>
+                    <td>部门</td>
+                    <td>经理</td>
+                    <td>18511811818</td>
+                    <td>北京市大兴区aaa街12号</td>
+                    <td>19991225</td>
+                    <td>男</td>
+                    <td>20091225</td>
+                </tr>
+                <tr>
+                    <td><label class="labelio m_t_check ygcheck"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                    <td>A001</td>
+                    <td>咔咔咔</td>
+                    <td>李某</td>
+                    <td>Bearbaby店</td>
+                    <td>部门</td>
+                    <td>经理</td>
+                    <td>18511811818</td>
+                    <td>北京市大兴区aaa街12号</td>
+                    <td>19991225</td>
+                    <td>男</td>
+                    <td>20091225</td>
+                </tr>
+                <tr>
+                    <td><label class="labelio m_t_check ygcheck"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                    <td>A001</td>
+                    <td>咔咔咔</td>
+                    <td>李某</td>
+                    <td>Bearbaby店</td>
+                    <td>部门</td>
+                    <td>经理</td>
+                    <td>18511811818</td>
+                    <td>北京市大兴区aaa街12号</td>
+                    <td>19991225</td>
+                    <td>男</td>
+                    <td>20091225</td>
+                </tr>
+                <tr>
+                    <td><label class="labelio m_t_check ygcheck"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                    <td>A001</td>
+                    <td>咔咔咔</td>
+                    <td>李某</td>
+                    <td>Bearbaby店</td>
+                    <td>部门</td>
+                    <td>经理</td>
+                    <td>18511811818</td>
+                    <td>北京市大兴区aaa街12号</td>
+                    <td>19991225</td>
+                    <td>男</td>
+                    <td>20091225</td>
+                </tr>
+                <tr>
+                    <td><label class="labelio m_t_check ygcheck"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                    <td>A001</td>
+                    <td>咔咔咔</td>
+                    <td>李某</td>
+                    <td>Bearbaby店</td>
+                    <td>部门</td>
+                    <td>经理</td>
+                    <td>18511811818</td>
+                    <td>北京市大兴区aaa街12号</td>
+                    <td>19991225</td>
+                    <td>男</td>
+                    <td>20091225</td>
+                </tr>
+                <tr>
+                    <td><label class="labelio m_t_check ygcheck"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                    <td>A001</td>
+                    <td>咔咔咔</td>
+                    <td>李某</td>
+                    <td>Bearbaby店</td>
+                    <td>部门</td>
+                    <td>经理</td>
+                    <td>18511811818</td>
+                    <td>北京市大兴区aaa街12号</td>
+                    <td>19991225</td>
+                    <td>男</td>
+                    <td>20091225</td>
+                </tr>
+                <tr>
+                    <td><label class="labelio m_t_check ygcheck"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                    <td>A001</td>
+                    <td>咔咔咔</td>
+                    <td>李某</td>
+                    <td>Bearbaby店</td>
+                    <td>部门</td>
+                    <td>经理</td>
+                    <td>18511811818</td>
+                    <td>北京市大兴区aaa街12号</td>
+                    <td>19991225</td>
+                    <td>男</td>
+                    <td>20091225</td>
+                </tr>
+                <tr>
+                    <td><label class="labelio m_t_check ygcheck"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                    <td>A001</td>
+                    <td>咔咔咔</td>
+                    <td>李某</td>
+                    <td>Bearbaby店</td>
+                    <td>部门</td>
+                    <td>经理</td>
+                    <td>18511811818</td>
+                    <td>北京市大兴区aaa街12号</td>
+                    <td>19991225</td>
+                    <td>男</td>
+                    <td>20091225</td>
+                </tr>
+                <tr>
+                    <td><label class="labelio m_t_check ygcheck"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                    <td>A001</td>
+                    <td>咔咔咔</td>
+                    <td>李某</td>
+                    <td>Bearbaby店</td>
+                    <td>部门</td>
+                    <td>经理</td>
+                    <td>18511811818</td>
+                    <td>北京市大兴区aaa街12号</td>
+                    <td>19991225</td>
+                    <td>男</td>
+                    <td>20091225</td>
+                </tr>
+                <tr>
+                    <td><label class="labelio m_t_check ygcheck"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                    <td>A001</td>
+                    <td>咔咔咔</td>
+                    <td>李某</td>
+                    <td>Bearbaby店</td>
+                    <td>部门</td>
+                    <td>经理</td>
+                    <td>18511811818</td>
+                    <td>北京市大兴区aaa街12号</td>
+                    <td>19991225</td>
+                    <td>男</td>
+                    <td>20091225</td>
+                </tr>
+                <tr>
+                    <td><label class="labelio m_t_check ygcheck"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                    <td>A001</td>
+                    <td>咔咔咔</td>
+                    <td>李某</td>
+                    <td>Bearbaby店</td>
+                    <td>部门</td>
+                    <td>经理</td>
+                    <td>18511811818</td>
+                    <td>北京市大兴区aaa街12号</td>
+                    <td>19991225</td>
+                    <td>男</td>
+                    <td>20091225</td>
+                </tr>
+
+                <tr>
+                    <td><label class="labelio m_t_check ygcheck"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                    <td>A001</td>
+                    <td>咔咔咔</td>
+                    <td>李某</td>
+                    <td>Bearbaby店</td>
+                    <td>部门</td>
+                    <td>经理</td>
+                    <td>18511811818</td>
+                    <td>北京市大兴区aaa街12号</td>
+                    <td>19991225</td>
+                    <td>男</td>
+                    <td>20091225</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> 	
+</div>
+<div class="tb_foot">
+    <div class="tb_bottom"><!--公共底部功能（显示，按钮，分页） -->
+        <a href="#" class="tb_btn tb_green">导出</a>
+        <div class="tb_pag">
+             <span class="tb_pag_xs"> 每页显示20条&nbsp;&nbsp;共<label>29</label>条 </span>
+             <div class="quotes" id="Pagination">
+                 <span class="prev">&nbsp;&nbsp;&nbsp;</span>
+                 <span class="current">5</span>
+                 <a href="#">1</a>
+                 <a href="#">2</a>
+                 <a href="#">3</a>
+                 <a href="#">4</a>
+                 <a href="#">6</a>
+                 <a href="#">7</a>
+                 <a href="#">8</a>
+                 <a href="#" class="next">&nbsp;&nbsp;&nbsp;</a>
+             </div>
+        </div>
+    </div>
+</div>
+<!--table选中状态 -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('table tbody tr:odd').addClass('mtr_bg');
+	$(".table tbody tr").click(function(){
+		$('table tbody tr').removeClass('mtr_bg_act');
+		$('table tbody tr:odd').addClass('mtr_bg');
+		$(this).removeClass('mtr_bg');
+		$(this).addClass('mtr_bg_act');
+		});
+	});
+</script>
+</body>
+</html>

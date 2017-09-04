@@ -1,0 +1,1114 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>会员页面</title>
+<link rel="stylesheet" href="../css/reset_s.css">
+<link rel="stylesheet" href="../css/table.css" />
+<link rel="stylesheet" href="../css/news.css" />
+<link rel="stylesheet" href="../css/pagination.css" />
+<link rel="stylesheet" href="../css/right.css"/>
+<link rel="stylesheet" href="../css/content.css"/>
+<link rel="stylesheet" href="../css/box.css"/>
+<link rel="stylesheet" href="../css/VIP/vipTab1.css"> 
+<link rel="stylesheet" type="text/css" href="../css/VIP/VIP.css">
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../js/jquery.reveal.js"></script>
+<script type="text/javascript" src="../js/VIP/oaTab1.js"></script> 
+<script src="../js/jquery.effects.core.js"></script>
+<script src="../js/jquery.effects.drop.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+	  setDivMaxHeight();
+ });
+$(window).resize(function(){
+    setDivMaxHeight();
+});
+function setDivMaxHeight() {
+    var zb=$(window).height();
+    var zbh = parseInt(zb) -210;
+    $(".vip_tb").css("height", zbh);
+
+}
+</script>
+<script type="text/javascript">
+$(window).load(function(){
+	  setYTHeight();
+ });
+$(window).resize(function() {
+	setYTHeight();
+});
+function setYTHeight() {
+	var yt=$(window).height();
+	var yth = parseInt(yt) -100;
+	$(".myt_con2").css("height", yth);
+}
+</script>
+<script type="text/javascript">
+$(function(){
+    $(".labelio").click(function(){
+        $(this).find(".Mdivbg").toggleClass("Mdivbg01");
+    });
+    $(".span_ms").click(function(){
+        $(this).siblings(".Mdivbg").toggleClass("Mdivbg01");
+    });
+});
+</script>
+<style>
+	@media(max-width:1024px){
+	  #right_go{width:597px;}
+	  .myt_conul1{width:184px;}
+	  .lioax{width:174px;}
+	  .myt_name2 li a {
+		color: #a4adb8;
+		font-size: 13px;
+		cursor: pointer;
+		margin-top: 3px;
+		float: left;
+      }
+	  .box_con.box_cong{min-height:304px;height:304px;}
+	  .box_height{height:470px;}
+	}	
+</style>
+</head>
+<body>
+<div class="m_top">
+    <div class="m_name">会员中心</div>
+    <div class="mt_btn"><a href="#">会员统计</a><a href="#"  class="right_btn">会员类型</a></div>
+</div>
+    <!--页面主内容 -->
+<div id="m_con">
+  <div class="vip_top">
+	<div class="vip_sx">
+                <select name="select" id="vip_sele">
+                    <option>请选择店面</option>
+                    <option>请选择店面</option>
+                    <option>请选择店面</option>
+                    <option>请选择店面</option>
+                </select>
+                <small>--</small>
+                <input type="text">
+                <select name="select">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+                <a href="#">查询</a>
+            </div>
+             <div class="divright">
+                <form class="formpp" action="#2" method="post">
+                    <label class="labelio vip_labelio"><input type="checkbox" value="check" name="checkbox1" class="labelinput"/><span class="span_ms spanheighgt">显示全部</span></label>
+                    <label class="labelio vip_labelio"><input type="checkbox" value="check" name="checkbox1" class="labelinput"/><span class="span_ms spanheighgt">已绑定</span></label>
+                    <label class="labelio vip_labelio"><input type="checkbox" value="check" name="checkbox1" class="labelinput"/><span class="span_ms spanheighgt">未绑定</span></label>
+                </form>
+         	</div>
+    </div>
+
+    <div class="vip_tb" style="overflow-x:auto;">  
+        <div class="m_table">
+            <table class="table  table-hover  table-striped" style="width:2500px;">
+                <thead>
+                    <tr>
+                        <td class="tb_bor_right">序号</td>
+                        <td>会员卡号</td>
+                        <td>会员类型</td>
+                        <td>会员姓名</td>
+                        <td>客户编号</td>
+                        <td>消费类型</td>
+                        <td>会员余额</td>
+                        <td>会员积分</td>
+                        <td>会员折扣</td>
+                        <td>游泳次数</td>
+                        <td>男士号码</td>
+                    </tr>
+                </thead>
+                <tbody style="border-right:1px solid #ced4e0">
+                    <tr class="tb_bor_right">
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="tb_bor_right">
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="tb_bor_right">
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="tb_bor_right">
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="tb_bor_right">
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="tb_bor_right">
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="tb_bor_right">
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="tb_bor_right">
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                 
+                    <tr class="tb_bor_right">
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="tb_bor_right">
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="tb_bor_right">
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="tb_bor_right">
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="tb_bor_right">
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="tb_bor_right">
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="tb_bor_right">
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="tb_bor_right">
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="tb_bor_right">
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="tb_bor_right">
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="tb_bor_right"><label class="labelio vip_labelio m_t_check"><input name="" type="checkbox" value="" /><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="tb_foot">
+    <div class="tb_bottom"><!--公共底部功能（显示，按钮，分页） -->
+        <div class="tab_in2"><span class="shul">会员数量：14</span><span class="shul1">会员积分：88000</span><span class="shul2">会员余额：<span class="spanred">88000￥</span></span></div>
+    </div>
+    <div class="tb_bottom clearfix"><!--公共底部功能（显示,分页） -->
+        <div class="tb_pag">
+            <span class="tb_pag_xs"> 每页显示20条&nbsp;&nbsp;共<label id="lblTotalCount">29</label>条 </span>
+            <div class="quotes" id="Pagination">
+                <span class="prev">&nbsp;&nbsp;&nbsp;</span>
+                <span class="current">5</span>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#" class="next">&nbsp;&nbsp;&nbsp;</a>
+            </div>
+        </div>
+    </div>
+    <!--copyright -->
+<!--    <div class="ft_tel">北京熊宝贝科技发展有限公司 技术支持：400-100-7592</div>-->
+</div>
+<!--返工弹窗1 -->
+ <div class="box box_height" id="hj_t2" style="width:510px;">
+    <div class="box_tit">
+        <div class="box_t_name">基本信息</div> 
+        <a href="#" class="box_close close-reveal-modal"></a>
+    </div>
+   <div class="box_con box_cong">
+        <div class="divbox_con1">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">项目名称</span>
+                <select name="select" class="select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con2">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">项目名称</span>
+                <select name="select" class="select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con3">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">项目名称</span>
+                <select name="select" class="select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con4">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">收件人员</span>
+                <input type="text" value="请写数量" class="select01 textent"/>
+            </form>
+       </div>
+        <div class="divbox_con5">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">取件日期</span>
+                  <select name="select" class="select02">
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+                  <select name="select"  class="select03">
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con5">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">备注</span>
+                 <input type="text" value="请选择消费类别" class="input02"/>
+            </form>
+       </div>
+         <div class="divbox_con1">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">审核1</span>
+                <select name="select" class="leftgy select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+   </div>
+   <div class="gbox_btm"><a href="#" class="gbox_btn_clear close-reveal-modal">取消</a><button class="gbox_btn_save              close-reveal-modal">保存</button></div>
+</div>  
+ </div>
+ <!--返工弹窗2 -->
+  <div class="box box_height" id="hj_t3" style="width:510px;">
+    <div class="box_tit">
+        <div class="box_t_name">基本信息</div> 
+        <a href="#" class="box_close close-reveal-modal"></a>
+    </div>
+   <div class="box_con box_cong">
+        <div class="divbox_con1">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">项目名称</span>
+                <select name="select" class="select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con2">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">项目名称</span>
+                <select name="select" class="select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con3">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">项目名称</span>
+                <select name="select" class="select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con4">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">收件人员</span>
+                <input type="text" value="请写数量" class="select01 textent"/>
+            </form>
+       </div>
+        <div class="divbox_con5">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">取件日期</span>
+                  <select name="select" class="select02">
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+                  <select name="select"  class="select03">
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con5">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">备注</span>
+                 <input type="text" value="请选择消费类别" class="input02"/>
+            </form>
+       </div>
+         <div class="divbox_con1">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">审核1</span>
+                <select name="select" class="leftgy select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+    </div>
+   <div class="gbox_btm"><a href="#" class="gbox_btn_clear close-reveal-modal">取消</a><button class="gbox_btn_save              close-reveal-modal">保存</button></div>
+        </div>  
+ </div>
+ <!--返工弹窗3 -->
+ <div class="box box_height" id="hj_t4" style="width:510px;">
+    <div class="box_tit">
+        <div class="box_t_name">基本信息</div> 
+        <a href="#" class="box_close close-reveal-modal"></a>
+    </div>
+   <div class="box_con box_cong">
+        <div class="divbox_con1">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">项目名称</span>
+                <select name="select" class="select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con2">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">项目名称</span>
+                <select name="select" class="select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con3">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">项目名称</span>
+                <select name="select" class="select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con4">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">收件人员</span>
+                <input type="text" value="请写数量" class="select01 textent"/>
+            </form>
+       </div>
+        <div class="divbox_con5">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">取件日期</span>
+                  <select name="select" class="select02">
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+                  <select name="select"  class="select03">
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con5">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">备注</span>
+                 <input type="text" value="请选择消费类别" class="input02"/>
+            </form>
+       </div>
+         <div class="divbox_con1">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">审核1</span>
+                <select name="select" class="leftgy select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+    </div>
+   <div class="gbox_btm"><a href="#" class="gbox_btn_clear close-reveal-modal">取消</a><button class="gbox_btn_save              close-reveal-modal">保存</button></div>
+        </div>  
+ </div>
+ <!--返工弹窗4-->
+ <div class="box box_height" id="hj_t5" style="width:510px;">
+    <div class="box_tit">
+        <div class="box_t_name">基本信息</div> 
+        <a href="#" class="box_close close-reveal-modal"></a>
+    </div>
+   <div class="box_con box_cong">
+        <div class="divbox_con1">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">项目名称</span>
+                <select name="select" class="select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con2">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">项目名称</span>
+                <select name="select" class="select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con3">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">项目名称</span>
+                <select name="select" class="select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con4">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">收件人员</span>
+                <input type="text" value="请写数量" class="select01 textent"/>
+            </form>
+       </div>
+        <div class="divbox_con5">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">取件日期</span>
+                  <select name="select" class="select02">
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+                  <select name="select"  class="select03">
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con5">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">备注</span>
+                 <input type="text" value="请选择消费类别" class="input02"/>
+            </form>
+       </div>
+         <div class="divbox_con1">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">审核1</span>
+                <select name="select" class="leftgy select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+    </div>
+   <div class="gbox_btm"><a href="#" class="gbox_btn_clear close-reveal-modal">取消</a><button class="gbox_btn_save              close-reveal-modal">保存</button></div>
+        </div>  
+ </div>
+ <!--返工弹窗5 -->
+  <div class="box box_height" id="hj_t6" style="width:510px;">
+    <div class="box_tit">
+        <div class="box_t_name">基本信息</div> 
+        <a href="#" class="box_close close-reveal-modal"></a>
+    </div>
+   <div class="box_con box_cong">
+        <div class="divbox_con1">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">项目名称</span>
+                <select name="select" class="select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con2">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">项目名称</span>
+                <select name="select" class="select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con3">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">项目名称</span>
+                <select name="select" class="select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con4">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">收件人员</span>
+                <input type="text" value="请写数量" class="select01 textent"/>
+            </form>
+       </div>
+        <div class="divbox_con5">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">取件日期</span>
+                  <select name="select" class="select02">
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+                  <select name="select"  class="select03">
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+            </form>
+       </div>
+        <div class="divbox_con5">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">备注</span>
+                 <input type="text" value="请选择消费类别" class="input02"/>
+            </form>
+       </div>
+         <div class="divbox_con1">
+            <form action="#2" method="post">
+                <span class="spancolor">*</span><span class="spanmargin">审核1</span>
+                <select name="select" class="leftgy select01">
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                    <option>请选择消费类别</option>
+                </select>
+            </form>
+       </div>
+    </div>
+   <div class="gbox_btm"><a href="#" class="gbox_btn_clear close-reveal-modal">取消</a><button class="gbox_btn_save              close-reveal-modal">保存</button></div>
+        </div>  
+ </div>
+<!--右推效果内容 -->
+<div id="right_go" class="sidr-right"> <!--宽度根据页面需要自定义，不能写百分比 -->
+    <a href="#" class="myt_close clo_yt"></a>
+    <div class="myt_tit clearfix">
+        <div class="myt_name myt_name1">会员详情  A0001</div>
+        <ul class="myt_titul myt_name2">
+          <li class="myt_name2li"><a href="javascript:void(0)" data-reveal-id="hj_t2">基本信息</a></li>
+          <li class="myt_name2li"><a href="javascript:void(0)" data-reveal-id="hj_t3">会员升级</a></li>
+          <li class="myt_name2li"><a href="javascript:void(0)" data-reveal-id="hj_t4">更换会员卡</a></li>
+          <li class="myt_name2li"><a href="javascript:void(0)" data-reveal-id="hj_t5">加减积分</a></li>
+          <li><a href="javascript:void(0)" data-reveal-id="hj_t6">礼品兑换</a></li>
+        </ul>
+    </div>
+    <!--内容区域 -->
+    <div class="myt_con2">
+        <div id="TabbedPanels1" class="TabbedPanels clearfix">
+              <ul class="TabbedPanelsTabGroup">
+                <li class="TabbedPanelsTab" tabindex="0" style="margin-left:20px;">会员卡绑定</li>
+                <li class="TabbedPanelsTab" tabindex="0">新发卡绑定</li>
+              </ul>
+              <div class="TabbedPanelsContentGroup">
+                <div class="TabbedPanelsContent">
+                    <div class="myt_condiv" style="height:143px;">
+                        <div class="dingweidiv" style="top:10px;left:0; position:absolute;"></div>
+                   <!--     <p class="myt_conp">会员卡信息</p>-->
+                        <!--<div class="v_inf">绑定成功后，可以通过会员卡号直接查单！</div> -->
+                        <div class="v_card_no" style="margin-top:15px;"><span>会员卡号：</span><input name="" type="text" placeholder="请输入卡号"><a href="#">搜&nbsp;索</a></div>
+                        <script>
+                        $(document).ready(function(){
+                            $(".v_card_no input").focus(function(){
+                                $(".v_card_list").show();
+                                });
+                            $(".v_card_no input").blur(function(){
+                                $(".v_card_list").hide();
+                                });
+                            });
+                        </script>
+                        <div class="v_card_list" style="display:none">
+                            <ul>
+                                <li><a href="#">A0010&nbsp;&nbsp;白金卡&nbsp;&nbsp;8折</a></li>
+                                <li><a href="#">A0010&nbsp;&nbsp;白金卡&nbsp;&nbsp;8折</a></li>
+                                <li><a href="#">A0010&nbsp;&nbsp;白金卡&nbsp;&nbsp;8折</a></li>
+                            </ul>
+                        </div>
+                        <div class="v_card_no"><span>会员类型：</span><strong>钻石卡&nbsp;8折</strong><a href="#">确&nbsp;定</a></div>
+                    </div>
+                </div>
+                <div class="TabbedPanelsContent">
+                    <div class="myt_condiv" style="height:300px;">
+                         <div class="dingweidiv" style="top:10px;left:0; position:absolute;"></div>
+                        <div class="v_in" style="margin-top:20px"><span>会员卡号：</span><input type="text"></div>
+                        <div class="v_check"><label class="labelio vip_labelio m_t_check"><span class="Mdivbg vip_Mdivbg2"></span><input name="" type="checkbox" value="" /><span class="span_ms">普通卡</span></label></div>
+                        <div class="v_check"><label class="labelio vip_labelio m_t_check"><span class="Mdivbg vip_Mdivbg2"></span><input name="" type="checkbox" value="" /><span class="span_ms">芯片卡</span></label></div>
+                        <div class="v_in" style="margin-top:8px;">
+                            <span>会员类型：</span>
+                            <select name="select" class="vshow_sel2">
+                                <option class="show_in_op">项目1</option>
+                                <option class="show_in_op">项目2</option>
+                                <option class="show_in_op">项目3</option>
+                                <option class="show_in_op">项目4</option>
+                                <option class="show_in_op">项目5</option>
+                            </select>
+                        </div>
+                        <div class="v_in"><span>会员密码：</span><input type="text"></div>
+                        <div class="v_in"><span>初始积分：</span><input type="text"></div>
+                        <div class="vshow_in3">
+                            <span>充值日期：</span>
+                            <select name="select" class="vshow_sel3">
+                                <option class="show_in_op">项目1</option>
+                                <option class="show_in_op">项目2</option>
+                                <option class="show_in_op">项目3</option>
+                                <option class="show_in_op">项目4</option>
+                                <option class="show_in_op">项目5</option>
+                            </select>
+                            <small>--</small>
+                            <select name="select" class="vshow_sel3">
+                                <option class="show_in_op">项目1</option>
+                                <option class="show_in_op">项目2</option>
+                                <option class="show_in_op">项目3</option>
+                                <option class="show_in_op">项目4</option>
+                                <option class="show_in_op">项目5</option>
+                            </select>
+                        </div>
+                        <div class="buttona">
+                           <a href="#2" class="alefts tb_green">确定</a>
+                        </div>
+                    </div>    
+                </div>
+             </div> 
+        </div>
+        <div class="myt_con">
+              <div class="myt_condiv1" style="height:147px;">
+                    <div class="dingweidiv1"></div>
+                    <p class="myt_conp">会员卡充值</p>
+                    <div class="divms">
+                       <p class="fontcolor">会员卡号:<span class="spanms">A123456</span></p>
+                       <p class="fontcolor pfontms">会员卡号:<span class="spanms">A123456</span></p>
+                    </div>
+            </div>
+            <div class="myt_condiv1">
+                <div class="dingweidiv1"></div>
+                <p class="myt_conp">会员卡充值</p>
+                  <ul class="myt_conul1 clearfix myt_conul2">
+                   <li class="lioax clearfix">
+                     <a href="#2" class="lia">充值金额:</a>
+                      <select name="select" class="selectcolp yipse">
+                          <option>2016-02-14</option>
+                          <option>2016-02-14</option>
+                          <option>2016-02-14</option>
+                      </select>
+                    </li>
+                    <li class="lioax clearfix">
+                     <a href="#2" class="lia">收入金额:</a>
+                     <input type="text" name="text" value="100￥" class="fontcolort"/>
+                    </li>
+                    <li class="lioax clearfix">
+                     <a href="#2" class="lia">收款人员:</a>
+                     <form action="#2" method="post">
+                          <input type="text" name="text" value="mi" class="textval"/>
+                     </form>
+                    </li>
+                </ul>
+                   <ul class="myt_conul1 clearfix">
+                   <li class="lioax clearfix">
+                     <a href="#2" class="lia">冲入时间:</a>
+                     <form action="#2" method="post">
+                          <input type="text" name="text" value="2016-02-14" class="textval"/>
+                     </form>
+                   </li>
+                    <li class="lioax clearfix">
+                     <a href="#2" class="lia">收入金额:</a>
+                     <input type="text" name="text" value="100￥" class="fontcolort"/>
+                    </li>
+                    <li class="lioax clearfix">
+                     <a href="#2" class="lia">发票号码:</a>
+                     <form action="#2" method="post">
+                          <input type="text" name="text" value="空" class="textval"/>
+                     </form>
+                    </li>
+                </ul>
+                  <div class="divformm clearfix">
+                   <a href="#2" class="lisp lia">支付方式:</a>
+                   <form action="#2" method="post" class="formn vip_formn">
+                       <label class="labelio vip_labelio m_t_check label1 label2"><input type="checkbox" value="check" name="check" class="inputp1"/><span class="span_ms">现金</span></label>
+                       <label class="labelio vip_labelio m_t_check label1 label2"><input type="checkbox" value="check" name="check" class="inputp1"/><span class="span_ms">支票</span></label>
+                       <label class="labelio vip_labelio m_t_check label1 label2"><input type="checkbox" value="check" name="check" class="inputp1"/><span class="span_ms">银行卡</span></label>
+                       <label class="labelio vip_labelio m_t_check label1 label2"><input type="checkbox" value="check" name="check" class="inputp1"/><span class="span_ms">银行转账</span></label>
+                       <label class="labelio vip_labelio m_t_check label1 label2"><input type="checkbox" value="check" name="check" class="inputp1"/><span class="span_ms">网络支付</span></label>
+                   </form>
+                   <form action="#2" method="post" class="formn formn1">
+                       <label class="labelio vip_labelio m_t_check label1 label2"><input type="checkbox" value="check" name="check" class="inputp1"/><span class="span_ms">信用卡</span></label>
+                       <label class="labelio vip_labelio m_t_check label1 label2"><input type="checkbox" value="check" name="check" class="inputp1"/><span class="span_ms">微信支付</span></label>
+                       <label class="labelio vip_labelio m_t_check label1 label2"><input type="checkbox" value="check" name="check" class="inputp1"/><span class="span_ms">支付宝支付</span></label>
+                   </form>
+                </div>
+                  <div class="divclear">
+                    <a href="#2" class="liaf">充值备注:</a>
+                    <form action="#2" method="post"  class="formn">
+                       <input type="text" value="无" name="textp" class="valuer"/>
+                    </form>
+                  </div>
+                   <div class="buttona">
+                   <a href="#2" class="alefts tb_green">确定充值</a>
+                   <a href="#2" class="alefts1 tb_blue">打印发票</a>
+                </div>
+            </div>
+            <div class="myt_condiv1">
+                <div class="dingweidiv2"></div>
+                <p class="myt_conp">会员卡充值</p>
+                  <ul class="myt_conul1 clearfix myt_conul2">
+                   <li class="lioax clearfix">
+                     <a href="#2" class="lia">充值金额:</a>
+                      <select name="select" class="selectcolp yipse">
+                          <option>2016-02-14</option>
+                          <option>2016-02-14</option>
+                          <option>2016-02-14</option>
+                      </select>
+                    </li>
+                    <li class="lioax clearfix">
+                     <a href="#2" class="lia">收入金额:</a>
+                     <input type="text" name="text" value="100￥" class="fontcolort"/>
+                    </li>
+                    <li class="lioax clearfix">
+                     <a href="#2" class="lia">收款人员:</a>
+                     <form action="#2" method="post">
+                          <input type="text" name="text" value="mi" class="textval"/>
+                     </form>
+                    </li>
+                </ul>
+                 <ul class="myt_conul1 clearfix">
+                   <li class="lioax clearfix">
+                     <a href="#2" class="lia">冲入时间:</a>
+                     <form action="#2" method="post">
+                          <input type="text" name="text" value="2016-02-14" class="textval"/>
+                     </form>
+                   </li>
+                    <li class="lioax clearfix">
+                     <a href="#2" class="lia">收入金额:</a>
+                     <input type="text" name="text" value="100￥" class="fontcolort"/>
+                    </li>
+                    <li class="lioax clearfix">
+                     <a href="#2" class="lia">发票号码:</a>
+                     <form action="#2" method="post">
+                          <input type="text" name="text" value="空" class="textval"/>
+                     </form>
+                    </li>
+                </ul>
+                  <div class="divformm clearfix">
+                   <a href="#2" class="lisp lia">支付方式:</a>
+                   <form action="#2" method="post" class="formn vip_formn">
+                       <label class="labelio vip_labelio m_t_check label1 label2"><input type="checkbox" value="check" name="check"/><span class="span_ms">现金</span></label>
+                       <label class="labelio vip_labelio m_t_check label1 label2"><input type="checkbox" value="check" name="check"/><span class="span_ms">支票</span></label>
+                       <label class="labelio vip_labelio m_t_check label1 label2"><input type="checkbox" value="check" name="check"/><span class="span_ms">银行卡</span></label>
+                       <label class="labelio vip_labelio m_t_check label1 label2"><input type="checkbox" value="check" name="check"/><span class="span_ms">银行转账</span></label>
+                       <label class="labelio vip_labelio m_t_check label1 label2"><input type="checkbox" value="check" name="check"/><span class="span_ms">网络支付</span></label>
+                   </form>
+                   <form action="#2" method="post" class="formn formn1">
+                       <label class="labelio vip_labelio m_t_check label1 label2"><input type="checkbox" value="check" name="check"/><span class="span_ms">信用卡</span></label>
+                       <label class="labelio vip_labelio m_t_check label1 label2"><input type="checkbox" value="check" name="check"/><span class="span_ms">微信支付</span></label>
+                       <label class="labelio vip_labelio m_t_check label1 label2"><input type="checkbox" value="check" name="check"/><span class="span_ms">支付宝支付</span></label>
+                   </form>
+                </div>
+                   <div class="divclear">
+                    <a href="#2" class="liaf">充值备注:</a>
+                    <form action="#2" method="post"  class="formn">
+                       <input type="text" value="无" name="textp" class="valuer"/>
+                    </form>
+                </div>
+                  <div class="buttona">
+                   <a href="#2" class="alefts tb_green">确定充值</a>
+                   <a href="#2" class="alefts1 tb_blue">打印发票</a>
+                </div>
+            </div>
+      </div>
+  </div>
+</div>  
+<!--右推脚本 -->
+<select id="effectTypes" style="display:none">
+<option value="drop"></option>
+</select> 
+<script>
+$(function() {
+    function runEffect() {
+        var drop = $("#effectTypes").val();
+        var options = {};
+        $("#right_go").show(drop, options, 500);
+    };
+    $(".right_btn").click(function() {
+        runEffect();
+    });
+    $("#right_go").hide();
+
+    function closedEffect() {
+        var drop = $("#effectTypes").val();
+        var options = {};
+        $("#right_go").hide(drop, options, 1000);
+    };
+    $(".clo_yt").click(function() {
+        closedEffect();
+    });
+});
+</script>
+<!--table选中状态 -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('table tbody tr:odd').addClass('mtr_bg');
+	$(".table tbody tr").click(function(){
+		$('table tbody tr').removeClass('mtr_bg_act');
+		$('table tbody tr:odd').addClass('mtr_bg');
+		$(this).removeClass('mtr_bg');
+		$(this).addClass('mtr_bg_act');
+		});
+	});
+var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+</script>
+
+
+</body>
+</html>

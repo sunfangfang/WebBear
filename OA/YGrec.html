@@ -1,0 +1,298 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人考勤记录</title>
+<link rel="stylesheet" href="../css/reset_s.css">
+<link rel="stylesheet" href="../css/OA/oa.css">
+<link rel="stylesheet" href="../css/table.css"/>
+<link rel="stylesheet" href="../css/content.css">
+<link rel="stylesheet" href="../css/box.css">
+<link rel="stylesheet" href="../css/news.css">
+<link rel="stylesheet" href="../css/pagination.css">
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+	  setDivMaxHeight();
+ });
+
+$(window).resize(function() {
+	setDivMaxHeight();
+});
+function setDivMaxHeight() {
+	var fg=$(window).height();
+	var h = parseInt(fg) -115;
+//	$("#m_con").css("height", h);
+    $(".m_table").css("height", h);
+}
+</script>
+    <style>
+       
+        @media(max-width:850px){
+            body{min-width:827px;}
+
+        }
+    </style>
+</head>
+
+<body>
+<!--标题-->
+<div class="m_top">
+    <div class="m_name">个人考勤记录 </div>
+    <!--<div class="mt_btn"><a href="#">筛选</a></div> -->
+    <!--<div class="oa_top_in"><input type="text"><a href="#">筛选</a></div>-->
+    <div class="txtSearch" style="float: right; margin-right: 20px;">
+        <input type="text" id="s1" style="width: 60px; margin-left: 20px;"><a href="javascript:;">查询</a></div>
+</div>
+
+<div id="m_con">
+    <div class="m_table" style="border-bottom:none;">
+        <table class="table  table-hover  table-striped">
+            <thead class="tb_th_bga">
+                <tr>
+                    <td>日期</td>
+                    <td>员工编号</td>
+                    <td>员工姓名</td>
+                    <td>部门</td>
+                    <td>签到时间</td>
+                    <td>签退时间</td>
+                    <td>工时/小时</td>
+                    <td>签到备注</td>
+                    <td>签退备注</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015-11-06五</td>
+                    <td>003</td>
+                    <td>李某某</td>
+                    <td>管理部</td>
+                    <td>12:03</td>
+                    <td>12:56</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div> 	
+</div>
+
+
+
+<div class="tb_foot">
+    <div class="tb_bottom"><!--公共底部功能（显示，按钮，分页） -->
+        <a href="#" class="tb_btn tb_green">导出</a>
+    </div>
+</div>
+<!--table选中状态 -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('table tbody tr:odd').addClass('mtr_bg');
+	$(".table tbody tr").click(function(){
+		$('table tbody tr').removeClass('mtr_bg_act');
+		$('table tbody tr:odd').addClass('mtr_bg');
+		$(this).removeClass('mtr_bg');
+		$(this).addClass('mtr_bg_act');
+		});
+	});
+</script>
+</body>
+</html>

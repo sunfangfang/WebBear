@@ -1,0 +1,585 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>介绍人维护</title>
+<link rel="stylesheet" href="../css/reset_s.css">
+<link rel="stylesheet" href="../css/table.css" />
+<link rel="stylesheet" href="../css/news.css" />
+<link rel="stylesheet" href="../css/pagination.css" />
+<link rel="stylesheet" href="../css/LiuCheng/liucheng.css">
+<link rel="stylesheet" href="../css/right.css"/>
+<link rel="stylesheet" href="../css/content.css"/>
+<link rel="stylesheet" href="../css/box.css"/>
+<link rel="stylesheet" type="text/css" href="../css/yt.css"/>
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../js/jquery.reveal.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/yt.js"></script>
+<script type="text/javascript">
+	$(window).load(function(){
+		  setDivMaxHeight();
+	 });
+	$(window).resize(function(){
+		setDivMaxHeight();
+	});
+	function setDivMaxHeight(){
+		var fg=$(window).height();
+		var h = parseInt(fg) -210;
+		$("#m_tables").css("height", h);
+	}
+	$(function(){
+		$(".labelio").click(function(){
+			$(this).find(".Mdivbg").toggleClass("Mdivbg01");
+		});
+		$(".span_ms").click(function(){
+			$(this).siblings(".Mdivbg").toggleClass("Mdivbg01");
+		}); 
+	});
+</script>
+<style>
+	@media(max-width:1024px){	
+		#m_con{
+			clear: both;
+			float: left;
+			height:auto;
+			/*width: 825px;*/
+			margin-left: 5px;
+			overflow: auto;
+			margin-top:10px;
+		}
+	}
+</style>
+</head>
+<body>
+<div class="m_top">
+    <div class="m_name">介绍人维护</div>
+    <a class="mt_btn a_col">返回上一级</a>
+</div>
+<!--页面主内容 -->
+<div id="m_con">
+   <div class="div_conms">
+      <div class="div_sld">
+        <div class="div_sl">
+            <span class="span_sum">预约日期:</span>
+            <select class="seleo seleo1">
+                <option></option>
+                <option></option>
+                <option></option>
+            </select>
+            <span class="span_k">--</span>
+             <select class="seleo">
+                <option></option>
+                <option></option>
+                <option></option>
+            </select>
+        </div>
+        <div class="div_sl">
+            <span class="span_sum">介绍类型:</span>
+            <select class="seleo1 seleo">
+                <option>全部</option>
+                <option></option>
+                <option></option>
+            </select>
+        </div>
+        <div class="div_sl">
+            <span class="span_sum">客户编号/姓名/手机号:</span>
+            <input type="text" value="" class="i_msr"/>
+        </div>
+         <div class="div_af">
+           <a href="#2" class="font_c tb_green">查询</a>
+           <a href="#2" class="font_c tb_green">导出Excel</a>
+        </div>
+     </div>
+      <div class="div_fd">
+        <div class="div_sp">
+            <span class="span_sum">介绍类型:</span>
+            <select class="seleo1 seleo">
+                <option>全部</option>
+                <option></option>
+                <option></option>
+            </select>
+        </div>
+        <div class="div_jg">
+           <label>
+             <input type="checkbox" value="" class="checkh"/>
+             <span class="sp_fg">非会员客户</span>
+           </label>
+        </div>
+    </div>
+    </div>
+    <div id="m_tables">
+        <div class="m_table k_kl" style="margin-top:10px;" >
+            <table class="table  table-hover  table-striped">
+                <thead class="tb_th_bga" style="background:#f9f8f8">
+                    <tr>
+                       <td><label class="labelio hj_labelio m_t_check" style="margin-left:5px;"><input name="" type="checkbox" value=""></label></td>
+                        <td>客户编号</td>
+                        <td>男士姓名</td>
+                        <td>女士姓名</td>
+                        <td>预约日期</td>
+                        <td>消费类型</td>
+                        <td>会员卡号</td>
+                        <td>会员类型</td>
+                        <td>可用积分</td>
+                        <td>卡内金额</td>
+                        <td>消费积分</td>
+                        <td>介绍积分</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                       <td><a href="#" class="m_tab_link right_btn">0001</a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                       <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                       <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                       <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                     <tr>
+                        <td><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                       <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                       <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                       <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                       <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                     <tr>
+                        <td><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                       <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                       <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                       <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                       <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                       <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                       <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                       <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label class="labelio hj_labelio m_t_check"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>   
+        </div>
+    </div>
+    <!--页面主内容-------------end -->
+<div class="tb_foot">
+    <div class="tb_bottom" style="border-top:1px solid #e9ecf3;"><!--公共底部功能（显示，按钮，分页） -->
+        <div class="tbh" ><!--公共底部功能（显示，按钮，分页） -->
+            <div class="lc_bq"><span>客户数：</span><span>18</span></div>
+            <div class="lc_bq"><span>可用积分：</span><span>2000</span></div>
+            <div class="lc_bq"><span>可用金额：</span><span>20000</span></div>
+        </div>
+        <div class="tb_pag">
+             <span class="tb_pag_xs"> 每页显示20条&nbsp;&nbsp;共<label id="lblTotalCount">29</label>条 </span>
+             <div class="quotes" id="Pagination">
+                 <span class="prev">&nbsp;&nbsp;&nbsp;</span>
+                 <span class="current">5</span>
+                 <a href="#">1</a>
+                 <a href="#">2</a>
+                 <a href="#">3</a>
+                 <a href="#">4</a>
+                 <a href="#">6</a>
+                 <a href="#">7</a>
+                 <a href="#">8</a>
+                 <a href="#" class="next">&nbsp;&nbsp;&nbsp;</a>
+             </div>
+        </div> 
+    </div>
+    <!--copyright -->
+    <!--<div class="ft_tel">北京熊宝贝科技发展有限公司 技术支持：400-100-7592</div>-->
+</div>
+<!--右推效果内容 -->
+<div id="right_go" class="sidr-right"><!--宽度根据页面需要自定义，不能写百分比 -->
+    <a href="#" class="myt_close clo_yt"></a>
+    <div class="myt_tit">
+        <div class="myt_name">介绍客户详细</div>
+    </div>
+    <!--内容区域-->
+    <div class="myt_con">
+           <div class="TabbedPanelsContent">
+                <div class="m_table" style="overflow:auto;">
+                    <table class="table  table-hover  table-striped">
+                        <thead class="font_bg">
+                            <tr>
+                                <td class="tb_bor_right">序号</td>
+                                <td>客户编号</td>
+                                <td>男士姓名</td>
+                                <td>女士姓名</td>
+                                <td>消费项目</td>
+                                <td>消费金额</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                               <td>1</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tb_bottom">
+                    <div class="bottom_xx"><span class="font_size">总介绍客户数:</span><span class="font_sizea">20</span></div>
+                </div>
+           </div>
+     </div>
+<!--回件作业弹窗 -->
+<div class="box" id="hj_t">
+	<div class="box_tit">
+    	<div class="box_t_name">回件作业</div> 
+        <a href="#" class="box_close close-reveal-modal"></a>
+    </div>
+    <div class="box_con">
+        <div class="box_in2">
+            <span>厂商名称</span>
+            <select name="select" class="box_in2_sel" >
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+        <div class="box_in2">
+            <span>代工产品</span>
+            <input name="" type="text" />
+        </div>
+        <div class="box_in2">
+            <span>消费项目</span>
+            <select name="select"  class="box_in2_sel" >
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+        <div class="box_in2">
+            <span>项目数量</span>
+            <input name="" type="text" />
+        </div>
+        <div class="box_in2">
+            <span>项目P数</span>
+            <select name="select"  class="box_in2_sel" >
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+        <div class="box_in2">
+            <span>赠送数量</span>
+            <input name="" type="text" />
+        </div>
+        <div class="box_in2">
+            <span>输出面积</span>
+            <input name="" type="text" />
+        </div>
+        <div class="box_in2">
+            <span>输出单价</span>
+            <input name="" type="text" />
+        </div>
+        <div class="box_in8">
+            <span>规&nbsp;&nbsp;&nbsp;&nbsp;格</span>
+            <input name="" type="text" />
+        </div>
+        <div class="box_in1">
+            <span>备&nbsp;&nbsp;&nbsp;&nbsp;注</span>
+            <textarea name="" cols="" rows=""></textarea>
+        </div>
+        <div class="box_line"></div>
+        <div class="box_in2">
+            <span>送件日期</span>
+            <select name="select"  class="box_in2_sel" >
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+        <div class="box_in7">
+        	<label style="margin-left:10px;">
+        	<input name="" type="checkbox" value="" />
+            <span>退&nbsp;&nbsp;&nbsp;&nbsp;件</span>
+            </label>
+            <select name="select"  class="box_in2_sel" >
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+    </div>
+  <div class="gbox_btm"><a href="#" class="gbox_btn_clear close-reveal-modal">取消</a><button class="gbox_btn_save close-reveal-modal">保存</button></div>
+</div>  
+<!--回件作业弹窗-------------end -->
+<script type="text/javascript"><!--右推tab切换 -->
+	$('#myTab a').click(function(e){
+		e.preventDefault();
+		$(this).tab('show');
+	});
+</script>
+<!--右推脚-->
+<script src="../js/jquery.effects.core.js"></script>
+<script src="../js/jquery.effects.drop.js"></script>
+<script type="text/javascript">
+	$(function(){
+	  $(".sidr-right").css({"right":-900});
+	  $(".m_tab_link").click(function(){
+		  $(".sidr-right").animate({
+				right: '0'
+		  });
+	   });
+	  $(".myt_close").click(function(){
+		  $(".sidr-right").animate({
+				right: '-900px'
+			});
+		  });
+	 });
+</script>
+<script type="text/javascript">
+$(function(){
+	$(".tb_sx").mouseover(function(){
+		$(this).children('ul').show();
+		});
+	$(".tb_sx").mouseout(function(){
+		$(this).children('ul').hide();
+	});
+//		$(".tb_sx_px li a").click(function(){
+//			$(".tb_sx_px li a").removeClass('tb_sx_bg');
+//			$(this).addClass('tb_sx_bg');
+//			});          //筛选功能需要选中状态时候开启
+	$(".tb_bj_btn").mouseover(function(){
+		$(this).children('div').show();
+    });
+	$(".tb_bj_btn").mouseout(function(){
+		$(this).children('div').hide();
+	 });
+	$(".tb_del").click(function(){
+		$(this).parentsUntil('table tbody').remove();
+		});
+	});
+</script>
+<!--table选中状态 -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('table tbody tr:odd').addClass('mtr_bg');
+	$(".table tbody tr").click(function(){
+		$('table tbody tr').removeClass('mtr_bg_act');
+		$('table tbody tr:odd').addClass('mtr_bg');
+		$(this).removeClass('mtr_bg');
+		$(this).addClass('mtr_bg_act');
+		});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,509 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>零散件客户列表</title>
+<link rel="stylesheet" href="../css/reset_s.css">
+<link rel="stylesheet" href="../css/table.css" />
+<link rel="stylesheet" href="../css/news.css" />
+<link rel="stylesheet" href="../css/pagination.css" />
+<link rel="stylesheet" href="../css/LSan/lsan.css"/>
+<link rel="stylesheet" href="../css/right.css"/>
+<link rel="stylesheet" href="../css/content.css"/>
+<link rel="stylesheet" href="../css/box.css"/>
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../js/jquery.reveal.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+	  setDivMaxHeight();
+ });
+$(window).resize(function() {
+	setDivMaxHeight();
+});
+function setDivMaxHeight() {
+	var fg=$(window).height();
+	var h = parseInt(fg) -165;
+	$(".m_table").css("height", h);
+}	
+</script>
+<style>
+  .tb_bj{width:100px;}
+</style>
+</head>
+<body>
+<div class="m_top">
+    <div class="m_name">零散件客户</div>
+</div>
+    <!--页面主内容 -->
+<div id="m_con">
+	<div class="ls_top">
+        <div class="ls_sx">
+        	<span>客户编号：</span>
+            <input type="text" style="width:150px">
+        </div>
+        <div class="ls_sx" style="margin-left:20px;">
+        	<span>预约时间：</span>
+            <input type="text">
+            <small>--</small>
+            <input type="text">
+        </div>
+        <div class="ls_sx" style="margin-left:20px;">
+        	<span>服务状态：</span>
+            <select name="select">
+                <option>请选择消费类别</option>
+                <option>请选择消费类别</option>
+                <option>请选择消费类别</option>
+                <option>请选择消费类别</option>
+            </select>
+        </div>
+        <a href="#" class="ls_top_btn">查询</a>
+    </div>
+    <div class="m_table" style="overflow:auto;">
+        <table class="table  table-hover  table-striped" style="width:2500px">
+            <thead class="tb_th_bga">
+                <tr>
+                	<td style="width:35px;"><a href="javascript:void(0)" class="tb_sup_btn" data-reveal-id="tb-box"></a></td><!--增加编辑按钮格式 -->
+                    <td>序号</td>
+                    <td>标记</td>
+                    <td>客户编号 </td>
+                    <td>客户姓名</td>
+                    <td>预约日期</td>
+                    <td>销售人</td>
+                    <td>接单点</td>
+                    <td>总价</td>
+                    <td>已付款</td>
+                    <td>欠款</td>
+                    <td>付款完成</td>
+                    <td>手机号</td>
+                    <td>家庭店面</td>
+                    <td>取件完成</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                	<td class="tb_bj_btn tb_bor_right">
+                    	<div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div>
+                    </td>
+                    <td>1</td>
+                    <td><div class="m_mark"><span class="green"></span></div></td>
+                    <td>客户编号 </td>
+                    <td>客户姓名</td>
+                    <td>预约日期</td>
+                    <td>销售人</td>
+                    <td>接单点</td>
+                    <td>总价</td>
+                    <td>已付款</td>
+                    <td>欠款</td>
+                    <td>付款完成</td>
+                    <td>手机号</td>
+                    <td>家庭店面</td>
+                    <td>取件完成</td>
+                </tr>
+                <tr>
+                	<td class="tb_bj_btn tb_bor_right">
+                    	<div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div>
+                    </td>
+                    <td>1</td>
+                    <td><div class="m_mark"><span class="green"></span></div></td>
+                    <td>客户编号 </td>
+                    <td>客户姓名</td>
+                    <td>预约日期</td>
+                    <td>销售人</td>
+                    <td>接单点</td>
+                    <td>总价</td>
+                    <td>已付款</td>
+                    <td>欠款</td>
+                    <td>付款完成</td>
+                    <td>手机号</td>
+                    <td>家庭店面</td>
+                    <td>取件完成</td>
+                </tr>
+                <tr>
+                	<td class="tb_bj_btn tb_bor_right">
+                    	<div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div>
+                    </td>
+                    <td>1</td>
+                    <td><div class="m_mark"><span class="green"></span></div></td>
+                    <td>客户编号 </td>
+                    <td>客户姓名</td>
+                    <td>预约日期</td>
+                    <td>销售人</td>
+                    <td>接单点</td>
+                    <td>总价</td>
+                    <td>已付款</td>
+                    <td>欠款</td>
+                    <td>付款完成</td>
+                    <td>手机号</td>
+                    <td>家庭店面</td>
+                    <td>取件完成</td>
+                </tr>
+                <tr>
+                	<td class="tb_bj_btn tb_bor_right">
+                    	<div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div>
+                    </td>
+                    <td>1</td>
+                    <td><div class="m_mark"><span class="green"></span></div></td>
+                    <td>客户编号 </td>
+                    <td>客户姓名</td>
+                    <td>预约日期</td>
+                    <td>销售人</td>
+                    <td>接单点</td>
+                    <td>总价</td>
+                    <td>已付款</td>
+                    <td>欠款</td>
+                    <td>付款完成</td>
+                    <td>手机号</td>
+                    <td>家庭店面</td>
+                    <td>取件完成</td>
+                </tr>
+                <tr>
+                	<td class="tb_bj_btn tb_bor_right">
+                    	<div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div>
+                    </td>
+                    <td>1</td>
+                    <td><div class="m_mark"><span class="green"></span></div></td>
+                    <td>客户编号 </td>
+                    <td>客户姓名</td>
+                    <td>预约日期</td>
+                    <td>销售人</td>
+                    <td>接单点</td>
+                    <td>总价</td>
+                    <td>已付款</td>
+                    <td>欠款</td>
+                    <td>付款完成</td>
+                    <td>手机号</td>
+                    <td>家庭店面</td>
+                    <td>取件完成</td>
+                </tr>
+                <tr>
+                	<td class="tb_bj_btn tb_bor_right">
+                    	<div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div>
+                    </td>
+                    <td>1</td>
+                    <td><div class="m_mark"><span class="green"></span></div></td>
+                    <td>客户编号 </td>
+                    <td>客户姓名</td>
+                    <td>预约日期</td>
+                    <td>销售人</td>
+                    <td>接单点</td>
+                    <td>总价</td>
+                    <td>已付款</td>
+                    <td>欠款</td>
+                    <td>付款完成</td>
+                    <td>手机号</td>
+                    <td>家庭店面</td>
+                    <td>取件完成</td>
+                </tr>
+                <tr>
+                	<td class="tb_bj_btn tb_bor_right">
+                    	<div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div>
+                    </td>
+                    <td>1</td>
+                    <td><div class="m_mark"><span class="green"></span></div></td>
+                    <td>客户编号 </td>
+                    <td>客户姓名</td>
+                    <td>预约日期</td>
+                    <td>销售人</td>
+                    <td>接单点</td>
+                    <td>总价</td>
+                    <td>已付款</td>
+                    <td>欠款</td>
+                    <td>付款完成</td>
+                    <td>手机号</td>
+                    <td>家庭店面</td>
+                    <td>取件完成</td>
+                </tr>
+                <tr>
+                	<td class="tb_bj_btn tb_bor_right">
+                    	<div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div>
+                    </td>
+                    <td>1</td>
+                    <td><div class="m_mark"><span class="green"></span></div></td>
+                    <td>客户编号 </td>
+                    <td>客户姓名</td>
+                    <td>预约日期</td>
+                    <td>销售人</td>
+                    <td>接单点</td>
+                    <td>总价</td>
+                    <td>已付款</td>
+                    <td>欠款</td>
+                    <td>付款完成</td>
+                    <td>手机号</td>
+                    <td>家庭店面</td>
+                    <td>取件完成</td>
+                </tr>
+                <tr>
+                	<td class="tb_bj_btn tb_bor_right">
+                    	<div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div>
+                    </td>
+                    <td>1</td>
+                    <td><div class="m_mark"><span class="green"></span></div></td>
+                    <td>客户编号 </td>
+                    <td>客户姓名</td>
+                    <td>预约日期</td>
+                    <td>销售人</td>
+                    <td>接单点</td>
+                    <td>总价</td>
+                    <td>已付款</td>
+                    <td>欠款</td>
+                    <td>付款完成</td>
+                    <td>手机号</td>
+                    <td>家庭店面</td>
+                    <td>取件完成</td>
+                </tr>
+                <tr>
+                	<td class="tb_bj_btn tb_bor_right">
+                    	<div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div>
+                    </td>
+                    <td>1</td>
+                    <td><div class="m_mark"><span class="green"></span></div></td>
+                    <td>客户编号 </td>
+                    <td>客户姓名</td>
+                    <td>预约日期</td>
+                    <td>销售人</td>
+                    <td>接单点</td>
+                    <td>总价</td>
+                    <td>已付款</td>
+                    <td>欠款</td>
+                    <td>付款完成</td>
+                    <td>手机号</td>
+                    <td>家庭店面</td>
+                    <td>取件完成</td>
+                </tr>
+                <tr>
+                	<td class="tb_bj_btn tb_bor_right">
+                    	<div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div>
+                    </td>
+                    <td>1</td>
+                    <td><div class="m_mark"><span class="green"></span></div></td>
+                    <td>客户编号 </td>
+                    <td>客户姓名</td>
+                    <td>预约日期</td>
+                    <td>销售人</td>
+                    <td>接单点</td>
+                    <td>总价</td>
+                    <td>已付款</td>
+                    <td>欠款</td>
+                    <td>付款完成</td>
+                    <td>手机号</td>
+                    <td>家庭店面</td>
+                    <td>取件完成</td>
+                </tr>
+                <tr>
+                	<td class="tb_bj_btn tb_bor_right">
+                    	<div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div>
+                    </td>
+                    <td>1</td>
+                    <td><div class="m_mark"><span class="green"></span></div></td>
+                    <td>客户编号 </td>
+                    <td>客户姓名</td>
+                    <td>预约日期</td>
+                    <td>销售人</td>
+                    <td>接单点</td>
+                    <td>总价</td>
+                    <td>已付款</td>
+                    <td>欠款</td>
+                    <td>付款完成</td>
+                    <td>手机号</td>
+                    <td>家庭店面</td>
+                    <td>取件完成</td>
+                </tr>
+                <tr>
+                	<td class="tb_bj_btn tb_bor_right">
+                    	<div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div>
+                    </td>
+                    <td>1</td>
+                    <td><div class="m_mark"><span class="green"></span></div></td>
+                    <td>客户编号 </td>
+                    <td>客户姓名</td>
+                    <td>预约日期</td>
+                    <td>销售人</td>
+                    <td>接单点</td>
+                    <td>总价</td>
+                    <td>已付款</td>
+                    <td>欠款</td>
+                    <td>付款完成</td>
+                    <td>手机号</td>
+                    <td>家庭店面</td>
+                    <td>取件完成</td>
+                </tr>
+                <tr>
+                	<td class="tb_bj_btn tb_bor_right">
+                    	<div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div>
+                    </td>
+                    <td>1</td>
+                    <td><div class="m_mark"><span class="green"></span></div></td>
+                    <td>客户编号 </td>
+                    <td>客户姓名</td>
+                    <td>预约日期</td>
+                    <td>销售人</td>
+                    <td>接单点</td>
+                    <td>总价</td>
+                    <td>已付款</td>
+                    <td>欠款</td>
+                    <td>付款完成</td>
+                    <td>手机号</td>
+                    <td>家庭店面</td>
+                    <td>取件完成</td>
+                </tr>
+                <tr>
+                	<td class="tb_bj_btn tb_bor_right">
+                    	<div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div>
+                    </td>
+                    <td>1</td>
+                    <td><div class="m_mark"><span class="green"></span></div></td>
+                    <td>客户编号 </td>
+                    <td>客户姓名</td>
+                    <td>预约日期</td>
+                    <td>销售人</td>
+                    <td>接单点</td>
+                    <td>总价</td>
+                    <td>已付款</td>
+                    <td>欠款</td>
+                    <td>付款完成</td>
+                    <td>手机号</td>
+                    <td>家庭店面</td>
+                    <td>取件完成</td>
+                </tr>
+                <tr>
+                	<td class="tb_bj_btn tb_bor_right">
+                    	<div class="tb_bj"><a href="#" data-reveal-id="">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div>
+                    </td>
+                    <td>1</td>
+                    <td><div class="m_mark"><span class="green"></span></div></td>
+                    <td>客户编号 </td>
+                    <td>客户姓名</td>
+                    <td>预约日期</td>
+                    <td>销售人</td>
+                    <td>接单点</td>
+                    <td>总价</td>
+                    <td>已付款</td>
+                    <td>欠款</td>
+                    <td>付款完成</td>
+                    <td>手机号</td>
+                    <td>家庭店面</td>
+                    <td>取件完成</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>   
+</div>    
+    <!--页面主内容-------------end -->
+
+<div class="tb_foot">
+    <div class="tb_bottom"><!--公共底部功能（显示，按钮，分页） -->
+        <a href="#" class="tb_btn tb_blue" data-reveal-id="ls-box1">新建</a>
+        <a href="#" class="tb_btn tb_orange">删除</a>
+        <div class="lc_bq"><div class="m_mark"><span class="blue"></span></div>已转单：6</div>
+        <div class="lc_bq"><div class="m_mark"><span class="green"></span></div>未取件：4</div>
+        <div class="lc_bq"><div class="m_mark"><span class="red"></span></div>已取件：6</div>
+        <div class="tb_pag">
+             <span class="tb_pag_xs"> 每页显示20条&nbsp;&nbsp;共<label id="lblTotalCount">29</label>条 </span>
+             <div class="quotes" id="Pagination">
+                 <span class="prev">&nbsp;&nbsp;&nbsp;</span>
+                 <span class="current">5</span>
+                 <a href="#">1</a>
+                 <a href="#">2</a>
+                 <a href="#">3</a>
+                 <a href="#">4</a>
+                 <a href="#">6</a>
+                 <a href="#">7</a>
+                 <a href="#">8</a>
+                 <a href="#" class="next">&nbsp;&nbsp;&nbsp;</a>
+             </div>
+        </div>
+    </div> 
+    <!--copyright -->
+   <!-- <div class="ft_tel">北京熊宝贝科技发展有限公司 技术支持：400-100-7592</div>-->
+</div>
+<!--弹窗内容 -->
+<div class="box" id="ls-box1">
+  	<div class="box_tit"><div class="box_t_name">新建零散件客户</div><a href="#" class="box_close close-reveal-modal"></a></div>
+
+    <div class="ls_con">
+          <div class="ls">
+                <span>客户编号</span>
+                <input name="" type="text" />
+          </div>
+          <div class="ls">
+            <span>预约日期</span>
+            <select name="select"  class="ls_sel" >
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+          </div>
+          <div class="ls">
+            <span>接 单 点</span>
+            <select name="select"  class="ls_sel" >
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+          </div>
+          <div class="ls">
+            <span>销售人员</span>
+            <select name="select"  class="ls_sel" >
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+          </div>
+          <div class="ls">
+                <span>客户姓名</span>
+                <input name="" type="text" />
+          </div>
+          <br/>
+          <div class="ls" style="clear:both;">
+                <span>客户手机</span>
+                <input name="" type="text" />
+          </div>
+          <div class="ls">
+                <span>家庭电话</span>
+                <input name="" type="text" />
+          </div>
+          <div class="ls" style="clear:both;">
+                <span>家庭地址</span>
+                <textarea></textarea>
+          </div>
+    </div>
+    <div class="gbox_btm"><a href="#" class="gbox_btn_clear close-reveal-modal">取消</a><button class="gbox_btn_save close-reveal-modal">保存</button></div>
+</div>
+<!--弹窗内容--end -->
+<script type="text/javascript">
+$(function(){
+	$(".tb_bj_btn").mouseover(function(){
+		$(this).children('div').show();
+		});
+	$(".tb_bj_btn").mouseout(function(){
+		$(this).children('div').hide();
+		});
+	$(".tb_del").click(function(){
+		$(this).parentsUntil('table tbody').remove();
+		});
+
+
+	});
+</script>
+
+<!--table选中状态 -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('table tbody tr:odd').addClass('mtr_bg');
+	$(".table tbody tr").click(function(){
+		$('table tbody tr').removeClass('mtr_bg_act');
+		$('table tbody tr:odd').addClass('mtr_bg');
+		$(this).removeClass('mtr_bg');
+		$(this).addClass('mtr_bg_act');
+		});
+	});
+</script>
+
+
+</body>
+</html>

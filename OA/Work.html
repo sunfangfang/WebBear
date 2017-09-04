@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>工作任务</title>
+    <link rel="stylesheet" href="../css/reset_s.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/news.css">
+    <link rel="stylesheet" href="../css/box.css">
+    <link rel="stylesheet" href="../css/content.css">
+    <link rel="stylesheet" href="../css/OA/oa.css">
+    <link rel="stylesheet" href="SpryAssets/oaTab2.css">
+    <link rel="stylesheet" href="../css/OA/zyUpload.css">
+    <link rel="stylesheet" href="../css/OA/jquery.fs.boxer.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/pagination.css">
+    <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="../js/jquery.reveal.js"></script>
+    <script type="text/javascript" src="SpryAssets/oaTab2.js"></script>
+    <script type="text/javascript">
+        $(window).load(function(){
+            setDivMaxHeight();
+        });
+        $(window).resize(function() {
+            setDivMaxHeight();
+        });
+        function setDivMaxHeight() {
+            var fg=$(window).height();
+            var h = parseInt(fg) -122;
+            $("#m_con").css("height", h);
+
+        }
+    </script>
+    <script type="text/javascript">
+        $(function(){
+            $(".oa_xbg").click(function(){
+                $(".oa_sx").toggle();
+            });
+        });
+        $(function(){
+            $(".labelio").click(function(){
+                $(this).find(".Mdivbg").toggleClass("Mdivbg01");
+            });
+            $(".span_ms").click(function(){
+                $(this).siblings(".Mdivbg").toggleClass("Mdivbg01");
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+<!--标题-->
+<div class="m_top">
+    <div class="m_name">工作任务</div>
+    <a href="javascript:;" class="oa_pub_btn" data-reveal-id="divTask">我要派任务</a>
+</div>
+<!--标题----------end-->
+<div id="m_con" style="background-color:#fff;">
+    <div class="oa_sc3">
+        <div class="oa_hb">
+            <div class="oa_hb_user"><img src="../img/tt.jpg"></div>
+            <div class="oa_hby">
+                <div class="oa_k_arrow"></div>
+                <div class="oa_hby_t">
+                    <div class="oa_hby_name">ytujyjjyu</div>
+                    <div class="oa_hby_time">2016-06-23 至 2016-06-23</div>
+                    <div class="oa_hby_time"></div>
+                    <div class="oa_hby_time">待办</div>
+                    <a href="javascript:;" class="oa_del">删除</a>
+                </div>
+                <div class="oa_hby_nr">yuiyui</div>
+                <div class="oa_hby_nr">发起人：张三 发起时间：2016-06-23 11:31</div>
+                <div class="oa_hby_nr">委派人：小张</div>
+                <div class="oa_hby_nr"><span style="float:left;">完成进度：0</span>
+                </div>       <div class="oa_hby_nr">完成时间：--</div>
+                <div class="oa_hby_nr"></div>
+                <div class="oa_hby_nr"></div>
+            </div>
+        </div>
+
+        <div class="oa_hb">
+            <div class="oa_hb_user"><img src="../img/tt.jpg"></div>
+            <div class="oa_hby">
+                <div class="oa_k_arrow"></div>
+                <div class="oa_hby_t">
+                    <div class="oa_hby_name">ytujyjjyu</div>
+                    <div class="oa_hby_time">2016-06-23 至 2016-06-23</div>
+                    <div class="oa_hby_time"></div>
+                    <div class="oa_hby_time">待办</div>
+                    <a href="javascript:;" class="oa_del">删除</a>
+                </div>
+                <div class="oa_hby_nr">yuiyui</div>
+                <div class="oa_hby_nr">发起人：张三 发起时间：2016-06-23 11:31</div>
+                <div class="oa_hby_nr">委派人：小张</div>
+                <div class="oa_hby_nr"><span style="float:left;">完成进度：0</span>
+                </div>       <div class="oa_hby_nr">完成时间：--</div>
+                <div class="oa_hby_nr"></div>
+                <div class="oa_hby_nr"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tb_foot">
+    <div class="tb_bottom">
+        <div class="tb_pag">
+            <span class="tb_pag_xs" style="width: auto; margin-right: 10px;">每页显示10条&nbsp;&nbsp;共<label id="lblTotalCount">0</label>条</span>
+            <div class="quotes" id="Pagination"><span class="current prev">&nbsp;&nbsp;&nbsp;</span><span class="current">1</span><span class="current next">&nbsp;&nbsp;&nbsp;</span></div>
+        </div>
+    </div>
+</div>
+
+
+<!--派任务弹窗 -->
+<div class="box" id="divTask">
+    <div class="box_tit">
+        <div class="box_t_name">
+            派任务</div>
+        <a href="javascript:;" class="box_close close-reveal-modal"></a>
+    </div>
+    <div class="box_con" style="overflow: auto;">
+        <div class="oat_con2">
+            <div class="aot_sel">
+                <span>日期</span>
+                <input type="text" id="t1" name="t1" style="width: 100px;">
+                <small style="float: left; display: inline-block; margin: 5px;">--</small>
+                <input type="text" style="width: 100px;">
+            </div>
+            <div class="aot_sel">
+                <span>标题</span>
+                <input type="text" placeholder="请输入标题" style="width: 435px;">
+            </div>
+            <div class="aot_sel">
+                <span>内容</span>
+                <textarea rows="4" cols="35" placeholder="请输入任务内容" style="resize: none;"></textarea>
+            </div>
+            <div class="oat_r">
+                <div class="oat_r1">委派</div>
+                <div class="oat_r2">
+                    <ul class="ulStaff"></ul>
+                    <input type="hidden" value="">
+                </div>
+                <a href="javascript:;" class="oat_r3"></a>
+                <div class="oat_r4" style="padding-left: 315px; margin-top: 0px;">
+                    <div class="oat_rdiv" style="margin-top: 0px; width: auto;">
+                    </div>
+                </div>
+            </div>
+            <div class="aot_sel">
+                <span>督办</span>
+                <input type="checkbox" value="1" style="width: auto">
+            </div>
+            <div class="oat_r">
+                <div class="oat_r1">
+                    附件</div>
+                <div class="oat_r2" style="border: 0px;">
+                    <div id="divPic" style="width: 435px; height: 100px;">
+                        <div class="upload_main single_main">
+                            <div class="status_bar">
+                                <div id="status_info" class="info">选中0张文件，共0B。</div>
+                                <div class="btns">
+                                    <input id="fileImage" type="file" size="30">
+                                </div>
+                            </div>
+                            <div id="preview" class="upload_preview">
+                                <div class="add_upload">
+                                    <a style="height:50px;width:60px;" title="点击添加文件" id="rapidAddImg" class="add_imgBox" href="javascript:void(0)">
+                                        <div class="uploadImg" style="width:45px">
+                                            <img class="upload_image" src="../img/add_img.png">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <span style="color: #f00;font-size: 14px;display:inline-block;margin-bottom: 30px;">* 注：请上传图片、文档或者压缩文件</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gbox_btm">
+        <a href="javascript:;" class="gbox_btn_clear close-reveal-modal">取消</a> <a href="javascript:;" class="gbox_btn_save close-reveal-modal">确定</a>
+    </div>
+</div>
+<!--派任务弹窗 -----------end-->
+
+<script type="text/javascript">
+    $(function(){
+        $(".oat_name a").click(function(){
+            $(this).parent().hide();
+        });
+    });
+    $(".oat_r3").click(function(){
+        $(this).prev().append('<div class="oat_name"><span>李某某<small>(经理)</small></span><a href="#"></a></div>');
+        $(".oat_name a").click(function(){
+            $(this).parent().hide();
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function(){
+        $(".oat_r_search input").focus(function(){
+            $(this).parent().next().show();
+        });
+        $(".oat_r_search input").blur(function(){
+            $(this).parent().next().hide();
+        });
+
+        $(".oa_hby_btn3 a").each(function(i){
+            $(this).data("index",i);
+        });
+        $(".oa_hby_btn3 a").click(function(){
+            var i=$(this).data("index");
+            $($(".pl_show")[i]).toggle();
+        })
+    })
+</script>
+</body>
+</html>

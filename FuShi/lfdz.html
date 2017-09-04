@@ -1,0 +1,895 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>男士礼服定制</title>
+    <link rel="stylesheet" href="../css/reset_s.css">
+    <link rel="stylesheet" href="../css/table.css" />
+    <link rel="stylesheet" href="../css/pagination.css" />
+    <link rel="stylesheet" href="../css/news.css" />
+    <link rel="stylesheet" href="../css/right.css"/>
+    <link rel="stylesheet" href="../css/FuShi/lfdz.css">
+    <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        $(window).load(function(){
+            setDivMaxHeight();
+        });
+        $(window).resize(function(){
+            setDivMaxHeight();
+        });
+        function setDivMaxHeight() {
+            var fg=$(window).height();
+            var h = parseInt(fg) -105;
+            $(".m_table").css("height", h);
+            var aa=parseInt(fg) -155;
+            $(".yt_con").css("height", aa);
+        }
+    </script>
+    <style>
+        @media(max-width:1024px){
+            body{min-width:827px;}
+			.mt_sx_arrow{margin-left:342px;}
+        }
+    </style>
+</head>
+<body>
+<div class="m_top">
+    <div class="lf_title">
+        <span>男士礼服定制</span>
+    </div>
+    <div class="mt_btn"><a href="#" id="mt_sx_show">筛选</a></div>
+    <script type="text/javascript">
+        $(function(){
+            $("#mt_sx_show").click(function(){
+                $(".mt_sx").slideToggle();
+            });
+        });
+    </script>
+    <div class="mt_sx" style="top:37px;">
+        <div class="mt_sx_arrow"></div>
+        <div class="mt_sx_con">
+            <div class="mt_s1">
+                <div class="mt_s1">
+                    <span>客户编号/姓名：</span>
+                    <input name="F1" type="text" id="F1" style="width: 206px;">
+                </div>
+            </div>
+            <div class="mt_s1">
+                <span>种类：</span>
+                <select name="F0" id="F0">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div>
+            <div class="mt_s1">
+                <span>日期类型：</span>
+                <select id="F2" class="lc_in_sel" name="select">
+                    <option value=""></option>
+                    <option value="">定制日期</option>
+                    <option value="">送制日期</option>
+                    <option value="">试穿日期</option>
+                    <option value="">完成日期</option>
+                    <option value="">取件日期</option>
+                </select>
+            </div>
+            <div class="mt_s1">
+                <span>日期时间：</span>
+                <input type="text" id="F3" style="width: 75px" maxlength="10">
+                <small style="float: left; margin: 0 5px;">--</small>
+                <input type="text" id="F4" style="width: 75px;" maxlength="10">
+            </div>
+            <div class="mt_s1">
+                <span>完成状态：</span>
+                <select class="lc_in_sel">
+                    <option value="">全部</option>
+                    <option value="">未完成</option>
+                    <option value="">已完成</option>
+                </select>
+            </div>
+            <div class="mt_btm">
+                <a href="#" class="mt_search tb_orange">导出EXCEL</a>
+                <a href="#" class="mt_search tb_orange">查询</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--页面主内容 -->
+<div id="m_con">
+    <div class="m_table lfdz_tb">
+        <table class="table  table-hover  table-striped" style="width: 2500px">
+            <thead class="tb_th_bga">
+            <tr>
+                <td></td>
+                <td>完成</td>
+                <td>客户编号</td>
+                <td>女士姓名</td>
+                <td>男士姓名</td>
+                <td>定制日期</td>
+                <td>定制金额</td>
+                <td>礼服昵称</td>
+                <td>进货厂商</td>
+                <td>进货价格</td>
+                <td>送制日期</td>
+                <td>试穿日期</td>
+                <td>完成日期</td>
+                <td>取件日期</td>
+                <td>礼服秘书</td>
+                <td>礼服类型</td>
+                <td>礼服颜色</td>
+                <td>礼服样式</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="tb_bj_btn tb_bor_right">
+                    <div class="tb_bj">
+                        <a href="javascript:;" class="m_tab_link update">修改</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">删除</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">打印报表</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">显示照片</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tb_bj_btn tb_bor_right">
+                    <div class="tb_bj">
+                        <a href="javascript:;" class="m_tab_link update">修改</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">删除</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">打印报表</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">显示照片</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tb_bj_btn tb_bor_right">
+                    <div class="tb_bj">
+                        <a href="javascript:;" class="m_tab_link update">修改</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">删除</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">打印报表</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">显示照片</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tb_bj_btn tb_bor_right">
+                    <div class="tb_bj">
+                        <a href="javascript:;" class="m_tab_link update">修改</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">删除</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">打印报表</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">显示照片</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tb_bj_btn tb_bor_right">
+                    <div class="tb_bj">
+                        <a href="javascript:;" class="m_tab_link update">修改</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">删除</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">打印报表</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">显示照片</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tb_bj_btn tb_bor_right">
+                    <div class="tb_bj">
+                        <a href="javascript:;" class="m_tab_link update">修改</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">删除</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">打印报表</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">显示照片</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tb_bj_btn tb_bor_right">
+                    <div class="tb_bj">
+                        <a href="javascript:;" class="m_tab_link update">修改</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">删除</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">打印报表</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">显示照片</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tb_bj_btn tb_bor_right">
+                    <div class="tb_bj">
+                        <a href="javascript:;" class="m_tab_link update">修改</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">删除</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">打印报表</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">显示照片</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tb_bj_btn tb_bor_right">
+                    <div class="tb_bj">
+                        <a href="javascript:;" class="m_tab_link update">修改</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">删除</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">打印报表</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">显示照片</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tb_bj_btn tb_bor_right">
+                    <div class="tb_bj">
+                        <a href="javascript:;" class="m_tab_link update">修改</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">删除</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">打印报表</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">显示照片</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tb_bj_btn tb_bor_right">
+                    <div class="tb_bj">
+                        <a href="javascript:;" class="m_tab_link update">修改</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">删除</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">打印报表</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">显示照片</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tb_bj_btn tb_bor_right">
+                    <div class="tb_bj">
+                        <a href="javascript:;" class="m_tab_link update">修改</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">删除</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">打印报表</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">显示照片</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tb_bj_btn tb_bor_right">
+                    <div class="tb_bj">
+                        <a href="javascript:;" class="m_tab_link update">修改</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">删除</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">打印报表</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">显示照片</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tb_bj_btn tb_bor_right">
+                    <div class="tb_bj">
+                        <a href="javascript:;" class="m_tab_link update">修改</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">删除</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">打印报表</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">显示照片</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tb_bj_btn tb_bor_right">
+                    <div class="tb_bj">
+                        <a href="javascript:;" class="m_tab_link update">修改</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">删除</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">打印报表</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">显示照片</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tb_bj_btn tb_bor_right">
+                    <div class="tb_bj">
+                        <a href="javascript:;" class="m_tab_link update">修改</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">删除</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">打印报表</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">显示照片</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tb_bj_btn tb_bor_right">
+                    <div class="tb_bj">
+                        <a href="javascript:;" class="m_tab_link update">修改</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">删除</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">打印报表</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">显示照片</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tb_bj_btn tb_bor_right">
+                    <div class="tb_bj">
+                        <a href="javascript:;" class="m_tab_link update">修改</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">删除</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">打印报表</a>
+                        <small>|</small>
+                        <a href="javascript:;" class="m_tab_link">显示照片</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--页面主内容-------------end -->
+<div class="tb_foot" style="margin-left:0.5%;">
+    <div class="tb_bottom" style="border-top:1px solid #e9ecf3;"><!--公共底部功能（显示，按钮，分页） -->
+        <a href="#" class="tb_btn tb_blue vip_bt">新增男士定制礼服</a>
+        <div class="tab_in2"><span class="shul">客户数量：<label>100</label></span><span class="shul1">总金额：<label class="spanred" >10000</label> </span></div>
+        <div class="tb_pag" style="float: right">
+            <span class="tb_pag_xs" style="width: auto; margin-right: 10px;">每页显示20条&nbsp;&nbsp;共<label id="lbl1">6</label>条</span>
+            <div class="quotes"><span class="current prev">&nbsp;&nbsp;&nbsp;</span><span class="current">1</span><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#" class="next">&nbsp;&nbsp;&nbsp;</a></div>
+        </div>
+    </div>
+</div>
+<!--右推效果内容 -->
+<div id="right_go" class="sidr-right"> <!--宽度根据页面需要自定义，不能写百分比 -->
+    <a href="#" class="myt_close clo_yt"></a>
+    <div class="myt_tit">
+        <div class="myt_name">定制男士礼服</div>
+    </div>
+    <!--内容区域 -->
+    <div class="myt_con">
+        <div class="kh_content">
+            <div class="yt_con">
+                <div class="kh_top">
+                    <span>客户编号/姓名：</span>
+                    <span class="search_btn">
+                        <input type="text">
+                        <i class="search"></i>
+                    </span>
+
+                    <div class="ku_scdiv">
+                        <div class="m_tabel yt_tb">
+                            <table class="table  table-hover  table-striped">
+                                <thead class="tb_th_bgb">
+                                <tr>
+                                    <td>客户编号</td>
+                                    <td>男士姓名</td>
+                                    <td>女士姓名</td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>张三</td>
+                                    <td>李四</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="kh_ul">
+                    <ul>
+                        <li><span>客户编号：</span><input type="text"></li>
+                        <li><span>结婚日期：</span><input type="text"></li>
+                        <li><span>礼服名称：</span><input type="text"></li>
+                        <li><span>取件日期：</span><input type="text"></li>
+                        <li><span>礼服秘书：</span><input type="text"></li>
+                        <li><span>礼服样式：</span><input type="text"></li>
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="kh_ul">-->
+                    <!--<ul>-->
+                        <li><span>男士姓名：</span><input type="text"></li>
+                        <li><span>定制日期：</span><input type="text"></li>
+                        <li><span>进货厂商：</span><input type="text"></li>
+                        <li><span>完成日期：</span><input type="text"></li>
+                        <li><span>礼服风格：</span><input type="text"></li>
+                        <li><span>礼服备注：</span><input type="text"></li>
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="kh_ul">-->
+                    <!--<ul>-->
+                        <li><span>女士姓名：</span><input type="text"></li>
+                        <li><span>试穿日期：</span><input type="text"></li>
+                        <li><span>定制金额：</span><input type="text"></li>
+                        <li><span>送制日期：</span><input type="text"></li>
+                        <li><span>礼服种类：</span><input type="text"></li>
+                        <li><span>礼服颜色：</span><input type="text"></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                <div class="khlb">
+                    <label><input type="checkbox"><span>加急</span></label>
+                    <label><input type="checkbox"><span>定制鞋子</span></label>
+                    <label><input type="checkbox"><span>定制其他</span></label>
+                </div>
+                <div class="lfcs">定制礼服参数</div>
+                <div class="cs_block">
+                    <ul>
+                        <li><span>净身高：</span><input type="text"></li>
+                        <li><span>BP宽：</span><input type="text"></li>
+                        <li><span>鞋高：</span><input type="text"></li>
+                        <li><span>BP高：</span><input type="text"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tb_bottom">
+                <a href="#" class="tb_btn tb_blue">确定定制</a>
+                <a href="#" class="tb_btn tb_blue">打印</a>
+            </div>
+        </div>
+    </div>
+    <!--内容区域------------end -->
+</div>
+
+
+<!--右推脚本 -->
+<select id="effectTypes" style="display:none">
+    <option value="drop">drop</option>
+</select>
+<script src="../js/jquery.effects.core.js"></script>
+<script src="../js/jquery.effects.drop.js"></script>
+<script>
+    $(function() {
+        function runEffect() {
+            var drop = $("#effectTypes").val();
+            var options = {};
+            $("#right_go").show(drop, options, 500);
+        };
+        $(".vip_bt").click(function() {
+            runEffect();
+        });
+        $(".update").click(function(){
+            runEffect();
+        })
+        $("#right_go").hide();
+
+        function closedEffect() {
+            var drop = $("#effectTypes").val();
+            var options = {};
+            $("#right_go").hide(drop, options, 1000);
+        };
+        $(".clo_yt").click(function() {
+            closedEffect();
+        });
+
+        $(".kh_top input").focus(function(){
+            $(".ku_scdiv").show();
+        });
+        var text="";
+        $(".ku_scdiv tbody tr").click(function(){
+            var text=$(this).find("td:first").html();
+            $(".kh_top input").val(text);
+            $(".ku_scdiv").hide();
+        });
+
+    });
+</script>
+
+<!--table选中状态 -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('table tbody tr:odd').addClass('mtr_bg');
+        $("tbody tr").click(function(){
+            $('table tbody tr').removeClass('mtr_bg_act');
+            $('table tbody tr:odd').addClass('mtr_bg');
+            $(this).removeClass('mtr_bg');
+            $(this).addClass('mtr_bg_act');
+        });
+    });
+    $(function(){
+        $(".tb_bj_btn").mouseover(function(){
+            $(this).children('div').show();
+        });
+        $(".tb_bj_btn").mouseout(function(){
+            $(this).children('div').hide();
+        });
+        $(".tb_del").click(function(){
+            $(this).parentsUntil('table tbody').remove();
+        });
+    });
+</script>
+</body>
+</html>

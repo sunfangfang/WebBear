@@ -1,0 +1,518 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>员工排班</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset_s.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/table.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/news.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/TongJi/sheyingtongji2.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/box.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/content.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/MenShi/gzpc.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/OA/YGPB.css"/>
+
+    <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="../js/FuShi/Common.js"></script>
+    <script type="text/javascript" src="../js/TongJ/WdatePicker.js"></script>
+    <script type="text/javascript" src="../js/jquery.reveal.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            setDivMaxHeight();
+        });
+        $(window).resize(function () {
+            setDivMaxHeight();
+        });
+        function setDivMaxHeight() {
+            var fg = $(window).height();
+            var h = parseInt(fg) - 82;
+            $("#m_con").css("height", h);
+        }
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            //筛选
+            $("#ASearch").click(function () {
+                $(".crm_sx").slideToggle();
+                $(".mt_btn a").toggleClass("colo");
+            });
+            $(".mt_btn a").click(function () {
+                $(".crm_sx").slideToggle();
+                $(this).toggleClass("colo");
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div class="m_top">
+        <div class="m_name">
+            员工排班
+        </div>
+        <div class="mt_btn">
+            <a href="javascript:;">筛选</a></div>
+        <div class="crm_sx" style="width: 340px; height: 280px;">
+            <div class="crm_sx_arrow" style="right: 36px">
+            </div>
+            <div class="crm_sx1" style="width: 300px; margin-left: 20px;">
+                <span>所属店面：</span>
+                <select name="s1" id="s1" style="width: 220px">
+                    <option value="">全部</option>
+                    <option value="北京大兴旗舰店">北京大兴旗舰店</option>
+                    <option value="SH体验店">SH体验店</option>
+                    <option value="Swarovski·BeiJing">Swarovski&#183;BeiJing</option>
+                    <option value="蒙娜丽莎">蒙娜丽莎</option>
+                    <option value="TEST FACTORY">TEST FACTORY</option>
+                    <option value="韩国THE QUEEN">韩国THE QUEEN</option>
+
+                </select>
+            </div>
+            <div class="crm_sx1" style="width: 300px; margin-left: 20px;">
+                <span>部门：</span>
+                <select name="s2" id="s2" style="width: 220px">
+                    <option value="">全部</option>
+                    <option value="门市">门市</option>
+                    <option value="测试test">测试test</option>
+                    <option value="选样部">选样部</option>
+                    <option value="客服">客服</option>
+
+                </select>
+            </div>
+            <div class="crm_sx1" style="width: 300px; margin-left: 20px;">
+                <span>职务：</span>
+                <select name="s3" id="s3" style="width: 220px">
+                    <option value="">全部</option>
+                    <option value="董事长">董事长</option>
+                    <option value="门市主管">门市主管</option>
+                    <option value="选样">选样</option>
+
+                </select>
+            </div>
+            <div class="crm_sx1" style="width: 300px; margin-left: 20px;">
+                <span>姓名：</span>
+                <input type="text" id="s4" style="width: 220px" placeholder="姓名"/>
+            </div>
+            <div class="crm_sx1_btn" style="margin-top: 20px;">
+                <a href="javascript:;" id="ASearch">查询</a>
+                <a href="javascript:;">重置</a>
+            </div>
+        </div>
+    </div>
+    <div id="m_con" style="background: #f9f9f9;">
+        <div class="m_cz">
+            <div class="title"><span>筛选结果显示</span></div>
+            <div class="m_table ygpb">
+                <table class="table  table-hover table-striped">
+                    <thead class="tb_th_bgb"><!-- 如果是在tab切换里面时候，th的class="tb_th_bgb";一般状态下用class="tb_th_bga"  -->
+                    <tr>
+                        <td style="width: 50px"><label><input type="checkbox"><span>全部</span></label></td>
+                        <td>部门</td>
+                        <td>姓名</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"><span>111</span></label></td>
+                        <td>门市</td>
+                        <td>张扬</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="m_cy">
+            <div class="tj_table" style="border-bottom: none;">
+                <div class="riqi">
+                    <div class="title">
+                        <i class="dir_left" title="上一月" ></i>
+                        <span class="time" id="spantime">2016-06-04  星期四</span>
+                        <i class="dir_right" title="下一月" ></i>
+                        <span class="date_back">返回当天</span>
+                        <a class="date_back" style="width: 100px;" data-reveal-id="pb_set">批量设置排班</a>
+                    </div>
+                    <div id="date_b">
+                        <div class="datel">
+                            <div class="dl_week">
+                                <span class="work">SUN日</span>
+                                <span class="work">MON一</span>
+                                <span class="work">TUE二</span>
+                                <span class="work">WED三</span>
+                                <span class="work">THU四</span>
+                                <span class="work">FRI五</span>
+                                <span class="work">SAT六</span>
+                            </div>
+                            <div class="dl_day">
+                                <a href="javascript:;" class="date free"></a>
+                                <a href="javascript:;" class="date work"></a>
+                                <a href="javascript:;" class="date work"></a>
+                                <a href="javascript:;" class="date work" p="2016-06-01" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">01</strong>
+                                        <span class="work2">廿六</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-02" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">02</strong>
+                                        <span class="work2">廿七</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-03" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">03</strong>
+                                        <span class="work2">廿八</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date free" p="2016-06-04" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">04</strong>
+                                        <span class="work2">廿九</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date free" p="2016-06-05" d="d">
+                                    <ul class="pb_time">
+                                        <li>上午(<b>08:00</b>-<b>11:00</b>)</li>
+                                        <li>下午(<b>08:00</b>-<b>11:00</b>)</li>
+                                        <li>晚上(<b>08:00</b>-<b>11:00</b>)</li>
+                                    </ul>
+                                    <div class="day_block">
+                                        <strong class="day">05</strong>
+                                        <span class="work2">五月</span>
+                                    </div>
+                                </a>
+
+                                <a href="javascript:;" class="date work" p="2016-06-06" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">06</strong>
+                                        <span class="work2">初二</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-07" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">07</strong>
+                                        <span class="work2">初三</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-08" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">08</strong>
+                                        <span class="work2">初四</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-09" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">09</strong>
+                                        <span class="work2">初五</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-10" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">10</strong>
+                                        <span class="work2">初六</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date free" p="2016-06-11" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">11</strong>
+                                        <span class="work2">初七</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date free" p="2016-06-12" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">12</strong>
+                                        <span class="work2">初八</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-13" d="d">
+                                    <strong class="day">13</strong>
+                                    <span class="work2">初九</span>
+
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-14" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">14</strong>
+                                        <span class="work2">初十</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work dat_act2 dat_act" p="2016-06-15" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">15</strong>
+                                        <span class="work2">十一</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-16" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">16</strong>
+                                        <span class="work2">十二</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-17" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">17</strong>
+                                        <span class="work2">十三</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date free" p="2016-06-18" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">18</strong>
+                                        <span class="work2">十四</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date free" p="2016-06-19" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">19</strong>
+                                        <span class="work2">十五</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-20" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">20</strong>
+                                        <span class="work2">十六</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-21" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">21</strong>
+                                        <span class="work2">十七</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-22" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">22</strong>
+                                        <span class="work2">十八</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-23" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">23</strong>
+                                        <span class="work2">十九</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-24" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">24</strong>
+                                        <span class="work2">二十</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date free" p="2016-06-25" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">25</strong>
+                                        <span class="work2">廿一</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date free" p="2016-06-26" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">26</strong>
+                                        <span class="work2">廿二</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-27" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">27</strong>
+                                        <span class="work2">廿三</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-28" d="d">
+                                    <strong class="day">28</strong>
+                                    <span class="work2">廿四</span>
+
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-29" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">29</strong>
+                                        <span class="work2">廿五</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work" p="2016-06-30" d="d">
+                                    <div class="day_block">
+                                        <strong class="day">30</strong>
+                                        <span class="work2">廿六</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" class="date work"></a>
+                                <a href="javascript:;" class="date free"></a>
+                                <a href="javascript:;" class="date free"></a>
+                                <a href="javascript:;" class="date work"></a>
+                                <a href="javascript:;" class="date work"></a>
+                                <a href="javascript:;" class="date work"></a>
+                                <a href="javascript:;" class="date work"></a>
+                                <a href="javascript:;" class="date work"></a>
+                                <a href="javascript:;" class="date free"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tb_bottom">
+                <a href="javascript:;" id="R013" class="tb_btn tb_green">批量保存</a>
+            </div>
+        </div>
+    </div>
+
+    <!--新增批量排班弹层 -->
+    <div class="box pb_box" id="pb_set">
+        <div class="box_tit">
+            <div class="box_t_name">批量设置排班</div>
+            <a href="#" class="box_close close-reveal-modal"></a>
+        </div>
+        <div class="box_con" style="overflow: auto;">
+            <div class="m_table pb_tb">
+                <table class="table  table-hover table-striped">
+                    <thead class="tb_th_bgb"><!-- 如果是在tab切换里面时候，th的class="tb_th_bgb";一般状态下用class="tb_th_bga"  -->
+                    <tr>
+                        <td style="width: 70px;"><label><input type="checkbox"><span>全部</span></label></td>
+                        <td>班次</td>
+                        <td>上下班时间</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><label><input type="checkbox"></label></td>
+                        <td>上午班</td>
+                        <td>时间安排（08:00-11:30）</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"></label></td>
+                        <td>下午班</td>
+                        <td>时间安排（11:40-17:50）</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"></label></td>
+                        <td>晚上班</td>
+                        <td>时间安排（18:00-02:00）</td>
+                    </tr>
+                    <tr>
+                        <td>选择日期</td>
+                        <td colspan ="2">
+                            <label class="pb_week"><input type="checkbox"><span>星期一</span></label>
+                            <label class="pb_week"><input type="checkbox"><span>星期二</span></label>
+                            <label class="pb_week"><input type="checkbox"><span>星期三</span></label>
+                            <label class="pb_week"><input type="checkbox"><span>星期四</span></label>
+                            <label class="pb_week"><input type="checkbox"><span>星期五</span></label>
+                            <label class="pb_week"><input type="checkbox"><span>星期六</span></label>
+                            <label class="pb_week"><input type="checkbox"><span>星期七</span></label>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="gbox_btm">
+            <a href="#" class="gbox_btn_clear close-reveal-modal">取消</a>
+            <button class="gbox_btn_save close-reveal-modal">保存</button>
+        </div>
+    </div>
+    <!--table选中状态 -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".ygpb table tbody tr").click(function(){
+                $(".ygpb table tbody tr").removeClass('right_tb_bgcolor');
+                $(this).addClass('right_tb_bgcolor');
+            });
+            $(".date").click(function(){
+                $(".date").removeClass("dat_act");
+                $(this).addClass("dat_act");
+            })
+        });
+    </script>
+</body>
+</html>
