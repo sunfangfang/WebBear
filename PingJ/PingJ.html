@@ -1,0 +1,776 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>客户评价</title>
+<link rel="stylesheet" href="../css/reset_s.css">
+<link rel="stylesheet" href="../css/PingJ/table.css" />
+<link rel="stylesheet" href="../css/news.css" />
+<link rel="stylesheet" href="../css/PingJ/pagination.css" />
+<link rel="stylesheet" href="../css/PingJ/PingJ.css">
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../js/jquery.reveal.js"></script>
+<script src="../js/PingJ/PingJ.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+	  setDivMaxHeight();
+ });
+
+$(window).resize(function() {
+	setDivMaxHeight();
+});
+function setDivMaxHeight() {
+	var fg=$(window).height();
+
+    var aa=$(window).width();
+    if(aa<900){
+        var h = parseInt(fg) - 122;
+        $("#m_con").css("height", h);
+    }else{
+        var h = parseInt(fg) - 422;
+        $(".pj_content").css("height", h);
+    }
+
+
+}
+</script>
+<style type="text/css">
+	@media(max-width:850px){
+		body{min-width:827px;}
+	}
+</style>
+</head>
+<body>
+<div class="m_top">
+    <div class="m_name">
+        客户评价
+    </div>
+    <div class="txtSearch" style="float: right; margin-right: 10px">
+        <select name="xuanze" id="xuanze" style="width: 200px">
+            <option value="">全部</option>
+            <option selected="selected" value="XB0108">北京大兴旗舰店</option>
+            <option value="XBB5210">SH体验店</option>
+        </select>
+        <input type="text" placeholder="请输入订单编号/客户姓名/手机号" id="txtSearch">
+        <a href="javascript:;" onClick="Search()">查询</a>
+    </div>
+</div>
+<!--页面主内容 -->
+<div id="m_con">
+    <div class="m_pj">
+        <div class="m_table m_table1">
+            <div class="pj_table">
+                <table class="table  table-hover table-striped" style="width: 2000px;">
+                    <thead class="mtr_bg"><!-- 如果是在tab切换里面时候，th的class="tb_th_bgb";一般状态下用class="tb_th_bga"  -->
+                    <tr>
+                        <td>序号</td>
+                        <td>服务店面</td>
+                        <td>客户编号</td>
+                        <td>类型</td>
+                        <td>订单日期</td>
+                        <td>男士姓名</td>
+                        <td>女士姓名</td>
+                        <td>宝宝姓名</td>
+                        <td>宝宝生日</td>
+                        <td>消费类型</td>
+                        <td>会员卡号</td>
+                        <td>会员卡号</td>
+                        <td>服务店面</td>
+                        <td>客户编号</td>
+                        <td>类型</td>
+                        <td>订单日期</td>
+                        <td>男士姓名</td>
+                        <td>女士姓名</td>
+                        <td>宝宝姓名</td>
+                        <td>宝宝生日</td>
+                        <td>消费类型</td>
+                        <td>会员卡号</td>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="td_border">1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="td_border">2</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="td_border">3</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pj_table pj_table1">
+                <table class="table  table-hover table-striped">
+                    <thead class="mtr_bg">
+                    <tr>
+                        <td>序号</td>
+                        <td>客户编号</td>
+                        <td>服次</td>
+                    </tr>
+                    </thead>
+                    <tbody id="list1">
+                    <tr>
+                        <td class="td_border">1</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="td_border">2</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="td_border">3</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="c_pj">
+        <div class="pj_title">
+            <ul class="pj_link">
+                <li style="margin-left: 10px;" id="first_li">服务态度</li>
+                <li>化妆水平</li>
+                <li>摄影水平</li>
+            </ul>
+        </div>
+        <div class="pj_content">
+            <div class="pj_conblock" style="display: block">
+                <div class="pj_bian" style="border-bottom: 1px dotted #ced4e0">
+                    <div class="pj_con">
+                        <div>
+                            <div class="sec">
+                                <div class="circle"></div>
+                                <div class="con_l"><span>评价主题：</span><input type="text" value="设计师服务满意度评分" class="pj_input"></div>
+                                <ul class="check">
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">非常满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">一般</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">不满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">非常不满意</span></label></li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="sec">
+                                <div class="kong"></div>
+                                <ul class="item">
+                                    <li style="text-align: left">
+                                        <span>评价部门：</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">化妆部</option>
+                                            <option value="">化妆部</option>
+                                            <option value="">化妆部</option>
+                                        </select>
+                                    </li>
+                                    <li style="text-align: center">
+                                        <span>评价人员</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                        </select>
+                                    </li>
+                                    <li style="text-align: center; width:30%">
+                                        <span>回访日期：</span><input type="text" class="pj_input1">
+                                    </li>
+                                    <li style="text-align: right">
+                                        <span>回访人员：</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="sec">
+                                <div class="kong"></div>
+                                <span class="pj_text">评价备注：</span>
+                                <textarea name="" id="" class="input_large"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pj_bian">
+                    <div class="pj_con">
+                        <div>
+                            <div class="sec">
+                                <div class="circle"></div>
+                                <div class="con_l"><span>评价主题：</span><input type="text" value="设计师服务满意度评分" class="pj_input"></div>
+                                <ul class="check">
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">非常满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">一般</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">不满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">非常不满意</span></label></li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="sec">
+                                <div class="kong"></div>
+                                <ul class="item">
+                                    <li style="text-align: left">
+                                        <span>评价部门：</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">化妆部</option>
+                                            <option value="">化妆部</option>
+                                            <option value="">化妆部</option>
+                                        </select>
+                                    </li>
+                                    <li style="text-align: center">
+                                        <span>评价人员</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                        </select>
+                                    </li>
+                                    <li style="text-align: center; width:30%">
+                                        <span>回访日期：</span><input type="text" class="pj_input1">
+                                    </li>
+                                    <li style="text-align: right">
+                                        <span>回访人员：</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="sec">
+                                <div class="kong"></div>
+                                <span class="pj_text">评价备注：</span>
+                                <textarea name="" id="" class="input_large"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pj_bian">
+                    <div class="pj_con">
+                        <div>
+                            <div class="sec">
+                                <div class="circle"></div>
+                                <div class="con_l"><span>评价主题：</span><input type="text" value="设计师服务满意度评分" class="pj_input"></div>
+                                <ul class="check">
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">非常满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">一般</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">不满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">非常不满意</span></label></li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="sec">
+                                <div class="kong"></div>
+                                <ul class="item">
+                                    <li style="text-align: left">
+                                        <span>评价部门：</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">化妆部</option>
+                                            <option value="">化妆部</option>
+                                            <option value="">化妆部</option>
+                                        </select>
+                                    </li>
+                                    <li style="text-align: center">
+                                        <span>评价人员</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                        </select>
+                                    </li>
+                                    <li style="text-align: center; width:30%">
+                                        <span>回访日期：</span><input type="text" class="pj_input1">
+                                    </li>
+                                    <li style="text-align: right">
+                                        <span>回访人员：</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="sec">
+                                <div class="kong"></div>
+                                <span class="pj_text">评价备注：</span>
+                                <textarea name="" id="" class="input_large"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pj_bian">
+                    <div class="pj_con">
+                        <div>
+                            <div class="sec">
+                                <div class="circle"></div>
+                                <div class="con_l"><span>评价主题：</span><input type="text" value="设计师服务满意度评分" class="pj_input"></div>
+                                <ul class="check">
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">非常满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">一般</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">不满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">非常不满意</span></label></li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="sec">
+                                <div class="kong"></div>
+                                <ul class="item">
+                                    <li style="text-align: left">
+                                        <span>评价部门：</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">化妆部</option>
+                                            <option value="">化妆部</option>
+                                            <option value="">化妆部</option>
+                                        </select>
+                                    </li>
+                                    <li style="text-align: center">
+                                        <span>评价人员</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                        </select>
+                                    </li>
+                                    <li style="text-align: center; width:30%">
+                                        <span>回访日期：</span><input type="text" class="pj_input1">
+                                    </li>
+                                    <li style="text-align: right">
+                                        <span>回访人员：</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="sec">
+                                <div class="kong"></div>
+                                <span class="pj_text">评价备注：</span>
+                                <textarea name="" id="" class="input_large"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pj_bian">
+                    <div class="pj_con">
+                        <div>
+                            <div class="sec">
+                                <div class="circle"></div>
+                                <div class="con_l"><span>评价主题：</span><input type="text" value="设计师服务满意度评分" class="pj_input"></div>
+                                <ul class="check">
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">非常满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">一般</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">不满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">非常不满意</span></label></li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="sec">
+                                <div class="kong"></div>
+                                <ul class="item">
+                                    <li style="text-align: left">
+                                        <span>评价部门：</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">化妆部</option>
+                                            <option value="">化妆部</option>
+                                            <option value="">化妆部</option>
+                                        </select>
+                                    </li>
+                                    <li style="text-align: center">
+                                        <span>评价人员</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                        </select>
+                                    </li>
+                                    <li style="text-align: center; width:30%">
+                                        <span>回访日期：</span><input type="text" class="pj_input1">
+                                    </li>
+                                    <li style="text-align: right">
+                                        <span>回访人员：</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="sec">
+                                <div class="kong"></div>
+                                <span class="pj_text">评价备注：</span>
+                                <textarea name="" id="" class="input_large"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pj_conblock">
+                <div class="pj_bian" style="border-bottom: 1px dotted #ced4e0">
+                    <div class="pj_con">
+                        <div>
+                            <div class="sec">
+                                <div class="circle"></div>
+                                <div class="con_l"><span>评价主题：</span><input type="text" value="设计师服务满意度评分" class="pj_input"></div>
+                                <ul class="check">
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">非常满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">一般</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">不满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">非常不满意</span></label></li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="sec">
+                                <div class="kong"></div>
+                                <ul class="item">
+                                    <li style="text-align: left">
+                                        <span>评价部门：</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">化妆部</option>
+                                            <option value="">化妆部</option>
+                                            <option value="">化妆部</option>
+                                        </select>
+                                    </li>
+                                    <li style="text-align: center">
+                                        <span>评价人员</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                        </select>
+                                    </li>
+                                    <li style="text-align: center; width:30%">
+                                        <span>回访日期：</span><input type="text" class="pj_input1">
+                                    </li>
+                                    <li style="text-align: right">
+                                        <span>回访人员：</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="sec">
+                                <div class="kong"></div>
+                                <span class="pj_text">评价备注：</span>
+                                <textarea name="" id="" class="input_large"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pj_bian">
+                    <div class="pj_con">
+                        <div>
+                            <div class="sec">
+                                <div class="circle"></div>
+                                <div class="con_l"><span>评价主题：</span><input type="text" value="设计师服务满意度评分" class="pj_input"></div>
+                                <ul class="check">
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">非常满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">一般</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">不满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">非常不满意</span></label></li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="sec">
+                                <div class="kong"></div>
+                                <ul class="item">
+                                    <li style="text-align: left">
+                                        <span>评价部门：</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">化妆部</option>
+                                            <option value="">化妆部</option>
+                                            <option value="">化妆部</option>
+                                        </select>
+                                    </li>
+                                    <li style="text-align: center">
+                                        <span>评价人员</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                        </select>
+                                    </li>
+                                    <li style="text-align: center; width:30%">
+                                        <span>回访日期：</span><input type="text" class="pj_input1">
+                                    </li>
+                                    <li style="text-align: right">
+                                        <span>回访人员：</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="sec">
+                                <div class="kong"></div>
+                                <span class="pj_text">评价备注：</span>
+                                <textarea name="" id="" class="input_large"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pj_conblock">
+                <div class="pj_bian" style="border-bottom: 1px dotted #ced4e0">
+                    <div class="pj_con">
+                        <div>
+                            <div class="sec">
+                                <div class="circle"></div>
+                                <div class="con_l"><span>评价主题：</span><input type="text" value="设计师服务满意度评分" class="pj_input"></div>
+                                <ul class="check">
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">非常满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">一般</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">不满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">非常不满意</span></label></li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="sec">
+                                <div class="kong"></div>
+                                <ul class="item">
+                                    <li style="text-align: left">
+                                        <span>评价部门：</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">化妆部</option>
+                                            <option value="">化妆部</option>
+                                            <option value="">化妆部</option>
+                                        </select>
+                                    </li>
+                                    <li style="text-align: center">
+                                        <span>评价人员</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                        </select>
+                                    </li>
+                                    <li style="text-align: center; width:30%">
+                                        <span>回访日期：</span><input type="text" class="pj_input1">
+                                    </li>
+                                    <li style="text-align: right">
+                                        <span>回访人员：</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="sec">
+                                <div class="kong"></div>
+                                <span class="pj_text">评价备注：</span>
+                                <textarea name="" id="" class="input_large"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pj_bian">
+                    <div class="pj_con">
+                        <div>
+                            <div class="sec">
+                                <div class="circle"></div>
+                                <div class="con_l"><span>评价主题：</span><input type="text" value="设计师服务满意度评分" class="pj_input"></div>
+                                <ul class="check">
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">非常满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">一般</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">不满意</span></label></li>
+                                    <li><label class="labelio pjialab"><span class="Mdivbg pjiaspan"></span><input name="" type="checkbox" value=""><span class="span_ms">非常不满意</span></label></li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="sec">
+                                <div class="kong"></div>
+                                <ul class="item">
+                                    <li style="text-align: left">
+                                        <span>评价部门：</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">化妆部</option>
+                                            <option value="">化妆部</option>
+                                            <option value="">化妆部</option>
+                                        </select>
+                                    </li>
+                                    <li style="text-align: center">
+                                        <span>评价人员</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                        </select>
+                                    </li>
+                                    <li style="text-align: center; width:30%">
+                                        <span>回访日期：</span><input type="text" class="pj_input1">
+                                    </li>
+                                    <li style="text-align: right">
+                                        <span>回访人员：</span>
+                                        <select name="" class="sel_s">
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                            <option value="">李希</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="sec">
+                                <div class="kong"></div>
+                                <span class="pj_text">评价备注：</span>
+                                <textarea name="" id="" class="input_large"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--页面主内容-------------end -->
+
+<div class="tb_foot">
+    <div class="tb_bottom"><!--公共底部功能（显示，按钮，分页） -->
+        <a href="#" class="tb_btn tb_green">保存</a>
+    </div>
+    <!--copyright -->
+</div>
+
+
+<script type="text/javascript">
+$(function(){
+	$(".tb_sx").mouseover(function(){
+		$(this).children('ul').show();
+		});
+	$(".tb_sx").mouseout(function(){
+		$(this).children('ul').hide();
+		});
+//		$(".tb_sx_px li a").click(function(){
+//			$(".tb_sx_px li a").removeClass('tb_sx_bg');
+//			$(this).addClass('tb_sx_bg');
+//			});          //筛选功能需要选中状态时候开启
+	$(".tb_bj_btn").mouseover(function(){
+		$(this).children('div').show();
+		});
+	$(".tb_bj_btn").mouseout(function(){
+		$(this).children('div').hide();
+		});
+	$(".tb_del").click(function(){
+		$(this).parentsUntil('table tbody').remove();
+		});
+	});
+</script>
+
+<!--table选中状态 -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('table tbody tr:odd').addClass('mtr_bg');
+	$(".table tbody tr").click(function(){
+		$('table tbody tr').removeClass('mtr_bg_act');
+		$('table tbody tr:odd').addClass('mtr_bg');
+		$(this).removeClass('mtr_bg');
+		$(this).addClass('mtr_bg_act');
+		});
+	});
+</script>
+</body>
+</html>

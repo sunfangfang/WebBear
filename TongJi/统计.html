@@ -1,0 +1,650 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>统计</title>
+<link rel="stylesheet" type="text/css" href="../css/reset_s.css">
+<link rel="stylesheet" type="text/css" href="../css/table.css">
+<link rel="stylesheet" type="text/css" href="../css/news.css">
+<link rel="stylesheet" type="text/css" href="../css/pagination.css">
+<link rel="stylesheet" type="text/css" href="../css/TongJi/tongji.css">
+<link rel="stylesheet" href="../css/pagination.css" />
+<link rel="stylesheet" href="../css/crm/crm_tab.css"/>
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../js/crm/crm_tab.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+	  setDivMaxHeight();
+ });
+$(window).resize(function() {
+	setDivMaxHeight();
+});
+function setDivMaxHeight() {
+	var fg=$(window).height();
+	var h = parseInt(fg) - 232;
+	$(".m_table").css("height", h);
+}
+</script>
+    <style>
+        .tb_bj {
+           width: 100px;
+        }
+        .m_table{
+            overflow: auto;
+        }
+		.mt_sx_con{height:465px;}
+        @media(max-width:850px){
+            .mt_sx_arrow.mt_sx_arrow1{margin-left:314px;}
+			body{min-width:827px;}
+        }
+    </style>
+</head>
+<body>
+<div class="m_top">
+    <div class="m_name">工作统计</div>
+    <div class="mt_btn"><a href="#" id="mt_sx_show">筛选</a></div>
+    <script type="text/javascript">
+	$(function(){
+		$("#mt_sx_show,.mt_search").click(function(){
+			$(".mt_sx").slideToggle();
+			});
+    });
+	</script>
+    <div class="mt_sx1 mt_sx">
+    	<div class="mt_sx_arrow mt_sx_arrow1"></div>
+         <div class="mt_sx_con">
+        	<div class="mt_s1">
+            	<span class="spanright">接单地点:</span>
+        	    <select name="select">
+        	      <option>请选择取件地点</option>
+        	      <option>请选择取件地点</option>
+        	      <option>请选择取件地点</option>
+      	        </select>
+        	</div>
+        	<div class="mt_s1">
+            	<span class="spanright">客户来源:</span>
+        	    <select name="select">
+        	      <option>北京</option>
+        	      <option>北京</option>
+        	      <option>北京</option>
+      	        </select>
+        	</div>
+        	<div class="mt_s1">
+            	<span class="spanright">部门:</span>
+        	    <select name="select">
+        	      <option>部门1</option>
+        	      <option>部门2</option>
+        	      <option>部门3</option>
+      	        </select>
+        	</div>
+              <div class="mt_s1">
+            	<span class="spanright">姓名:</span>
+        	    <select name="select">
+        	      <option>mi</option>
+        	      <option>mi</option>
+        	      <option>mi</option>
+      	        </select>
+        	</div>
+              <div class="mt_s1">
+            	<span class="spanright">职务:</span>
+        	    <select name="select">
+        	      <option>工程师</option>
+        	      <option>工程师</option>
+        	      <option>工程师</option>
+      	        </select>
+        	</div>
+             <div class="mt_s1">
+            	<span class="spanright">日期标准:</span>
+        	    <select name="select">
+        	      <option>请选择日期标准</option>
+        	      <option>请选择日期标准</option>
+        	      <option>请选择日期标准</option>
+      	        </select>
+        	</div>
+               <div class="mt_s1">
+            	<span class="spanright">分店名称:</span>
+        	    <select name="select">
+        	      <option>请选择分店标准</option>
+        	      <option>请选择分店标准</option>
+        	      <option>请选择分店标准</option>
+      	        </select>
+        	</div>
+             <div class="mt_s1">
+            	<span class="spanright">日期范围:</span>
+        	    <select name="select" class="selectwidth">
+        	      <option>2016-2-14</option>
+        	      <option>2016-2-14</option>
+        	      <option>2016-2-14</option>
+      	        </select>
+                <span class="spand" style="width:14px;padding-left:8px;">- -</span>
+                 <select name="select" class="selectwidth" style="margin-left:10px;">
+        	      <option>2016-2-14</option>
+        	      <option>2016-2-14</option>
+        	      <option>2016-2-14</option>
+      	        </select>
+        	</div>
+            <div class="mt_btm"><a href="#" class="mt_search tb_orange">查询</a></div>
+      	</div>
+    </div>
+</div>
+<!--tab切换-->
+
+<!--主内容区域-->
+<div id="m_con" style="background-color:#fff;">
+    <div id="TabbedPanels1" class="TabbedPanels">
+        <ul class="TabbedPanelsTabGroup">
+            <li class="TabbedPanelsTab" tabindex="0" style="margin-left:10px;">订单客户</li>
+            <li class="TabbedPanelsTab" tabindex="0">零散客户</li>
+        </ul>
+        <div class="TabbedPanelsContentGroup">
+            <div class="TabbedPanelsContent">
+                <div class="divson" id="vson1">
+                      <div class="m_table" style="border-bottom:none;"> 
+                                <table class="table  table-hover table-striped" style="width: 2000px;">
+                                    <thead class="tb_th_bga"><!-- 如果是在tab切换里面时候，th的class="tb_th_bgb";一般状态下用class="tb_th_bga"  -->
+                                        <tr>
+                                            <td style="width: 80px"></td>
+                                            <td>序号</td>
+                                            <td>客户编号</td>
+                                            <td>服务店面</td>
+                                            <td>宝宝姓名</td>
+                                            <td>总金额</td>
+                                            <td>总已付</td>
+                                            <td>总尾款</td>
+                                            <td>预约总金额</td>
+                                            <td>二销金额</td>
+                                            <td>包套总金额</td>
+                                            <td>包套总已付款</td>
+                                            <td>包套总尾款</td>
+                                            <td>产品总金额</td>
+                                            <td style="border:none">产品总已付</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tb_bj_btn tb_bor_right">
+                                                <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                            </td>
+                                            <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_bj_btn tb_bor_right">
+                                                <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                            </td>
+                                            <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_bj_btn tb_bor_right">
+                                                <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                            </td>
+                                            <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_bj_btn tb_bor_right">
+                                                <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                            </td>
+                                            <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_bj_btn tb_bor_right">
+                                                <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                            </td>
+                                            <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_bj_btn tb_bor_right">
+                                                <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                            </td>
+                                            <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_bj_btn tb_bor_right">
+                                                <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                            </td>
+                                            <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_bj_btn tb_bor_right">
+                                                <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                            </td>
+                                            <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                          </div>   
+                      <div class="tj_foot">
+                        <div class="tb_bottom"><!--公共底部功能（显示，按钮，分页） -->
+                            <div class="tb_b_zs fontcol"><span>总客户数：0</span><span>总消费金额：8,800.00￥</span><span>已付消费金额：8,800.00￥</span><span>未付消费金额：8,800.00￥</span></div>
+                        </div> 
+                        <div class="tb_bottom"><!--公共底部功能（显示，按钮，分页） -->
+                            <a href="#" class="tb_btn tb_green">导出excel</a>
+                            <div class="tb_pag">
+                                 <span class="tb_pag_xs"> 每页显示20条&nbsp;&nbsp;共<label>29</label>条 </span>
+                                 <div class="quotes" id="Pagination">
+                                     <span class="prev">&nbsp;&nbsp;&nbsp;</span>
+                                     <span class="current">5</span>
+                                     <a href="#">1</a>
+                                     <a href="#">2</a>
+                                     <a href="#">3</a>
+                                     <a href="#">4</a>
+                                     <a href="#">6</a>
+                                     <a href="#">7</a>
+                                     <a href="#">8</a>
+                                     <a href="#" class="next">&nbsp;&nbsp;&nbsp;</a>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="TabbedPanelsContent">
+                <div class="divson" id="vson2">
+                       <div class="m_table" style="border-bottom:none;"> 
+                            <table class="table  table-hover table-striped" style="width: 2000px;">
+                                <thead class="tb_th_bga"><!-- 如果是在tab切换里面时候，th的class="tb_th_bgb";一般状态下用class="tb_th_bga"  -->
+                                    <tr>
+                                        <td style="width: 80px;"></td>
+                                        <td>序号</td>
+                                        <td>客户编号</td>
+                                        <td>服务店面</td>
+                                        <td>宝宝姓名</td>
+                                        <td>总金额</td>
+                                        <td>总已付</td>
+                                        <td>总尾款</td>
+                                        <td>预约总金额</td>
+                                        <td>二销金额</td>
+                                        <td>包套总金额</td>
+                                        <td>包套总已付款</td>
+                                        <td>包套总尾款</td>
+                                        <td>产品总金额</td>
+                                        <td style="border:none">产品总已付</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tb_bj_btn tb_bor_right">
+                                            <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                        </td>
+                                        <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tb_bj_btn tb_bor_right">
+                                            <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                        </td>
+                                        <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tb_bj_btn tb_bor_right">
+                                            <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                        </td>
+                                        <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tb_bj_btn tb_bor_right">
+                                            <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                        </td>
+                                        <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tb_bj_btn tb_bor_right">
+                                            <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                        </td>
+                                        <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                      <tr>
+                                        <td class="tb_bj_btn tb_bor_right">
+                                            <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                        </td>
+                                          <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                      <tr>
+                                        <td class="tb_bj_btn tb_bor_right">
+                                            <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                        </td>
+                                          <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                      <tr>
+                                        <td class="tb_bj_btn tb_bor_right">
+                                            <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                        </td>
+                                          <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                      <tr>
+                                        <td class="tb_bj_btn tb_bor_right">
+                                            <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                        </td>
+                                          <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                      <tr>
+                                        <td class="tb_bj_btn tb_bor_right">
+                                            <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                        </td>
+                                          <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                      <tr>
+                                        <td class="tb_bj_btn tb_bor_right">
+                                            <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                                        </td>
+                                          <td><label class="labelio tb_xh tjilab"><input name="" type="checkbox" value=""><span class="span_ms">1</span></label></td><!--序号check用这格式  -->
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                       </div>
+                       <div class="tj_foot">
+                            <div class="tb_bottom"><!--公共底部功能（显示，按钮，分页） -->
+                                <div class="tb_b_zs fontcol"><span>总客户数：0</span><span>总消费金额:0</span></div>
+                            </div> 
+                            <div class="tb_bottom"><!--公共底部功能（显示，按钮，分页） -->
+                                <a href="#" class="tb_btn tb_green">导出excel</a>
+                                <div class="tb_pag">
+                                     <span class="tb_pag_xs"> 每页显示20条&nbsp;&nbsp;共<label>29</label>条 </span>
+                                     <div class="quotes" id="Pagination">
+                                         <span class="prev">&nbsp;&nbsp;&nbsp;</span>
+                                         <span class="current">5</span>
+                                         <a href="#">1</a>
+                                         <a href="#">2</a>
+                                         <a href="#">3</a>
+                                         <a href="#">4</a>
+                                         <a href="#">6</a>
+                                         <a href="#">7</a>
+                                         <a href="#">8</a>
+                                         <a href="#" class="next">&nbsp;&nbsp;&nbsp;</a>
+                                     </div>
+                                </div>
+                            </div>
+
+                        </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+<!--tab控件区域------------end -->
+</div>
+<script type="text/javascript"><!--tab切换 -->
+var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+</script>
+
+<script type="text/javascript">
+$(function(){
+	$(".tb_sx").mouseover(function(){
+		$(this).children('ul').show();
+		});
+	$(".tb_sx").mouseout(function(){
+		$(this).children('ul').hide();
+		});
+//		$(".tb_sx_px li a").click(function(){
+//			$(".tb_sx_px li a").removeClass('tb_sx_bg');
+//			$(this).addClass('tb_sx_bg');
+//			});          //筛选功能需要选中状态时候开启
+	$(".tb_bj_btn").mouseover(function(){
+		$(this).children('div').show();
+		});
+	$(".tb_bj_btn").mouseout(function(){
+		$(this).children('div').hide();
+		});
+	$(".tb_del").click(function(){
+		$(this).parentsUntil('table tbody').remove();
+		});
+	});
+</script>
+<!--table选中状态 -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('table tbody tr:odd').addClass('mtr_bg');
+	$(".table tbody tr").click(function(){
+		$('table tbody tr').removeClass('mtr_bg_act');
+		$('table tbody tr:odd').addClass('mtr_bg');
+		$(this).removeClass('mtr_bg');
+		$(this).addClass('mtr_bg_act');
+		});
+	});
+</script>
+</body>
+</html>

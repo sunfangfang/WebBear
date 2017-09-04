@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>申请流程</title>
+    <link rel="stylesheet" href="../css/reset_s.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/news.css">
+    <link rel="stylesheet" href="../css/box.css">
+    <link rel="stylesheet" href="../css/content.css">
+    <link rel="stylesheet" href="../css/OA/oa.css">
+    <link rel="stylesheet" href="SpryAssets/oaTab.css">
+    <link rel="stylesheet" href="../css/OA/zyUpload.css">
+    <link rel="stylesheet" href="../css/OA/jquery.fs.boxer.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/pagination.css">
+    <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="../js/jquery.reveal.js"></script>
+    <script type="text/javascript" src="SpryAssets/oaTab2.js"></script>
+    <script type="text/javascript">
+        $(window).load(function(){
+            setDivMaxHeight();
+        });
+        $(window).resize(function() {
+            setDivMaxHeight();
+        });
+        function setDivMaxHeight() {
+            var fg=$(window).height();
+            var h = parseInt(fg) -122;
+            $("#m_con").css("height", h);
+
+        }
+    </script>
+    <script type="text/javascript">
+        $(function(){
+            $(".oa_xbg").click(function(){
+                $(".oa_sx").toggle();
+            });
+        });
+        $(function(){
+            $(".labelio").click(function(){
+                $(this).find(".Mdivbg").toggleClass("Mdivbg01");
+            });
+            $(".span_ms").click(function(){
+                $(this).siblings(".Mdivbg").toggleClass("Mdivbg01");
+            });
+        });
+
+    </script>
+    <style>
+        /*.oat_con{*/
+            /*height: 430px;*/
+            /*overflow: auto;*/
+        /*}*/
+        /*@media screen and (max-width: 850px){*/
+            /*.oat_con{*/
+                /*height: 330px;*/
+            /*}*/
+        /*}*/
+    </style>
+</head>
+
+<body>
+<!--标题-->
+<div class="m_top">
+    <div class="m_name">申请流程</div>
+    <a href="javascript:;" class="oa_pub_btn" data-reveal-id="divApply">我要申请</a>
+    <div class="mt_btn">
+        <a href="javascript:;" id="mt_sx_show">筛选</a>
+        <a href="javascript:;">已审批</a>
+        <a href="javascript:;">
+            待审批</a>
+    </div>
+    <!--筛选框-->
+    <div class="mt_sx">
+        <div class="mt_sx_arrow">
+        </div>
+        <div class="mt_sx_con">
+            <div class="mt_s1">
+                <span>申请类型：</span>
+                <select id="ApplyType" class="lc_in_sel" name="select" onchange="ChangeType(this)">
+                    <option value="">全部</option>
+                    <option value="1">请假</option>
+                    <option value="2">加班</option>
+                    <option value="3">出差</option>
+                    <option value="4">外勤</option>
+                    <option value="5">报销</option>
+                    <option value="6">采购</option>
+                    <option value="7">自定义</option>
+                </select>
+            </div>
+            <div id="Div2" class="mt_s1" style="display: none;">
+                <span>请假类型：</span>
+                <select id="Select2" class="lc_in_sel" name="select">
+                    <option value="">全部</option>
+                    <option value="事假">事假</option>
+                    <option value="病假">病假</option>
+                    <option value="年休">年休</option>
+                    <option value="调休">调休</option>
+                    <option value="婚假">婚假</option>
+                    <option value="产假">产假</option>
+                    <option value="陪产假">陪产假</option>
+                    <option value="丧假">丧假</option>
+                    <option value="其他">其他</option>
+                </select>
+            </div>
+            <div id="Div1" class="mt_s1" style="display: none;">
+                <span>报销类型：</span>
+                <select id="Select1" class="lc_in_sel" name="select">
+                    <option value="">全部</option>
+                    <option value="福利费">福利费</option>
+                    <option value="办公费">办公费</option>
+                    <option value="差旅费">差旅费</option>
+                    <option value="通讯费">通讯费</option>
+                    <option value="业务招待费">业务招待费</option>
+                    <option value="劳务费">劳务费</option>
+                    <option value="会务费">会务费</option>
+                    <option value="劳保费">劳保费</option>
+                    <option value="维修费">维修费</option>
+                    <option value="快递费">快递费</option>
+                    <option value="测试费">测试费</option>
+                    <option value="印刷费">印刷费</option>
+                    <option value="交通费">交通费</option>
+                    <option value="宣传费">宣传费</option>
+                    <option value="咨询费">咨询费</option>
+                    <option value="绿植费">绿植费</option>
+                    <option value="人力资源费">人力资源费</option>
+                    <option value="水电气费">水电气费</option>
+                    <option value="汽油费">汽油费</option>
+                </select>
+            </div>
+            <div class="mt_s1">
+                <span>申请人：</span>
+                <input type="text" id="ApplyUser" style="width: 196px;">
+            </div>
+            <div class="mt_s1">
+                <span>申请时间：</span>
+                <input type="text" style="width: 75px" maxlength="10">
+                <small style="float: left; margin: 0 5px;">--</small>
+                <input type="text" style="width: 75px;" maxlength="10">
+            </div>
+            <div class="mt_s1">
+                <span>审批状态：</span>
+                <select id="ApplyState" class="lc_in_sel">
+                    <option value="">全部</option>
+                    <option value="0">待审批</option>
+                    <option value="1">已审批</option>
+                </select>
+            </div>
+            <div class="mt_btm">
+                <a href="javascript:;" class="mt_search">查询</a>
+                <a href="javascript:;" class="mt_search">重置</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#mt_sx_show").click(function(){
+            $(".mt_sx").toggle();
+        })
+    </script>
+</div>
+<!--标题----------end-->
+<div id="m_con" style="background-color:#fff;">
+    <div class="oa_sc3">
+        <div class="oa_hb">
+            <div class="oa_hb_user"><img src="../img/tt.jpg"></div>
+            <div class="oa_hby">
+                <div class="oa_k_arrow"></div>
+                <div class="oa_mark0">待审批</div>
+                <div class="oa_mark" id="pic1"></div>
+                <div class="oa_hby_t2">
+                    <div class="oa_s1">
+                        <small style="font-weight: bold;">申请类型：</small>
+                        <span><strong style="font-weight: bold;">请假</strong></span>
+                    </div>
+                    <div class="oa_s1">
+                        <small>申请人：</small>
+                        <span>张三</span>
+                    </div>
+                    <div class="oa_s1">
+                        <small>申请时间：</small>
+                        <span>2016-06-23 13:03</span>
+                    </div>
+                    <div class="oa_s1">
+                        <small>请假类型：</small>
+                        <span>事假</span>
+                    </div>
+                    <div class="oa_s1">
+                        <small>申请时间：</small>
+                        <span>2016-06-16 13:03 - 2016-06-22 13:03</span>
+                    </div>
+                    <div class="oa_s1">
+                        <small>申请期限：</small>
+                        <span>3 天</span>
+                    </div>
+                    <div class="oa_s1">
+                        <small>申请理由：</small>
+                        <span>tyhtghtgvhgh</span>
+                    </div>
+                </div>
+                <div class="oa_hby_nr2" style="margin-bottom:20px;">
+                    <a href="javascript:;" class="oa_del" style="margin-left:10px;">删除</a>
+                    <div class="oa_hby_btn3" style="width:80px">
+                        <a href="javascript:;" style="width:80px">审批详情</a>
+                    </div>
+                </div>
+                <div class="oa_hby_nr3 sp_show" style="margin-top: 0px; display: none;">
+                    <div class="oa_hby_tit">
+                        <span>需要审核步骤为1步：</span>
+                    </div>
+                    <ul class="oa_s_ul">
+                        <li>
+                            <div class="oa_s9"><strong>第1步：<span>经理</span>审批人：小张</strong><small>待小张审批</small></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="oa_hb">
+            <div class="oa_hb_user"><img src="../img/tt.jpg"></div>
+            <div class="oa_hby">
+                <div class="oa_k_arrow"></div>
+                <div class="oa_mark0">待审批</div>
+                <div class="oa_mark"></div>
+                <div class="oa_hby_t2">
+                    <div class="oa_s1">
+                        <small style="font-weight: bold;">申请类型：</small>
+                        <span><strong style="font-weight: bold;">请假</strong></span>
+                    </div>
+                    <div class="oa_s1">
+                        <small>申请人：</small>
+                        <span>张三</span>
+                    </div>
+                    <div class="oa_s1">
+                        <small>申请时间：</small>
+                        <span>2016-06-23 13:03</span>
+                    </div>
+                    <div class="oa_s1">
+                        <small>请假类型：</small>
+                        <span>事假</span>
+                    </div>
+                    <div class="oa_s1">
+                        <small>申请时间：</small>
+                        <span>2016-06-16 13:03 - 2016-06-22 13:03</span>
+                    </div>
+                    <div class="oa_s1">
+                        <small>申请期限：</small>
+                        <span>3 天</span>
+                    </div>
+                    <div class="oa_s1">
+                        <small>申请理由：</small>
+                        <span>tyhtghtgvhgh</span>
+                    </div>
+                </div>
+                <div class="oa_hby_nr2" style="margin-bottom:20px;">
+                    <a href="javascript:;" class="oa_del" style="margin-left:10px;">删除</a>
+                    <div class="oa_hby_btn3" style="width:80px">
+                        <a href="javascript:;" style="width:80px">审批详情</a>
+                    </div>
+                </div>
+                <div class="oa_hby_nr3 sp_show" style="margin-top: 0px; display: none;">
+                    <div class="oa_hby_tit">
+                        <span>需要审核步骤为1步：</span>
+                    </div>
+                    <ul class="oa_s_ul">
+                        <li>
+                            <div class="oa_s9"><strong>第1步：<span>经理</span>审批人：小张</strong><small>待小张审批</small></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tb_foot">
+    <div class="tb_bottom">
+        <div class="tb_pag">
+            <span class="tb_pag_xs" style="width: auto; margin-right: 10px;">每页显示10条&nbsp;&nbsp;共<label id="lblTotalCount">0</label>条</span>
+            <div class="quotes" id="Pagination"><span class="current prev">&nbsp;&nbsp;&nbsp;</span><span class="current">1</span><span class="current next">&nbsp;&nbsp;&nbsp;</span></div>
+        </div>
+    </div>
+</div>
+
+
+<!--申请弹窗 -->
+<div class="box" id="divApply">
+    <div class="box_tit">
+        <div class="box_t_name">
+            申请流程</div>
+        <a href="javascript:;" class="box_close close-reveal-modal"></a>
+    </div>
+    <input type="hidden" id="hidType" value="1">
+    <div id="TabbedPanels1" class="TabbedPanels">
+        <ul class="TabbedPanelsTabGroup">
+            <li class="TabbedPanelsTab TabbedPanelsTabSelected">请假</li>
+            <li class="TabbedPanelsTab">加班</li>
+            <li class="TabbedPanelsTab">出差</li>
+            <li class="TabbedPanelsTab">外勤</li>
+            <li class="TabbedPanelsTab">报销</li>
+            <li class="TabbedPanelsTab">采购</li>
+            <li class="TabbedPanelsTab">自定义</li>
+        </ul>
+        <div class="TabbedPanelsContentGroup">
+            <div class="TabbedPanelsContent TabbedPanelsContentVisible" style="display: block;">
+                <!--请假 -->
+                <form method="post">
+                    <div class="oat_con">
+                        <div class="aot_sel">
+                            <span>类型<small>*</small></span>
+                            <select id="a1" name="a1">
+                                <option value="事假" selected="selected">事假</option>
+                                <option value="病假">病假</option>
+                                <option value="年休">年休</option>
+                                <option value="调休">调休</option>
+                                <option value="婚假">婚假</option>
+                                <option value="产假">产假</option>
+                                <option value="陪产假">陪产假</option>
+                                <option value="丧假">丧假</option>
+                                <option value="其他">其他</option>
+                            </select>
+                        </div>
+                        <div class="aot_sel" style="margin-left: 50px;">
+                            <span>时长<small>*</small></span>
+                            <input type="text" placeholder="请输入时长（单位：天）">
+                        </div>
+                        <div class="aot_sel">
+                            <span>开始<small>*</small></span>
+                            <input name="a3" type="text">
+                        </div>
+                        <div class="aot_sel" style="margin-left: 50px;">
+                            <span>结束<small>*</small></span>
+                            <input name="a4" type="text">
+                        </div>
+                        <div class="aot_sel">
+                            <span>原因</span>
+                            <textarea rows="5" cols="35" placeholder="请填写原因"></textarea>
+                        </div>
+                        <div class="aot_sel">
+                            <span>审核流程</span>
+                            <select><option value="2">三天以上</option></select>
+                        </div>
+                        <div class="oat_r">
+                            <div class="oat_r1">附件</div>
+                            <div class="oat_r2" style="border: 0px;">
+                                <div id="divPic1" style="width: 435px; height: 100px;">
+                                    <div class="upload_main single_main">
+                                        <div class="status_bar">
+                                            <div id="status_info" class="info">选中0张文件，共0B。</div>
+                                            <div class="btns">
+                                                <input id="fileImage" type="file" size="30" name="fileselect[]" multiple>
+                                            </div>
+                                        </div>
+                                        <div id="preview" class="upload_preview">
+                                            <div class="add_upload">
+                                                <a style="height:50px;width:60px;" title="点击添加文件" class="add_imgBox" href="javascript:void(0)">
+                                                    <div class="uploadImg" style="width:45px">
+                                                        <img class="upload_image" src="../img/add_img.png">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div><span style="color: #f00;font-size: 14px">* 注：请上传图片、文档或者压缩文件</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="TabbedPanelsContent" style="display: none;">
+                <!--加班 -->
+                <form>
+                    <div class="oat_con">
+                        <div class="aot_sel">
+                            <span>开始<small>*</small></span>
+                            <input type="text" >
+                        </div>
+                        <div class="aot_sel" style="margin-left: 50px;">
+                            <span>结束<small>*</small></span>
+                            <input type="text" >
+                        </div>
+                        <div class="aot_sel">
+                            <span>时长<small>*</small></span>
+                            <input type="text" maxlength="5" placeholder="请输入时长(单位：小时)">
+                        </div>
+                        <div class="aot_sel">
+                            <span>原因</span>
+                            <textarea rows="5" cols="35" style="resize: none;" placeholder="请填写原因"></textarea>
+                        </div>
+                        <div class="aot_sel">
+                            <span>审核流程</span>
+                            <select></select>
+                        </div>
+                        <div class="oat_r">
+                            <div class="oat_r1">附件</div>
+                            <div class="oat_r2" style="border: 0px;">
+                                <div id="divPic1" style="width: 435px; height: 100px;">
+                                    <div class="upload_main single_main">
+                                        <div class="status_bar">
+                                            <div id="status_info" class="info">选中0张文件，共0B。</div>
+                                            <div class="btns">
+                                                <input id="fileImage" type="file" size="30" name="fileselect[]" multiple>
+                                            </div>
+                                        </div>
+                                        <div id="preview" class="upload_preview">
+                                            <div class="add_upload">
+                                                <a style="height:50px;width:60px;" title="点击添加文件" class="add_imgBox" href="javascript:void(0)">
+                                                    <div class="uploadImg" style="width:45px">
+                                                        <img class="upload_image" src="../img/add_img.png">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div><span style="color: #f00;font-size: 14px">* 注：请上传图片、文档或者压缩文件</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="TabbedPanelsContent" style="display: none;">
+                <!--出差 -->
+                <div class="oat_con">
+                    <div id="trB">
+                        <div class="aot_sel">
+                            <span>出发时间</span>
+                            <input name="c1" type="text">
+                        </div>
+                        <div class="aot_sel" style="margin-left: 30px;">
+                            <span>出发地点</span>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div id="trE">
+                        <div class="aot_sel">
+                            <span>返回时间</span>
+                            <input name="c3" type="text">
+                        </div>
+                        <div class="aot_sel" style="margin-left: 30px;">
+                            <span>返回地点</span>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="oat_add">
+                        <input type="hidden">
+                        <a href="javascript:;">添加目的地</a></div>
+                    <div class="aot_sel">
+                        <span>原因</span>
+                        <textarea rows="5" cols="35" style="resize: none;" placeholder="请填写原因"></textarea>
+                    </div>
+                    <div class="aot_sel">
+                        <span>审核类型</span>
+                        <select id="set3" name="set3">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="TabbedPanelsContent" style="display: none;">
+                <!--外勤 -->
+                <form method="post">
+                    <div class="oat_con">
+                        <div class="aot_sel">
+                            <span>出发时间</span>
+                            <input name="d1" type="text">
+                        </div>
+                        <div class="aot_sel" style="margin-left: 50px;">
+                            <span>结束时间</span>
+                            <input name="d2" type="text">
+                        </div>
+                        <div class="aot_sel">
+                            <span>抵达时间</span>
+                            <input name="d3" type="text">
+                        </div>
+                        <div class="aot_sel" style="margin-left: 50px;">
+                            <span>抵达地点</span>
+                            <input type="text">
+                        </div>
+                        <div class="aot_sel">
+                            <span>原因</span>
+                            <textarea rows="5" cols="45" style="resize: none;" placeholder="请填写原因"></textarea>
+                        </div>
+                        <div class="aot_sel">
+                            <span>审核流程</span>
+                            <select></select>
+                        </div>
+                        <div class="oat_r">
+                            <div class="oat_r1">附件</div>
+                            <div class="oat_r2" style="border: 0px;">
+                                <div id="divPic1" style="width: 435px; height: 100px;">
+                                    <div class="upload_main single_main">
+                                        <div class="status_bar">
+                                            <div id="status_info" class="info">选中0张文件，共0B。</div>
+                                            <div class="btns">
+                                                <input id="fileImage" type="file" size="30" name="fileselect[]" multiple>
+                                            </div>
+                                        </div>
+                                        <div id="preview" class="upload_preview">
+                                            <div class="add_upload">
+                                                <a style="height:50px;width:60px;" title="点击添加文件" class="add_imgBox" href="javascript:void(0)">
+                                                    <div class="uploadImg" style="width:45px">
+                                                        <img class="upload_image" src="../img/add_img.png">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div><span style="color: #f00;font-size: 14px">* 注：请上传图片、文档或者压缩文件</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="TabbedPanelsContent" style="display: none;">
+                <!--报销 -->
+                <form method="post">
+                    <div class="oat_con">
+                        <div class="oat_d" id="trBM">
+                            <div class="aot_sel">
+                                <span>类型<small>*</small></span>
+                                <select id="es1" name="es1">
+                                    <option value="福利费">福利费</option>
+                                    <option value="办公费">办公费</option>
+                                    <option value="差旅费">差旅费</option>
+                                    <option value="通讯费">通讯费</option>
+                                    <option value="业务招待费">业务招待费</option>
+                                    <option value="劳务费">劳务费</option>
+                                    <option value="会务费">会务费</option>
+                                    <option value="劳保费">劳保费</option>
+                                    <option value="维修费">维修费</option>
+                                    <option value="快递费">快递费</option>
+                                    <option value="测试费">测试费</option>
+                                    <option value="印刷费">印刷费</option>
+                                    <option value="交通费">交通费</option>
+                                    <option value="宣传费">宣传费</option>
+                                    <option value="咨询费">咨询费</option>
+                                    <option value="绿植费">绿植费</option>
+                                    <option value="人力资源费">人力资源费</option>
+                                    <option value="水电气费">水电气费</option>
+                                    <option value="汽油费">汽油费</option>
+                                </select>
+                            </div>
+                            <div class="aot_sel" style="margin-left: 20px;">
+                                <span>金额<small>*</small></span>
+                                <input type="text" maxlength="8" placeholder="请输入金额（单位：元）">
+                            </div>
+                            <div class="aot_sel">
+                                <span>用途</span>
+                                <textarea rows="2" cols="35" style="resize: none; height: 60px;
+                                    width: 405px;" placeholder="请填写用途"></textarea>
+                            </div>
+                            <div class="box_line2">
+                            </div>
+                        </div>
+                        <div class="oat_add" id="trEM">
+                            <input type="hidden">
+                            <span>合计<strong id="lblMoney5">￥0</strong></span><a href="javascript:;">添加新报销项目</a>
+                        </div>
+                        <div class="aot_sel">
+                            <span>审核流程</span>
+                            <select></select>
+                        </div>
+                        <div class="oat_r">
+                            <div class="oat_r1">附件</div>
+                            <div class="oat_r2" style="border: 0px;">
+                                <div id="divPic1" style="width: 435px; height: 100px;">
+                                    <div class="upload_main single_main">
+                                        <div class="status_bar">
+                                            <div id="status_info" class="info">选中0张文件，共0B。</div>
+                                            <div class="btns">
+                                                <input id="fileImage" type="file" size="30" name="fileselect[]" multiple>
+                                            </div>
+                                        </div>
+                                        <div id="preview" class="upload_preview">
+                                            <div class="add_upload">
+                                                <a style="height:50px;width:60px;" title="点击添加文件" class="add_imgBox" href="javascript:void(0)">
+                                                    <div class="uploadImg" style="width:45px">
+                                                        <img class="upload_image" src="../img/add_img.png">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div><span style="color: #f00;font-size: 14px">* 注：请上传图片、文档或者压缩文件</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="TabbedPanelsContent" style="display: none;">
+                <!--采购 -->
+                <form>
+                    <div class="oat_con">
+                        <div class="oat_d">
+                            <div class="aot_sel">
+                                <span>采购项目<small>*</small></span>
+                                <input type="text" id="fa1" name="fa1">
+                            </div>
+                            <div class="aot_sel" style="margin-left: 20px;">
+                                <span>金额<small>*</small></span>
+                                <input type="text" value="0" maxlength="8" placeholder="请输入金额（单位：元）">
+                            </div>
+                            <div class="aot_sel">
+                                <span>用途</span>
+                                <textarea rows="2" cols="35" style="resize: none; height: 60px; width: 405px;" placeholder="请填写用途"></textarea>
+                            </div>
+                            <div class="box_line2">
+                            </div>
+                        </div>
+                        <div class="oat_add" id="trEB">
+                            <input type="hidden" value="1">
+                            <span>合计<strong id="lblMoney6">￥0</strong></span><a href="javascript:;" >添加新采购项目</a></div>
+                        <div class="aot_sel">
+                            <span>审核流程</span>
+                            <select id="set6" name="set6">
+                            </select>
+                        </div>
+                        <div class="oat_r">
+                            <div class="oat_r1">附件</div>
+                            <div class="oat_r2" style="border: 0px;">
+                                <div id="divPic1" style="width: 435px; height: 100px;">
+                                    <div class="upload_main single_main">
+                                        <div class="status_bar">
+                                            <div id="status_info" class="info">选中0张文件，共0B。</div>
+                                            <div class="btns">
+                                                <input id="fileImage" type="file" size="30" name="fileselect[]" multiple>
+                                            </div>
+                                        </div>
+                                        <div id="preview" class="upload_preview">
+                                            <div class="add_upload">
+                                                <a style="height:50px;width:60px;" title="点击添加文件" class="add_imgBox" href="javascript:void(0)">
+                                                    <div class="uploadImg" style="width:45px">
+                                                        <img class="upload_image" src="../img/add_img.png">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div><span style="color: #f00;font-size: 14px">* 注：请上传图片、文档或者压缩文件</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="TabbedPanelsContent" style="display: none;">
+                <!--自定义 -->
+                <div class="oat_con">
+                    <div class="aot_sel">
+                        <span>标题</span>
+                        <input type="text" placeholder="请输入标题" style="width: 435px;">
+                    </div>
+                    <div class="aot_sel">
+                        <span>内容</span>
+                        <textarea rows="5" cols="35" style="resize: none; height: 60px; margin-top: 10px;" placeholder="请填写内容"></textarea>
+                    </div>
+                    <div class="aot_sel">
+                        <span>审核流程</span>
+                        <select></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gbox_btm">
+        <a href="javascript:;" class="gbox_btn_clear close-reveal-modal">取消</a> <a href="javascript:;" class="gbox_btn_save close-reveal-modal" >确定</a>
+    </div>
+</div>
+<!--申请弹窗 -----------end-->
+
+<script type="text/javascript">
+    $(function(){
+        $(".oat_name a").click(function(){
+            $(this).parent().hide();
+        });
+    });
+    $(".oat_r3").click(function(){
+        $(this).prev().append('<div class="oat_name"><span>李某某<small>(经理)</small></span><a href="#"></a></div>');
+        $(".oat_name a").click(function(){
+            $(this).parent().hide();
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function(){
+        $(".oat_r_search input").focus(function(){
+            $(this).parent().next().show();
+        });
+        $(".oat_r_search input").blur(function(){
+            $(this).parent().next().hide();
+        });
+
+        $(".oa_hby_btn3 a").each(function(i){
+            $(this).data("index",i);
+        });
+        $(".oa_hby_btn3 a").click(function(){
+            var i=$(this).data("index");
+            $($(".sp_show")[i]).toggle();
+        })
+
+        $(".TabbedPanelsTab").each(function(i){
+            $(this).data("index",i);
+        });
+
+        $(".TabbedPanelsTab").click(function(){
+            var i=$(this).data("index");
+            $(".TabbedPanelsTab").removeClass("TabbedPanelsTabSelected");
+            $(this).addClass("TabbedPanelsTabSelected");
+            $(".TabbedPanelsContent").hide();
+            $($(".TabbedPanelsContent")[i]).show();
+        })
+    })
+</script>
+</body>
+</html>

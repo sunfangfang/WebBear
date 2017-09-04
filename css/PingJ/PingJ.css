@@ -1,0 +1,244 @@
+*
+{
+    box-sizing: border-box;
+}
+.clear{
+    clear: both;
+}
+.pj_search{
+    font-size: 16px;
+    text-align: center;
+    height: 26px;
+    width: 134px;
+    float: left;
+    border: 1px solid #ced4e0;
+    margin-right: 10px;
+}
+.tb_pjbtn{
+    width: 54px;
+    height: 26px;
+    margin: 0;
+    margin-right: 10px;
+}
+.table tr{
+    height: 35px;
+}
+.table thead tr{
+    height: 40px;
+}
+.m_pj{
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    clear: both;
+    float: left;
+    height: auto;
+    width: 100%;
+    overflow: auto;
+}
+.m_table1{
+    float: left;
+    margin-right: 10px;
+    border: none;
+}
+.pj_table{
+    width: 70%;
+    float: left;
+    border: 1px solid #E9ECF3;
+    overflow-x: auto;
+    height: 208px;
+}
+.pj_table1{
+    float: right;
+    width: 29.5%;
+    height: 208px;
+    border-bottom: none;
+}
+.pj_table tr{
+    width: 100%;
+}
+.td_border{
+    border-right: 1px solid #e9ecf3;
+}
+.c_pj{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding-top: 10px;
+    clear: both;
+    overflow: auto;
+    margin: auto;
+}
+.pj_title{
+    width: 100%;
+    height: 48px;
+    border-bottom: 1px solid #c5c8cf;
+}
+.pj_link li{
+    float: left;
+    font-size: 16px;
+    line-height: 46px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-bottom: 1px solid #c5c8cf;
+    color: rgb(108, 108, 108);
+    padding: 0 12px;
+}
+#first_li{
+    border: 1px solid #c5c8cf;
+    border-bottom: 1px solid #f9f9f9;
+    background: #f9f9f9;
+    color: #161616;
+}
+.pj_content{
+    width: 100%;
+    clear: both;
+    background: #f9f9f9;
+    padding: 10px;
+    /*height: 515px;*/
+    overflow-y: auto;
+    /*overflow-x: hidden;*/
+}
+.pj_conblock{
+    display: none;
+    width: 100%;
+    border: 1px solid #e9ecf3;
+    background: #fff;
+}
+.pj_input{
+    width: auto;
+    height: 28px;
+    border: 1px solid #e9ecf3;
+    color: #202020;
+    font-size: 14px;
+    padding: 0 4px;
+}
+.pj_input1{
+    width: 100px;
+    height: 28px;
+    border: 1px solid #e9ecf3;
+    color: #202020;
+    font-size: 14px;
+    padding: 0 4px;
+}
+.pj_bian{
+    width: 100%;
+    margin-bottom: 0px;
+    padding: 15px 0 10px;
+    border-bottom: 1px dotted #ced4e0;
+}
+.pj_con{
+    width: 900px;
+    clear: both;
+}
+.circle{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f59665;
+    float: left;
+    margin: 14px;
+    margin-top: 7px;
+}
+.kong{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    float: left;
+    margin: 13px;
+}
+.sec{
+    margin-bottom: 10px;
+}
+span{
+    color: #666666;
+    font-size: 13px;
+}
+.con_l{
+    float: left;
+}
+.con_l label{
+    font-size: 14px;
+    color: #666;
+}
+.check{
+    width: 60%;
+    float: left;
+    padding-left: 10px;
+    margin-top: -3px;
+}
+.check li{
+    float: left;
+    width: 20%;
+    text-align: center;
+    line-height: 38px;
+}
+.sel_s{
+    width: 85px;
+    height: 28px;
+    border: 1px solid #ced4e0;
+}
+.span_ml{
+    margin-left: 20%;
+}
+.item{
+    width: 103%;
+}
+.item label{
+    color: #666;
+    font-size: 14px;
+}
+.item li{
+    width: 20%;
+    float: left;
+}
+.input_large{
+    width: 88%;
+    height: 54px;
+    border: 1px solid #e9ecf3;
+    padding: 4px;
+    resize: none;
+}
+label input{
+    float: left;
+    margin-top: 8px;
+}
+label span{
+    float: left;
+    margin-top: -4px;
+}
+.pj_text{
+    line-height: 30px;
+    display: inline-block;
+    float: left;
+    padding: 4px;
+    margin-left: -4px;
+}
+
+
+.txtSearch{line-height:75px;margin-left:10px;margin-top: 10px;}
+.txtSearch select{height:30px;border:1px solid #ced4e0;line-height: 30px;background:#fff;font-size:12px;float: left;margin-right:10px;}
+.txtSearch input{color:#939393;width:220px;height:30px;border:1px solid #ced4e0;text-indent:3px;line-height: 30px;background:#f9f9f9;font-size:12px;float: left;}
+.txtSearch a{border:none;background:#4dcd70;width:54px;height:30px;color:#fff;float: left;text-align:center;font-size:14px;line-height: 30px;}
+.txtSearch a:hover{background:#369550;}
+.mt_btn .syh{color:#ff8d52;}
+.pjiaspan {
+    top: 10px;
+    left: -51px;
+}
+label span {
+    float: left;
+    margin-top: -4px;
+    height: 28px;
+}
+
+@media screen and (max-width: 1024px){
+    .pj_con {
+        width: 804px;
+    }
+    .input_large {
+        width: 84%;
+    }
+}
+

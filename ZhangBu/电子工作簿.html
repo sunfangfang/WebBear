@@ -1,0 +1,922 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>电子工作簿</title>
+<link rel="stylesheet" href="../css/reset_s.css">
+<link rel="stylesheet" href="../css/table.css" />
+<link rel="stylesheet" href="../css/news.css" />
+<link rel="stylesheet" href="../css/pagination.css" />
+<link rel="stylesheet" href="../css/ZhangBu/zbu.css" />
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../js/jquery.reveal.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+	  setDivMaxHeight();
+ });
+$(window).resize(function(){
+	setDivMaxHeight();
+});
+function setDivMaxHeight() {
+	var fg=$(window).height();
+	var h = parseInt(fg) -150;
+	$("#m_con").css("height", h);
+}
+function setDivMaxHeight(){
+	var zb=$(window).height();
+	var zbh = parseInt(zb) -300;
+	$(".m_table").css("height", zbh);
+}
+</script>
+<script type="text/javascript"><!--内容标题下拉 -->
+$(function(){
+	$(".m_name_sel").click(function(){
+		$(this).children('ul').slideToggle();
+		});
+	});
+$(function(){
+    $(".labelio").click(function(){
+        $(this).find(".Mdivbg").toggleClass("Mdivbg01");
+    });
+    $(".span_ms").click(function(){
+        $(this).siblings(".Mdivbg").toggleClass("Mdivbg01");
+    });
+});
+</script>
+<!--<style type="text/css">
+    @media screen and (max-width: 1024px){
+        .gzb_tb{
+            height: 350px;
+        }
+    }
+</style>-->
+</head>
+<body>
+<div class="m_top">
+    <div class="m_name_sel">
+    	<span>北京施华洛婚纱摄影广渠门店</span>
+        <ul>
+        	<li><a href="#">北京施华洛婚纱摄影广渠门店</a></li>
+        	<li><a href="#">北京施华洛婚纱摄影广渠门店</a></li>
+        	<li><a href="#">北京施华洛婚纱摄影广渠门店</a></li>
+        	<li><a href="#">北京施华洛婚纱摄影广渠门店</a></li>
+        </ul>
+    </div>
+    <div class="mt_btn"><a href="#">显示设定</a><a href="#">导出EXCEL</a></div>
+</div>
+<!--页面主内容 -->
+<div id="m_con">
+    <div class="zb">
+        <div class="zb01">
+            <a href="#" style="margin-right:2px;"><img src="../img/ZhangBu/arrowb.png"><span>上一天</span></a>
+            <a href="#"><span>下一天</span><img src="../img/ZhangBu/arrowb2.png"></a>
+        </div>
+        <div class="zb_sel">
+            <select name="select">
+                <option>2016-03-15</option>
+                <option>项目2</option>
+                <option>项目3</option>
+                <option>项目4</option>
+                <option>项目5</option>
+            </select>
+            <span>--</span>
+            <select name="select">
+                <option>2016-03-15</option>
+                <option>项目2</option>
+                <option>项目3</option>
+                <option>项目4</option>
+                <option>项目5</option>
+            </select>
+        </div>
+        <div class="zb_sel2">
+            <select name="select" style="width:206px;">
+                <option>请选择客户分区</option>
+                <option>项目2</option>
+                <option>项目3</option>
+                <option>项目4</option>
+                <option>项目5</option>
+            </select>
+            <select name="select" style="width:135px;">
+                <option>请选择接单点</option>
+                <option>项目2</option>
+                <option>项目3</option>
+                <option>项目4</option>
+                <option>项目5</option>
+            </select>
+        </div>
+        <div class="zb_btn"><a href="#">查询</a></div>
+        <div class="zb02">
+            <label class="labelio zb_labelio"><input name="" type="checkbox" value=""><span class="span_ms">全部</span></label>
+            <label class="labelio zb_labelio"><input name="" type="checkbox" value=""><span class="span_ms">婚纱</span></label>
+            <label class="labelio zb_labelio"><input name="" type="checkbox" value=""><span class="span_ms">儿童</span></label>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(function(){
+        $("#zbza").click(function(){
+            $(".zbcz_nav").removeClass('znav_bg');
+            $(this).addClass('znav_bg');
+            $(".zbcy").hide();
+            $("#zby_a").show();
+            });
+        $("#zbzb").click(function(){
+            $(".zbcz_nav").removeClass('znav_bg');
+            $(this).addClass('znav_bg');
+            $(".zbcy").hide();
+            $("#zby_b").show();
+            });
+        $("#zbzc").click(function(){
+            $(".zbcz_nav").removeClass('znav_bg');
+            $(this).addClass('znav_bg');
+            $(".zbcy").hide();
+            $("#zby_c").show();
+            });
+        $("#zbzd").click(function(){
+            $(".zbcz_nav").removeClass('znav_bg');
+            $(this).addClass('znav_bg');
+            $(".zbcy").hide();
+            $("#zby_d").show();
+            });
+        $("#zbze").click(function(){
+            $(".zbcz_nav").removeClass('znav_bg');
+            $(this).addClass('znav_bg');
+            $(".zbcy").hide();
+            $("#zby_e").show();
+            });
+        $("#zbzf").click(function(){
+            $(".zbcz_nav").removeClass('znav_bg');
+            $(this).addClass('znav_bg');
+            $(".zbcy").hide();
+            $("#zby_f").show();
+            });
+        $("#zbzg").click(function(){
+            $(".zbcz_nav").removeClass('znav_bg');
+            $(this).addClass('znav_bg');
+            $(".zbcy").hide();
+            $("#zby_g").show();
+            });
+        });
+    </script>
+    <div class="zb_con">
+        <div class="zbcz">
+            <ul>
+                <li><a href="#" class="zbcz_nav" id="zbza">摄影拍照  --  123人</a></li>
+                <li><a href="#" class="zbcz_nav" id="zbzb">摄影选片  --  34人</a></li>
+                <li><a href="#" class="zbcz_nav" id="zbzc">摄影看版  --  34人</a></li>
+                <li><a href="#" class="zbcz_nav" id="zbzd">摄影整件  --  54人</a></li>
+                <li><a href="#" class="zbcz_nav" id="zbze">摄影取件  --  46人</a></li>
+                <li><a href="#" class="zbcz_nav" id="zbzf">摄影礼服  --  72人</a></li>
+            </ul>
+        </div>
+        <div class="zbcy" id="zby_a" style="display:block;">
+            <div class="zbcy_top">
+                 <div class="zbcy_in">
+                    <span>拍照类型：</span>
+                    <select name="select" class="zbcy_in_sel">
+                        <option class="show_in_op">项目1</option>
+                        <option class="show_in_op">项目2</option>
+                        <option class="show_in_op">项目3</option>
+                        <option class="show_in_op">项目4</option>
+                        <option class="show_in_op">项目5</option>
+                    </select>
+                </div>
+                <div class="zbcy_in">
+                    <span>拍摄状态：</span>
+                    <select name="select" class="zbcy_in_sel">
+                        <option class="show_in_op">项目1</option>
+                        <option class="show_in_op">项目2</option>
+                        <option class="show_in_op">项目3</option>
+                        <option class="show_in_op">项目4</option>
+                        <option class="show_in_op">项目5</option>
+                    </select>
+                </div>
+                <div class="zbcy_sl">共：<span>9</span> 位客户</div>
+            </div>
+            <div class="m_table" style="border:none;overflow:auto;">
+                <table class="table  table-hover  table-striped" style="width:2000px;">
+                    <thead class="tb_th_bga">
+                        <tr>
+                            <td>状态</td>
+                            <td>会员类型</td>
+                            <td>会员姓名</td>
+                            <td>会员余额</td>
+                            <td>会员积分</td>
+                            <td>会员折扣</td>
+                            <td>游泳次数</td>
+                            <td>男士电话</td>
+                            <td>女士电话</td>
+                            <td>客户编号</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>A1215200</td>
+                            <td>李某某a</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+        </div>
+        <div class="zbcy" id="zby_b">
+            <div class="zbcy_top">
+                <div class="zbcy_in">
+                    <span>拍照类型：</span>
+                    <select name="select" class="zbcy_in_sel">
+                        <option class="show_in_op">项目1</option>
+                        <option class="show_in_op">项目2</option>
+                        <option class="show_in_op">项目3</option>
+                        <option class="show_in_op">项目4</option>
+                        <option class="show_in_op">项目5</option>
+                    </select>
+                </div>
+                <div class="zbcy_in">
+                    <span>拍摄状态：</span>
+                    <select name="select" class="zbcy_in_sel">
+                        <option class="show_in_op">项目1</option>
+                        <option class="show_in_op">项目2</option>
+                        <option class="show_in_op">项目3</option>
+                        <option class="show_in_op">项目4</option>
+                        <option class="show_in_op">项目5</option>
+                    </select>
+                </div>
+                <div class="zbcy_sl">共：<span>9</span> 位客户</div>
+            </div>
+             <div class="m_table" style="border:none;overflow:auto;">
+                <table class="table  table-hover  table-striped" style="width:2000px;">
+                    <thead class="tb_th_bga">
+                        <tr>
+                            <td>状态</td>
+                            <td>会员类型</td>
+                            <td>会员姓名</td>
+                            <td>会员余额</td>
+                            <td>会员积分</td>
+                            <td>会员折扣</td>
+                            <td>游泳次数</td>
+                            <td>男士电话</td>
+                            <td>女士电话</td>
+                            <td>客户编号</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>A1215200</td>
+                            <td>李某某a</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="zbcy" id="zby_c">
+            <div class="zbcy_top">
+                <div class="zbcy_in">
+                    <span>拍照类型：</span>
+                    <select name="select" class="zbcy_in_sel">
+                        <option class="show_in_op">项目1</option>
+                        <option class="show_in_op">项目2</option>
+                        <option class="show_in_op">项目3</option>
+                        <option class="show_in_op">项目4</option>
+                        <option class="show_in_op">项目5</option>
+                    </select>
+                </div>
+                <div class="zbcy_in">
+                    <span>拍摄状态：</span>
+                    <select name="select" class="zbcy_in_sel">
+                        <option class="show_in_op">项目1</option>
+                        <option class="show_in_op">项目2</option>
+                        <option class="show_in_op">项目3</option>
+                        <option class="show_in_op">项目4</option>
+                        <option class="show_in_op">项目5</option>
+                    </select>
+                </div>
+                <div class="zbcy_sl">共：<span>9</span> 位客户</div>
+            </div>
+             <div class="m_table" style="border:none;overflow:auto;">
+                <table class="table  table-hover  table-striped" style="width:2000px;">
+                    <thead class="tb_th_bga">
+                        <tr>
+                            <td>状态</td>
+                            <td>会员类型</td>
+                            <td>会员姓名</td>
+                            <td>会员余额</td>
+                            <td>会员积分</td>
+                            <td>会员折扣</td>
+                            <td>游泳次数</td>
+                            <td>男士电话</td>
+                            <td>女士电话</td>
+                            <td>客户编号</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>A1215200</td>
+                            <td>李某某a</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+        </div>
+        
+        <div class="zbcy" id="zby_d">
+            <div class="zbcy_top">
+                <div class="zbcy_in">
+                    <span>拍照类型：</span>
+                    <select name="select" class="zbcy_in_sel">
+                        <option class="show_in_op">项目1</option>
+                        <option class="show_in_op">项目2</option>
+                        <option class="show_in_op">项目3</option>
+                        <option class="show_in_op">项目4</option>
+                        <option class="show_in_op">项目5</option>
+                    </select>
+                </div>
+                <div class="zbcy_in">
+                    <span>拍摄状态：</span>
+                    <select name="select" class="zbcy_in_sel">
+                        <option class="show_in_op">项目1</option>
+                        <option class="show_in_op">项目2</option>
+                        <option class="show_in_op">项目3</option>
+                        <option class="show_in_op">项目4</option>
+                        <option class="show_in_op">项目5</option>
+                    </select>
+                </div>
+                <div class="zbcy_sl">共：<span>9</span> 位客户</div>
+            </div>
+            <div class="m_table" style="border:none;overflow:auto;">
+                <table class="table  table-hover  table-striped" style="width:2000px;">
+                    <thead class="tb_th_bga">
+                        <tr>
+                            <td>状态</td>
+                            <td>会员类型</td>
+                            <td>会员姓名</td>
+                            <td>会员余额</td>
+                            <td>会员积分</td>
+                            <td>会员折扣</td>
+                            <td>游泳次数</td>
+                            <td>男士电话</td>
+                            <td>女士电话</td>
+                            <td>客户编号</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>A1215200</td>
+                            <td>李某某a</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+        </div>
+        
+        <div class="zbcy" id="zby_e">
+            <div class="zbcy_top">
+                <div class="zbcy_in">
+                    <span>拍照类型：</span>
+                    <select name="select" class="zbcy_in_sel">
+                        <option class="show_in_op">项目1</option>
+                        <option class="show_in_op">项目2</option>
+                        <option class="show_in_op">项目3</option>
+                        <option class="show_in_op">项目4</option>
+                        <option class="show_in_op">项目5</option>
+                    </select>
+                </div>
+                <div class="zbcy_in">
+                    <span>拍摄状态：</span>
+                    <select name="select" class="zbcy_in_sel">
+                        <option class="show_in_op">项目1</option>
+                        <option class="show_in_op">项目2</option>
+                        <option class="show_in_op">项目3</option>
+                        <option class="show_in_op">项目4</option>
+                        <option class="show_in_op">项目5</option>
+                    </select>
+                </div>
+                <div class="zbcy_sl">共：<span>9</span> 位客户</div>
+            </div>
+            <div class="m_table" style="border:none;overflow:auto;">
+                <table class="table  table-hover  table-striped" style="width:2000px;">
+                    <thead class="tb_th_bga">
+                        <tr>
+                            <td>状态</td>
+                            <td>会员类型</td>
+                            <td>会员姓名</td>
+                            <td>会员余额</td>
+                            <td>会员积分</td>
+                            <td>会员折扣</td>
+                            <td>游泳次数</td>
+                            <td>男士电话</td>
+                            <td>女士电话</td>
+                            <td>客户编号</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>A1215200</td>
+                            <td>李某某a</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+        </div>
+        
+        <div class="zbcy" id="zby_f">
+            <div class="zbcy_top">
+                <div class="zbcy_in">
+                    <span>拍照类型：</span>
+                    <select name="select" class="zbcy_in_sel">
+                        <option class="show_in_op">项目1</option>
+                        <option class="show_in_op">项目2</option>
+                        <option class="show_in_op">项目3</option>
+                        <option class="show_in_op">项目4</option>
+                        <option class="show_in_op">项目5</option>
+                    </select>
+                </div>
+                <div class="zbcy_in">
+                    <span>拍摄状态：</span>
+                    <select name="select" class="zbcy_in_sel">
+                        <option class="show_in_op">项目1</option>
+                        <option class="show_in_op">项目2</option>
+                        <option class="show_in_op">项目3</option>
+                        <option class="show_in_op">项目4</option>
+                        <option class="show_in_op">项目5</option>
+                    </select>
+                </div>
+                <div class="zbcy_sl">共：<span>9</span> 位客户</div>
+            </div>
+           <div class="m_table" style="border:none;overflow:auto;">
+                <table class="table  table-hover  table-striped" style="width:2000px;">
+                    <thead class="tb_th_bga">
+                        <tr>
+                            <td>状态</td>
+                            <td>会员类型</td>
+                            <td>会员姓名</td>
+                            <td>会员余额</td>
+                            <td>会员积分</td>
+                            <td>会员折扣</td>
+                            <td>游泳次数</td>
+                            <td>男士电话</td>
+                            <td>女士电话</td>
+                            <td>客户编号</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>A1215200</td>
+                            <td>李某某a</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>A1215200</td>
+                            <td>李某某</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>95</td>
+                            <td>10</td>
+                            <td>13811111111</td>
+                            <td>13811111111</td>
+                            <td>A1215200</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+        </div>
+    </div>
+
+</div>    
+    <!--页面主内容-------------end -->
+    <!--copyright -->
+<!--<div class="tb_foot">
+    
+    <div class="ft_tel">北京熊宝贝科技发展有限公司 技术支持：400-100-7592</div>
+</div>-->
+<script type="text/javascript">
+$(function(){
+	$(".tb_sx").mouseover(function(){
+		$(this).children('ul').show();
+		});
+	$(".tb_sx").mouseout(function(){
+		$(this).children('ul').hide();
+		});
+//		$(".tb_sx_px li a").click(function(){
+//			$(".tb_sx_px li a").removeClass('tb_sx_bg');
+//			$(this).addClass('tb_sx_bg');
+//			});          //筛选功能需要选中状态时候开启
+	$(".tb_bj_btn").mouseover(function(){
+		$(this).children('div').show();
+		});
+	$(".tb_bj_btn").mouseout(function(){
+		$(this).children('div').hide();
+		});
+	$(".tb_del").click(function(){
+		$(this).parentsUntil('table tbody').remove();
+		});
+	});
+</script>
+
+<!--table选中状态 -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('table tbody tr:odd').addClass('mtr_bg');
+	$(".table tbody tr").click(function(){
+		$('table tbody tr').removeClass('mtr_bg_act');
+		$('table tbody tr:odd').addClass('mtr_bg');
+		$(this).removeClass('mtr_bg');
+		$(this).addClass('mtr_bg_act');
+		});
+	});
+</script>
+</body>
+</html>

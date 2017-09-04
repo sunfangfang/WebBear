@@ -1,0 +1,707 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>短信发送</title>
+    <link rel="stylesheet" href="../css/reset_s.css">
+    <link rel="stylesheet" href="../css/MessageSet/table.css" />
+    <link rel="stylesheet" href="../css/news.css" />
+    <link rel="stylesheet" href="../css/MessageSet/pagination.css" />
+    <link rel="stylesheet" href="../css/MessageSet/liucheng.css"/>
+    <link rel="stylesheet" href="../css/MessageSet/right.css"/>
+    <link rel="stylesheet" href="../css/content.css"/>
+    <link rel="stylesheet" href="../css/box.css"/>
+    <link rel="stylesheet" href="../css/MessageSet/yt.css">
+    <link rel="stylesheet" href="../css/MessageSet/MessageSet.css">
+    <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="../js/jquery.reveal.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
+    <!--<script type="text/javascript" src="../js/yt.js"></script>-->
+    <script type="text/javascript">
+        $(window).load(function(){
+            setDivMaxHeight();
+        });
+
+        $(window).resize(function(){
+            setDivMaxHeight();
+        });
+        function setDivMaxHeight(){
+            var fg=$(window).height();
+            var h = parseInt(fg) -100;
+            $("#m_con").css("height", h);
+        }
+        function setDivMaxHeight() {
+            var ytfg=$(window).height();
+            var yth = parseInt(ytfg) -115;
+            $(".m_table").css("height", yth);
+        }
+        $(function(){
+            $(".labelio").click(function(){
+                $(this).find(".Mdivbg").toggleClass("Mdivbg01");
+            });
+            $(".span_ms").click(function(){
+                $(this).siblings(".Mdivbg").toggleClass("Mdivbg01");
+            });
+        });
+    </script>
+    <style type="text/css">
+	.crm_sx1 input[type=checkbox]
+        {
+            height: auto;
+            width: auto;
+            margin-top: 5px;
+        }
+        .crm_sx1 span
+        {
+            margin: 0;
+        }
+        .box_in1 span
+        {
+            text-align: right;
+			font-size:14px;
+        }
+        .box_in2 span
+        {
+            float: none;
+        }
+        .box_in2 input{
+            font-size: 13px;
+            line-height: 28px;
+            color: #333;
+            float: none;
+            height: auto;
+            padding-right: 4px;
+            padding-left: 4px;
+            border: 1px solid #999;
+            margin-left: 8px;
+        }
+        .box_in1 a
+        {
+            margin-top: 7px;
+            float: left;
+            margin-left: 10px;
+            font-family: "微软雅黑";
+            font-size: 14px;
+        }
+        .box_in1 select
+        {
+            margin-left: 10px;
+            width: 130px;
+            height: 22px;
+            margin-top: 6px;
+            border: 1px solid #b6b6b6;
+        }
+        .box_in1 input
+        {
+            margin-top: 8px;
+            margin-left: 10px;
+        }
+        .box-in2 input
+        {
+            clear: both;
+            width: inherit;
+            height: 13px;
+            margin-top: 6px;
+        }
+        .box-in2 label
+        {
+            margin-top: 7px;
+            float: left;
+            margin-left: 4px;
+            font-size: 14px;
+            color: #666;
+        }
+        #DianTable tr,#DianTable tr td{ height: 24px;}
+        .box_cx_btn
+        {
+            font-size: 12px;
+            line-height: 20px;
+            color: #FFF;
+            text-align: center;
+            height: 20px;
+            width: 43px;
+            background-color: #4dcd70;
+            border: none;
+            cursor: pointer;
+        }
+    @media(max-width:850px){
+            body{min-width:827px;}
+        }
+
+    </style>
+</head>
+<body>
+<div class="m_top">
+    <div class="m_name">规则短信发送</div>
+    <div class="mt_btn"><a href="短信发送记录.html">查看短信记录</a></div>
+</div>
+<!--页面主内容 -->
+<div id="m_con">
+    <div class="m_table">
+        <table class="table  table-hover  table-striped">
+            <thead class="tb_th_bga">
+            <tr>
+                <td style="width:60px;"><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">选择</span></label></td>
+                <td>服务店</td>
+                <td>客户编号</td>
+                <td>类型</td>
+                <td>订单日期</td>
+                <td>男士姓名</td>
+                <td>女士姓名</td>
+                <td>宝宝姓名</td>
+                <td>宝宝生日</td>
+                <td>消费类型</td>
+                <td>会员卡号</td>
+                <td>会员类型</td>
+                <td>男士手机</td>
+                <td>女士手机</td>
+                <td>客户分区</td>
+                <td>客户来源</td>
+                <td>接单点</td>
+                <td>客户备注</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">1</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">2</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">3</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">4</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">5</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">6</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">7</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">8</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">9</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">10</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">11</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">12</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">13</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">14</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">15</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">16</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">17</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">18</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">19</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">20</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label class="labelio dxcx_labelio"><input name="" type="checkbox" class="dxtc_checkbox" value=""><span class="span_ms span_ms1">21</span></label></td>
+                <td>爱你宝贝体育场店...</td>
+                <td>CZ000011</td>
+                <td>婚纱</td>
+                <td>fa</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>新生儿</td>
+                <td></td>
+                <td></td>
+                <td>13071104543</td>
+                <td></td>
+                <td>金钻</td>
+                <td>自然进店</td>
+                <td>文二店</td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--页面主内容-------------end -->
+<div class="tb_foot">
+    <div class="tb_bottom"><!--公共底部功能（显示，按钮，分页） -->
+        <a href="#" class="tb_btn tb_blue" data-reveal-id="divMsgRules">新建</a>
+        <a href="#" class="tb_btn tb_orange">删除</a>
+    </div>
+    <!--copyright -->
+</div>
+<!--规则短信发送弹窗-->
+<div class="gbox" id="divMsgRules" style="width: 600px">
+    <div class="gbox_top">
+        <span>资源客户规则短信发送</span> <a class="close-reveal-modal" href="javascript:;"></a>
+    </div>
+    <div class="gboxd_con" style="height: auto;">
+        <div class="box_in1" style="padding-left: 0px; width: 96%; margin-left: 2%;">
+            <textarea rows="5" cols="35" placeholder="请输入短信内容" style="resize: none; text-indent: 4px; width: 100%; height: 120px; margin: 0; padding: 0;"></textarea>
+            <span style="color: #b6b6b6; width: auto; float: right; margin-right: 4px;">当前短信字数<i style="font-size: 16px;">0</i></span>
+        </div>
+        <div class="box_in2" style="padding-left: 0px; width: 96%; margin-left: 2%;">
+            <span>客户类别：</span>
+            <select id="Select2" style="width: 80px; border: 1px solid #b6b6b6;">
+                <option value="婚纱">婚纱</option>
+                <option value="儿童">儿童</option>
+            </select>
+            <span style="margin-left: 15px;">日期类型：</span>
+            <select id="Select3" style="width: 80px; border: 1px solid #b6b6b6;">
+                <option value="预约日期">预约日期</option>
+                <option value="订婚日期">订婚日期</option>
+                <option value="结婚日期">结婚日期</option>
+            </select>
+        </div>
+        <div class="box_in1" style="padding-left: 0px; width: 96%; margin-left: 2%; margin-top: 0;">
+            <span style="width: auto;">客户姓名：</span>
+            <a href="javascript:;" style="color: rgb(71, 162, 255);">男士姓名△</a>&nbsp;&nbsp;
+            <a href="javascript:;" style="color: rgb(71, 162, 255);">女士姓名▽</a>&nbsp;&nbsp;
+            <a href="javascript:;" style="color: rgb(71, 162, 255);">宝宝姓名◇</a>
+        </div>
+        <div class="box_in2" style="padding-left: 0px; width: 96%; margin-left: 2%; font-size: 14px; color: #666;">
+            <span style="width: auto;">设定规则：</span>
+            <label><input type="radio" name="SBA" style="width:14px;" id="rdBefore" value="+" checked="checked">提前</label>
+            <label><input type="radio" name="SBA" style="width:14px;" id="rdAfter" value="-">推后</label>
+            <input type="number" max="9999" id="Text1" style="width: 40px; height: 20px; line-height: 20px; border: 1px solid #b6b6b6;" maxlength="4">天 &nbsp;&nbsp;
+            每日发送时间：<input type="text" id="Text2" style="width: 50px; height: 20px; line-height: 20px; border: 1px solid #b6b6b6;" maxlength="5">
+        </div>
+        <div class="box_in1 box-in2" style="padding-left: 0px; width: 96%; margin-left: 2%; margin-top: 0; padding-bottom: 25px;">
+            <span style="width: auto;">　接收人：</span>
+            <label>
+                <input type="checkbox" id="t5">男
+            </label>
+            <label>
+                <input type="checkbox" id="t6">女
+            </label>
+        </div>
+        <div style="display: none;">
+            <select id="selWedding">
+                <option value="预约日期">预约日期</option>
+                <option value="订婚日期">订婚日期</option>
+                <option value="结婚日期">结婚日期</option>
+            </select>
+            <select id="selChid">
+                <option value="怀孕日期">怀孕日期</option>
+                <option value="宝宝生日">宝宝生日</option>
+                <option value="预产日期">预产日期</option>
+            </select>
+        </div>
+    </div>
+    <div class="gbox_btm">
+        <a href="javascript:;" class="gbox_btn_clear close-reveal-modal">取消</a>
+        <a href="javascript:;" class="gbox_btn_save close-reveal-modal">确定</a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    $(function(){
+        $(".tb_sx").mouseover(function(){
+            $(this).children('ul').show();
+        });
+        $(".tb_sx").mouseout(function(){
+            $(this).children('ul').hide();
+        });
+//		$(".tb_sx_px li a").click(function(){
+//			$(".tb_sx_px li a").removeClass('tb_sx_bg');
+//			$(this).addClass('tb_sx_bg');
+//			});          //筛选功能需要选中状态时候开启
+        $(".tb_bj_btn").mouseover(function(){
+            $(this).children('div').show();
+        });
+        $(".tb_bj_btn").mouseout(function(){
+            $(this).children('div').hide();
+        });
+        $(".tb_del").click(function(){
+            $(this).parentsUntil('table tbody').remove();
+        });
+    });
+</script>
+
+<!--table选中状态 -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('table tbody tr:odd').addClass('mtr_bg');
+        $(".table tbody tr").click(function(){
+            $('table tbody tr').removeClass('mtr_bg_act');
+            $('table tbody tr:odd').addClass('mtr_bg');
+            $(this).removeClass('mtr_bg');
+            $(this).addClass('mtr_bg_act');
+        });
+    });
+    //var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+</script>
+
+
+</body>
+</html>

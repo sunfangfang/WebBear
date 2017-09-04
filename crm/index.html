@@ -1,0 +1,719 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>crm</title>
+<link rel="stylesheet" type="text/css" href="../css/reset_s.css"/>
+<link rel="stylesheet" type="text/css" href="../css/table.css"/>
+<link rel="stylesheet" type="text/css" href="../css/news.css"/>
+<link rel="stylesheet" type="text/css" href="../css/pagination.css"/>
+<link rel="stylesheet" type="text/css" href="../css/box.css">
+<link rel="stylesheet" href="../css/crm/crm.css" />
+<link rel="stylesheet" type="text/css" href="../css/right.css"/>
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../js/jquery.reveal.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+	 setDivMaxHeight();
+ });
+$(window).resize(function(){
+	setDivMaxHeight();
+});
+function setDivMaxHeight() {
+	var fg=$(window).height();
+	var h = parseInt(fg) - 200;
+	$("#m_con").css("height", h);
+}
+</script>
+<script type="text/javascript">
+$(window).load(function(){
+	  setDivMaxHeight1();
+ });
+$(window).resize(function(){
+	setDivMaxHeight1();
+});
+function setDivMaxHeight1(){
+	var ytfg=$(window).height();
+	var yth = parseInt(ytfg) - 85;
+	$(".myt_con").css("height", yth);
+}
+</script>
+<script type="text/javascript">
+<!--内容标题下拉-->                                
+$(function(){
+	$(".m_name_sel").click(function(){
+		$(this).children('ul').slideToggle();
+});
+});
+/*checkbox*/
+$(function(){
+	 $(".labelio").click(function(){
+        $(this).find(".Mdivbg").toggleClass("Mdivbg01");
+    });
+    $(".span_ms").click(function(){
+        (this).siblings(".Mdivbg").toggleClass("Mdivbg01");
+});
+});
+</script>
+<script type="text/javascript">
+//$(function(){
+//	$(".mt_btn_a").click(function(){
+//		$(this).addClass('mt_btn_act');
+//		});
+//	$(".crm_sx1_btn a").click(function(){
+//		$(".mt_btn_a").removeClass('mt_btn_act');
+//		});
+//	});
+</script>
+<!--头部右侧的筛选效果，后期改class名后用-->
+<style>
+	.sd_hj{width:800px;}
+	@media(max-width:1024px){
+		#m_con{
+			clear: both;
+			float: left;
+			height:auto;
+			width: 825px;
+			margin-left: 5px;
+			overflow: auto;
+			margin-top:10px;
+		}
+		.m_table table{width:1100px;}
+		.sd_hj{width:686px;}
+		.crm_sx{height:404px;}
+		.div_hm{height:316px;}
+	}
+</style>
+</head>
+<body>
+<div class="m_top">
+    <div class="m_name_sel">
+        <span>全部客户</span>
+        <ul>
+            <li><a href="#">全部客户</a></li>
+            <li><a href="#">7天未跟进客户</a></li>
+            <li><a href="#">我的再约客户</a></li>
+        </ul>
+    </div>
+    <div class="mt_btn"><a href="#" class="mt_btn_a">筛选</a></div>
+    <script type="text/javascript">
+	$(function(){
+		$(".mt_btn,.crm_sx1_btn a").click(function(){
+			$(".crm_sx").slideToggle();
+			});
+	});
+	</script>
+    <div class="crm_sx">
+    	<div class="crm_sx_arrow"></div>
+        <div class="div_hm">
+           <ul class="clearfix">
+            <li>
+                <div class="crm_sx1">
+                    <span>客户编号：</span>
+                     <select>
+                        <option>项目1</option>
+                        <option>项目2</option>
+                        <option>项目3</option>
+                    </select>
+                </div>
+                <div class="crm_sx1">
+                    <span>服务类型：</span>
+                     <select>
+                        <option>项目1</option>
+                        <option>项目2</option>
+                        <option>项目3</option>
+                    </select>
+                </div>
+                <div class="crm_sx1">
+                    <span>客户编号：</span>
+                     <select>
+                        <option>项目1</option>
+                        <option>项目2</option>
+                        <option>项目3</option>
+                    </select>
+                </div>
+                <div class="crm_sx1">
+                    <span>服务类型：</span>
+                     <select>
+                        <option>项目1</option>
+                        <option>项目2</option>
+                        <option>项目3</option>
+                    </select>
+                </div>
+                <div class="crm_sx1">
+                    <span>客户来源：</span>
+                     <select>
+                        <option>项目1</option>
+                        <option>项目2</option>
+                        <option>项目3</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div class="crm_sx1">
+                    <span>客户编号：</span>
+                     <select>
+                        <option>项目1</option>
+                        <option>项目2</option>
+                        <option>项目3</option>
+                    </select>
+                </div>
+                <div class="crm_sx2">
+                    <label class="labelio crm_labelio tb_xh"><input name="" type="checkbox" value="" class="input_ms"><span class="span_ms xf_span_ms danhao">单号日期</span></label>
+                    <label class="labelio crm_labelio tb_xh"><input name="" type="checkbox" value="" class="input_ms1"><span class="span_ms xf_span_ms danhao1">双号日期</span></label>
+                </div>
+            </li>
+            <li style="border:none;">
+                <div class="crm_sx1"><span>录入时间：</span><input type="text"><small>--</small><input type="text"></div>
+                <div class="crm_sx1"><span>再约时间：</span><input type="text"><small>--</small><input type="text"></div>
+                <div class="crm_sx1"><span>宝宝时间：</span><input type="text"><small>--</small><input type="text"></div>
+                <div class="crm_sx1"><span>预产时间：</span><input type="text"><small>--</small><input type="text"></div>
+                <div class="crm_sx1"><span>派活日期：</span><input type="text"><small>--</small><input type="text"></div>
+            </li>
+        </ul>
+        </div>
+        <div class="crm_sx1_btn"><a href="#">查询</a></div>
+    </div>
+</div>
+<!--页面主内容 -->
+<div id="m_con">
+     <div class="m_table"> 
+     	<table class="table  table-hover table-striped">
+            <thead class="tb_th_bga">
+                <tr>
+                    <td></td>
+                    <td>序号</td>
+                    <td>状态</td>
+                    <td>客户姓名</td>
+                    <td>派活日期</td>
+                    <td>结束日期</td>
+                    <td>服次</td>
+                    <td>服务类型</td>
+                    <td>标记</td>
+                    <td>电话人员</td>
+                    <td>客户电话</td>
+                    <td>客户等级</td>
+                    <td style="border:none">客户分类</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td><label class="labelio crm_labelio tb_xh"><input name="" type="checkbox" value=""><span class="span_ms xf_span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td><div class="crm_zt1"></div></td>
+                    <td><a href="#" class="m_tab_link right_btn">李某某</a></td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>张AB</td>
+                    <td><img src="../img/tel.png">1888888888</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td><label class="labelio crm_labelio tb_xh"><input name="" type="checkbox" value=""><span class="span_ms xf_span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td><div class="crm_zt2">进行中</div></td>
+                    <td><a href="#" class="m_tab_link">李某某</a></td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>张AB</td>
+                    <td><img src="../img/tel.png">1888888888</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td><label class="labelio crm_labelio tb_xh"><input name="" type="checkbox" value=""><span class="span_ms xf_span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td><div class="crm_zt1"></div></td>
+                    <td><a href="#" class="m_tab_link">李某某</a></td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>张AB</td>
+                    <td><img src="../img/tel.png">1888888888</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td><label class="labelio crm_labelio tb_xh"><input name="" type="checkbox" value=""><span class="span_ms xf_span_ms">1</span></label></td><!--序号check用这格式  -->
+                    <td><div class="crm_zt1"></div></td>
+                    <td><a href="#" class="m_tab_link">李某某</a></td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>张AB</td>
+                    <td><img src="../img/tel.png">1888888888</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td><label class="labelio crm_labelio tb_xh"><input name="" type="checkbox" value=""><span class="span_ms xf_span_ms">1</span></label></label></td><!--序号check用这格式  -->
+                    <td><div class="crm_zt1"></div></td>
+                    <td><a href="#" class="m_tab_link">李某某</a></td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>张AB</td>
+                    <td><img src="../img/tel.png">1888888888</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td><label class="labelio crm_labelio tb_xh"><input name="" type="checkbox" value=""><span class="span_ms xf_span_ms">1</span></label></label></td><!--序号check用这格式  -->
+                    <td><div class="crm_zt1"></div></td>
+                    <td><a href="#" class="m_tab_link">李某某</a></td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>张AB</td>
+                    <td><img src="../img/tel.png">1888888888</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td><label class="labelio crm_labelio tb_xh"><input name="" type="checkbox" value=""><span class="span_ms xf_span_ms">1</span></label></label></td><!--序号check用这格式  -->
+                    <td><div class="crm_zt1"></div></td>
+                    <td><a href="#" class="m_tab_link">李某某</a></td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>张AB</td>
+                    <td><img src="../img/tel.png">1888888888</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td><label class="labelio crm_labelio tb_xh"><input name="" type="checkbox" value=""><span class="span_ms xf_span_ms">1</span></label></label></td><!--序号check用这格式  -->
+                    <td><div class="crm_zt1"></div></td>
+                    <td><a href="#" class="m_tab_link">李某某</a></td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>张AB</td>
+                    <td><img src="../img/tel.png">1888888888</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td><label class="labelio crm_labelio tb_xh"><input name="" type="checkbox" value=""><span class="span_ms xf_span_ms">1</span></label></label></td><!--序号check用这格式  -->
+                    <td><div class="crm_zt1"></div></td>
+                    <td><a href="#" class="m_tab_link">李某某</a></td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>张AB</td>
+                    <td><img src="../img/tel.png">1888888888</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tb_bj_btn tb_bor_right">
+                        <div class="tb_bj tb_width"><a href="#">编辑</a><small>|</small><a href="#" class="tb_del">删除</a></div><!--增加编辑按钮格式 -->
+                    </td>
+                    <td>
+                     <label class="labelio crm_labelio tb_xh"><input name="" type="checkbox" value=""><span class="span_ms xf_span_ms">1</span></label></label>
+                     </td><!--序号check用这格式  -->
+                    <td><div class="crm_zt1"></div></td>
+                    <td><a href="#" class="m_tab_link">李某某</a></td>
+                    <td>2015-08-15</td>
+                    <td>2015-08-15</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>张AB</td>
+                    <td><img src="../img/tel.png">1888888888</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+     </div>
+</div>
+<!--页面主内容---------------------end -->
+<div class="tb_foot">
+    <div class="tb_bottom" style="border-top:1px solid #e9ecf3;"><!--公共底部功能（显示，按钮，分页） -->
+        <div class="tb_b_zs"><span>客户数量：4</span></div>
+    </div> 
+    <div class="tb_bottom"><!--公共底部功能（显示，按钮，分页） -->
+        <a href="#" class="tb_btn tb_green">派活</a>
+        <a href="#" class="tb_btn tb_blue">新建</a>
+        <a href="#" class="tb_btn tb_orange">导入</a>
+        <a href="#" class="tb_btn tb_orange">导出</a>
+        <a href="#" class="tb_btn tb_blue">删除</a>
+        <div class="tb_pag">
+             <span class="tb_pag_xs"> 每页显示20条&nbsp;&nbsp;共<label>29</label>条 </span>
+             <div class="quotes" id="Pagination">
+                 <span class="prev">&nbsp;&nbsp;&nbsp;</span>
+                 <span class="current">5</span>
+                 <a href="#">1</a>
+                 <a href="#">2</a>
+                 <a href="#">3</a>
+                 <a href="#">4</a>
+                 <a href="#">6</a>
+                 <a href="#">7</a>
+                 <a href="#">8</a>
+                 <a href="#" class="next">&nbsp;&nbsp;&nbsp;</a>
+             </div>
+        </div>
+    </div>
+    <!--copyright -->
+    <div class="ft_tel">北京熊宝贝科技发展有限公司 技术支持：400-100-7592</div>
+</div>
+<!--右推效果内容 -->
+<div id="right_go" class="sidr-right sd_hj"> <!--宽度根据页面需要自定义，不能写百分比 -->
+    <a href="#" class="myt_close clo_yt"></a>
+    <div class="myt_tit">
+        <div class="myt_name">电话情况</div>
+    </div>
+    <!--内容区域 -->
+    <div class="myt_con">
+    	<div class="crm_yc">
+            <div class="crm_yname"><span>李某某、张某某</span><img src="../img/crm/hart_mini.png"></div>
+                <div class="cyt_tit">婚纱照--出生照-- 孕妇照--孕妇照--孕妇照--<span>孕妇照</span></div>
+                <div class="cyt_xc">
+                    <div class="cyt_nr">该任务于2015-07-23 08:53由宗文君和孟巧华电访4次</div>
+                    <div class="cyt_nr">服务类型：满月</div>
+                    <div class="cyt_nr">委托人：李某某</div>
+                    <div class="cyt_nr_date">7月22日</div>
+                    <div class="cyt_cc">
+                        <div class="cyt_cc_nr">
+                            <a href="#">15:23 <small>李某某</small> --  18800002542 -- 近期拍照</a>
+                            <span><div class="cyt_arrow"></div>近期拍照</span>
+                        </div>
+                        <div class="cyt_cc_nr">
+                            <a href="#">15:23 <small>李某某</small> --  18800002542 -- 近期拍照</a>
+                            <span><div class="cyt_arrow"></div>近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照</span>
+                        </div>
+                        <div class="cyt_cc_nr cc_bga">
+                            <a href="#">15:23 <small>李某某</small> --  18800002542 -- 近期拍照</a>
+                        </div>
+                        <div class="cyt_cc_nr">
+                            <a href="#">15:23 <small>李某某</small> --  18800002542 -- 近期拍照</a>
+                        </div>
+                        <div class="cyt_cc_jg cc_bgb"><span style="width:60px;">审核人：</span><span><small>李某某</small>于 2015-07-23 9:53审核成功</span></div>
+                    </div>
+                    <div class="crm_sh">
+                        <textarea name="" class="textd"></textarea>
+                        <button class="crm_sh_btn1">审核</button>
+                        <button class="crm_sh_btn2">取消</button>
+                    </div>                   
+              </div>
+              <div class="cyt_xc">
+                    <div class="cyt_nr">该任务于2015-07-23 08:53由宗文君和孟巧华电访4次</div>
+                    <div class="cyt_nr">服务类型：满月</div>
+                    <div class="cyt_nr">委托人：李某某</div>
+                    <div class="cyt_nr_date">7月22日</div>
+                    <div class="cyt_cc">
+                        <div class="cyt_cc_nr">
+                            <a href="#">15:23 <small>李某某</small> --  18800002542 -- 近期拍照</a>
+                            <span><div class="cyt_arrow"></div>近期拍照</span>
+                        </div>
+                        <div class="cyt_cc_nr">
+                            <a href="#">15:23 <small>李某某</small> --  18800002542 -- 近期拍照</a>
+                            <span><div class="cyt_arrow"></div>近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照近期拍照</span>
+                        </div>
+                        <div class="cyt_cc_nr">
+                            <a href="#">15:23 <small>李某某</small> --  18800002542 -- 近期拍照</a>
+                        </div>
+                        <div class="cyt_cc_nr">
+                            <a href="#">15:23 <small>李某某</small> --  18800002542 -- 近期拍照</a>
+                        </div>
+                        <div class="cyt_cc_jg"><span style="width:60px;">审核人：</span><span><small>李某某</small>于 2015-07-23 9:53审核成功</span></div>
+                    </div>
+                    <div class="crm_sh">
+                        <textarea name="" class="textd"></textarea>
+                        <button class="crm_sh_btn1">审核</button>
+                        <button class="crm_sh_btn2">取消</button>
+                    </div> 
+              </div>
+          </div>
+          <div class="my_ytd">
+            <a href="#" class="my_yt_btn y-nav1" data-reveal-id="kg_yt1"><span>拨打电话</span></a>
+            <a href="#" class="my_yt_btn y-nav2" data-reveal-id="kg_yt2"><span>标记</span></a>
+            <a href="#" class="my_yt_btn y-nav3" data-reveal-id="kg_yt3"><span>转移给他人</span></a>
+            <a href="#" class="my_yt_btn y-nav4" data-reveal-id="kg_yt4"><span>查看电访语音</span></a>
+            <a href="#" class="my_yt_btn y-nav5" data-reveal-id="kg_ph"><span>转订单</span></a>
+            <a href="#" class="my_yt_btn y-nav6" data-reveal-id="kg_yt5"><span>删除</span></a>
+        </div>
+    </div>
+    <!--内容区域------------end -->
+</div>
+<!--标记弹窗 -->
+<div class="gbox" id="kg_yt2">
+	<div class="gbox_top"><span>标记</span><a href="#" class="close-reveal-modal"></a></div>
+    <div class="gboxd_con">
+    	<div class="box_in1" style="margin-top:30px; margin-left:30px">
+            <span>标记类型</span>
+            <select name="select"  class="box_in1_sel" style="width:260px;">
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+    	<div class="box_in1" style="margin-top:30px; margin-left:30px">
+            <span>标记日期</span>
+            <select name="select"  class="box_in1_sel" style="width:260px;">
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+    </div>
+    <div class="gbox_btm"><a href="#" class="gbox_btn_clear close-reveal-modal">取消</a><button class="gbox_btn_save close-reveal-modal">提交</button></div>
+</div>
+<!--标记弹窗 -----------end-->
+<!--派活弹窗 -->
+<div class="gbox" id="kg_ph">
+	<div class="gbox_top"><span>派活</span><a href="#" class="close-reveal-modal"></a></div>
+    <div class="gboxd_con">
+    	<div class="box_in1" style="margin-top:30px; margin-left:30px">
+            <span>电话联系</span>
+            <select name="select"  class="box_in1_sel" style="width:260px;">
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+    	<div class="box_in1" style="margin-top:30px; margin-left:30px">
+            <span>开始时间</span>
+            <select name="select"  class="box_in1_sel" style="width:260px;">
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+    	<div class="box_in1" style="margin-top:30px; margin-left:30px">
+            <span>结束时间</span>
+            <select name="select"  class="box_in1_sel" style="width:260px;">
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+    </div>
+    <div class="gbox_btm"><a href="#" class="gbox_btn_clear close-reveal-modal">取消</a><button class="gbox_btn_save close-reveal-modal">提交</button></div>
+</div>
+<!--标记弹窗 -----------end-->  
+<!--转让弹窗 -->
+<div class="gbox" id="kg_yt3">
+	<div class="gbox_top"><span>转移给他人</span><a href="#" class="close-reveal-modal"></a></div>
+    <div class="gboxd_con">
+    	<div class="box_in1" style="margin-left:30px">
+            <span>转让店面</span>
+            <select name="select"  class="box_in1_sel" style="width:260px;">
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+    	<div class="box_in1" style="margin-left:30px">
+            <span>订单日期</span>
+            <select name="select"  class="box_in1_sel" style="width:260px;">
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+    	<div class="box_in10"><span>客户编码</span><input name="" type="text"></div>
+    	<div class="box_in1" style="margin-left:30px">
+            <span>消费类型</span>
+            <select name="select"  class="box_in1_sel" style="width:260px;">
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+    	<div class="box_in1" style="margin-left:30px">
+            <span>客户分区</span>
+            <select name="select"  class="box_in1_sel" style="width:260px;">
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+    	<div class="box_in1" style="margin-left:30px">
+            <span>客户来源</span>
+            <select name="select"  class="box_in1_sel" style="width:260px;">
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+    	<div class="box_in1" style="margin-left:30px">
+            <span>接单点</span>
+            <select name="select"  class="box_in1_sel" style="width:260px;">
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+    </div>
+    <div class="gbox_btm"><a href="#" class="gbox_btn_clear close-reveal-modal">取消</a><button class="gbox_btn_save close-reveal-modal">提交</button></div>
+</div>
+<!--转让弹窗 -----------end-->   
+    <!--电访弹窗 -->
+<div class="gbox" id="kg_yt4">
+	<div class="gbox_top"><span>查看电访</span><a href="#" class="close-reveal-modal"></a></div>
+    <div class="gboxd_con">
+        <div class="mbox_tel"><img src="../img/crm/tel.png"><span>18810881523&nbsp;&nbsp;&nbsp;00 : 56 : 49</span><a href="#">挂断</a></div>
+    	<div class="box_in11"><span>通话开始</span><label class="crm_thd">2016-04-15&nbsp;14:24:40</label></div>
+        <div class="box_in11" style="margin-top:0"><span>通话结束</span><label class="crm_thd">2016-04-15&nbsp;14:24:40</label></div>
+		<div class="box_in11"><span>男士号码</span><input name="" type="text"><a href="#"></a></div>
+		<div class="box_in11"><span>女士号码</span><input name="" type="text"><a href="#"></a></div>
+        <div class="mbox_ct">电访情况</div>
+    	<div class="box_in1" style="margin-left:45px">
+            <span>客户意愿</span>
+            <select name="select"  class="box_in1_sel" style="width:240px;">
+                <option class="show_in_op">项目1</option>
+                <option class="show_in_op">项目2</option>
+                <option class="show_in_op">项目3</option>
+                <option class="show_in_op">项目4</option>
+                <option class="show_in_op">项目5</option>
+            </select>
+        </div>
+    	<div class="box_in1" style="margin-left:45px">
+            <span>备注信息</span>
+            <textarea style="width:240px"></textarea>
+        </div>
+    </div>
+    <div class="gbox_btm"><a href="#" class="gbox_btn_clear close-reveal-modal">取消</a><button class="gbox_btn_save close-reveal-modal">保存</button></div>
+</div>
+<!--电访弹窗 -----------end-->     
+<!--对话框效果 -->
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".cyt_cc_nr a").click(function(){
+        $(this).next('span').slideToggle();
+        });
+ });
+</script>
+<!--右推脚本 -->
+<select id="effectTypes" style="display:none">
+    <option value="drop">drop</option>
+</select>
+<script src="../js/jquery.effects.core.js"></script>
+<script src="../js/jquery.effects.drop.js"></script>
+<script>
+    $(function() {
+        function runEffect() {
+            var drop = $("#effectTypes").val();
+            var options = {};
+            $("#right_go").show(drop, options, 500);
+        };
+        $(".right_btn").click(function() {
+            runEffect();
+        });
+        $("#right_go").hide();
+
+        function closedEffect() {
+            var drop = $("#effectTypes").val();
+            var options = {};
+            $("#right_go").hide(drop, options, 1000);
+        };
+        $(".clo_yt").click(function() {
+            closedEffect();
+        });
+    });
+</script>
+<script type="text/javascript">
+$(function(){
+	$(".tb_sx").mouseover(function(){
+		$(this).children('ul').show();
+		});
+	$(".tb_sx").mouseout(function(){
+		$(this).children('ul').hide();
+		});
+//		$(".tb_sx_px li a").click(function(){
+//			$(".tb_sx_px li a").removeClass('tb_sx_bg');
+//			$(this).addClass('tb_sx_bg');
+//			});          //筛选功能需要选中状态时候开启
+	$(".tb_bj_btn").mouseover(function(){
+		$(this).children('div').show();
+		});
+	$(".tb_bj_btn").mouseout(function(){
+		$(this).children('div').hide();
+		});
+	$(".tb_del").click(function(){
+		$(this).parentsUntil('table tbody').remove();
+		});
+	});
+</script>
+<!--table选中状态 -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('table tbody tr:odd').addClass('mtr_bg');
+	$(".table tbody tr").click(function(){
+		$('table tbody tr').removeClass('mtr_bg_act');
+		$('table tbody tr:odd').addClass('mtr_bg');
+		$(this).removeClass('mtr_bg');
+		$(this).addClass('mtr_bg_act');
+		});
+	});
+</script>
+</body>    
+</html>

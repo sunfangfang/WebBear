@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" type="text/css" href="../css/MenShi/bootstrap.min.css">-->
+<link rel="stylesheet" type="text/css" href="../css/reset_s.css">
+<link rel="stylesheet" type="text/css" href="../css/news.css">
+<link rel="stylesheet" type="text/css" href="../css/table.css">
+<link rel="stylesheet" type="text/css" href="../css/MenShi/menshi.css">
+<link rel="stylesheet" type="text/css" href="../css/VIP/VIPSta.css">
+<script src="../js/jquery-1.7.2.js"></script>
+<script src="../js/jquery.reveal.js"></script>
+<script src="../js/Menshi/menshi.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+	  setDivMaxHeight();
+ });
+$(window).resize(function() {
+    setDivMaxHeight();
+});
+function setDivMaxHeight() {
+    var zb=$(window).height();
+    var zbh = parseInt(zb) -238;
+    $(".main").css("height", zbh);
+}
+ $(function(){
+		$(".divsa").find("a").eq(0).addClass('bgms');	
+	    $(".divso").not(".divso:first").hide();
+		$(".divsa").find("a").click(function(){
+		   $(this).addClass("bgms").siblings().removeClass("bgms");
+		   $(".divso").eq($(this).index()).show().siblings().hide();
+	       }); 
+      });
+ $(function(){
+		$(".Mulo").find("li").eq(0).addClass('lineborder');	
+	    $(".Mdivw").not(".Mdivw:first").hide();
+		$(".Mulo").find("li").click(function(){
+		   $(this).addClass("lineborder").siblings().removeClass("lineborder");
+		   $(this).find("a").addClass("acolorp1").siblings().removeClass("acolorp1");
+		   $(".Mdivw").eq($(this).index()).show().siblings().hide();
+	       }); 
+      });
+	  
+	  
+$(function(){
+    $(".labelio").click(function(){
+        $(this).find(".Mdivbg").toggleClass("Mdivbg01");
+    });
+    $(".span_ms").click(function(){
+        $(this).siblings(".Mdivbg").toggleClass("Mdivbg01");
+    });
+});
+	  
+</script>
+<title>会员统计</title>
+</head>
+<body>
+<div class="m_top" style="height:50px;">
+    <div class="m_name">会员统计</div>
+    <div class="mt_btn"><a href="#" id="vip_sx_show">筛选</a></div>
+    <script type="text/javascript">
+        $(function(){
+            $("#vip_sx_show").click(function(){
+                $(".vip1_sx").slideToggle();
+            });
+        });
+    </script>
+    <!------------------筛选弹窗------------------>
+    <div class="vip1_sx">
+        <div class="vip1_sx_arrow"></div>
+        <div class="vip1_sx_con">
+            <div class="vip1_row">
+                <span>服务店面：</span>
+                <select class="vip1_select1">
+                    <option value="">请选择服务店面</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="vip1_row">
+                <span>日期范围：</span>
+                <select class="vip1_select2">
+                    <option value="">2016-2-14</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <span id="vip_spanline">--</span>
+                <select class="vip1_select2">
+                    <option value="">2016-2-14</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="vip1_row">
+                <span>收款类型：</span>
+                <select class="vip1_select1">
+                    <option value="">市场部</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="vip1_row">
+                <span>支付方式：</span>
+                <select class="vip1_select1">
+                    <option value="">my</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="mt_btm">
+                <a href="#" class="tb_btn tb_orange vip1_btn">查询</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!------------------end------------------->
+
+</div>
+
+<div id="m_con" style="overflow: hidden">
+    <div class="vip_top">
+        <div class="vip_sx">
+            <select name="select" id="vip_sele">
+                <option>请选择店面</option>
+                <option>请选择店面</option>
+                <option>请选择店面</option>
+                <option>请选择店面</option>
+            </select>
+            <small>--</small>
+            <input type="text">
+            <select name="select">
+                <option>请选择消费类别</option>
+                <option>请选择消费类别</option>
+                <option>请选择消费类别</option>
+                <option>请选择消费类别</option>
+            </select>
+            <a href="#">查询</a>
+        </div>
+         <div class="divright">
+            <form class="formpp" action="#2" method="post">
+                <label class="labelio vip_labelio"><input type="checkbox" value="check" name="checkbox1"/><span class="span_ms spanheighgt">显示全部</span></label>
+                <label class="labelio vip_labelio"><input type="checkbox" value="check" name="checkbox1"/><span class="span_ms spanheighgt">已绑定</span></label>
+                <label class="labelio vip_labelio"><input type="checkbox" value="check" name="checkbox1"/><span class="span_ms spanheighgt">未绑定</span></label>
+            </form>
+        </div>
+     </div>
+     <div class="divtab" style="margin-top:0;">
+       <ul class="Mulo clearfix" style="margin-top:0;">
+            <li class="limulo1">公司所有卡</li> 
+            <li class="Mlid limulo1">会员充值</li>
+            <li class="limulo1"> 会员消费</li>
+            <li class="limulo1">会员积分</li>
+            <li class="limulo1"> 会员升级</li>
+            <li class="limulo1">积分兑换</li>
+            <li class="limulo1">更换卡记录</li>
+        </ul>
+        <div class="Mcon clearfix">
+             <div class="Mdivw">
+                 <div class="main clearfix" style="overflow-x:auto;">
+                     <!--<div class="vip2_tb">-->
+                         <div class="m_table" style="border-bottom:none;width:2500px;">
+                            <table class="table  table-hover  table-striped">
+                                <thead class="tb_th_bga">
+                                    <tr>
+                                        <td>标题名称</td>
+                                        <td>会员门店</td>
+                                        <td>卡号</td>
+                                        <td>类型</td>
+                                        <td>初始日期</td>
+                                        <td>发卡日期</td>
+                                        <td>卡内金额</td>
+                                        <td>可用积分</td>
+                                        <td>充值欠款</td>
+                                        <td>初始积分</td>
+                                        <td>备注</td>
+                                        <td>消费积分</td>
+                                        <td>介绍积分</td>
+                                        <td>加减积分</td>
+                                        <td>前期折扣</td>
+                                        <td>后期折扣</td>
+                                        <td style="border-right:none;">可游泳次数</td>
+                                   </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>标题名称</td>
+                                        <td>会员门店</td>
+                                        <td>卡号</td>
+                                        <td>类型</td>
+                                        <td>初始日期</td>
+                                        <td>发卡日期</td>
+                                        <td>卡内金额</td>
+                                        <td>可用积分</td>
+                                        <td>充值欠款</td>
+                                        <td>初始积分</td>
+                                        <td>备注</td>
+                                        <td>消费积分</td>
+                                        <td>介绍积分</td>
+                                        <td>加减积分</td>
+                                        <td>前期折扣</td>
+                                        <td>后期折扣</td>
+                                        <td>可游泳次数</td>
+                                     </tr>
+                                    <tr>
+                                        <td>标题名称</td>
+                                        <td>会员门店</td>
+                                        <td>卡号</td>
+                                        <td>类型</td>
+                                        <td>初始日期</td>
+                                        <td>发卡日期</td>
+                                        <td>卡内金额</td>
+                                        <td>可用积分</td>
+                                        <td>充值欠款</td>
+                                        <td>初始积分</td>
+                                        <td>备注</td>
+                                        <td>消费积分</td>
+                                        <td>介绍积分</td>
+                                        <td>加减积分</td>
+                                        <td>前期折扣</td>
+                                        <td>后期折扣</td>
+                                        <td>可游泳次数</td>
+                                     </tr>
+                                    <tr>
+                                        <td>标题名称</td>
+                                        <td>会员门店</td>
+                                        <td>卡号</td>
+                                        <td>类型</td>
+                                        <td>初始日期</td>
+                                        <td>发卡日期</td>
+                                        <td>卡内金额</td>
+                                        <td>可用积分</td>
+                                        <td>充值欠款</td>
+                                        <td>初始积分</td>
+                                        <td>备注</td>
+                                        <td>消费积分</td>
+                                        <td>介绍积分</td>
+                                        <td>加减积分</td>
+                                        <td>前期折扣</td>
+                                        <td>后期折扣</td>
+                                        <td>可游泳次数</td>
+                                     </tr>
+                                    <tr>
+                                        <td>标题名称</td>
+                                        <td>会员门店</td>
+                                        <td>卡号</td>
+                                        <td>类型</td>
+                                        <td>初始日期</td>
+                                        <td>发卡日期</td>
+                                        <td>卡内金额</td>
+                                        <td>可用积分</td>
+                                        <td>充值欠款</td>
+                                        <td>初始积分</td>
+                                        <td>备注</td>
+                                        <td>消费积分</td>
+                                        <td>介绍积分</td>
+                                        <td>加减积分</td>
+                                        <td>前期折扣</td>
+                                        <td>后期折扣</td>
+                                        <td>可游泳次数</td>
+                                     </tr>
+                                    <tr>
+                                        <td>标题名称</td>
+                                        <td>会员门店</td>
+                                        <td>卡号</td>
+                                        <td>类型</td>
+                                        <td>初始日期</td>
+                                        <td>发卡日期</td>
+                                        <td>卡内金额</td>
+                                        <td>可用积分</td>
+                                        <td>充值欠款</td>
+                                        <td>初始积分</td>
+                                        <td>备注</td>
+                                        <td>消费积分</td>
+                                        <td>介绍积分</td>
+                                        <td>加减积分</td>
+                                        <td>前期折扣</td>
+                                        <td>后期折扣</td>
+                                        <td>可游泳次数</td>
+                                     </tr>
+                                    <tr>
+                                        <td>标题名称</td>
+                                        <td>会员门店</td>
+                                        <td>卡号</td>
+                                        <td>类型</td>
+                                        <td>初始日期</td>
+                                        <td>发卡日期</td>
+                                        <td>卡内金额</td>
+                                        <td>可用积分</td>
+                                        <td>充值欠款</td>
+                                        <td>初始积分</td>
+                                        <td>备注</td>
+                                        <td>消费积分</td>
+                                        <td>介绍积分</td>
+                                        <td>加减积分</td>
+                                        <td>前期折扣</td>
+                                        <td>后期折扣</td>
+                                        <td>可游泳次数</td>
+                                     </tr>
+                                    <tr>
+                                        <td>标题名称</td>
+                                        <td>会员门店</td>
+                                        <td>卡号</td>
+                                        <td>类型</td>
+                                        <td>初始日期</td>
+                                        <td>发卡日期</td>
+                                        <td>卡内金额</td>
+                                        <td>可用积分</td>
+                                        <td>充值欠款</td>
+                                        <td>初始积分</td>
+                                        <td>备注</td>
+                                        <td>消费积分</td>
+                                        <td>介绍积分</td>
+                                        <td>加减积分</td>
+                                        <td>前期折扣</td>
+                                        <td>后期折扣</td>
+                                        <td>可游泳次数</td>
+                                     </tr>
+                                    <tr>
+                                        <td>标题名称</td>
+                                        <td>会员门店</td>
+                                        <td>卡号</td>
+                                        <td>类型</td>
+                                        <td>初始日期</td>
+                                        <td>发卡日期</td>
+                                        <td>卡内金额</td>
+                                        <td>可用积分</td>
+                                        <td>充值欠款</td>
+                                        <td>初始积分</td>
+                                        <td>备注</td>
+                                        <td>消费积分</td>
+                                        <td>介绍积分</td>
+                                        <td>加减积分</td>
+                                        <td>前期折扣</td>
+                                        <td>后期折扣</td>
+                                        <td>可游泳次数</td>
+                                     </tr>
+                                    <tr>
+                                        <td>标题名称</td>
+                                        <td>会员门店</td>
+                                        <td>卡号</td>
+                                        <td>类型</td>
+                                        <td>初始日期</td>
+                                        <td>发卡日期</td>
+                                        <td>卡内金额</td>
+                                        <td>可用积分</td>
+                                        <td>充值欠款</td>
+                                        <td>初始积分</td>
+                                        <td>备注</td>
+                                        <td>消费积分</td>
+                                        <td>介绍积分</td>
+                                        <td>加减积分</td>
+                                        <td>前期折扣</td>
+                                        <td>后期折扣</td>
+                                        <td>可游泳次数</td>
+                                     </tr>
+                                    <tr>
+                                        <td>标题名称</td>
+                                        <td>会员门店</td>
+                                        <td>卡号</td>
+                                        <td>类型</td>
+                                        <td>初始日期</td>
+                                        <td>发卡日期</td>
+                                        <td>卡内金额</td>
+                                        <td>可用积分</td>
+                                        <td>充值欠款</td>
+                                        <td>初始积分</td>
+                                        <td>备注</td>
+                                        <td>消费积分</td>
+                                        <td>介绍积分</td>
+                                        <td>加减积分</td>
+                                        <td>前期折扣</td>
+                                        <td>后期折扣</td>
+                                        <td>可游泳次数</td>
+                                     </tr>
+                                    <tr>
+                                        <td>标题名称</td>
+                                        <td>会员门店</td>
+                                        <td>卡号</td>
+                                        <td>类型</td>
+                                        <td>初始日期</td>
+                                        <td>发卡日期</td>
+                                        <td>卡内金额</td>
+                                        <td>可用积分</td>
+                                        <td>充值欠款</td>
+                                        <td>初始积分</td>
+                                        <td>备注</td>
+                                        <td>消费积分</td>
+                                        <td>介绍积分</td>
+                                        <td>加减积分</td>
+                                        <td>前期折扣</td>
+                                        <td>后期折扣</td>
+                                        <td>可游泳次数</td>
+                                     </tr>
+                                    <tr>
+                                        <td>标题名称</td>
+                                        <td>会员门店</td>
+                                        <td>卡号</td>
+                                        <td>类型</td>
+                                        <td>初始日期</td>
+                                        <td>发卡日期</td>
+                                        <td>卡内金额</td>
+                                        <td>可用积分</td>
+                                        <td>充值欠款</td>
+                                        <td>初始积分</td>
+                                        <td>备注</td>
+                                        <td>消费积分</td>
+                                        <td>介绍积分</td>
+                                        <td>加减积分</td>
+                                        <td>前期折扣</td>
+                                        <td>后期折扣</td>
+                                        <td>可游泳次数</td>
+                                     </tr>
+                                    <tr>
+                                        <td>标题名称</td>
+                                        <td>会员门店</td>
+                                        <td>卡号</td>
+                                        <td>类型</td>
+                                        <td>初始日期</td>
+                                        <td>发卡日期</td>
+                                        <td>卡内金额</td>
+                                        <td>可用积分</td>
+                                        <td>充值欠款</td>
+                                        <td>初始积分</td>
+                                        <td>备注</td>
+                                        <td>消费积分</td>
+                                        <td>介绍积分</td>
+                                        <td>加减积分</td>
+                                        <td>前期折扣</td>
+                                        <td>后期折扣</td>
+                                        <td>可游泳次数</td>
+                                     </tr>
+                                    <tr>
+                                        <td>标题名称</td>
+                                        <td>会员门店</td>
+                                        <td>卡号</td>
+                                        <td>类型</td>
+                                        <td>初始日期</td>
+                                        <td>发卡日期</td>
+                                        <td>卡内金额</td>
+                                        <td>可用积分</td>
+                                        <td>充值欠款</td>
+                                        <td>初始积分</td>
+                                        <td>备注</td>
+                                        <td>消费积分</td>
+                                        <td>介绍积分</td>
+                                        <td>加减积分</td>
+                                        <td>前期折扣</td>
+                                        <td>后期折扣</td>
+                                        <td>可游泳次数</td>
+                                     </tr>
+                                    <tr>
+                                        <td>标题名称</td>
+                                        <td>会员门店</td>
+                                        <td>卡号</td>
+                                        <td>类型</td>
+                                        <td>初始日期</td>
+                                        <td>发卡日期</td>
+                                        <td>卡内金额</td>
+                                        <td>可用积分</td>
+                                        <td>充值欠款</td>
+                                        <td>初始积分</td>
+                                        <td>备注</td>
+                                        <td>消费积分</td>
+                                        <td>介绍积分</td>
+                                        <td>加减积分</td>
+                                        <td>前期折扣</td>
+                                        <td>后期折扣</td>
+                                        <td>可游泳次数</td>
+                                     </tr>
+                                    <tr>
+                                        <td>标题名称</td>
+                                        <td>会员门店</td>
+                                        <td>卡号</td>
+                                        <td>类型</td>
+                                        <td>初始日期</td>
+                                        <td>发卡日期</td>
+                                        <td>卡内金额</td>
+                                        <td>可用积分</td>
+                                        <td>充值欠款</td>
+                                        <td>初始积分</td>
+                                        <td>备注</td>
+                                        <td>消费积分</td>
+                                        <td>介绍积分</td>
+                                        <td>加减积分</td>
+                                        <td>前期折扣</td>
+                                        <td>后期折扣</td>
+                                        <td>可游泳次数</td>
+                                     </tr>
+                                    <tr>
+                                        <td>标题名称</td>
+                                        <td>会员门店</td>
+                                        <td>卡号</td>
+                                        <td>类型</td>
+                                        <td>初始日期</td>
+                                        <td>发卡日期</td>
+                                        <td>卡内金额</td>
+                                        <td>可用积分</td>
+                                        <td>充值欠款</td>
+                                        <td>初始积分</td>
+                                        <td>备注</td>
+                                        <td>消费积分</td>
+                                        <td>介绍积分</td>
+                                        <td>加减积分</td>
+                                        <td>前期折扣</td>
+                                        <td>后期折扣</td>
+                                        <td>可游泳次数</td>
+                                     </tr>
+                                </tbody>
+                            </table>
+                         </div>
+<!--                         </div>-->
+                 </div>
+                       <!--页面主内容-------------end -->
+                 </div>
+                 <div class="Mdivw">
+                      <div class="main clearfix" style="overflow-x:auto;">
+                            <!--页面主内容 -->
+                          <!--<div class="vip2_tb">-->
+                             <div class="m_table" style="border-bottom:none;width:2500px;">
+                                <table class="table  table-hover  table-striped" >
+                                    <thead class="tb_th_bga"><!-- 如果是在tab切换里面时候，th的class="tb_th_bgb";一般状态下用class="tb_th_bga"  -->
+                                        <tr>
+                                            <td>会员卡号</td>
+                                            <td>会员类型</td>
+                                            <td>冲入金额</td>
+                                            <td>实收金额</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td style="border-right:none;">标题名称</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                        <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                       <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                        <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                         <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                         <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                         <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                    </tbody>
+                                </table>
+                             </div>
+                          <!--</div>-->
+                            <!--页面主内容-------------end -->
+                       </div> 
+                 </div>
+                 <div class="Mdivw">
+                     <div class="main clearfix" style="overflow-x:auto;">
+                            <!--页面主内容 -->
+                         <!--<div class="vip2_tb">-->
+                             <div class="m_table" style="border-bottom:none;width:2500px;">
+                                    <table class="table  table-hover  table-striped">
+                                        <thead class="tb_th_bga"><!-- 如果是在tab切换里面时候，th的class="tb_th_bgb";一般状态下用class="tb_th_bga"  -->
+                                            <tr>
+                                                <td>会员卡号</td>
+                                                <td>会员类型</td>
+                                                <td>冲入金额</td>
+                                                <td>实收金额</td>
+                                                <td>标题名称</td>
+                                                <td>标题名称</td>
+                                                <td>标题名称</td>
+                                                <td>标题名称</td>
+                                                <td>标题名称</td>
+                                                <td>标题名称</td>
+                                                <td>标题名称</td>
+                                                <td style="border-right:none;">标题名称</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td><!--序号check用这格式  -->
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td><!--序号check用这格式  -->
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                            </tr>
+                                           <tr>
+                                                <td>1</td><!--序号check用这格式  -->
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td><!--序号check用这格式  -->
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                            </tr>
+                                             <tr>
+                                                <td>1</td><!--序号check用这格式  -->
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                            </tr>
+                                             <tr>
+                                                <td>1</td><!--序号check用这格式  -->
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                            </tr>
+                                             <tr>
+                                                <td>1</td><!--序号check用这格式  -->
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                                <td>mi</td>
+                                            </tr>
+                                        </tbody>
+                                </table>
+                             </div>
+                         <!--</div>-->
+                            <!--页面主内容-------------end -->
+                       </div> 
+                  </div>
+                <div class="Mdivw">
+                  <div class="main clearfix" style="overflow-x:auto;">
+                            <!--页面主内容 -->
+                      <!--<div class="vip2_tb">-->
+                             <div class="m_table" style="border-bottom:none;width:2500px;">
+                                <table class="table  table-hover  table-striped">
+                                    <thead class="tb_th_bga"><!-- 如果是在tab切换里面时候，th的class="tb_th_bgb";一般状态下用class="tb_th_bga"  -->
+                                        <tr>
+                                            <td>会员卡号</td>
+                                            <td>会员类型</td>
+                                            <td>冲入金额</td>
+                                            <td>实收金额</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td style="border-right:none;">标题名称</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                        <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                       <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                        <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                         <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                         <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                         <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                    </tbody>
+                                </table>
+                             </div>
+                     <!-- </div>-->
+                            <!--页面主内容-------------end -->
+                   </div>
+                </div>
+                <div class="Mdivw">
+                    <div class="main clearfix" style="overflow-x:auto;">
+                            <!--页面主内容 -->
+                        <!--<div class="vip2_tb">-->
+                             <div class="m_table" style="border-bottom:none;width:2500px;">
+                                <table class="table  table-hover  table-striped">
+                                    <thead class="tb_th_bga"><!-- 如果是在tab切换里面时候，th的class="tb_th_bgb";一般状态下用class="tb_th_bga"  -->
+                                        <tr>
+                                            <td>会员卡号</td>
+                                            <td>会员类型</td>
+                                            <td>冲入金额</td>
+                                            <td>实收金额</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td style="border-right:none;">标题名称</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                        <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                       <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                        <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                         <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                         <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                         <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                    </tbody>
+                                </table>
+                             </div>
+                        </div>
+                            <!--页面主内容-------------end -->
+                   <!--</div>-->
+                </div>
+                <div class="Mdivw">
+                   <div class="main clearfix" style="overflow-x:auto;">
+                            <!--页面主内容 -->
+                       <!--<div class="vip2_tb">-->
+                             <div class="m_table" style="border-bottom:none;width:2500px;">
+                                <table class="table  table-hover  table-striped">
+                                    <thead class="tb_th_bga"><!-- 如果是在tab切换里面时候，th的class="tb_th_bgb";一般状态下用class="tb_th_bga"  -->
+                                        <tr>
+                                            <td>会员卡号</td>
+                                            <td>会员类型</td>
+                                            <td>冲入金额</td>
+                                            <td>实收金额</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                        <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                       <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                        <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                         <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                         <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                         <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                    </tbody>
+                                </table>
+                             </div>
+                       <!--</div>-->
+                            <!--页面主内容-------------end -->
+                   </div>
+                </div>
+                <div class="Mdivw"> 
+                    <div class="main clearfix" style="overflow-x:auto;">
+                            <!--页面主内容 -->
+                       <!-- <div class="vip2_tb">-->
+                             <div class="m_table" style="border-bottom:none;width:2500px;">
+                                <table class="table  table-hover  table-striped">
+                                    <thead class="tb_th_bga"><!-- 如果是在tab切换里面时候，th的class="tb_th_bgb";一般状态下用class="tb_th_bga"  -->
+                                        <tr>
+                                            <td>会员卡号</td>
+                                            <td>会员类型</td>
+                                            <td>冲入金额</td>
+                                            <td>实收金额</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                            <td>标题名称</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                        <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                       <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                        <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                         <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                         <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                         <tr>
+                                            <td>1</td><!--序号check用这格式  -->
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>
+                                            <td>mi</td>  
+                                            <td>mi</td>                                        
+                                        </tr>
+                                    </tbody>
+                                </table>
+                             </div>
+                        <!--</div>-->
+                            <!--页面主内容-------------end -->
+                   </div>
+                </div>
+            </div>   
+         </div>
+
+</div>
+<div class="tb_foot" style="margin-left:0.5%;">
+    <div class="tb_bottom" style="border-top:1px solid #e9ecf3;"><!--公共底部功能（显示，按钮，分页） -->
+        <a href="#" class="tb_btn tb_green vip_bt">导出Excel</a>
+        <a href="#" class="tb_btn tb_blue vip_bt">修改有效期</a>
+        <a href="#" class="tb_btn tb_orange vip_bt">删除</a>
+        <div class="tab_in2"><span class="shul">VIP卡数量：17</span><span class="shul1">总卡内金额：7600.00 </span><span class="shul2">总充值欠款：0 </span><span class="shul2">总游泳次数：65</span></div>
+    </div>
+    <!--copyright -->
+    <!--<div class="ft_tel">北京熊宝贝科技发展有限公司 技术支持：400-100-7592</div>-->
+</div> 
+<!--table选中状态 -->
+	   <script type="text/javascript">
+        $(document).ready(function(){
+            $('table tbody tr:odd').addClass('mtr_bg');
+            $(".table tbody tr").click(function(){
+                $('table tbody tr').removeClass('mtr_bg_act');
+                $('table tbody tr:odd').addClass('mtr_bg');
+                $(this).removeClass('mtr_bg');
+                $(this).addClass('mtr_bg_act');
+                });
+            });
+        </script>
+</body>
+</html>

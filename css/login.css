@@ -1,0 +1,352 @@
+@charset "utf-8";
+/* 20160317 by houhaixiaofeixia for BEARbaby ERP4.0 CSS Document */
+
+.head {
+	height: 80px;
+	width: 100%;
+	clear: both;
+	float: left;
+	background-color: #FFF;
+/*	background-image: url(../img/login/bg_yun.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;*/
+}
+.h_con {
+	height: 80px;
+	width: 1300px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.logo {
+	height: 80px;
+	width: 283px;
+	float: left;
+	margin-left: 20px;
+}
+.logo img {
+	height: 80px;
+	width: 283px;
+}
+.h_right {
+	float: right;
+	height: 80px;
+	width: auto;
+	margin-right: 30px;
+}
+.h_tel {
+	float: right;
+	height: 30px;
+	width: 214px;
+	margin-top:10px;
+	clear: both;
+}
+.h_tel img {
+	height: 30px;
+	width: 214px;
+}
+.h_link {
+	clear: both;
+	float: right;
+	height: 20px;
+	width: auto;
+	margin-top: 10px;
+}
+.h_link a {
+	font-size: 14px;
+	line-height: 20px;
+	color: #566c9e;
+	float: right;
+	height: 20px;
+	width: auto;
+	margin-left: 20px;
+}
+.h_link a:hover {
+	color: #142958;
+}
+body{
+	background-image: url(../img/login/b_bg.png);
+	background-repeat: repeat-y;
+	background-position: center 80px;
+	float: left;
+	width: 100%;
+	position: fixed;
+	height:100%;
+	background-size: 100% auto;
+}
+.bg-yun {
+	height: 59px;
+	width: 160px;
+	position: absolute;
+	margin-top:21px;
+	margin-left:1270px;
+}
+.bg-sj {
+	float: left;
+	height: 375px;
+	width: 1860px;
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	background-image: url(../img/login/bg_sj.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+.con {
+	float: left;
+	height: 630px;
+	width: 488px;
+	position: absolute;
+	left: 57%;
+	top:15%;
+	background-image: url(../img/login/con_bg.png);
+	background-repeat: no-repeat;
+	position:fixed;
+}
+.con-logo {
+	float: left;
+	height: 90px;
+	width: 365px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	clear: both;
+	background-size:auto auto;
+	margin-top: 40px;
+	margin-left: 60px;
+	background-image: url(../img/login/con-logo.png);
+}
+.con-tit {
+	font-size: 15px;
+	line-height: 20px;
+	color: #48556e;
+	clear: both;
+	float: left;
+	height: 20px;
+	width: 300px;
+	margin-top: 35px;
+	margin-left:62px;
+	margin-bottom: 5px;
+}
+.con-in {
+	float: left;
+	height: 30px;
+	width: 330px;
+	margin-left: 10px;
+	margin-top: 13px;
+	clear: both;
+	margin-bottom: 10px;
+}
+.con-in img {
+	float: left;
+	height: 30px;
+	width: 30px;
+}
+.con-in input {
+	font-size: 16px;
+	line-height: 30px;
+	color: #f59665;
+	float: left;
+	height: 30px;
+	width: 230px;
+	background:none;
+	margin-left: 8px;
+	letter-spacing:0.1em;
+}
+.con-in input:focus {
+	font-size: 16px;
+	line-height: 30px;
+	color: #f59665;
+	float: left;
+	height: 30px;
+	width: 230px;
+	background:none;
+	margin-left: 8px;
+	letter-spacing:0.1em;
+}
+.con-btn {
+	float: left;
+	height: 55px;
+	width: 360px;
+	margin-top: 18px;
+	margin-left: 62px;
+}
+.con-btn button {
+	font-size: 24px;
+	line-height: 55px;
+	color: #FFF;
+	text-align: center;
+	float: left;
+	height: 55px;
+	width: 100%;
+	background:none;
+	font-family: "微软雅黑";
+	cursor:pointer;
+	background-color:#f59665;
+	border-radius:10px;
+}
+.con-btn button:hover {
+	background-color:#e97f49;
+}
+.con_copyright {
+	text-align: center;
+	float: left;
+	height: auto;
+	width: 80%;
+	font-size: 14px;
+	line-height: 18px;
+	color: #333e54;
+	margin-right: 10%;
+	margin-bottom: 0;
+	margin-left: 10%;
+	position: absolute;
+	top: 540px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+color: #2d3a57;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+color: #2d3a57;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+color: #2d3a57;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+color: #2d3a57;
+} 
+.con-body {
+	clear: both;
+	float: left;
+	width: 356px;
+	background-image: url(../img/login/con-body.png);
+	background-repeat: no-repeat;
+	border:2px solid #1e2c48;
+	margin-left: 60px;
+	overflow:hidden;
+}
+.con-in a {
+	float: left;
+	height: 30px;
+	width: auto;
+	margin-left: 45px;
+	font-size: 15px;
+	line-height: 30px;
+	color: #f59665;
+}
+.con-in a:hover {
+	color:#e97f49;
+}
+.tsd {
+	background-image: url(../img/login/tsd_bg.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 25px;
+}
+.nw {
+	height: 106px;
+}
+.ww {
+	height: 213px;
+}
+@media(max-width:1024px){
+.h_con {
+	height: 80px;
+	width: 990px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.con {
+	float: left;
+	height: 530px;
+	width: 411px;
+	position: absolute;
+	left: 57%;
+	top:15%;
+	background-image: url(../img/login/con_bg2.png);
+	background-repeat: no-repeat;
+	position:fixed;
+}
+.con-logo {
+	float: left;
+	height: 90px;
+	width: 410px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	clear: both;
+	background-size:auto auto;
+	margin-top: 25px;
+	margin-left: 0px;
+	background-image: url(../img/login/con-logo2.png);
+}
+.con-tit {
+	font-size: 15px;
+	line-height: 20px;
+	color: #48556e;
+	clear: both;
+	float: left;
+	height: 20px;
+	width: 300px;
+	margin-top: 35px;
+	margin-left:62px;
+	margin-bottom: 5px;
+}
+.con-tit {
+	font-size: 15px;
+	line-height: 20px;
+	color: #48556e;
+	clear: both;
+	float: left;
+	height: 20px;
+	width: 300px;
+	margin-top: 5px;
+	margin-left:26px;
+	margin-bottom: 5px;
+}
+.con-body {
+	clear: both;
+	float: left;
+	width: 356px;
+	background-image: url(../img/login/con-body.png);
+	background-repeat: no-repeat;
+	border:2px solid #1e2c48;
+	margin-left: 25px;
+	overflow:hidden;
+}
+.con-btn {
+	float: left;
+	height: 55px;
+	width: 360px;
+	margin-top: 18px;
+	margin-left: 26px;
+}
+.con_copyright {
+	text-align: center;
+	float: left;
+	height: auto;
+	width: 80%;
+	font-size: 14px;
+	line-height: 18px;
+	color: #333e54;
+	margin-right: 10%;
+	margin-bottom: 0;
+	margin-left: 10%;
+	position: absolute;
+	top: 460px;
+}
+.bg-yun {
+	height: 59px;
+	width: 160px;
+	position: absolute;
+	margin-top:21px;
+	margin-left:950px;
+}
+.bg-sj {
+	float: left;
+	height: 262px;
+	width: 1300px;
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	background-image: url(../img/login/bg_sj2.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+	}

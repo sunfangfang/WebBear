@@ -1,0 +1,323 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>审批流程设定</title>
+    <link rel="stylesheet" href="../css/reset_s.css">
+    <link rel="stylesheet" href="../css/table.css"/>
+    <link rel="stylesheet" href="../css/content.css">
+    <link rel="stylesheet" href="../css/box.css">
+    <link rel="stylesheet" href="../css/news.css">
+    <link rel="stylesheet" href="../css/pagination.css">
+    <link rel="stylesheet" href="../css/OA/oa.css">
+    <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="../js/jquery.reveal.js"></script>
+    <script type="text/javascript">
+        $(window).load(function(){
+            setDivMaxHeight();
+        });
+
+        $(window).resize(function() {
+            setDivMaxHeight();
+        });
+        function setDivMaxHeight() {
+            var fg=$(window).height();
+            var h = parseInt(fg) -150;
+            $("#m_con").css("height", h);
+
+        }
+    </script>
+    <style>
+        .tb_bj {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+<!--标题-->
+<div class="m_top">
+    <div class="m_name">审批流程设定 </div>
+    <div class="oa_xbg">
+        <span>我要设定</span>
+        <div class="oa_sx">
+            <small></small>
+            <ul>
+                <li><a href="javascript:;" data-reveal-id="divSet">常务申请流程</a></li>
+                <li style="border: none;"><a href="javascript:;" data-reveal-id="divSet_BX">报销采购流程</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function(){
+        $(".oa_xbg").click(function () {
+            $(".oa_sx").toggle();
+            $(".oa_xbg span").toggleClass("m_s");
+        });
+
+    })
+</script>
+
+<div id="m_con">
+    <div class="oa_g">
+        <div class="oa_g_sel">
+            <select style="width:170px;height:30px">
+                <option value="">选择类型</option>
+                <option value="1">请假</option>
+                <option value="2">加班</option>
+                <option value="3">出差</option>
+                <option value="4">外勤</option>
+                <option value="5">报销</option>
+                <option value="6">采购</option>
+                <option value="7">自定义</option>
+            </select>
+        </div>
+    </div>
+    <div class="m_table" style="border-bottom: none;">
+        <table class="table  table-hover  table-striped">
+            <thead class="tb_th_bga">
+            <tr>
+                <td width="35px">
+                    <a href="javascript:void(0)" class="tb_sup_btn" style="margin-left: 4px"></a>
+                </td>
+                <td>序号</td>
+                <td>类型</td>
+                <td>项目</td>
+                <td>流程名称</td>
+                <td>添加日期</td>
+            </tr>
+            </thead>
+            <tbody id="list"><tr><td class="tb_bj_btn tb_bor_right"><div class="tb_bj" style="display: none;"><a href="javascript:;" class="m_tab_link" onclick="update(this,2,1,1)">编辑</a><small>|</small><a href="javascript:;" class="m_tab_link" onclick="del(2)">删除</a></div></td><td>1</td><td>常务申请流程</td><td>请假</td><td>三天以上</td><td>2016-06-22</td></tr><tr class="mtr_bg"><td class="tb_bj_btn tb_bor_right"><div class="tb_bj" style="display: none;"><a href="javascript:;" class="m_tab_link" onclick="update(this,3,1,2)">编辑</a><small>|</small><a href="javascript:;" class="m_tab_link" onclick="del(3)">删除</a></div></td><td>2</td><td>常务申请流程</td><td>加班</td><td>十点加班</td><td>2016-06-22</td></tr></tbody>
+        </table>
+    </div>
+</div>
+
+
+
+<div class="tb_foot">
+    <div class="tb_bottom"><!--公共底部功能（显示，按钮，分页） -->
+        <div class="tb_pag">
+            <span class="tb_pag_xs"> 每页显示20条&nbsp;&nbsp;共<label>29</label>条 </span>
+            <div class="quotes" id="Pagination">
+                <span class="prev">&nbsp;&nbsp;&nbsp;</span>
+                <span class="current">5</span>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#" class="next">&nbsp;&nbsp;&nbsp;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--常务申请流程弹窗-->
+<div class="box" id="divSet">
+    <input type="hidden">
+    <input type="hidden" value="2">
+    <input type="hidden" value="1">
+    <div class="box_tit">
+        <div class="box_t_name">
+            <label style="font-family: '微软雅黑';">常务申请流程</label>
+        </div>
+        <a href="javascript:;" class="box_close close-reveal-modal"></a>
+    </div>
+    <div class="gboxd_con" style="height: auto;">
+        <div class="lcsd_tc">
+            <table border="0" cellpadding="0" cellspacing="0" style="background-color: #f7f7f7">
+                <tbody><tr>
+                    <td>
+                        <div class="box_in12">
+                            <span>审核名称</span><input type="text"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="box_in12">
+                            <span>类型</span>
+                            <select class="oa_in_selb">
+                                <option value="5">报销</option>
+                                <option value="6">采购</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="box_in12">
+                            <span>审批步骤</span></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="box_zs">
+                            例如：部门经理初审--财务经理复审--总经理批审</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="lcsd_in" style="margin-left: 15px;">
+                            <span>第1步</span><input type="text"></div>
+                        <div class="lcsd_in" style="margin-left: 14px;">
+                            <span>审批人</span>
+                            <select>
+                                <option value=""></option>
+                                <option value="G0001">Jason</option>
+                                <option value="0001">小张</option>
+                                <option value="1112">张三</option>
+                                <option value="0005">Tang</option>
+                                <option value="0006">大梦</option>
+                                <option value="0007">han</option>
+                                <option value="520">michael</option>
+                                <option value="0008">admin</option>
+                            </select>
+                        </div>
+                        <div class="lcsd_in" style="width: 180px;">
+                            <span>范围</span>
+                            <input type="text" style="width: 60px;">
+                            <label class="lblUnit">元</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6" align="center">
+                        <div class="box_sp_add" style="margin-bottom: 30px">
+                            <a href="javascript:;">添加步骤</a></div>
+                    </td>
+                </tr>
+                </tbody></table>
+        </div>
+    </div>
+    <div class="gbox_btm">
+        <a href="javascript:;" class="gbox_btn_clear close-reveal-modal">取消</a>
+        <a href="javascript:;" class="gbox_btn_save close-reveal-modal">确定</a>
+    </div>
+</div>
+
+<!--报销采购流程-->
+<div class="box" id="divSet_BX">
+    <input type="hidden">
+    <input type="hidden" value="2">
+    <input type="hidden" value="1">
+    <div class="box_tit">
+        <div class="box_t_name">
+            <label id="lblProType" style="font-family: '微软雅黑';">报销采购流程</label>
+        </div>
+        <a href="javascript:;" class="box_close close-reveal-modal"></a>
+    </div>
+    <div class="gboxd_con" style="height: auto;">
+        <div class="lcsd_tc">
+            <table border="0" cellpadding="0" cellspacing="0" style="background-color: #f7f7f7">
+                <tbody><tr>
+                    <td>
+                        <div class="box_in12">
+                            <span>审核名称</span><input type="text" id="t1"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="box_in12">
+                            <span>类型</span>
+                            <select class="oa_in_selb" id="t2">
+                                <option value="5">报销</option>
+                                <option value="6">采购</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="box_in12">
+                            <span>审批步骤</span></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="box_zs">
+                            例如：部门经理初审--财务经理复审--总经理批审</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="lcsd_in" style="margin-left: 15px;">
+                            <span>第1步</span><input type="text" id="ta1"></div>
+                        <div class="lcsd_in" style="margin-left: 14px;">
+                            <span>审批人</span>
+                            <select id="tb1">
+                                <option value=""></option>
+                                <option value="G0001">Jason</option>
+                                <option value="0001">小张</option>
+                                <option value="1112">张三</option>
+                                <option value="0005">Tang</option>
+                                <option value="0006">大梦</option>
+                                <option value="0007">han</option>
+                                <option value="520">michael</option>
+                                <option value="0008">admin</option>
+                            </select>
+                        </div>
+                        <div class="lcsd_in" style="width: 180px;">
+                            <span>范围</span>
+                            <input type="text" id="td1" style="width: 60px;">
+                            <label class="lblUnit">元</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="trE">
+                    <td colspan="6" align="center">
+                        <div class="box_sp_add" style="margin-bottom: 30px">
+                            <a href="javascript:;">添加步骤</a></div>
+                    </td>
+                </tr>
+                </tbody></table>
+        </div>
+    </div>
+    <div class="gbox_btm">
+        <a href="javascript:;" class="gbox_btn_clear close-reveal-modal">取消</a>
+        <a href="javascript:;" class="gbox_btn_save close-reveal-modal">确定</a>
+    </div>
+</div>
+
+
+
+
+
+<!--table选中状态 -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('table tbody tr:odd').addClass('mtr_bg');
+        $(".table tbody tr").click(function(){
+            $('table tbody tr').removeClass('mtr_bg_act');
+            $('table tbody tr:odd').addClass('mtr_bg');
+            $(this).removeClass('mtr_bg');
+            $(this).addClass('mtr_bg_act');
+        });
+    });
+    $(function(){
+        $(".tb_sx").mouseover(function(){
+            $(this).children('ul').show();
+        });
+        $(".tb_sx").mouseout(function(){
+            $(this).children('ul').hide();
+        });
+//		$(".tb_sx_px li a").click(function(){
+//			$(".tb_sx_px li a").removeClass('tb_sx_bg');
+//			$(this).addClass('tb_sx_bg');
+//			});          //筛选功能需要选中状态时候开启
+        $(".tb_bj_btn").mouseover(function(){
+            $(this).children('div').show();
+        });
+        $(".tb_bj_btn").mouseout(function(){
+            $(this).children('div').hide();
+        });
+        $(".tb_del").click(function(){
+            $(this).parentsUntil('table tbody').remove();
+        });
+    });
+</script>
+
+</body>
+</html>

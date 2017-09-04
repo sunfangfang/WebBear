@@ -1,0 +1,117 @@
+/*css quotes style pagination*/
+ .td_fcol a{color:#00a8ff;}
+ .txtSearch {
+            line-height: 75px;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        .txtSearch input {
+            color: #939393;
+            width: 220px;
+            height: 30px;
+            border: 1px solid #ced4e0;
+            text-indent: 3px;
+            line-height: 30px;
+            background: #f9f9f9;
+            font-size: 12px;
+            float: left;
+        }
+        .txtSearch a{
+            border: none;
+            background: #4dcd70;
+            width: 54px;
+            height: 30px;
+            color: #fff;
+            float: left;
+            text-align: center;
+            font-size: 14px;
+            line-height: 30px;
+            cursor: pointer;
+        }
+       /* .m_table{
+            overflow: auto;
+        }*/
+div.quotes {
+	text-align: center;
+	font-size:12px;
+	display:inline-block;
+	float: right;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+}
+div.quotes a {
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-bottom: 2px;
+	color: #979797;
+	margin-right: 2px;
+	padding-top: 2px;
+}
+div.quotes a:hover {
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-bottom: 2px;
+	margin-right: 2px;
+	padding-top: 2px
+}
+div.quotes a:active {
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-bottom: 2px;
+	margin-right: 2px;
+	padding-top: 2px
+}
+div.quotes span.current {
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-bottom: 2px;
+	margin-right: 2px;
+	padding-top: 2px;
+	background-color: #FFF;
+}
+div.quotes span.disabled {
+    padding-right: 5px; padding-left: 5px; padding-bottom: 2px;color: #ccc; margin-right: 2px; padding-top: 2px;
+}
+.tb_pag {
+	float: right;
+	height: auto;
+	width: auto;
+	margin-right: 1%;
+	margin-top: 10px;
+}
+.tb_pag_xs {
+	color: #979797;
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	margin-left: 10px;
+	width: 150px;
+	font-size: 12px;
+}
+.prev {
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #979797;
+	border-left-color: #979797;
+	background-image: url(../img/pag-arw1.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding:0 5px;
+}
+.next {
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #979797;
+	border-left-color: #979797;
+	background-image: url(../img/pag-arw2.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+/*	padding:0 5px;*/
+}
+.box_height{height:560px;}
+.box_con.box_cong{min-height:390px;height:390px;}
